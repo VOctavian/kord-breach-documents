@@ -9,7 +9,7 @@ if (!isLocal) document.getElementById('editor-link').remove();
 applyI18n();
 mountWidgets();
 
-const { maps, spawns, docById } = await loadData();
+const { maps, docs, spawns, docById } = await loadData();
 const grid = document.getElementById('grid');
 
 for (const map of maps) {
@@ -22,7 +22,7 @@ for (const map of maps) {
   grid.append(
     el(
       'a',
-      { class: 'map-card', href: `map.html?map=${map.id}` },
+      { class: 'map-card', href: `map.html?map=${map.id}`, 'data-docs': [...byDoc.keys()].join(' ') },
       el('div', { class: 'thumb' }, el('img', { src: map.file, alt: map.name, loading: 'lazy' })),
       el(
         'div',
@@ -36,13 +36,49 @@ for (const map of maps) {
             const doc = docById[docId];
             return el(
               'span',
-              { class: 'chip', title: localized(doc) },
+              { class: 'chip', title: localized(doc), 'data-doc': docId },
               el('img', { src: doc.icon, alt: '' }),
               String(n)
             );
           })
         )
       )
+    )
+  );
+}
+
+/* ---------- полоса типов документации ---------- */
+
+const legend = document.getElementById('doc-legend');
+
+/** Подсветить карты, на которых есть спавны этого типа. */
+function highlight(docId) {
+  grid.classList.toggle('highlighting', docId != null);
+  for (const card of grid.querySelectorAll('.map-card')) {
+    const has = docId != null && card.dataset.docs.split(' ').includes(docId);
+    card.classList.toggle('match', has);
+    for (const chip of card.querySelectorAll('.chip')) {
+      chip.classList.toggle('match', has && chip.dataset.doc === docId);
+    }
+  }
+}
+
+for (const doc of docs) {
+  const n = spawns.filter((s) => s.doc === doc.id).length;
+  if (!n) continue;
+  legend.append(
+    el(
+      'div',
+      {
+        class: 'doc-legend-item',
+        onmouseenter: () => highlight(doc.id),
+        onmouseleave: () => highlight(null),
+        // На тач-устройствах наведения нет — подсвечиваем по тапу.
+        onclick: () => highlight(grid.classList.contains('highlighting') ? null : doc.id),
+      },
+      el('img', { src: doc.icon, alt: localized(doc) }),
+      el('div', { class: 'lbl' }, localized(doc)),
+      el('div', { class: 'n' }, String(n))
     )
   );
 }
