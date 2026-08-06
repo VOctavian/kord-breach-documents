@@ -34,6 +34,9 @@ jobs:
         with:
           path: _site
 
+  # Разворачивание иногда зависает в очереди на стороне GitHub Pages,
+  # поэтому даём деплою запас по времени вместо десятиминутного дефолта.
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -43,3 +46,5 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
