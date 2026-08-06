@@ -1,0 +1,15 @@
+# Промежуточные файлы парсинга статьи
+article.html
+article-nodes.json
+spawns-raw.json
+
+# Резервные копии разметки
+data/spawns.backup-*.json
+
+# Локальное
+node_modules/
+.claude/
+_site/
+*.log
+.DS_Store
+Thumbs.db

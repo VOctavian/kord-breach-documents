@@ -1,0 +1,1788 @@
+[
+  {
+    "id": "customs-1",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На базе Решалы в центральной комнате",
+    "x": 57.334,
+    "y": 9.233,
+    "floor": "First_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-c39a854c.jpg"
+    ],
+    "captionEn": "Reshala's base, in the central room"
+  },
+  {
+    "id": "customs-2",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "3 этаж трёхэтажного общежития (комната 304)",
+    "x": 80.724,
+    "y": 80.811,
+    "floor": "Third_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-dc58c28b.jpg"
+    ],
+    "captionEn": "3rd floor of the three-story dorms (room 304)"
+  },
+  {
+    "id": "customs-3",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "3 этаж склада 17",
+    "x": 58.917,
+    "y": 39.775,
+    "floor": "Third_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-449da759.jpg"
+    ],
+    "captionEn": "3rd floor of Warehouse 17"
+  },
+  {
+    "id": "customs-4",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Времянка у таркона",
+    "x": 84.751,
+    "y": 44.803,
+    "floor": null,
+    "images": [
+      "assets/screenshots/customs-finansovaea-088abdaa.jpg"
+    ],
+    "captionEn": "Shack next to Tarcone"
+  },
+  {
+    "id": "customs-5",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "2 этаж трёхэтажного общежития (комната 212), у внешней лестницы к машине",
+    "x": 89.311,
+    "y": 95.231,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-22af2577.jpg",
+      "assets/screenshots/customs-finansovaea-6b02b372.jpg"
+    ],
+    "captionEn": "2nd floor of the three-story dorms (room 212), by the outside stairs to the car"
+  },
+  {
+    "id": "customs-7",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "2 этаж библиотеки",
+    "x": 65.025,
+    "y": 7.586,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-f3e73363.jpg"
+    ],
+    "captionEn": "2nd floor of the Library"
+  },
+  {
+    "id": "customs-8",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "2 этаж библиотеки",
+    "x": 65.043,
+    "y": 8.476,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-ffb79280.jpg"
+    ],
+    "captionEn": "2nd floor of the Library"
+  },
+  {
+    "id": "customs-9",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На столе на Старой Заправке",
+    "x": 35.107,
+    "y": 17.28,
+    "floor": null,
+    "images": [
+      "assets/screenshots/customs-finansovaea-ce653c81.jpg"
+    ],
+    "captionEn": "On the table at the Old Gas Station"
+  },
+  {
+    "id": "customs-10",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "3 этаж здания с изображением Винни-Пуха в офисе",
+    "x": 38.232,
+    "y": 36.189,
+    "floor": "Third_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-d45a0392.jpg"
+    ],
+    "captionEn": "3rd floor office of the building with the Winnie-the-Pooh mural"
+  },
+  {
+    "id": "customs-11",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Двухэтажное общежитие в комнате запертой на «Ключ от проходной общежития»",
+    "x": 69.917,
+    "y": 83.579,
+    "floor": "First_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-2a0cf8b3.jpg"
+    ],
+    "captionEn": "Two-story dorms, room locked with the dorm checkpoint key"
+  },
+  {
+    "id": "customs-12",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Времянка рядом с Библиотекой (Ближайшая к Складу 17)",
+    "x": 59.723,
+    "y": 29.909,
+    "floor": null,
+    "images": [
+      "assets/screenshots/customs-finansovaea-e1dae0bb.jpg"
+    ],
+    "captionEn": "Shack next to the Library (the one closest to Warehouse 17)"
+  },
+  {
+    "id": "customs-13",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "2 этаж офисов Таркона",
+    "x": 90.015,
+    "y": 64.401,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-8e356705.jpg"
+    ],
+    "captionEn": "2nd floor of the Tarcone offices"
+  },
+  {
+    "id": "customs-14",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "2 этаж котельной в помещении запертой на «Ключ от кабинета директора предприятия»",
+    "x": 56.549,
+    "y": 39.785,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-finansovaea-53f0b104.jpg"
+    ],
+    "captionEn": "2nd floor of the boiler room, in the room locked with the plant manager's office key"
+  },
+  {
+    "id": "interchange-15",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В офисах между Goshan и OLI",
+    "x": 82.438,
+    "y": 60.618,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-finansovaea-7070dfe6.jpg"
+    ],
+    "captionEn": "Offices between Goshan and OLI"
+  },
+  {
+    "id": "interchange-16",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В офисах IDEA рядом с лагерем Бати",
+    "x": 78.554,
+    "y": 27.921,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-finansovaea-d4c8d0fc.jpg"
+    ],
+    "captionEn": "IDEA offices next to Batya's camp"
+  },
+  {
+    "id": "interchange-17",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В офисах между Goshan и IDEA",
+    "x": 82.388,
+    "y": 41.466,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-finansovaea-b8d6456f.jpg"
+    ],
+    "captionEn": "Offices between Goshan and IDEA"
+  },
+  {
+    "id": "interchange-18",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На круглом столе в новом лагере контрабандистов",
+    "x": 8.975,
+    "y": 72.463,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-finansovaea-529890ed.jpg"
+    ],
+    "captionEn": "On the round table in the new smugglers' camp"
+  },
+  {
+    "id": "streets-19",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В здании Cardinal «Unity Bank»",
+    "x": 49.092,
+    "y": 33.135,
+    "floor": null,
+    "images": [
+      "assets/screenshots/streets-finansovaea-4b65dcd9.jpg"
+    ],
+    "captionEn": "Cardinal building, \"Unity Bank\""
+  },
+  {
+    "id": "streets-20",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В офисе TerraGroup в ЖК Cardinal",
+    "x": 50.298,
+    "y": 28.67,
+    "floor": null,
+    "images": [
+      "assets/screenshots/streets-finansovaea-56fda3a2.jpg"
+    ],
+    "captionEn": "TerraGroup office in the Cardinal residential complex"
+  },
+  {
+    "id": "reserve-21",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Комната РБ-ОБ",
+    "x": 90.657,
+    "y": 65.009,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-personal-1d8e1e9a.jpg"
+    ],
+    "captionEn": "RB-OB room"
+  },
+  {
+    "id": "reserve-22",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Комната коменданта в Королеве (чупик)",
+    "x": 69.485,
+    "y": 77.397,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-personal-470cfcf2.jpg"
+    ],
+    "captionEn": "Commandant's room in the Queen building (dead end)"
+  },
+  {
+    "id": "reserve-23",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На третьем этаже чёрного коня (комната с компьютерами)",
+    "x": 9.16,
+    "y": 91.333,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-personal-7b4b5846.jpg"
+    ],
+    "captionEn": "3rd floor of the Black Knight (the room with computers)"
+  },
+  {
+    "id": "reserve-24",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В комнате на РЛС рядом с серверной (необходим ключ Ключ РБ-РЛСА)",
+    "x": 70.326,
+    "y": 78.5,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-personal-b970edc5.jpg"
+    ],
+    "captionEn": "Room at the radar station next to the server room (needs the RB-RLSA key)"
+  },
+  {
+    "id": "reserve-25",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В подвалах под Чёрным Слоном",
+    "x": 91.852,
+    "y": 9.769,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-personal-f6c1683c.jpg"
+    ],
+    "captionEn": "Basements under the Black Bishop"
+  },
+  {
+    "id": "customs-26",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж трёхэтажного общежития (комната 212)",
+    "x": 88.752,
+    "y": 95.287,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-17b9886f.jpg"
+    ],
+    "captionEn": "2nd floor of the three-story dorms (room 212)"
+  },
+  {
+    "id": "customs-27",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж котельной в помещении запертой на «Ключ от кабинета директора предприятия»",
+    "x": 56.732,
+    "y": 40.391,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-102cd1f3.jpg"
+    ],
+    "captionEn": "2nd floor of the boiler room, in the room locked with the plant manager's office key"
+  },
+  {
+    "id": "customs-28",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В здании котельной в СТО",
+    "x": 55.103,
+    "y": 34.465,
+    "floor": null,
+    "images": [
+      "assets/screenshots/customs-proectnaea-fab5ef32.jpg"
+    ],
+    "captionEn": "In the boiler building of the auto repair shop"
+  },
+  {
+    "id": "customs-29",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж в Библиотеке",
+    "x": 64.789,
+    "y": 8.055,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-2967e39b.jpg"
+    ],
+    "captionEn": "2nd floor of the Library"
+  },
+  {
+    "id": "customs-30",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж в Библиотеке",
+    "x": 65.04,
+    "y": 6.583,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-9afb3a8d.jpg"
+    ],
+    "captionEn": "2nd floor of the Library"
+  },
+  {
+    "id": "customs-31",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В одном из жилых помещений Склада 17",
+    "x": 62.712,
+    "y": 38.062,
+    "floor": null,
+    "images": [
+      "assets/screenshots/customs-proectnaea-510ee71b.jpg"
+    ],
+    "captionEn": "In one of the living quarters of Warehouse 17"
+  },
+  {
+    "id": "customs-32",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж закрытых офисов Таркона",
+    "x": 89.458,
+    "y": 64.389,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-29054a23.jpg"
+    ],
+    "captionEn": "2nd floor of the locked Tarcone offices"
+  },
+  {
+    "id": "customs-33",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На входе рядом со шкафом на Старой Заправке",
+    "x": 35.369,
+    "y": 17.325,
+    "floor": null,
+    "images": [
+      "assets/screenshots/customs-proectnaea-58f248e7.jpg"
+    ],
+    "captionEn": "By the entrance, next to the cabinet at the Old Gas Station"
+  },
+  {
+    "id": "customs-34",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "216 комната двухэтажного общежития",
+    "x": 62.07,
+    "y": 94.837,
+    "floor": "Second_Floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-d02f2e19.jpg"
+    ],
+    "captionEn": "Room 216 of the two-story dorms"
+  },
+  {
+    "id": "factory-35",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Офисы на 3 этаже (комната выбивается с ноги)",
+    "x": 5.618,
+    "y": 49.438,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-24de8d5c.jpg"
+    ],
+    "captionEn": "3rd floor offices (the room you kick open)"
+  },
+  {
+    "id": "factory-36",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В подсобке TerraGroup запертой на «Ключ-карта от склада TerraGroup»",
+    "x": 77.032,
+    "y": 76.457,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-fef307dd.jpg"
+    ],
+    "captionEn": "TerraGroup utility room locked with the TerraGroup storage keycard"
+  },
+  {
+    "id": "factory-37",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Железная будка рядом с выходом «Ворота 3»",
+    "x": 56.826,
+    "y": 31.891,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-9a03360a.jpg"
+    ],
+    "captionEn": "Iron shack next to the \"Gate 3\" extract"
+  },
+  {
+    "id": "factory-38",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "1 этаж лаборатории в шкафчике",
+    "x": 67.627,
+    "y": 47.114,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-945a5c7f.jpg"
+    ],
+    "captionEn": "1st floor of the laboratory, in a locker"
+  },
+  {
+    "id": "factory-39",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В трансформаторах рядом с надписью на стене «1986»",
+    "x": 32.035,
+    "y": 76.676,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-b31d2cdc.jpg"
+    ],
+    "captionEn": "In the transformers next to the \"1986\" writing on the wall"
+  },
+  {
+    "id": "factory-40",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На 1 этаже в запертой комнате офисов завода (попасть можно через окно с улицы)",
+    "x": 53.539,
+    "y": 48.114,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-ac5f7798.jpg"
+    ],
+    "captionEn": "1st floor, locked room in the plant offices (reachable through the window from outside)"
+  },
+  {
+    "id": "factory-41",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "3 этаж офисов завода в комнате с сейфом",
+    "x": 53.443,
+    "y": 57.041,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-ca8c5c11.jpg"
+    ],
+    "captionEn": "3rd floor of the plant offices, in the room with the safe"
+  },
+  {
+    "id": "factory-42",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж в лаборатории",
+    "x": 40.585,
+    "y": 48.634,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-d40ab6b1.jpg"
+    ],
+    "captionEn": "2nd floor of the laboratory"
+  },
+  {
+    "id": "factory-43",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "1 этаж Лаборатории в коридоре",
+    "x": 67.639,
+    "y": 42.717,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-0e4e1ea2.jpg"
+    ],
+    "captionEn": "1st floor of the laboratory, in the corridor"
+  },
+  {
+    "id": "factory-44",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Офис завода на 3 этаже в комнате с сейфом",
+    "x": 5.874,
+    "y": 51.762,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-proectnaea-b19c6f35.jpg"
+    ],
+    "captionEn": "3rd floor plant office, in the room with the safe"
+  },
+  {
+    "id": "reserve-45",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Подземный бункер в центральном офисе",
+    "x": 90.467,
+    "y": 17.661,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-proectnaea-0f759efc.jpg"
+    ],
+    "captionEn": "Underground bunker in the central office"
+  },
+  {
+    "id": "reserve-46",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Подземный бункер в офисе",
+    "x": 90.445,
+    "y": 17.425,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-proectnaea-635bd634.jpg"
+    ],
+    "captionEn": "Underground bunker, in the office"
+  },
+  {
+    "id": "reserve-47",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В комнате Королеве рядом с серверной (необходим ключ Ключ РБ-РЛСА)",
+    "x": 70.315,
+    "y": 77.987,
+    "floor": null,
+    "images": [
+      "assets/screenshots/reserve-proectnaea-b454c5aa.jpg"
+    ],
+    "captionEn": "Room in the Queen building next to the server room (needs the RB-RLSA key)"
+  },
+  {
+    "id": "interchange-48",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Офис между Goshan и IDEA",
+    "x": 82.452,
+    "y": 41.66,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-d8222685.jpg"
+    ],
+    "captionEn": "Office between Goshan and IDEA"
+  },
+  {
+    "id": "interchange-49",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Офисы между Goshan и OLI (комната с пультом выкл. сигнализации)",
+    "x": 82.134,
+    "y": 61.105,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-9d07335f.jpg"
+    ],
+    "captionEn": "Offices between Goshan and OLI (the room with the alarm shut-off panel)"
+  },
+  {
+    "id": "interchange-50",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Офисы OLI",
+    "x": 74.311,
+    "y": 71.117,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-bcce7bab.jpg"
+    ],
+    "captionEn": "OLI offices"
+  },
+  {
+    "id": "interchange-51",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Офисы OLI",
+    "x": 74.461,
+    "y": 71.383,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-ea57bbca.jpg"
+    ],
+    "captionEn": "OLI offices"
+  },
+  {
+    "id": "interchange-52",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Офис администрации OLI",
+    "x": 73.881,
+    "y": 65.832,
+    "floor": null,
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-3e3b5c7b.jpg"
+    ],
+    "captionEn": "OLI administration office"
+  },
+  {
+    "id": "factory-53",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На 3 этаже в офисах завода в комнате с сейфом",
+    "x": 5.717,
+    "y": 51.762,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-911667f8.jpg"
+    ],
+    "captionEn": "3rd floor of the plant offices, in the room with the safe"
+  },
+  {
+    "id": "factory-54",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Первый этаж лаборатории",
+    "x": 67.596,
+    "y": 48.793,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-42b41034.jpg"
+    ],
+    "captionEn": "1st floor of the laboratory"
+  },
+  {
+    "id": "factory-55",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "1 этаж офисов завода у сейфа",
+    "x": 54.048,
+    "y": 57.125,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-362fe9bb.jpg"
+    ],
+    "captionEn": "1st floor of the plant offices, by the safe"
+  },
+  {
+    "id": "factory-56",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "3 этаж офисов завода (комната запертая на «Ключ от Завода»)",
+    "x": 5.661,
+    "y": 46.884,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-6619945a.jpg"
+    ],
+    "captionEn": "3rd floor of the plant offices (room locked with the Factory key)"
+  },
+  {
+    "id": "factory-57",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "1 этаж лаборатории",
+    "x": 67.797,
+    "y": 44.796,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-d3fc0032.jpg"
+    ],
+    "captionEn": "1st floor of the laboratory"
+  },
+  {
+    "id": "factory-58",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Закрытая комната на 1 этаже офисов завода (забраться можно с улицы через окно)",
+    "x": 53.715,
+    "y": 48.076,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-8262dadb.jpg"
+    ],
+    "captionEn": "Locked room on the 1st floor of the plant offices (climb in through the window from outside)"
+  },
+  {
+    "id": "factory-59",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Железная времянка рядом с «Выходом 3»",
+    "x": 57.449,
+    "y": 31.888,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-f5d12674.jpg"
+    ],
+    "captionEn": "Iron shack next to the \"Gate 3\" extract"
+  },
+  {
+    "id": "factory-60",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "3 этаж офисов завода в открытой картотеке в коридоре",
+    "x": 6.509,
+    "y": 49.45,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-dd7a9f36.jpg"
+    ],
+    "captionEn": "3rd floor of the plant offices, in the open filing cabinet in the corridor"
+  },
+  {
+    "id": "factory-61",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В мед. палатке рядом с выходом «Ворота у медицинской палатки»",
+    "x": 66.429,
+    "y": 73.581,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-560eeda1.jpg"
+    ],
+    "captionEn": "In the medical tent next to the \"Gate next to the medical tent\" extract"
+  },
+  {
+    "id": "factory-62",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Под железной лестницей рядом с офисами завода",
+    "x": 58.027,
+    "y": 45.467,
+    "floor": null,
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-8e57b00a.jpg"
+    ],
+    "captionEn": "Under the iron stairs next to the plant offices"
+  },
+  {
+    "id": "woods-63",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "База МЧС в контейнере с трупом",
+    "x": 60.394,
+    "y": 82.453,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-4da9dae4.jpg"
+    ],
+    "captionEn": "EMERCOM base, in the container with the corpse"
+  },
+  {
+    "id": "woods-64",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На 2 этаже Старой Лесопилки",
+    "x": 83.735,
+    "y": 51.864,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-13174155.jpg"
+    ],
+    "captionEn": "2nd floor of the Old Sawmill"
+  },
+  {
+    "id": "woods-65",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Двухэтажное кирпичное здание в груде папок в деревне",
+    "x": 78.17,
+    "y": 40.821,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-64021406.jpg"
+    ],
+    "captionEn": "Two-story brick building in the village, in a pile of folders"
+  },
+  {
+    "id": "woods-66",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Двухэтажный дом с комнатой одного из Чемпионов Арены на втором этаже в деревне",
+    "x": 81.522,
+    "y": 38.878,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-410d1243.jpg"
+    ],
+    "captionEn": "Two-story house in the village, 2nd floor room of one of the Arena Champions"
+  },
+  {
+    "id": "woods-67",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На старой лесопилке в здании с антеной",
+    "x": 81.499,
+    "y": 53.873,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-26ff0758.jpg"
+    ],
+    "captionEn": "Old Sawmill, in the building with the antenna"
+  },
+  {
+    "id": "woods-68",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Лагерь USEC (ближайший к дороге), на пластиковом стуле за ближайшими мешками с песком",
+    "x": 27.672,
+    "y": 35.873,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-9b22f589.jpg"
+    ],
+    "captionEn": "USEC camp (the one closest to the road), on the plastic chair behind the nearest sandbags"
+  },
+  {
+    "id": "woods-69",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В железной будке на КПП USEC",
+    "x": 30.106,
+    "y": 61.283,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-545acca3.jpg"
+    ],
+    "captionEn": "In the iron shack at the USEC checkpoint"
+  },
+  {
+    "id": "woods-70",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Лагерь USEC на палете в лежаке",
+    "x": 27.886,
+    "y": 35.769,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-9a6e3101.jpg"
+    ],
+    "captionEn": "USEC camp, on a pallet in the sleeping spot"
+  },
+  {
+    "id": "woods-71",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Лагерь USEC на столе с трупом",
+    "x": 27.176,
+    "y": 29.899,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-testovaea-dfbe007d.jpg"
+    ],
+    "captionEn": "USEC camp, on the table with the corpse"
+  },
+  {
+    "id": "icebreaker-72",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На столе на 1 этаже в медицинском корпусе (смежное помещение с трупом инженера)",
+    "x": 68.175,
+    "y": 43.735,
+    "floor": null,
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-c14cc0f6.jpg"
+    ],
+    "captionEn": "On the table on the 1st floor of the medical block (the room adjoining the engineer's corpse)"
+  },
+  {
+    "id": "icebreaker-73",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На спавне (в небольшой будке с РСП-30)",
+    "x": 67.538,
+    "y": 54.613,
+    "floor": null,
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-ff0ffa91.jpg"
+    ],
+    "captionEn": "At the spawn (in the small shack with an RSP-30)"
+  },
+  {
+    "id": "icebreaker-74",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Рубка на вертолётной площадкой (там же спавн РСП-30 и АМГ-10)",
+    "x": 46.52,
+    "y": 20.535,
+    "floor": null,
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-ecf52dcf.jpg"
+    ],
+    "captionEn": "The bridge above the helipad (RSP-30 and AMG-10 spawn there too)"
+  },
+  {
+    "id": "streets-75",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Офис TerraGroup (комната охраны) в здании Cardinal",
+    "x": 50.374,
+    "y": 27.74,
+    "floor": null,
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-39545c81.jpg"
+    ],
+    "captionEn": "TerraGroup office (security room) in the Cardinal building"
+  },
+  {
+    "id": "streets-76",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж Фин. учреждения напротив Шестёрочки рядом с выходом «Река в коллекторе» (в этом здании раньше забиралась папка по квесту «Аудит»)",
+    "x": 80.561,
+    "y": 73.251,
+    "floor": null,
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-dfb59121.jpg"
+    ],
+    "captionEn": "2nd floor of the financial institution opposite Shestyorochka, next to the \"Sewer River\" extract (the folder for the \"Audit\" quest used to be here)"
+  },
+  {
+    "id": "groundzero-77",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж офиса TerraGroup (помещение с мед. сумками)",
+    "x": 62.22,
+    "y": 37.219,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-d2347242.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room with medical bags)"
+  },
+  {
+    "id": "groundzero-78",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж офиса TerraGroup (помещение где выполняется квест Механика «Спасение крота»)",
+    "x": 62.629,
+    "y": 34.898,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-452e23cb.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room where Mechanic's \"Saving the Mole\" quest is done)"
+  },
+  {
+    "id": "groundzero-79",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Ресторан «Fusion» на 2 этаже",
+    "x": 9.381,
+    "y": 49.78,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-6958e3c5.jpg"
+    ],
+    "captionEn": "\"Fusion\" restaurant on the 2nd floor"
+  },
+  {
+    "id": "groundzero-80",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж офиса TerraGroup, лавка в тупике",
+    "x": 65.707,
+    "y": 39.163,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-1f33bb92.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office, bench in the dead end"
+  },
+  {
+    "id": "groundzero-81",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Будка охраны рядом с выходом «Проспект Мира»",
+    "x": 19.936,
+    "y": 32.931,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-6eab148c.jpg"
+    ],
+    "captionEn": "Security booth next to the \"Mira Ave\" extract"
+  },
+  {
+    "id": "groundzero-82",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж офиса TerraGroup на стойке ресепшена",
+    "x": 67.153,
+    "y": 36.504,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-72a770ce.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office, on the reception desk"
+  },
+  {
+    "id": "groundzero-83",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж офиса TerraGroup (помещение с мед. сумками)",
+    "x": 64.743,
+    "y": 39.097,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-2bdf3f5d.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room with medical bags)"
+  },
+  {
+    "id": "lab-84",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Шкаф в «Молекуле»",
+    "x": 77.04,
+    "y": 8.234,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-c1d1db70.jpg"
+    ],
+    "captionEn": "Cabinet in the \"Molecule\""
+  },
+  {
+    "id": "lab-85",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В комнате охраны запертой на «Ключ-карта TerraGroup Labs (Желтая)»",
+    "x": 74.295,
+    "y": 20.363,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-ba2e37c3.jpg"
+    ],
+    "captionEn": "Security room locked with the TerraGroup Labs keycard (Yellow)"
+  },
+  {
+    "id": "lab-86",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На столе в офисе управляющего",
+    "x": 80.679,
+    "y": 34.887,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-9b0e6564.jpg"
+    ],
+    "captionEn": "On the table in the manager's office"
+  },
+  {
+    "id": "lab-87",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На кнопке с открытием ворот на парковку",
+    "x": 74.24,
+    "y": 12.157,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-4726545c.jpg"
+    ],
+    "captionEn": "On the button that opens the parking gate"
+  },
+  {
+    "id": "lab-88",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Внутри жилого модуля",
+    "x": 29.732,
+    "y": 84.264,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-c1d1a890.jpg"
+    ],
+    "captionEn": "Inside the living module"
+  },
+  {
+    "id": "lab-89",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж в офисах TerraGroup",
+    "x": 69.629,
+    "y": 28.675,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-ec3b95f9.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup offices"
+  },
+  {
+    "id": "lab-90",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В комнате охраны (в этом же помещении используется Красная и Фиолетовая ключ-карты)",
+    "x": 83.386,
+    "y": 5.429,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-8165499b.jpg"
+    ],
+    "captionEn": "Security room (the Red and Violet keycards are used in the same room)"
+  },
+  {
+    "id": "lab-91",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В молекуле на столе",
+    "x": 76.609,
+    "y": 5.799,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-4ab3c2a2.jpg"
+    ],
+    "captionEn": "On the table in the Molecule"
+  },
+  {
+    "id": "groundzero-92",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Офис TerraGroup на 2 этаже (помещение с мед. сумками)",
+    "x": 62.35,
+    "y": 35.64,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-9ea4d45b.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room with medical bags)"
+  },
+  {
+    "id": "groundzero-93",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "2 этаж офиса TerraGroup (помещение где выполняется квест Механика «Спасение крота»)",
+    "x": 62.117,
+    "y": 36.354,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-ca7ea643.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room where Mechanic's \"Saving the Mole\" quest is done)"
+  },
+  {
+    "id": "groundzero-94",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Кафетерий рядом с офисом TerraGroup",
+    "x": 47.924,
+    "y": 36.604,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-a917d387.jpg"
+    ],
+    "captionEn": "Cafeteria next to the TerraGroup office"
+  },
+  {
+    "id": "groundzero-95",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Офис TerraGroup на 2 этаже (помещение с мед. сумками)",
+    "x": 62.865,
+    "y": 37.867,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-f22d151c.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room with medical bags)"
+  },
+  {
+    "id": "groundzero-96",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В здании «Oasis» на 2 этаже",
+    "x": 11.988,
+    "y": 43.922,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-d17a3cd7.jpg"
+    ],
+    "captionEn": "2nd floor of the \"Oasis\" building"
+  },
+  {
+    "id": "groundzero-97",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "2 этаж офиса TerraGroup (помещение где выполняется квест Механика «Спасение крота»)",
+    "x": 64.348,
+    "y": 33.064,
+    "floor": null,
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-9af31f61.jpg"
+    ],
+    "captionEn": "2nd floor of the TerraGroup office (the room where Mechanic's \"Saving the Mole\" quest is done)"
+  },
+  {
+    "id": "lab-98",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе в закрытом лабораторном корпусе рядом с жилым модулем (чтобы попасть в корпус необходимо подать питание в смежном помещении)",
+    "x": 31.158,
+    "y": 92.134,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-02315f58.jpg"
+    ],
+    "captionEn": "On the table in the closed lab block next to the living module (to get in, power must be switched on in the adjoining room)"
+  },
+  {
+    "id": "lab-99",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В зоне для экспериментов запертой на «Ключ-карта TerraGroup Labs (Черная)»",
+    "x": 45.016,
+    "y": 80.88,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-9487c3fc.jpg"
+    ],
+    "captionEn": "Experiment area locked with the TerraGroup Labs keycard (Black)"
+  },
+  {
+    "id": "lab-100",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "3 этаж в открытых палатах",
+    "x": 70.968,
+    "y": 43.833,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-95debea1.jpg"
+    ],
+    "captionEn": "3rd floor, in the open wards"
+  },
+  {
+    "id": "lab-101",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "3 этаж в открытых палатах",
+    "x": 70.555,
+    "y": 43.833,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-2b7a6a2a.jpg"
+    ],
+    "captionEn": "3rd floor, in the open wards"
+  },
+  {
+    "id": "lab-102",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Синяя)»",
+    "x": 37.42,
+    "y": 80.846,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-f6fd1b19.jpg"
+    ],
+    "captionEn": "On the table in the room locked with the TerraGroup keycard (Blue)"
+  },
+  {
+    "id": "lab-103",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»",
+    "x": 77.027,
+    "y": 43.705,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-c14316bf.jpg"
+    ],
+    "captionEn": "On the table in the room locked with the TerraGroup keycard (Green)"
+  },
+  {
+    "id": "lab-104",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе в закрытом лабораторном корпусе рядом с жилым модулем (чтобы попасть в корпус необходимо подать питание в смежном помещении)",
+    "x": 30.191,
+    "y": 86.93,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-08ffa1c7.jpg"
+    ],
+    "captionEn": "On the table in the closed lab block next to the living module (to get in, power must be switched on in the adjoining room)"
+  },
+  {
+    "id": "lab-105",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Круглый стол на «Котах»",
+    "x": 80.697,
+    "y": 15.327,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-71ba8e85.jpg"
+    ],
+    "captionEn": "Round table at the \"Cats\""
+  },
+  {
+    "id": "lab-106",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "3 этаж в открытой лаборатории",
+    "x": 70.78,
+    "y": 44.59,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-bb4832d6.jpg"
+    ],
+    "captionEn": "3rd floor, in the open laboratory"
+  },
+  {
+    "id": "lab-107",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В лаборатории запертой на «Ключ-карта TerraGroup Labs (Синяя)»",
+    "x": 37.445,
+    "y": 81.692,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-da110a91.jpg"
+    ],
+    "captionEn": "Laboratory locked with the TerraGroup Labs keycard (Blue)"
+  },
+  {
+    "id": "lab-108",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе лаборанта рядом с запертой лабараторией на «Ключ-карта TerraGroup Labs (Синяя)»",
+    "x": 37.581,
+    "y": 80.188,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-db320295.jpg"
+    ],
+    "captionEn": "On the lab assistant's table next to the laboratory locked with the TerraGroup Labs keycard (Blue)"
+  },
+  {
+    "id": "labyrinth-109",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Комната наблюдения",
+    "x": null,
+    "y": null,
+    "floor": null,
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-d4e7d610.jpg"
+    ],
+    "captionEn": "Observation room"
+  },
+  {
+    "id": "labyrinth-110",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На трупе медработника (рядом с комнатой наблюдения)",
+    "x": null,
+    "y": null,
+    "floor": null,
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-f4e7853b.jpg"
+    ],
+    "captionEn": "On the medic's corpse (next to the observation room)"
+  },
+  {
+    "id": "shoreline-111",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В одном из ангаров на Базе Контрабандистов",
+    "x": 57.887,
+    "y": 42.133,
+    "floor": null,
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-f2c51000.jpg"
+    ],
+    "captionEn": "In one of the hangars at the Smugglers' base"
+  },
+  {
+    "id": "shoreline-112",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В Санатории в административном корпусе в комнате с открытым сейфом",
+    "x": 60.164,
+    "y": 9.903,
+    "floor": null,
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-53926fe5.jpg"
+    ],
+    "captionEn": "Health Resort, administrative building, in the room with the open safe"
+  },
+  {
+    "id": "shoreline-113",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На 1 этаже ГЭС в комнате смежной с убежищем Чемпиона Арены (Заперт на навесной замок, который ломается от выстрела по нему)",
+    "x": 38.886,
+    "y": 68.704,
+    "floor": null,
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-92a64719.jpg"
+    ],
+    "captionEn": "1st floor of the power station, in the room adjoining the Arena Champion's hideout (padlocked; the lock breaks if you shoot it)"
+  },
+  {
+    "id": "shoreline-114",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "3 этаж восточного корпуса Санатория",
+    "x": 80.199,
+    "y": 72.286,
+    "floor": null,
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-776726f7.jpg"
+    ],
+    "captionEn": "3rd floor of the east wing of the Health Resort"
+  },
+  {
+    "id": "woods-115",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В упавшем самолёте",
+    "x": 63.591,
+    "y": 64.516,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-5c73fd0b.jpg"
+    ],
+    "captionEn": "In the crashed plane"
+  },
+  {
+    "id": "woods-116",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Железная времянка рядом со Старой Лесопилкой",
+    "x": 79.039,
+    "y": 53.67,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-e779f701.jpg"
+    ],
+    "captionEn": "Iron shack next to the Old Sawmill"
+  },
+  {
+    "id": "woods-117",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Подземный бункер возле деревни",
+    "x": 76.124,
+    "y": 21.194,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-ec8956e7.jpg"
+    ],
+    "captionEn": "Underground bunker near the village"
+  },
+  {
+    "id": "woods-118",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "2 этаж времянки рядом с вышкой связи",
+    "x": 37.257,
+    "y": 15.243,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-5f4eff35.jpg"
+    ],
+    "captionEn": "2nd floor of the shack next to the communication tower"
+  },
+  {
+    "id": "woods-119",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Подбитая машина рядом с домом диких",
+    "x": 21.324,
+    "y": 75.072,
+    "floor": null,
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-b7973515.jpg"
+    ],
+    "captionEn": "Wrecked car next to the Scav House"
+  },
+  {
+    "id": "lighthouse-120",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Комната на 2 этаже в 1 ангаре на базе Отступников",
+    "x": 43.814,
+    "y": 29.377,
+    "floor": null,
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-24bbf597.jpg"
+    ],
+    "captionEn": "Room on the 2nd floor of hangar 1 at the Rogue base"
+  }
+]

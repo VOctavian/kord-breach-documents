@@ -1,0 +1,10 @@
+[
+  { "id": "finansovaea", "name": "Финансовая документация", "nameEn": "Financial documentation", "icon": "documentations/finansovaea.png", "color": "#7fa8d4" },
+  { "id": "personal", "name": "Личные данные ЧВК", "nameEn": "PMC personal data", "icon": "documentations/personal.png", "color": "#d4b37f" },
+  { "id": "proectnaea", "name": "Проектная документация", "nameEn": "Project documentation", "icon": "documentations/proectnaea.png", "color": "#8fd47f" },
+  { "id": "tehnicheskaea", "name": "Чертежи и тех. документация", "nameEn": "Blueprints & technical documentation", "icon": "documentations/tehnicheskaea.png", "color": "#d47f7f" },
+  { "id": "testovaea", "name": "Тестовая документация", "nameEn": "Test documentation", "icon": "documentations/testovaea.png", "color": "#c07fd4" },
+  { "id": "polzovatelskoe", "name": "Пользовательская документация", "nameEn": "User documentation", "icon": "documentations/polzovatelskoe.png", "color": "#d4cf7f" },
+  { "id": "meditsinskaea", "name": "Медицинская документация", "nameEn": "Medical documentation", "icon": "documentations/meditsinskaea.png", "color": "#7fd4c8" },
+  { "id": "expluatationnaea", "name": "Эксплуатационная документация", "nameEn": "Operational documentation", "icon": "documentations/expluatationnaea.png", "color": "#d49f7f" }
+]

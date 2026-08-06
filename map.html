@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта — Kord Breach</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="btn" href="index.html" data-i18n="backToMaps">← Локации</a>
+    <h1 id="map-name">…</h1>
+    <span class="sub" id="map-sub"></span>
+    <span class="spacer"></span>
+    <span id="lang-slot"></span>
+    <button class="btn" id="fit" data-i18n="fitLabel">Вписать</button>
+    <a class="btn" id="edit-link" href="#" data-i18n="editorShort">Редактор</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="group">
+        <h3 data-i18n="docTypeHeader">Тип документации</h3>
+        <div id="filters"></div>
+      </div>
+      <div class="group" id="floors-group" hidden>
+        <h3 data-i18n="floorHeader">Этаж</h3>
+        <div class="floor-list" id="floors"></div>
+      </div>
+      <div class="group">
+        <h3 data-i18n="spawnListHeader">Точки спавна</h3>
+        <div class="spawn-list" id="spawn-list"></div>
+      </div>
+    </aside>
+
+    <div class="viewport" id="viewport">
+      <div class="hint" data-i18n="mapHint"></div>
+      <div class="zoom-ctl">
+        <button class="btn" id="zin" data-i18n-title="zoomIn">+</button>
+        <button class="btn" id="zout" data-i18n-title="zoomOut">−</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <img class="doc" id="m-icon" alt="">
+        <div class="t">
+          <div class="doc-name" id="m-doc"></div>
+          <div class="cap" id="m-cap"></div>
+        </div>
+        <div class="counter" id="m-counter"></div>
+        <button class="x" id="m-close" data-i18n-title="closeEsc">×</button>
+      </div>
+      <div class="modal-body">
+        <button class="nav-btn prev" id="m-prev" data-i18n-title="prevTitle">‹</button>
+        <img class="shot" id="m-shot" alt="">
+        <button class="nav-btn next" id="m-next" data-i18n-title="nextTitle">›</button>
+      </div>
+      <div class="modal-foot">
+        <span id="m-map"></span>
+        <span id="m-floor"></span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/map.js"></script>
+</body>
+</html>

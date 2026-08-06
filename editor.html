@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Редактор точек — Kord Breach</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="btn" href="index.html">← Локации</a>
+    <h1>Редактор</h1>
+    <select class="btn" id="map-select"></select>
+    <span class="sub" id="progress-text"></span>
+    <span class="spacer"></span>
+    <span class="status" id="status"></span>
+    <button class="btn primary" id="save">Сохранить</button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="group editor-panel">
+        <div class="progress"><div id="progress-bar" style="width:0%"></div></div>
+
+        <label class="fld">
+          <span>Тип документации</span>
+          <select id="e-doc"></select>
+        </label>
+
+        <label class="fld">
+          <span>Описание (RU)</span>
+          <textarea id="e-cap-ru" rows="3" placeholder="Где лежит документ"></textarea>
+        </label>
+
+        <label class="fld">
+          <span>Описание (EN)</span>
+          <textarea id="e-cap-en" rows="3" placeholder="Where the document is"></textarea>
+        </label>
+
+        <img class="editor-shot" id="e-shot" alt="" title="Клик — открыть в полном размере">
+        <div class="editor-thumbs" id="e-thumbs"></div>
+
+        <div class="editor-nav">
+          <button class="btn" id="add-shot">+ Скриншот</button>
+          <button class="btn" id="del-shot">Убрать фото</button>
+        </div>
+        <input type="file" id="shot-input" accept="image/png,image/jpeg,image/webp" multiple hidden>
+
+        <div class="editor-nav">
+          <button class="btn" id="prev">← Пред</button>
+          <button class="btn" id="next">След →</button>
+        </div>
+        <div class="editor-nav">
+          <button class="btn" id="next-empty">К неразмеченной</button>
+          <button class="btn" id="clear">Сброс координат</button>
+        </div>
+        <div class="editor-nav">
+          <button class="btn primary" id="new-spawn">+ Новый спавн</button>
+          <button class="btn danger" id="del-spawn">Удалить точку</button>
+        </div>
+      </div>
+
+      <div class="group" id="floors-group" hidden>
+        <h3>Этаж (запишется в точку)</h3>
+        <div class="floor-list" id="floors"></div>
+      </div>
+
+      <div class="group">
+        <h3>Все точки локации</h3>
+        <div class="spawn-list" id="spawn-list"></div>
+      </div>
+    </aside>
+
+    <div class="viewport placing" id="viewport">
+      <div class="hint">Клик по карте — поставить точку · колесо — зум · перетаскивание — сдвиг</div>
+      <div class="zoom-ctl">
+        <button class="btn" id="zin">+</button>
+        <button class="btn" id="zout">−</button>
+        <button class="btn" id="fit" title="Вписать">⤢</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div class="t"><div class="cap" id="m-cap"></div></div>
+        <button class="x" id="m-close">×</button>
+      </div>
+      <div class="modal-body"><img class="shot" id="m-shot" alt=""></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/editor.js"></script>
+</body>
+</html>
