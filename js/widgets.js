@@ -1,6 +1,7 @@
 // Общие для всех страниц виджеты: переключатель языка, «Угостить кофе», фидбэк в Discord.
 import { t, lang, setLang, applyI18n } from './i18n.js';
 import { el } from './common.js';
+import { trackEvent } from './analytics.js';
 
 export const DISCORD_INVITE = 'https://discord.gg/GUeWxXf9R';
 
@@ -111,7 +112,13 @@ export function mountWidgets() {
     el('p', { class: 'pop-intro', 'data-i18n': 'feedbackIntro' }),
     el(
       'a',
-      { class: 'btn primary discord-btn', href: DISCORD_INVITE, target: '_blank', rel: 'noopener noreferrer' },
+      {
+        class: 'btn primary discord-btn',
+        href: DISCORD_INVITE,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+        onclick: () => trackEvent('discord-open'),
+      },
       t('discordJoin')
     ),
     el('div', { class: 'pop-method' }, el('div', { class: 'pop-value' }, DISCORD_INVITE.replace('https://', ''))),
@@ -128,7 +135,10 @@ export function mountWidgets() {
         type: 'button',
         'data-i18n': 'coffeeBtnLabel',
         'data-i18n-title': 'coffeeBtnTitle',
-        onclick: () => coffee.classList.add('open'),
+        onclick: () => {
+          coffee.classList.add('open');
+          trackEvent('coffee-open');
+        },
       },
       t('coffeeBtnLabel')
     ),
@@ -139,7 +149,10 @@ export function mountWidgets() {
         type: 'button',
         'data-i18n': 'feedbackBtnLabel',
         'data-i18n-title': 'feedbackBtnTitle',
-        onclick: () => feedback.classList.add('open'),
+        onclick: () => {
+          feedback.classList.add('open');
+          trackEvent('feedback-open');
+        },
       },
       t('feedbackBtnLabel')
     )

@@ -1,4 +1,6 @@
 // Локализация ru/en. Разметка помечается data-i18n / data-i18n-title / data-i18n-placeholder.
+import { trackEvent } from './analytics.js';
+
 const LS_KEY = 'kord_breach_lang_v1';
 
 const DICT = {
@@ -94,5 +96,6 @@ export function applyI18n(root = document) {
 export function setLang(next) {
   if (next === lang) return;
   localStorage.setItem(LS_KEY, next);
+  trackEvent('lang-switch-' + next);
   location.reload();
 }

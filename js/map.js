@@ -2,6 +2,7 @@
 import { loadData, el, MapView } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, mountWidgets, isLocal } from './widgets.js';
+import { trackEvent } from './analytics.js';
 
 document.title = t('pageTitleMap');
 document.getElementById('lang-slot').append(langToggle());
@@ -144,6 +145,8 @@ function open(i) {
   $('m-counter').textContent = `${current + 1} / ${slides.length}`;
   $('m-map').textContent = localized(map);
   $('m-floor').textContent = s.floor ? map.floors?.find((f) => f.id === s.floor)?.name ?? '' : '';
+  // Считаем открытие просмотрщика, а не каждое пролистывание стрелками.
+  if (!modal.classList.contains('open')) trackEvent('spawn-view-' + mapId);
   modal.classList.add('open');
   highlight();
 }

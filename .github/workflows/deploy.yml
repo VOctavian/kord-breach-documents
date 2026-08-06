@@ -27,7 +27,7 @@ jobs:
           mkdir -p _site/js
           cp index.html map.html _site/
           cp -r css data assets documentations _site/
-          cp js/common.js js/i18n.js js/widgets.js js/index.js js/map.js _site/js/
+          cp js/common.js js/i18n.js js/widgets.js js/analytics.js js/index.js js/map.js _site/js/
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3

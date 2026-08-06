@@ -87,6 +87,21 @@ node server.mjs
 Координаты привязаны к конкретному изображению карты: если заменить файл в
 `assets/maps/`, размеченные точки этой локации придётся ставить заново.
 
+## Аналитика
+
+GoatCounter, сайт `kord-breach-documents` — https://kord-breach-documents.goatcounter.com.
+Скрипт подключён в `index.html` и `map.html`, просмотры страниц считаются
+автоматически; с локалхоста `count.js` ничего не отправляет.
+
+Дополнительные события шлёт `js/analytics.js`:
+
+| Событие | Когда |
+| --- | --- |
+| `map-open-<id>` | клик по карточке локации |
+| `spawn-view-<id>` | открытие просмотрщика скриншотов (пролистывание стрелками не считается) |
+| `lang-switch-<ru\|en>` | переключение языка |
+| `coffee-open`, `feedback-open`, `discord-open` | клики по кнопкам поддержки и фидбэка |
+
 ## Деплой
 
 GitHub Actions (`.github/workflows/deploy.yml`) при пуше в `main` собирает

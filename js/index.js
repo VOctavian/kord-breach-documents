@@ -2,6 +2,7 @@
 import { loadData, el } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, mountWidgets, isLocal } from './widgets.js';
+import { trackEvent } from './analytics.js';
 
 document.title = t('pageTitleIndex');
 document.getElementById('lang-slot').append(langToggle());
@@ -22,7 +23,12 @@ for (const map of maps) {
   grid.append(
     el(
       'a',
-      { class: 'map-card', href: `map.html?map=${map.id}`, 'data-docs': [...byDoc.keys()].join(' ') },
+      {
+        class: 'map-card',
+        href: `map.html?map=${map.id}`,
+        'data-docs': [...byDoc.keys()].join(' '),
+        onclick: () => trackEvent('map-open-' + map.id),
+      },
       el('div', { class: 'thumb' }, el('img', { src: map.file, alt: map.name, loading: 'lazy' })),
       el(
         'div',
