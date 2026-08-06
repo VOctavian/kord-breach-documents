@@ -1,5 +1,5 @@
 // Главная страница: выбор локации.
-import { loadData, el } from './common.js';
+import { loadData, el, isPublished } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent } from './analytics.js';
@@ -10,7 +10,9 @@ if (!isLocal) document.getElementById('editor-link').remove();
 applyI18n();
 mountWidgets();
 
-const { maps, docs, spawns, docById } = await loadData();
+const data = await loadData();
+const { maps, docs, docById } = data;
+const spawns = data.spawns.filter(isPublished);
 const grid = document.getElementById('grid');
 
 for (const map of maps) {

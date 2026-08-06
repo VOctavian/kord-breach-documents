@@ -1784,5 +1784,18 @@
       "assets/screenshots/lighthouse-expluatationnaea-24bbf597.jpg"
     ],
     "captionEn": "Room on the 2nd floor of hangar 1 at the Rogue base"
+  },
+  {
+    "id": "customs-cmshfymtb",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "",
+    "captionEn": "",
+    "images": [],
+    "x": null,
+    "y": null,
+    "floor": null
   }
 ]

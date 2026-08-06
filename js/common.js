@@ -15,6 +15,14 @@ export async function loadData() {
   };
 }
 
+/**
+ * Точка готова к показу, если у неё есть описание или хотя бы один скриншот.
+ * Недозаполненные заготовки из редактора на сайт не выводим.
+ */
+export function isPublished(spawn) {
+  return Boolean(spawn.caption?.trim() || spawn.images?.length);
+}
+
 export function el(tag, attrs = {}, ...kids) {
   const node = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {

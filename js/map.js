@@ -1,5 +1,5 @@
 // Страница локации: карта с иконками документов + просмотрщик скриншотов.
-import { loadData, el, MapView } from './common.js';
+import { loadData, el, MapView, isPublished } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent } from './analytics.js';
@@ -14,7 +14,7 @@ const mapId = new URLSearchParams(location.search).get('map');
 const map = mapById[mapId];
 if (!map) location.replace('index.html');
 
-const all = spawns.filter((s) => s.map === mapId);
+const all = spawns.filter((s) => s.map === mapId && isPublished(s));
 const placed = all.filter((s) => s.x != null && s.y != null);
 
 document.title = `${localized(map)} — Kord Breach`;
