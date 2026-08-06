@@ -461,7 +461,7 @@
     "y": 64.389,
     "floor": "Second_Floor",
     "images": [
-      "assets/screenshots/customs-proectnaea-29054a23.jpg"
+      "assets/screenshots/customs-proectnaea-bc6db6a5.jpg"
     ],
     "captionEn": "2nd floor of the locked Tarcone offices"
   },
@@ -1387,8 +1387,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "Кафетерий рядом с офисом TerraGroup",
-    "x": 47.924,
-    "y": 36.604,
+    "x": 47.527,
+    "y": 36.725,
     "floor": null,
     "images": [
       "assets/screenshots/groundzero-meditsinskaea-a917d387.jpg"
@@ -1552,8 +1552,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "Круглый стол на «Котах»",
-    "x": 80.697,
-    "y": 15.327,
+    "x": 80.799,
+    "y": 15.344,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-71ba8e85.jpg"
@@ -1612,8 +1612,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "Комната наблюдения",
-    "x": null,
-    "y": null,
+    "x": 13.668,
+    "y": 73.474,
     "floor": null,
     "images": [
       "assets/screenshots/labyrinth-meditsinskaea-d4e7d610.jpg"
@@ -1627,8 +1627,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "На трупе медработника (рядом с комнатой наблюдения)",
-    "x": null,
-    "y": null,
+    "x": 21.977,
+    "y": 77.509,
     "floor": null,
     "images": [
       "assets/screenshots/labyrinth-meditsinskaea-f4e7853b.jpg"
@@ -1642,8 +1642,8 @@
     "doc": "expluatationnaea",
     "docName": "Эксплуатационная документация",
     "caption": "В одном из ангаров на Базе Контрабандистов",
-    "x": 57.887,
-    "y": 42.133,
+    "x": 58.749,
+    "y": 37.809,
     "floor": null,
     "images": [
       "assets/screenshots/shoreline-expluatationnaea-f2c51000.jpg"
@@ -1786,16 +1786,723 @@
     "captionEn": "Room on the 2nd floor of hangar 1 at the Rogue base"
   },
   {
-    "id": "customs-cmshfymtb",
+    "id": "shoreline-cmshy66wh",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Норвинка перед входом",
+    "captionEn": "Norvinsk in front of main enter",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-88e6d773.png"
+    ],
+    "x": 43.227,
+    "y": 90.055,
+    "floor": null
+  },
+  {
+    "id": "streets-e598ac2d",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Офис TerraGroup (комната охраны) в здании Cardinal",
+    "captionEn": "TerraGroup office (security room) in the Cardinal building",
+    "images": [
+      "assets/screenshots/streets-finansovaea-e598ac2d.jpg"
+    ],
+    "x": 50.572,
+    "y": 27.534,
+    "floor": null
+  },
+  {
+    "id": "streets-edc7ceb3",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "2 этаж фин. учреждения в комнате запертой на «Ключ от кабинета в финучреждении»",
+    "captionEn": "2nd floor of the financial institution, in the room locked with the financial institution office key",
+    "images": [
+      "assets/screenshots/streets-finansovaea-edc7ceb3.jpg"
+    ],
+    "x": 79.88,
+    "y": 68.075,
+    "floor": null
+  },
+  {
+    "id": "reserve-8ea1eb18",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В столе в здании у выхода «Забор у КПП»",
+    "captionEn": "In a desk in the building by the \"Checkpoint Fence\" extract",
+    "images": [
+      "assets/screenshots/reserve-personal-8ea1eb18.jpg"
+    ],
+    "x": 47.536,
+    "y": 21.361,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-83f30435",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На 2 этаже с каютами в комнате заседаний запертый на кодовый замок",
+    "captionEn": "Cabin deck, 2nd floor — meeting room locked with a code lock",
+    "images": [
+      "assets/screenshots/icebreaker-personal-83f30435.jpg"
+    ],
+    "x": 49.94,
+    "y": 1.684,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-423f3f20",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В капитанской рубке на столе",
+    "captionEn": "On the table in the captain's bridge",
+    "images": [
+      "assets/screenshots/icebreaker-personal-423f3f20.jpg"
+    ],
+    "x": 11.156,
+    "y": 46.259,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-59995411",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В лазарете напротив трупа инженера",
+    "captionEn": "In the infirmary, opposite the engineer's corpse",
+    "images": [
+      "assets/screenshots/icebreaker-personal-59995411.jpg"
+    ],
+    "x": 67.796,
+    "y": 42.868,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-ef404d52",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В небольшой комнате перед вертолётной площадкой",
+    "captionEn": "In the small room before the helipad",
+    "images": [
+      "assets/screenshots/icebreaker-personal-ef404d52.jpg"
+    ],
+    "x": 61.637,
+    "y": 24.733,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-d818625e",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "2 этаж нижнего шале в комнате с вылазом на козырёк",
+    "captionEn": "2nd floor of the lower chalet, in the room with access to the awning",
+    "images": [
+      "assets/screenshots/lighthouse-personal-d818625e.jpg"
+    ],
+    "x": 79.968,
+    "y": 61.485,
+    "floor": null
+  },
+  {
+    "id": "customs-073e8815",
     "map": "customs",
     "mapName": "Таможня",
     "doc": "proectnaea",
     "docName": "Проектная документация",
-    "caption": "",
-    "captionEn": "",
-    "images": [],
-    "x": null,
-    "y": null,
+    "caption": "На базе Решалы в комнате с оружейными ящиками и мед.контейнером",
+    "captionEn": "Reshala's base, in the room with weapon crates and a medical container",
+    "images": [
+      "assets/screenshots/customs-proectnaea-073e8815.jpg"
+    ],
+    "x": 58.575,
+    "y": 14.465,
+    "floor": null
+  },
+  {
+    "id": "customs-0d68bf19",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Под столом на 3 этаже склада 17",
+    "captionEn": "Under the table on the 3rd floor of Warehouse 17",
+    "images": [
+      "assets/screenshots/customs-proectnaea-0d68bf19.jpg"
+    ],
+    "x": 58.874,
+    "y": 39.58,
+    "floor": null
+  },
+  {
+    "id": "factory-d28541e8",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На скамейке, рядом с ящиками у ворот №1",
+    "captionEn": "On the bench next to the crates by Gate 1",
+    "images": [
+      "assets/screenshots/factory-proectnaea-d28541e8.jpg"
+    ],
+    "x": 67.283,
+    "y": 21.47,
+    "floor": null
+  },
+  {
+    "id": "factory-c2b6e309",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В одноэтажной пристройке напротив ворот 2 ",
+    "captionEn": "In the single-storey annex opposite Gate 2 ",
+    "images": [
+      "assets/screenshots/factory-proectnaea-c2b6e309.jpg"
+    ],
+    "x": 63.385,
+    "y": 40.358,
+    "floor": null
+  },
+  {
+    "id": "factory-4130e6c5",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На паллете в подвалах ближе к офисам со стороны выхода «Ворота 0»",
+    "captionEn": "On a pallet in the basements, closer to the offices on the \"Gate 0\" side",
+    "images": [
+      "assets/screenshots/factory-proectnaea-4130e6c5.jpg"
+    ],
+    "x": 79.121,
+    "y": 66.344,
+    "floor": null
+  },
+  {
+    "id": "reserve-4b6bed63",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "1 этаж небольшого здания у выхода «Забор у КПП»",
+    "captionEn": "1st floor of the small building by the \"Checkpoint Fence\" extract",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-4b6bed63.jpg"
+    ],
+    "x": 47.918,
+    "y": 21.301,
+    "floor": null
+  },
+  {
+    "id": "reserve-3a4839ef",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На 4 этаже чёрной пешки в открытой оружейной",
+    "captionEn": "4th floor of the Black Pawn, in the open armoury",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-3a4839ef.jpg"
+    ],
+    "x": 93.284,
+    "y": 64.381,
+    "floor": null
+  },
+  {
+    "id": "factory-4249cd02",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "За воротами №2 в помещении с выходом на улицу",
+    "captionEn": "Behind Gate 2, in the room with an exit to the street",
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-4249cd02.jpg"
+    ],
+    "x": 69.714,
+    "y": 37,
+    "floor": null
+  },
+  {
+    "id": "factory-3707e4b0",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "3 этаж офисов возле стола с рабочим компьютером",
+    "captionEn": "3rd floor of the offices, by the desk with a working computer",
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-3707e4b0.jpg"
+    ],
+    "x": 5.887,
+    "y": 56.876,
+    "floor": null
+  },
+  {
+    "id": "factory-92e6dea0",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В подвалах недалеко от мед. палатки в ногах мертвого ЧВК",
+    "captionEn": "In the basements near the medical tent, at the feet of a dead PMC",
+    "images": [
+      "assets/screenshots/factory-tehnicheskaea-92e6dea0.jpg"
+    ],
+    "x": 88.603,
+    "y": 52.975,
+    "floor": null
+  },
+  {
+    "id": "woods-dda02a64",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Лагерь USEC, ящик под навесом.",
+    "captionEn": "USEC camp, in the crate under the canopy",
+    "images": [
+      "assets/screenshots/woods-testovaea-dda02a64.jpg"
+    ],
+    "x": 28.103,
+    "y": 30.345,
+    "floor": null
+  },
+  {
+    "id": "woods-181c4841",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В биотуалете на КПП USEC",
+    "captionEn": "In the portable toilet at the USEC checkpoint",
+    "images": [
+      "assets/screenshots/woods-testovaea-181c4841.jpg"
+    ],
+    "x": 30.362,
+    "y": 61.032,
+    "floor": null
+  },
+  {
+    "id": "woods-0f62e873",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В палатке в лагере USEC",
+    "captionEn": "In the tent at the USEC camp",
+    "images": [
+      "assets/screenshots/woods-testovaea-0f62e873.jpg"
+    ],
+    "x": 25.568,
+    "y": 34.071,
+    "floor": null
+  },
+  {
+    "id": "shoreline-e3cad41b",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На носилках у здания «Норвинский»",
+    "captionEn": "On the stretchers by the \"Norvinsky\" building",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-e3cad41b.jpg"
+    ],
+    "x": 43.289,
+    "y": 90.674,
+    "floor": null
+  },
+  {
+    "id": "shoreline-f0cf971d",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "2 этаж времянок рядом с выходом на машине",
+    "captionEn": "2nd floor of the shacks next to the vehicle extract",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-f0cf971d.jpg"
+    ],
+    "x": 53.424,
+    "y": 30.093,
+    "floor": null
+  },
+  {
+    "id": "shoreline-798601fc",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В доме в деревне (второй дом по счету если идти вдоль минного поля от выхода «Тоннель»)",
+    "captionEn": "In a house in the village (the second one along the minefield from the \"Tunnel\" extract)",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-798601fc.jpg"
+    ],
+    "x": 4.386,
+    "y": 66.046,
+    "floor": null
+  },
+  {
+    "id": "streets-6d6e285a",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В здании Cardinal «Unity Bank»",
+    "captionEn": "Cardinal building, \"Unity Bank\"",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-6d6e285a.jpg"
+    ],
+    "x": 48.242,
+    "y": 32.781,
+    "floor": null
+  },
+  {
+    "id": "groundzero-ff0ed192",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В кафетерии у офиса TerraGroup",
+    "captionEn": "In the cafeteria by the TerraGroup office",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-ff0ed192.jpg"
+    ],
+    "x": 47.831,
+    "y": 36.633,
+    "floor": null
+  },
+  {
+    "id": "groundzero-2383677d",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2 этаж офиса TerraGroup (помещение где выполняется квест Механика «Спасение крота»)",
+    "captionEn": "2nd floor of the TerraGroup office (the room where Mechanic's \"Saving the Mole\" quest is done)",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-2383677d.jpg"
+    ],
+    "x": 63.298,
+    "y": 32.335,
+    "floor": null
+  },
+  {
+    "id": "groundzero-78118135",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На 1 этаже в здании с «Утёсом»",
+    "captionEn": "1st floor of the building with the \"Utyos\"",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-78118135.jpg"
+    ],
+    "x": 43.879,
+    "y": 47.695,
+    "floor": null
+  },
+  {
+    "id": "lab-183c8d70",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Круглый стол на «Котах»",
+    "captionEn": "Round table at the \"Cats\"",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-183c8d70.jpg"
+    ],
+    "x": 80.443,
+    "y": 15.39,
+    "floor": null
+  },
+  {
+    "id": "lab-61c29df1",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На 2 этаже в офисах (ближайшие к зоне запертой на «Ключ-карта TerraGroup Labs (Зелёная)»",
+    "captionEn": "2nd floor offices, the ones closest to the area locked with the TerraGroup Labs keycard (Green)",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-61c29df1.jpg"
+    ],
+    "x": 71.723,
+    "y": 39.747,
+    "floor": null
+  },
+  {
+    "id": "lab-396bfe59",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На деревянном столе под офисом управляющего",
+    "captionEn": "On the wooden table below the manager's office",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-396bfe59.jpg"
+    ],
+    "x": 47.453,
+    "y": 69.86,
+    "floor": null
+  },
+  {
+    "id": "groundzero-a12f3d21",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В инвалидном кресле на выходе «Пункт МЧС»",
+    "captionEn": "In the wheelchair at the \"EMERCOM Checkpoint\" extract",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-a12f3d21.jpg"
+    ],
+    "x": 27.048,
+    "y": 12.188,
+    "floor": null
+  },
+  {
+    "id": "groundzero-aeaf1188",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На скамейках у здания «Nakatani»",
+    "captionEn": "On the benches by the \"Nakatani\" building",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-aeaf1188.jpg"
+    ],
+    "x": 38.289,
+    "y": 72.87,
+    "floor": null
+  },
+  {
+    "id": "groundzero-671db510",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Ресторан «Fusion» на 1 этаже",
+    "captionEn": "\"Fusion\" restaurant on the 1st floor",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-671db510.jpg"
+    ],
+    "x": 34.793,
+    "y": 49.003,
+    "floor": null
+  },
+  {
+    "id": "lab-927d9828",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На 3 этаже в открытой секции с палатами",
+    "captionEn": "3rd floor, in the open ward section",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-927d9828.jpg"
+    ],
+    "x": 70.254,
+    "y": 44.493,
+    "floor": null
+  },
+  {
+    "id": "lab-2fe1203c",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На полу в комнате закрытой на «Ключ-карта TerraGroup (Синяя)»",
+    "captionEn": "On the floor in the room locked with the TerraGroup keycard (Blue)",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-2fe1203c.jpg"
+    ],
+    "x": 37.875,
+    "y": 80.986,
+    "floor": null
+  },
+  {
+    "id": "lab-8053eb6f",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "3 этаж в коридоре на кровати",
+    "captionEn": "3rd floor, on a bed in the corridor",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-8053eb6f.jpg"
+    ],
+    "x": 43.335,
+    "y": 84.721,
+    "floor": null
+  },
+  {
+    "id": "lab-4030228d",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "2 этаж в открытых лабораториях (смежное помещение с лабораторией закрытой на «Ключ-карта TerraGroup Labs (Синяя)»)",
+    "captionEn": "2nd floor open laboratories (the room adjoining the lab locked with the TerraGroup Labs keycard (Blue))",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-4030228d.jpg"
+    ],
+    "x": 35.844,
+    "y": 80.845,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-debd8b47",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На пакете с трупом рядом со спавном с токсичным бассейном",
+    "captionEn": "On the body bag next to the spawn with the toxic pool",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-debd8b47.jpg"
+    ],
+    "x": 29.871,
+    "y": 82.173,
+    "floor": null
+  },
+  {
+    "id": "shoreline-77f16aa8",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На метеостанции в комнате на вышке",
+    "captionEn": "At the weather station, in the room up the tower",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-77f16aa8.jpg"
+    ],
+    "x": 53.201,
+    "y": 73.473,
+    "floor": null
+  },
+  {
+    "id": "woods-03c02982",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "У запертого бункера на склоне горы",
+    "captionEn": "By the locked bunker on the mountain slope",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-03c02982.jpg"
+    ],
+    "x": 62.131,
+    "y": 43.878,
+    "floor": null
+  },
+  {
+    "id": "woods-49582adb",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В разрушенной деревне в доме с сектанскими пометками",
+    "captionEn": "In the ruined village, in the house with cultist markings",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-49582adb.jpg"
+    ],
+    "x": 55.466,
+    "y": 17.948,
+    "floor": null
+  },
+  {
+    "id": "woods-8d82fd9b",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В лагере USEC",
+    "captionEn": "At the USEC camp",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-8d82fd9b.jpg"
+    ],
+    "x": 26.686,
+    "y": 30.521,
+    "floor": null
+  },
+  {
+    "id": "woods-95a5432a",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На лесопилке во времянке с цифрой 3",
+    "captionEn": "At the sawmill, in the shack marked with the number 3",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-95a5432a.jpg"
+    ],
+    "x": 46.809,
+    "y": 61.38,
+    "floor": null
+  },
+  {
+    "id": "woods-218fadd3",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На деревянном ящике на базе МЧС",
+    "captionEn": "On a wooden crate at the EMERCOM base",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-218fadd3.jpg"
+    ],
+    "x": 60.687,
+    "y": 81.028,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-a8b2393f",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На 1 этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
+    "captionEn": "1st floor of the brick house in the village, next to the \"Path to Shoreline\" extract",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-a8b2393f.jpg"
+    ],
+    "x": 71.863,
+    "y": 54.387,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-e8345406",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "3 этаж нижнего шале у комода за кроватью",
+    "captionEn": "3rd floor of the lower chalet, by the dresser behind the bed",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-e8345406.jpg"
+    ],
+    "x": 82.7,
+    "y": 61.206,
     "floor": null
   }
 ]
