@@ -592,8 +592,8 @@
     "doc": "proectnaea",
     "docName": "Проектная документация",
     "caption": "3 этаж офисов завода в комнате с сейфом",
-    "x": 53.443,
-    "y": 57.041,
+    "x": 5.391,
+    "y": 57.172,
     "floor": null,
     "images": [
       "assets/screenshots/factory-proectnaea-ca8c5c11.jpg"
@@ -1841,8 +1841,8 @@
     "images": [
       "assets/screenshots/reserve-personal-8ea1eb18.jpg"
     ],
-    "x": 47.536,
-    "y": 21.361,
+    "x": 33.728,
+    "y": 72.247,
     "floor": null
   },
   {
