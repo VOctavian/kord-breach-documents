@@ -8,7 +8,8 @@ data/spawns.backup-*.json
 
 # Локальное
 node_modules/
-.claude/
+.claude/*
+!.claude/commands/
 _site/
 *.log
 .DS_Store
