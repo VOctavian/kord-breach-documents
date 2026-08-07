@@ -1639,11 +1639,11 @@
     "id": "shoreline-111",
     "map": "shoreline",
     "mapName": "Берег",
-    "doc": "expluatationnaea",
-    "docName": "Эксплуатационная документация",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
     "caption": "В одном из ангаров на Базе Контрабандистов",
-    "x": 58.749,
-    "y": 37.809,
+    "x": 58.795,
+    "y": 37.855,
     "floor": null,
     "images": [
       "assets/screenshots/shoreline-expluatationnaea-f2c51000.jpg"
@@ -2534,6 +2534,36 @@
     ],
     "x": 6.046,
     "y": 47.665,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsjd9izw",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Тумбочка 2 этаж, 2 подъезд",
+    "captionEn": "Nightstand 2 floor",
+    "images": [
+      "assets/screenshots/reserve-personal-d3d19467.png"
+    ],
+    "x": 86.944,
+    "y": 88.603,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsjdhsre",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На полу",
+    "captionEn": "On the floor",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-4b4e434d.png"
+    ],
+    "x": 54.258,
+    "y": 7.548,
     "floor": null
   }
 ]
