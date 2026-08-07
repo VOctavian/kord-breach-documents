@@ -173,13 +173,12 @@ GitHub Actions (`.github/workflows/deploy.yml`) при пуше в `main` соб
 ## Обратная связь
 
 Неточность в координатах, спавн которого здесь нет, идея — Discord:
-https://discord.gg/rFe78brNT
+https://discord.gg/UErdQwg7ww
 
 Ссылка задаётся в [js/config.js](js/config.js) (`DISCORD_INVITE`) и используется
-и кнопкой «Фидбэк», и иконкой в шапке. Приглашения Discord по умолчанию живут
-7 дней — в настройках приглашения нужно выставить срок «Никогда», иначе ссылка
-однажды перестанет работать. Проверить:
+и кнопкой «Фидбэк», и иконкой в шапке. Приглашение бессрочное; если когда-нибудь
+заменишь его, проверь срок жизни — по умолчанию Discord выдаёт ссылки на 7 дней:
 
 ```
-curl -s "https://discord.com/api/v10/invites/rFe78brNT?with_expiration=true"
+curl -s "https://discord.com/api/v10/invites/UErdQwg7ww?with_expiration=true"
 ```
