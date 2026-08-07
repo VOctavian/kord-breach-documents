@@ -1372,8 +1372,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "2 этаж офиса TerraGroup (помещение где выполняется квест Механика «Спасение крота»)",
-    "x": 62.117,
-    "y": 36.354,
+    "x": 62.65,
+    "y": 33.608,
     "floor": null,
     "images": [
       "assets/screenshots/groundzero-meditsinskaea-ca7ea643.jpg"
@@ -2007,8 +2007,8 @@
     "images": [
       "assets/screenshots/reserve-proectnaea-4b6bed63.jpg"
     ],
-    "x": 47.918,
-    "y": 21.301,
+    "x": 34.055,
+    "y": 72.268,
     "floor": null
   },
   {
