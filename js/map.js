@@ -2,9 +2,12 @@
 import { loadData, el, MapView, isPublished } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
-import { trackEvent } from './analytics.js';
+import { trackEvent, mountUmami } from './analytics.js';
+import { mountOnlineBadge } from './online.js';
 
 document.title = t('pageTitleMap');
+mountUmami();
+mountOnlineBadge(document.getElementById('online-slot'));
 document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
 applyI18n();

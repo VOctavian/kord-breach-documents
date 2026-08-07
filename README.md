@@ -118,6 +118,28 @@ node scripts/publish.mjs
 Координаты привязаны к конкретному изображению карты: если заменить файл в
 `assets/maps/`, размеченные точки этой локации придётся ставить заново.
 
+## Счётчик «онлайн» и realtime-дашборд
+
+Оба сервиса настраиваются в [js/config.js](js/config.js). Пустое значение —
+сервис выключен, страница работает как обычно.
+
+**Плашка «N онлайн» в шапке** — Supabase Realtime Presence. Каждая вкладка
+держит вебсокет и объявляет себя в общем канале `kord-breach-online`; число
+участников канала и есть онлайн. Своего сервера не нужно, база не используется.
+
+1. Завести проект на [supabase.com](https://supabase.com) (бесплатный тариф).
+2. Project Settings → API → скопировать **Project URL** и **anon public key**.
+3. Вписать их в `SUPABASE_URL` и `SUPABASE_ANON_KEY`.
+
+Ограничение бесплатного тарифа — 200 одновременных подключений; при превышении
+лишние просто не подключатся, сайт продолжит работать. `anon key` рассчитан на
+публикацию в браузере, но держи в этом проекте только Realtime — ни таблиц, ни
+файлов.
+
+**Realtime-дашборд** — [Umami Cloud](https://cloud.umami.is), бесплатный Hobby
+(3 сайта, 100k событий/мес). Add website → Tracking code → вписать website id в
+`UMAMI_WEBSITE_ID`. Нужен потому, что у GoatCounter realtime-режима нет.
+
 ## Аналитика
 
 GoatCounter, сайт `kord-breach-documents` — https://kord-breach-documents.goatcounter.com.

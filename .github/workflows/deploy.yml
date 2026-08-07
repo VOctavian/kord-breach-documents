@@ -24,11 +24,12 @@ jobs:
       # но не публикуются — редактировать точки можно лишь локально.
       - name: Собрать read-only версию
         run: |
-          mkdir -p _site/js
+          mkdir -p _site
           cp index.html map.html _site/
-          cp -r css data assets documentations _site/
-          cp js/common.js js/i18n.js js/widgets.js js/analytics.js js/index.js js/map.js _site/js/
+          cp -r css js data assets documentations _site/
+          rm -f _site/js/editor.js
           touch _site/.nojekyll
+          test ! -e _site/editor.html && test ! -e _site/js/editor.js && test ! -e _site/server.mjs
 
       - uses: actions/upload-pages-artifact@v3
         with:
