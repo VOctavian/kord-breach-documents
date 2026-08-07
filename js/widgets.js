@@ -2,10 +2,17 @@
 import { t, lang, setLang, applyI18n } from './i18n.js';
 import { el } from './common.js';
 import { trackEvent } from './analytics.js';
+import { DISCORD_INVITE } from './config.js';
 
-export const DISCORD_INVITE = 'https://discord.gg/GUeWxXf9R';
+export { DISCORD_INVITE };
 
 const SOCIALS = [
+  {
+    name: 'Discord',
+    href: DISCORD_INVITE,
+    color: '#5865f2',
+    path: 'M20.3 4.4a19.8 19.8 0 0 0-4.9-1.5c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.5 0c-.2-.4-.4-.9-.6-1.3a19.7 19.7 0 0 0-4.9 1.5C.5 9 .3 13.6.1 18.1a19.9 19.9 0 0 0 6 3 14.1 14.1 0 0 0 1.2-2c-.7-.2-1.3-.5-1.9-.9l.4-.3c3.9 1.8 8.2 1.8 12.1 0l.4.3c-.6.4-1.2.7-1.9.9.4.7.8 1.4 1.2 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.5-13.7zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z',
+  },
   {
     name: 'YouTube',
     href: 'https://www.youtube.com/@MasterMD_yt',
