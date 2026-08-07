@@ -502,8 +502,8 @@
     "doc": "proectnaea",
     "docName": "Проектная документация",
     "caption": "Офисы на 3 этаже (комната выбивается с ноги)",
-    "x": 5.618,
-    "y": 49.438,
+    "x": 5.739,
+    "y": 49.713,
     "floor": null,
     "images": [
       "assets/screenshots/factory-proectnaea-24de8d5c.jpg"
@@ -2519,6 +2519,21 @@
     ],
     "x": 31.08,
     "y": 16.971,
+    "floor": null
+  },
+  {
+    "id": "factory-cmsjcag1f",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В тумбочке",
+    "captionEn": "In the nightstand",
+    "images": [
+      "assets/screenshots/factory-proectnaea-6e4e9e57.png"
+    ],
+    "x": 6.046,
+    "y": 47.665,
     "floor": null
   }
 ]
