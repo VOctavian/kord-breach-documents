@@ -1971,9 +1971,10 @@
     "mapName": "Завод",
     "doc": "proectnaea",
     "docName": "Проектная документация",
-    "caption": "В одноэтажной пристройке напротив ворот 2 ",
-    "captionEn": "In the single-storey annex opposite Gate 2 ",
+    "caption": "В одноэтажной пристройке напротив ворот 2",
+    "captionEn": "In the single-storey annex opposite Gate 2",
     "images": [
+      "assets/screenshots/factory-proectnaea-f2f04c96.jpg",
       "assets/screenshots/factory-proectnaea-c2b6e309.jpg"
     ],
     "x": 63.385,
