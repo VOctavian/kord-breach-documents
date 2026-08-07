@@ -1057,8 +1057,8 @@
     "doc": "testovaea",
     "docName": "Тестовая документация",
     "caption": "На столе на 1 этаже в медицинском корпусе (смежное помещение с трупом инженера)",
-    "x": 68.175,
-    "y": 43.735,
+    "x": 68.393,
+    "y": 43.421,
     "floor": null,
     "images": [
       "assets/screenshots/icebreaker-testovaea-c14cc0f6.jpg"
@@ -1856,8 +1856,8 @@
     "images": [
       "assets/screenshots/icebreaker-personal-83f30435.jpg"
     ],
-    "x": 49.94,
-    "y": 1.684,
+    "x": 39.344,
+    "y": 44.178,
     "floor": null
   },
   {
