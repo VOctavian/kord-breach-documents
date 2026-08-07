@@ -1,10 +1,11 @@
 // Страница локации: карта с иконками документов + просмотрщик скриншотов.
 import { loadData, el, MapView, isPublished } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
-import { langToggle, mountWidgets, isLocal } from './widgets.js';
+import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent } from './analytics.js';
 
 document.title = t('pageTitleMap');
+document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
 applyI18n();
 mountWidgets();

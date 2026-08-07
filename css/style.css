@@ -450,6 +450,28 @@ a:hover { color: #e0cfa4; }
 .badge-placed { color: var(--ok); }
 .badge-empty { color: var(--danger); }
 
+/* ---------- соцсети автора ---------- */
+
+.social-links { display: flex; gap: 2px; }
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  color: var(--text-dim);
+  transition: color 0.14s, background 0.14s;
+}
+.social-links a:hover { color: var(--brand); background: var(--bg-3); }
+.social-links svg { width: 17px; height: 17px; fill: currentColor; }
+
+@media (max-width: 700px) {
+  .social-links a { width: 26px; height: 26px; }
+  .social-links svg { width: 15px; height: 15px; }
+}
+
 /* ---------- переключатель языка ---------- */
 
 .lang-toggle {

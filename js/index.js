@@ -1,10 +1,11 @@
 // Главная страница: выбор локации.
 import { loadData, el, isPublished } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
-import { langToggle, mountWidgets, isLocal } from './widgets.js';
+import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent } from './analytics.js';
 
 document.title = t('pageTitleIndex');
+document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
 if (!isLocal) document.getElementById('editor-link').remove();
 applyI18n();
