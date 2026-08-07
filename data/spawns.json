@@ -1977,8 +1977,8 @@
       "assets/screenshots/factory-proectnaea-f2f04c96.jpg",
       "assets/screenshots/factory-proectnaea-c2b6e309.jpg"
     ],
-    "x": 63.385,
-    "y": 40.358,
+    "x": 64.127,
+    "y": 39.562,
     "floor": null
   },
   {
@@ -1992,8 +1992,8 @@
     "images": [
       "assets/screenshots/factory-proectnaea-4130e6c5.jpg"
     ],
-    "x": 79.121,
-    "y": 66.344,
+    "x": 75.946,
+    "y": 64.332,
     "floor": null
   },
   {
@@ -2067,8 +2067,8 @@
     "images": [
       "assets/screenshots/factory-tehnicheskaea-92e6dea0.jpg"
     ],
-    "x": 88.603,
-    "y": 52.975,
+    "x": 89.681,
+    "y": 53.178,
     "floor": null
   },
   {
@@ -2472,8 +2472,8 @@
     "images": [
       "assets/screenshots/woods-expluatationnaea-218fadd3.jpg"
     ],
-    "x": 60.687,
-    "y": 81.028,
+    "x": 61.079,
+    "y": 81.263,
     "floor": null
   },
   {
@@ -2504,6 +2504,21 @@
     ],
     "x": 82.7,
     "y": 61.206,
+    "floor": null
+  },
+  {
+    "id": "woods-cmsitd7yl",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Под антенной",
+    "captionEn": "Under Antenna",
+    "images": [
+      "assets/screenshots/woods-testovaea-23a5a1b4.png"
+    ],
+    "x": 31.08,
+    "y": 16.971,
     "floor": null
   }
 ]
