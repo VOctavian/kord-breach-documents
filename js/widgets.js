@@ -78,6 +78,7 @@ const DONATE = [
     label: 'DonationAlerts',
     value: 'https://www.donationalerts.com/r/mastermd_ttv',
     link: 'https://www.donationalerts.com/r/mastermd_ttv',
+    qr: 'assets/misc/donationalerts_qr.png',
   },
 ];
 
