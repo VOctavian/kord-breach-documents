@@ -74,6 +74,11 @@ const DONATE = [
   { label: 'USDT (TRC20)', value: 'TNEiHy5bQmHmFBjfy4gtDPmfU8qDY3VSTk' },
   { label: 'BTC', value: '16DGMk6p5TtLMoycR5BMmugPD1i2aU17oW' },
   { label: t('boostyLabel'), value: 'https://boosty.to/mastermd/donate', link: 'https://boosty.to/mastermd/donate' },
+  {
+    label: 'DonationAlerts',
+    value: 'https://www.donationalerts.com/r/mastermd_ttv',
+    link: 'https://www.donationalerts.com/r/mastermd_ttv',
+  },
 ];
 
 /** Переключатель ru/en — вставляется в шапку. */

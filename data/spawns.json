@@ -2580,5 +2580,20 @@
     "x": 63.194,
     "y": 62.028,
     "floor": null
+  },
+  {
+    "id": "factory-cmskjx414",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "",
+    "captionEn": "",
+    "images": [
+      "assets/screenshots/factory-proectnaea-c8ebf593.png"
+    ],
+    "x": 43.487,
+    "y": 47.784,
+    "floor": null
   }
 ]
