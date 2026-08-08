@@ -627,6 +627,8 @@ a:hover { color: #e0cfa4; }
 .btn.small { padding: 5px 10px; font-size: 12px; }
 .btn.copied { background: var(--ok); border-color: var(--ok); color: #0e1210; }
 .pop-qr { display: block; margin: 10px auto 0; width: 180px; height: 180px; border-radius: 6px; background: #fff; padding: 6px; }
+/* Без этого `display: block` перебивает атрибут hidden и пустая картинка видна как «битая». */
+.pop-qr[hidden] { display: none; }
 .discord-btn { display: block; text-align: center; margin-bottom: 12px; background: #5865f2; border-color: #5865f2; color: #fff; }
 .discord-btn:hover { background: #4752c4; color: #fff; }
 
