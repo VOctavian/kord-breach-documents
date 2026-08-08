@@ -291,14 +291,14 @@
     "mapName": "Резерв",
     "doc": "personal",
     "docName": "Личные данные ЧВК",
-    "caption": "Комната РБ-ОБ",
+    "caption": "Комната ключ РБ-ОБ",
     "x": 90.657,
     "y": 65.009,
     "floor": null,
     "images": [
       "assets/screenshots/reserve-personal-1d8e1e9a.jpg"
     ],
-    "captionEn": "RB-OB room"
+    "captionEn": "RB-OB key room"
   },
   {
     "id": "reserve-22",
@@ -306,14 +306,14 @@
     "mapName": "Резерв",
     "doc": "personal",
     "docName": "Личные данные ЧВК",
-    "caption": "Комната коменданта в Королеве (чупик)",
+    "caption": "Комната коменданта в Королеве (чупик) Ключ РБ-КОРЛ",
     "x": 69.485,
     "y": 77.397,
     "floor": null,
     "images": [
       "assets/screenshots/reserve-personal-470cfcf2.jpg"
     ],
-    "captionEn": "Commandant's room in the Queen building (dead end)"
+    "captionEn": "Commandant's room in the Queen building (dead end) RB-KORL key"
   },
   {
     "id": "reserve-23",

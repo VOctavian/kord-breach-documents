@@ -1,184 +1,206 @@
-# Kord Breach — спавны секретных документов
+# Kord Breach — secret document spawns
 
-Интерактивный справочник по точкам спавна секретных документов: выбор локации →
-карта с иконками документации → клик по иконке открывает скриншот с описанием,
-стрелки ← / → листают остальные спавны этой локации.
+**English** · [Русский](README.ru.md)
 
-**Сайт:** https://voctavian.github.io/kord-breach-documents/
+Interactive guide to secret document spawn points in Kord Breach: pick a
+location, get a map with document icons on it, click an icon to see the
+screenshot with a description, and use ← / → to page through the rest of the
+spawns on that map.
 
-119 точек, 8 типов документации, 12 локаций. Интерфейс и описания — русский и
-английский.
+**Live site:** https://voctavian.github.io/kord-breach-documents/
 
-## Запуск локально
+171 spawn points across 12 locations, 8 document types, 173 screenshots.
+Interface and descriptions in Russian and English.
+
+## Pages
+
+| Page | What it does |
+| --- | --- |
+| `index.html` | location picker: map preview, spawn count, document types present |
+| `map.html?map=<id>` | map with icons, filter by document type, screenshot viewer |
+| `editor.html?map=<id>` | editing points — **local only**, never published |
+
+The editor link only shows up when the site is opened from `localhost`, and the
+page itself is excluded from the GitHub Pages build: the published site is
+read-only.
+
+## Running locally
 
 ```
 node server.mjs
 ```
 
-Открыть http://localhost:5173 (порт можно задать через `PORT`).
-Зависимостей нет — только Node 18+.
+Open http://localhost:5173 (override with `PORT`). No dependencies — Node 18+ is
+all you need.
 
-## Страницы
+## Editor
 
-| Страница | Что делает |
-| --- | --- |
-| `index.html` | выбор локации: превью карты, число спавнов, типы документации |
-| `map.html?map=<id>` | карта с иконками, фильтр по типу документации, просмотрщик скриншотов |
-| `editor.html?map=<id>` | правка точек — **только локально**, на сайт не публикуется |
+Run `node server.mjs` and open `editor.html`.
 
-Ссылка на редактор показывается только при открытии с `localhost`, а сама
-страница на GitHub Pages не выкладывается: собранный сайт read-only.
+- **Place a point** — pick a location in the header, the current spawn's
+  screenshot and description show up on the left, click the map where it
+  belongs. The marker drops and the editor moves on to the next unplaced point.
+- **Edit descriptions** — the "Описание (RU)" and "Описание (EN)" fields save as
+  you type.
+- **Change document type** — the dropdown above the description.
+- **Screenshots** — "+ Скриншот" uploads files (jpeg/png/webp, up to 12 MB) into
+  `assets/screenshots/`; "Убрать фото" drops the current frame from the point
+  (the file stays on disk). With more than one frame, thumbnails appear below.
+- **New spawn** — "+ Новый спавн" creates an empty point: fill in the
+  description, add a screenshot, then click the map.
+- **Delete point** — "Удалить точку".
 
-## Редактор
+Everything saves automatically (`POST /api/spawns` → `data/spawns.json`); the
+"Сохранить" button is only there for manual saves.
 
-Запусти `node server.mjs` и открой `editor.html`.
+Shortcuts: `←` / `→` previous / next point, `Esc` closes the enlarged screenshot.
 
-- **Поставить точку** — выбери локацию в шапке, слева появится скриншот с
-  описанием; кликни по карте в нужном месте. Маркер встанет, редактор сам
-  перейдёт к следующей неразмеченной точке.
-- **Править описание** — поля «Описание (RU)» и «Описание (EN)» пишутся сразу.
-- **Сменить тип документации** — выпадающий список над описанием.
-- **Скриншоты** — «+ Скриншот» загружает файлы (jpeg/png/webp, до 12 МБ) в
-  `assets/screenshots/`, «Убрать фото» убирает текущий кадр из точки (файл на
-  диске остаётся). Если кадров несколько, под основным появляются миниатюры.
-- **Новый спавн** — «+ Новый спавн» создаёт пустую точку: заполни описание,
-  добавь скриншот, потом кликни по карте.
-- **Удалить точку** — «Удалить точку».
+> The editor holds the whole point list in the tab's memory and rewrites
+> `data/spawns.json` in full on every change. If the file was changed from
+> outside (by a script or by hand), reload the editor page — otherwise your next
+> action will restore the stale version.
 
-Всё сохраняется автоматически (`POST /api/spawns` → `data/spawns.json`), кнопка
-«Сохранить» нужна только для ручного сохранения.
+## Publishing updates
 
-Горячие клавиши: `←` / `→` — предыдущая / следующая точка, `Esc` — закрыть
-увеличенный скриншот.
-
-> Редактор держит весь список точек в памяти вкладки и при каждом изменении
-> перезаписывает `data/spawns.json` целиком. Если файл менялся снаружи (скриптом
-> или руками), перезагрузи страницу редактора — иначе следующее действие вернёт
-> старую версию.
-
-## Публикация обновлений
-
-Разметил новые точки — публикуй одной командой:
+Marked up new points? Publish with one command:
 
 ```
 node scripts/publish.mjs
 ```
 
-Она проверяет данные, коммитит, пушит и ждёт, пока обновление доедет до сайта.
+It validates the data, commits, pushes and waits for the update to reach the
+site.
 
-| Флаг | Что делает |
+| Flag | What it does |
 | --- | --- |
-| `--dry-run` | только проверки и предпросмотр коммита |
-| `-m "текст"` | своё сообщение коммита вместо сгенерированного |
-| `--all` | закоммитить вообще все изменения, а не только `data/` и `assets/screenshots/` |
-| `--no-wait` | не ждать деплой |
+| `--dry-run` | validation and commit preview only |
+| `-m "text"` | custom commit message instead of the generated one |
+| `--all` | commit everything, not just `data/` and `assets/screenshots/` |
+| `--no-wait` | don't wait for the deploy |
 
-Перед коммитом проверяется: уникальность id, существование локации и типа
-документации, наличие всех файлов скриншотов. Если что-то не так — публикация
-отменяется. Отдельно предупреждает про точки без координат, пустые заготовки и
-скриншоты, которые ни к одной точке не привязаны.
+Before committing it checks: unique ids, that the location and document type
+exist, that every screenshot file is present. If anything is off, publishing is
+aborted. It separately warns about points without coordinates, empty drafts, and
+screenshots not attached to any point.
 
-Сообщение коммита собирается из разницы с предыдущей версией, например
+The commit message is built from the diff against the previous version, e.g.
 `Обновление спавнов: новых точек: 4, размечено: 4, сдвинуто: 2`.
 
-Если деплой упал, скрипт один раз перезапускает прогон сам. Когда падает и
-повтор — почти всегда это перебой на стороне GitHub, смотри
-[githubstatus.com](https://www.githubstatus.com/).
+If the deploy fails, the script reruns it once. When the rerun fails too it's
+almost always a GitHub outage — check [githubstatus.com](https://www.githubstatus.com/).
 
-В Claude Code то же самое доступно как `/publish`.
+In Claude Code the same thing is available as `/publish`.
 
-## Данные
+## Data
 
-| Файл | Содержимое |
+| File | Contents |
 | --- | --- |
-| `data/spawns.json` | точки: карта, тип документации, описание `caption`/`captionEn`, массив `images`, координаты `x`/`y` в процентах от размера карты |
-| `data/maps.json` | 12 локаций: файл карты, тип (`raster`/`svg`), размеры |
-| `data/docs.json` | 8 типов документации: название ru/en, иконка, цвет маркера |
-| `assets/screenshots/` | скриншоты спавнов |
-| `assets/maps/` | карты локаций |
-| `documentations/` | иконки типов документации |
+| `data/spawns.json` | points: map, document type, `caption`/`captionEn`, `images` array, `x`/`y` as percentages of the map size |
+| `data/maps.json` | 12 locations: map file, type (`raster`/`svg`), dimensions |
+| `data/docs.json` | 8 document types: ru/en name, icon, marker colour |
+| `assets/screenshots/` | spawn screenshots |
+| `assets/maps/` | location maps |
+| `documentations/` | document type icons |
 
-Координаты хранятся в процентах, поэтому не зависят от масштаба показа.
-`x: null` означает, что точка ещё не размечена — на карте она не показывается,
-а в списке подсвечена красным.
+Coordinates are stored as percentages, so they don't depend on the display
+scale. `x: null` means the point isn't placed yet — it's hidden on the map and
+highlighted red in the list. Points with neither a description nor screenshots
+are treated as drafts and never reach the site.
 
-## Скрипты
+## Configuration
 
-| Скрипт | Что делает |
-| --- | --- |
-| `scripts/parse-article.mjs` | разбирает сохранённую копию статьи `article.html` в `spawns-raw.json` |
-| `scripts/download-screenshots.mjs` | скачивает скриншоты и **создаёт `data/spawns.json` заново** |
-| `scripts/download-maps.mjs [id…]` | скачивает карты с вики и обновляет `data/maps.json` |
-| `scripts/merge-spawns.mjs` | склейка нескольких скриншотов в одну точку (список в `MERGES`) |
-| `scripts/add-en-captions.mjs` | проставляет английские описания |
+Third-party service keys live in [js/config.js](js/config.js). An empty value
+simply turns the service off.
 
-`download-screenshots.mjs` перезаписывает `data/spawns.json` с нулевыми
-координатами — перед запуском сделай резервную копию.
+**Online counter** in the header — Supabase Realtime Presence. Every tab holds a
+websocket and announces itself in the shared `kord-breach-online` channel; the
+number of channel members is the online count. No server of your own, no
+database involved.
 
-Координаты привязаны к конкретному изображению карты: если заменить файл в
-`assets/maps/`, размеченные точки этой локации придётся ставить заново.
+1. Create a project at [supabase.com](https://supabase.com) (free tier).
+2. Project Settings → API → copy **Project URL** and **anon public key**.
+3. Put them into `SUPABASE_URL` and `SUPABASE_ANON_KEY`.
 
-## Счётчик «онлайн» и realtime-дашборд
+The free tier caps at 200 concurrent connections; past that the extra visitors
+just don't connect and the site keeps working. The `anon` key is meant to be
+public, but keep this project to Realtime only — no tables, no storage. If you
+ever add tables, turn RLS on, and never put the `service_role` key here.
 
-Оба сервиса настраиваются в [js/config.js](js/config.js). Пустое значение —
-сервис выключен, страница работает как обычно.
-
-**Плашка «N онлайн» в шапке** — Supabase Realtime Presence. Каждая вкладка
-держит вебсокет и объявляет себя в общем канале `kord-breach-online`; число
-участников канала и есть онлайн. Своего сервера не нужно, база не используется.
-
-1. Завести проект на [supabase.com](https://supabase.com) (бесплатный тариф).
-2. Project Settings → API → скопировать **Project URL** и **anon public key**.
-3. Вписать их в `SUPABASE_URL` и `SUPABASE_ANON_KEY`.
-
-Ограничение бесплатного тарифа — 200 одновременных подключений; при превышении
-лишние просто не подключатся, сайт продолжит работать. `anon key` рассчитан на
-публикацию в браузере, но держи в этом проекте только Realtime — ни таблиц, ни
-файлов.
-
-**Realtime-дашборд** — [Umami Cloud](https://cloud.umami.is), бесплатный Hobby
-(3 сайта, 100k событий/мес). Add website → Tracking code → вписать website id в
-`UMAMI_WEBSITE_ID`. Нужен потому, что у GoatCounter realtime-режима нет.
-
-## Аналитика
-
-GoatCounter, сайт `kord-breach-documents` — https://kord-breach-documents.goatcounter.com.
-Скрипт подключён в `index.html` и `map.html`, просмотры страниц считаются
-автоматически; с локалхоста `count.js` ничего не отправляет.
-
-Дополнительные события шлёт `js/analytics.js`:
-
-| Событие | Когда |
-| --- | --- |
-| `map-open-<id>` | клик по карточке локации |
-| `spawn-view-<id>` | открытие просмотрщика скриншотов (пролистывание стрелками не считается) |
-| `lang-switch-<ru\|en>` | переключение языка |
-| `coffee-open`, `feedback-open`, `discord-open` | клики по кнопкам поддержки и фидбэка |
-
-## Деплой
-
-GitHub Actions (`.github/workflows/deploy.yml`) при пуше в `main` собирает
-`_site` только из просмотровой части и публикует на GitHub Pages. Редактор,
-`server.mjs` и `scripts/` в сборку не попадают.
-
-## Источники
-
-- Скриншоты и описания спавнов: статья [«Kord Breach: полное прохождение и все точки спавна документов»](https://vk.ru/@metadvij-kord-breach-polnoe-prohozhdenie-i-vse-tochki-spavna-dokument) (сообщество МетаДвиж).
-- Карты локаций: [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/), авторы карт — RE3MR, Jindouz, xTycho. Лицензия CC BY-NC-SA 4.0.
-
-Какие именно файлы берутся с вики — см. таблицу `WIKI_FILES` в
-`scripts/download-maps.mjs`. Карта Завода обрезается по высоте (`CROP`), потому
-что нижняя половина исходника пустая.
-
-## Обратная связь
-
-Неточность в координатах, спавн которого здесь нет, идея — Discord:
-https://discord.gg/UErdQwg7ww
-
-Ссылка задаётся в [js/config.js](js/config.js) (`DISCORD_INVITE`) и используется
-и кнопкой «Фидбэк», и иконкой в шапке. Приглашение бессрочное; если когда-нибудь
-заменишь его, проверь срок жизни — по умолчанию Discord выдаёт ссылки на 7 дней:
+**Discord invite** — `DISCORD_INVITE`, used by both the feedback button and the
+header icon. The current invite never expires; Discord hands out 7-day links by
+default, so check the expiry whenever you replace it:
 
 ```
 curl -s "https://discord.com/api/v10/invites/UErdQwg7ww?with_expiration=true"
 ```
+
+## Analytics
+
+Two services, because they answer different questions.
+
+**GoatCounter** — https://kord-breach-documents.goatcounter.com. The script is
+in `index.html` and `map.html`, pageviews are counted automatically, and
+`count.js` sends nothing from localhost.
+
+**Umami Cloud** — [cloud.umami.is](https://cloud.umami.is), free Hobby tier,
+added for the realtime view GoatCounter doesn't have. Set `UMAMI_WEBSITE_ID` in
+`js/config.js`.
+
+Extra events are sent by `js/analytics.js`:
+
+| Event | When |
+| --- | --- |
+| `map-open-<id>` | clicking a location card |
+| `spawn-view-<id>` | opening the screenshot viewer (paging with arrows doesn't count) |
+| `lang-switch-<ru\|en>` | switching language |
+| `coffee-open`, `feedback-open`, `discord-open` | support and feedback buttons |
+| `social-<platform>` | social icons in the header |
+
+## Scripts
+
+| Script | What it does |
+| --- | --- |
+| `scripts/parse-article.mjs` | parses a saved copy of the article (`article.html`) into `spawns-raw.json` |
+| `scripts/diff-article.mjs` | compares the parsed article against `data/spawns.json` and reports what's missing; `--write` also downloads it |
+| `scripts/sync-new-spawns.mjs` | appends points that appeared in the article after the last parse, leaving existing coordinates and edits alone |
+| `scripts/download-screenshots.mjs` | downloads screenshots and **recreates `data/spawns.json` from scratch** |
+| `scripts/download-maps.mjs [id…]` | downloads maps from the wiki and updates `data/maps.json` |
+| `scripts/merge-spawns.mjs` | merges several screenshots into one point (list in `MERGES`) |
+| `scripts/add-en-captions.mjs`, `add-en-captions-2.mjs` | fill in English descriptions |
+| `scripts/stage-screenshots.mjs` | stages only the screenshots actually referenced by `data/spawns.json` |
+| `scripts/publish.mjs` | validate → commit → push → wait for the deploy |
+
+`download-screenshots.mjs` overwrites `data/spawns.json` with empty coordinates —
+back it up before running.
+
+Coordinates are tied to a specific map image: replace a file in `assets/maps/`
+and every point on that location has to be placed again.
+
+## Deploy
+
+On every push to `main`, GitHub Actions
+([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) assembles `_site`
+from the viewer part only and publishes it to GitHub Pages. The editor,
+`server.mjs` and `scripts/` never make it into the build — the workflow asserts
+this before uploading.
+
+## Sources
+
+- Spawn screenshots and descriptions: the article [«Kord Breach: полное прохождение и все точки спавна документов»](https://vk.ru/@-218287636-kord-breach-polnoe-prohozhdenie-i-vse-tochki-spavna-dokument) by the МетаДвиж community.
+- Location maps: [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/), maps by RE3MR, Jindouz and xTycho. Licensed CC BY-NC-SA 4.0.
+
+Which files exactly are pulled from the wiki: see the `WIKI_FILES` table in
+`scripts/download-maps.mjs`. The Factory map is cropped vertically (`CROP`)
+because the bottom half of the original is empty.
+
+## Author
+
+[YouTube](https://www.youtube.com/@MasterMD_yt) ·
+[Twitch](https://www.twitch.tv/mastermd_ttv) ·
+[TikTok](https://www.tiktok.com/@mastermd_tt) ·
+[Boosty](https://boosty.to/mastermd)
+
+## Feedback
+
+Wrong marker, a spawn that's missing here, or an idea — drop by Discord:
+https://discord.gg/UErdQwg7ww
