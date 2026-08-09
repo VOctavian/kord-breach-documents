@@ -322,8 +322,8 @@
     "doc": "personal",
     "docName": "Личные данные ЧВК",
     "caption": "На третьем этаже чёрного коня (комната с компьютерами)",
-    "x": 9.16,
-    "y": 91.333,
+    "x": 8.406,
+    "y": 90.821,
     "floor": null,
     "images": [
       "assets/screenshots/reserve-personal-7b4b5846.jpg"
@@ -727,8 +727,8 @@
     "doc": "tehnicheskaea",
     "docName": "Чертежи и тех. документация",
     "caption": "Офисы OLI",
-    "x": 74.311,
-    "y": 71.117,
+    "x": 82.996,
+    "y": 66.901,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-tehnicheskaea-bcce7bab.jpg"
@@ -742,8 +742,8 @@
     "doc": "tehnicheskaea",
     "docName": "Чертежи и тех. документация",
     "caption": "Офисы OLI",
-    "x": 74.461,
-    "y": 71.383,
+    "x": 83.38,
+    "y": 66.951,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-tehnicheskaea-ea57bbca.jpg"
@@ -1027,8 +1027,8 @@
     "doc": "testovaea",
     "docName": "Тестовая документация",
     "caption": "Лагерь USEC на палете в лежаке",
-    "x": 27.886,
-    "y": 35.769,
+    "x": 28.063,
+    "y": 35.581,
     "floor": null,
     "images": [
       "assets/screenshots/woods-testovaea-9a6e3101.jpg"
@@ -1102,8 +1102,8 @@
     "doc": "polzovatelskoe",
     "docName": "Пользовательская документация",
     "caption": "Офис TerraGroup (комната охраны) в здании Cardinal",
-    "x": 50.374,
-    "y": 27.74,
+    "x": 50.34,
+    "y": 27.823,
     "floor": null,
     "images": [
       "assets/screenshots/streets-polzovatelskoe-39545c81.jpg"
@@ -1117,8 +1117,8 @@
     "doc": "polzovatelskoe",
     "docName": "Пользовательская документация",
     "caption": "2 этаж Фин. учреждения напротив Шестёрочки рядом с выходом «Река в коллекторе» (в этом здании раньше забиралась папка по квесту «Аудит»)",
-    "x": 80.561,
-    "y": 73.251,
+    "x": 80.626,
+    "y": 67.951,
     "floor": null,
     "images": [
       "assets/screenshots/streets-polzovatelskoe-dfb59121.jpg"
@@ -2292,8 +2292,8 @@
     "images": [
       "assets/screenshots/groundzero-meditsinskaea-aeaf1188.jpg"
     ],
-    "x": 38.289,
-    "y": 72.87,
+    "x": 47.694,
+    "y": 79.178,
     "floor": null
   },
   {
@@ -2412,8 +2412,8 @@
     "images": [
       "assets/screenshots/woods-expluatationnaea-03c02982.jpg"
     ],
-    "x": 62.131,
-    "y": 43.878,
+    "x": 55.905,
+    "y": 46.39,
     "floor": null
   },
   {
@@ -2570,12 +2570,12 @@
     "id": "shoreline-cmskijfp2",
     "map": "shoreline",
     "mapName": "Берег",
-    "doc": "testovaea",
-    "docName": "Тестовая документация",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
     "caption": "на полу бытовки",
     "captionEn": "on the floor of the trailer",
     "images": [
-      "assets/screenshots/shoreline-testovaea-99310cf1.png"
+      "assets/screenshots/shoreline-testovaea-c358146c.png"
     ],
     "x": 63.194,
     "y": 62.028,
@@ -2594,6 +2594,589 @@
     ],
     "x": 43.487,
     "y": 47.784,
+    "floor": null
+  },
+  {
+    "id": "customs-cmslk0pxl",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Под кроватью",
+    "captionEn": "Under the bed",
+    "images": [
+      "assets/screenshots/customs-finansovaea-bed16116.png"
+    ],
+    "x": 64.365,
+    "y": 94.759,
+    "floor": null
+  },
+  {
+    "id": "customs-cmslk1c7t",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Сторожка у Таркона",
+    "captionEn": "Gatehouse over the Tarcone",
+    "images": [
+      "assets/screenshots/customs-finansovaea-aa92d51f.png"
+    ],
+    "x": 83.243,
+    "y": 16.917,
+    "floor": null
+  },
+  {
+    "id": "customs-cmslk5i0p",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "За паллетами на 2 этаже",
+    "captionEn": "Behind the pallets on the 2nd floor",
+    "images": [
+      "assets/screenshots/customs-proectnaea-5b8f33d0.png"
+    ],
+    "x": 22.04,
+    "y": 21.734,
+    "floor": null
+  },
+  {
+    "id": "factory-cmslkauo2",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В комнате закрытый на ключ-карту «Полихим»",
+    "captionEn": "The room is locked with a Polikhim key card.",
+    "images": [
+      "assets/screenshots/factory-proectnaea-412ae90f.png"
+    ],
+    "x": 77.033,
+    "y": 76.92,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmslkca5u",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На полке в подземной станции ARRS (нужен пропуск на объект 14-4 KORD)",
+    "captionEn": "On a shelf in the ARRS underground station (requires a pass to facility 14-4 KORD)",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-73e61b3d.png"
+    ],
+    "x": 43.132,
+    "y": 21.707,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmslkdh0h",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В офисах IDEA ",
+    "captionEn": "IDEA offices ",
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-3750fb32.png"
+    ],
+    "x": 78.385,
+    "y": 28.288,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmslkei54",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На раковине в уборной",
+    "captionEn": "On the sink in the restroom",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-a0e125e1.png"
+    ],
+    "x": 79.694,
+    "y": 40.421,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmslki7n5",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На нижней полке",
+    "captionEn": "On the bottom shelf",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-0fbdc9a5.png"
+    ],
+    "x": 63.324,
+    "y": 62.123,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmslkjoop",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В здании метеостанции на втором этаже",
+    "captionEn": "In the weather station building on the second floor",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-c5687bfd.png"
+    ],
+    "x": 53.175,
+    "y": 72.143,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmslklluh",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На контейнерах перед коттеджем",
+    "captionEn": "On containers in front of the cottage",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-643068f7.png"
+    ],
+    "x": 22.067,
+    "y": 62.021,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmslkmcsg",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На крыльце коттеджа",
+    "captionEn": "On the porch of the cottage",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-1ce1e349.png"
+    ],
+    "x": 22.357,
+    "y": 63.401,
+    "floor": null
+  },
+  {
+    "id": "woods-cmslkpfhm",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На заднем сиденье пикапа",
+    "captionEn": "In the back seat of a pickup truck",
+    "images": [
+      "assets/screenshots/woods-testovaea-9a09d0da.png"
+    ],
+    "x": 42.591,
+    "y": 62.632,
+    "floor": null
+  },
+  {
+    "id": "woods-cmslkqngh",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В домике на картотеках",
+    "captionEn": "In the house on the filing cabinets",
+    "images": [
+      "assets/screenshots/woods-testovaea-28a87b50.png"
+    ],
+    "x": 48.394,
+    "y": 69.444,
+    "floor": null
+  },
+  {
+    "id": "woods-cmslks1g9",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В разбитом лагере, у остановки БТР «Развилка»",
+    "captionEn": "At the set-up camp, near the Razvilka armored personnel carrier stop",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-b36f4162.png"
+    ],
+    "x": 51.558,
+    "y": 35.254,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmslku76x",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На стуле в беседке",
+    "captionEn": "On a chair in the gazebo",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-14e9b7f3.png"
+    ],
+    "x": 54.343,
+    "y": 56.136,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmslkz62p",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В палатке на теннисном корте",
+    "captionEn": "In a tent on the tennis court",
+    "images": [
+      "assets/screenshots/lighthouse-personal-c3a5ff0d.png"
+    ],
+    "x": 54.968,
+    "y": 69.051,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsll155m",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "В белом коне на третьем этаже",
+    "captionEn": "In a white horse on the third floor",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-af28956c.png"
+    ],
+    "x": 10.088,
+    "y": 83.449,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsll39ex",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В белом коне на третьем этаже, на полу рядом со шкафом",
+    "captionEn": "In the white horse on the third floor, on the floor next to the closet",
+    "images": [],
+    "x": 8.514,
+    "y": 83.498,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsll4bw1",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На третьем этаже чёрного коня (комната с компьютерами)",
+    "captionEn": "3rd floor of the Black Knight (the room with computers)",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-6503cc1b.png"
+    ],
+    "x": 8.129,
+    "y": 90.636,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsll5zrd",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На столе в комнате с сейфом",
+    "captionEn": "On the table in the room with the safe",
+    "images": [
+      "assets/screenshots/reserve-personal-e3d9d77e.png"
+    ],
+    "x": 46.358,
+    "y": 82.001,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsll73o9",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На подоконнике КПП",
+    "captionEn": "On the windowsill of the checkpoint",
+    "images": [
+      "assets/screenshots/reserve-personal-898e305e.png"
+    ],
+    "x": 45.864,
+    "y": 80.291,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsll9ddl",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В комнате запертой на «Ключ РБ-РС»",
+    "captionEn": "In a room locked with the RB-RS Key",
+    "images": [
+      "assets/screenshots/reserve-personal-2ed8e69d.png"
+    ],
+    "x": 69.957,
+    "y": 80.045,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsllarb5",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж, хоз. помещение у левой лестницы",
+    "captionEn": "2nd floor, utility room near the left staircase",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-d32d332f.png"
+    ],
+    "x": 88.72,
+    "y": 65.377,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmslld3wq",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж, хоз. помещение у левых лестниц",
+    "captionEn": "2nd floor, utility room near the left stairs",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-74d0a0ea.png"
+    ],
+    "x": 92.334,
+    "y": 89.689,
+    "floor": null
+  },
+  {
+    "id": "streets-cmslledey",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Задний двор ТЦ Климова в пристройке на втором этаже",
+    "captionEn": "The backyard of the Klimova shopping center in the extension on the second floor",
+    "images": [
+      "assets/screenshots/streets-finansovaea-c474f114.png"
+    ],
+    "x": 57.802,
+    "y": 23.732,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllfno9",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В офисе TerraGroup на столе",
+    "captionEn": "On the desk in the TerraGroup office",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-542474fb.png"
+    ],
+    "x": 49.973,
+    "y": 29.321,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllgzk1",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Здание ЖК Cardinal, на кухне в корпоративной квартире TerraGroup (нужен ключ от корпоративной квартиры TerraGroup)",
+    "captionEn": "Cardinal residential complex, in the kitchen of the TerraGroup corporate apartment (requires a key to the TerraGroup corporate apartment)",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-7d961fbc.png"
+    ],
+    "x": 24.853,
+    "y": 33.409,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllnfht",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В ресторане на Примерском проспекте около спуска в подземный переход\n",
+    "captionEn": "In a restaurant on Primersky Prospekt near the entrance to the underground passage",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-6562a7a6.png"
+    ],
+    "x": 51.49,
+    "y": 39.108,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllodua",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Офис IT компании, средний зал, на столе справа от входа в комнату",
+    "captionEn": "IT company office, middle hall, on the table to the right of the entrance to the room",
+    "images": [
+      "assets/screenshots/streets-finansovaea-5cd14162.png"
+    ],
+    "x": 42.244,
+    "y": 51.279,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllqp7l",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Второй этаж ресторана Белуга на барной стойке",
+    "captionEn": "The second floor of the Beluga restaurant at the bar counter",
+    "images": [
+      "assets/screenshots/streets-finansovaea-9a67d1a2.png"
+    ],
+    "x": 65.938,
+    "y": 19.023,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllut6p",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На столе в номере 208",
+    "captionEn": "On the table in room 208",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-f803fb7a.png"
+    ],
+    "x": 83.279,
+    "y": 45.949,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsllwieh",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В комнате 212 на столе с кактусом",
+    "captionEn": "In room 212 on the table with a cactus",
+    "images": [
+      "assets/screenshots/streets-finansovaea-fd588774.png"
+    ],
+    "x": 84.254,
+    "y": 47.771,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmslm201e",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На стуле рядом со стойкой",
+    "captionEn": "On a chair next to the counter",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-f7b64911.png"
+    ],
+    "x": 68.313,
+    "y": 36.804,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmslm3ejd",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В коробках у перевёрнутого контейнера",
+    "captionEn": "In boxes near an overturned container",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-2fd8890e.png"
+    ],
+    "x": 87.658,
+    "y": 44.469,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmslm4nqh",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На скамейке рядом с шоурумом",
+    "captionEn": "On a bench next to the showroom",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-d7331eed.png"
+    ],
+    "x": null,
+    "y": null,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmslm5e1d",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В машине с открытым багажником",
+    "captionEn": "In a car with the trunk open",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-7fa3d278.png"
+    ],
+    "x": 27.528,
+    "y": 63.541,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmslm67bd",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На скамейке в аллее",
+    "captionEn": "On a bench in the alley",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-e20eea42.png"
+    ],
+    "x": 43.035,
+    "y": 65.652,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmslmabka",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В машинном отделении внутри комнаты с паролем",
+    "captionEn": "In the engine room inside the room with the password",
+    "images": [
+      "assets/screenshots/icebreaker-personal-e392a6db.png"
+    ],
+    "x": 87.474,
+    "y": 26.847,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmslmppey",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "база контрабандистов первый ангар ",
+    "captionEn": "Smugglers' Base, First Hangar",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-43939afe.png"
+    ],
+    "x": 57.709,
+    "y": 42.118,
     "floor": null
   }
 ]

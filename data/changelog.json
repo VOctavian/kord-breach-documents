@@ -1,0 +1,309 @@
+[
+  {
+    "id": "2026-08-09-1318",
+    "at": "2026-08-09T13:18",
+    "maps": [
+      {
+        "map": "customs",
+        "added": [
+          {
+            "id": "customs-cmslk0pxl",
+            "caption": "Под кроватью",
+            "captionEn": "Under the bed"
+          },
+          {
+            "id": "customs-cmslk1c7t",
+            "caption": "Сторожка у Таркона",
+            "captionEn": "Gatehouse over the Tarcone"
+          },
+          {
+            "id": "customs-cmslk5i0p",
+            "caption": "За паллетами на 2 этаже",
+            "captionEn": "Behind the pallets on the 2nd floor"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "factory",
+        "added": [
+          {
+            "id": "factory-cmslkauo2",
+            "caption": "В комнате закрытый на ключ-карту «Полихим»",
+            "captionEn": "The room is locked with a Polikhim key card."
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "groundzero",
+        "added": [
+          {
+            "id": "groundzero-cmslm201e",
+            "caption": "На стуле рядом со стойкой",
+            "captionEn": "On a chair next to the counter"
+          },
+          {
+            "id": "groundzero-cmslm3ejd",
+            "caption": "В коробках у перевёрнутого контейнера",
+            "captionEn": "In boxes near an overturned container"
+          },
+          {
+            "id": "groundzero-cmslm5e1d",
+            "caption": "В машине с открытым багажником",
+            "captionEn": "In a car with the trunk open"
+          },
+          {
+            "id": "groundzero-cmslm67bd",
+            "caption": "На скамейке в аллее",
+            "captionEn": "On a bench in the alley"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "groundzero-aeaf1188",
+            "caption": "На скамейках у здания «Nakatani»",
+            "captionEn": "On the benches by the \"Nakatani\" building"
+          }
+        ]
+      },
+      {
+        "map": "interchange",
+        "added": [
+          {
+            "id": "interchange-cmslkca5u",
+            "caption": "На полке в подземной станции ARRS (нужен пропуск на объект 14-4 KORD)",
+            "captionEn": "On a shelf in the ARRS underground station (requires a pass to facility 14-4 KORD)"
+          },
+          {
+            "id": "interchange-cmslkdh0h",
+            "caption": "В офисах IDEA ",
+            "captionEn": "IDEA offices "
+          },
+          {
+            "id": "interchange-cmslkei54",
+            "caption": "На раковине в уборной",
+            "captionEn": "On the sink in the restroom"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "interchange-50",
+            "caption": "Офисы OLI",
+            "captionEn": "OLI offices"
+          },
+          {
+            "id": "interchange-51",
+            "caption": "Офисы OLI",
+            "captionEn": "OLI offices"
+          }
+        ]
+      },
+      {
+        "map": "lighthouse",
+        "added": [
+          {
+            "id": "lighthouse-cmslku76x",
+            "caption": "На стуле в беседке",
+            "captionEn": "On a chair in the gazebo"
+          },
+          {
+            "id": "lighthouse-cmslkz62p",
+            "caption": "В палатке на теннисном корте",
+            "captionEn": "In a tent on the tennis court"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsll155m",
+            "caption": "В белом коне на третьем этаже",
+            "captionEn": "In a white horse on the third floor"
+          },
+          {
+            "id": "reserve-cmsll39ex",
+            "caption": "В белом коне на третьем этаже, на полу рядом со шкафом",
+            "captionEn": "In the white horse on the third floor, on the floor next to the closet"
+          },
+          {
+            "id": "reserve-cmsll4bw1",
+            "caption": "На третьем этаже чёрного коня (комната с компьютерами)",
+            "captionEn": "3rd floor of the Black Knight (the room with computers)"
+          },
+          {
+            "id": "reserve-cmsll5zrd",
+            "caption": "На столе в комнате с сейфом",
+            "captionEn": "On the table in the room with the safe"
+          },
+          {
+            "id": "reserve-cmsll73o9",
+            "caption": "На подоконнике КПП",
+            "captionEn": "On the windowsill of the checkpoint"
+          },
+          {
+            "id": "reserve-cmsll9ddl",
+            "caption": "В комнате запертой на «Ключ РБ-РС»",
+            "captionEn": "In a room locked with the RB-RS Key"
+          },
+          {
+            "id": "reserve-cmsllarb5",
+            "caption": "2 этаж, хоз. помещение у левой лестницы",
+            "captionEn": "2nd floor, utility room near the left staircase"
+          },
+          {
+            "id": "reserve-cmslld3wq",
+            "caption": "2 этаж, хоз. помещение у левых лестниц",
+            "captionEn": "2nd floor, utility room near the left stairs"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "reserve-23",
+            "caption": "На третьем этаже чёрного коня (комната с компьютерами)",
+            "captionEn": "3rd floor of the Black Knight (the room with computers)"
+          }
+        ]
+      },
+      {
+        "map": "shoreline",
+        "added": [
+          {
+            "id": "shoreline-cmslki7n5",
+            "caption": "На нижней полке",
+            "captionEn": "On the bottom shelf"
+          },
+          {
+            "id": "shoreline-cmslkjoop",
+            "caption": "В здании метеостанции на втором этаже",
+            "captionEn": "In the weather station building on the second floor"
+          },
+          {
+            "id": "shoreline-cmslklluh",
+            "caption": "На контейнерах перед коттеджем",
+            "captionEn": "On containers in front of the cottage"
+          },
+          {
+            "id": "shoreline-cmslkmcsg",
+            "caption": "На крыльце коттеджа",
+            "captionEn": "On the porch of the cottage"
+          },
+          {
+            "id": "shoreline-cmslmppey",
+            "caption": "база контрабандистов первый ангар ",
+            "captionEn": "Smugglers' Base, First Hangar"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "shoreline-cmskijfp2",
+            "caption": "на полу бытовки",
+            "captionEn": "on the floor of the trailer"
+          }
+        ]
+      },
+      {
+        "map": "streets",
+        "added": [
+          {
+            "id": "streets-cmslledey",
+            "caption": "Задний двор ТЦ Климова в пристройке на втором этаже",
+            "captionEn": "The backyard of the Klimova shopping center in the extension on the second floor"
+          },
+          {
+            "id": "streets-cmsllfno9",
+            "caption": "В офисе TerraGroup на столе",
+            "captionEn": "On the desk in the TerraGroup office"
+          },
+          {
+            "id": "streets-cmsllgzk1",
+            "caption": "Здание ЖК Cardinal, на кухне в корпоративной квартире TerraGroup (нужен ключ от корпоративной квартиры TerraGroup)",
+            "captionEn": "Cardinal residential complex, in the kitchen of the TerraGroup corporate apartment (requires a key to the TerraGroup corporate apartment)"
+          },
+          {
+            "id": "streets-cmsllnfht",
+            "caption": "В ресторане на Примерском проспекте около спуска в подземный переход\n",
+            "captionEn": "In a restaurant on Primersky Prospekt near the entrance to the underground passage"
+          },
+          {
+            "id": "streets-cmsllodua",
+            "caption": "Офис IT компании, средний зал, на столе справа от входа в комнату",
+            "captionEn": "IT company office, middle hall, on the table to the right of the entrance to the room"
+          },
+          {
+            "id": "streets-cmsllqp7l",
+            "caption": "Второй этаж ресторана Белуга на барной стойке",
+            "captionEn": "The second floor of the Beluga restaurant at the bar counter"
+          },
+          {
+            "id": "streets-cmsllut6p",
+            "caption": "На столе в номере 208",
+            "captionEn": "On the table in room 208"
+          },
+          {
+            "id": "streets-cmsllwieh",
+            "caption": "В комнате 212 на столе с кактусом",
+            "captionEn": "In room 212 on the table with a cactus"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "streets-75",
+            "caption": "Офис TerraGroup (комната охраны) в здании Cardinal",
+            "captionEn": "TerraGroup office (security room) in the Cardinal building"
+          },
+          {
+            "id": "streets-76",
+            "caption": "2 этаж Фин. учреждения напротив Шестёрочки рядом с выходом «Река в коллекторе» (в этом здании раньше забиралась папка по квесту «Аудит»)",
+            "captionEn": "2nd floor of the financial institution opposite Shestyorochka, next to the \"Sewer River\" extract (the folder for the \"Audit\" quest used to be here)"
+          }
+        ]
+      },
+      {
+        "map": "woods",
+        "added": [
+          {
+            "id": "woods-cmslkpfhm",
+            "caption": "На заднем сиденье пикапа",
+            "captionEn": "In the back seat of a pickup truck"
+          },
+          {
+            "id": "woods-cmslkqngh",
+            "caption": "В домике на картотеках",
+            "captionEn": "In the house on the filing cabinets"
+          },
+          {
+            "id": "woods-cmslks1g9",
+            "caption": "В разбитом лагере, у остановки БТР «Развилка»",
+            "captionEn": "At the set-up camp, near the Razvilka armored personnel carrier stop"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "woods-70",
+            "caption": "Лагерь USEC на палете в лежаке",
+            "captionEn": "USEC camp, on a pallet in the sleeping spot"
+          },
+          {
+            "id": "woods-03c02982",
+            "caption": "У запертого бункера на склоне горы",
+            "captionEn": "By the locked bunker on the mountain slope"
+          }
+        ]
+      },
+      {
+        "map": "icebreaker",
+        "added": [
+          {
+            "id": "icebreaker-cmslmabka",
+            "caption": "В машинном отделении внутри комнаты с паролем",
+            "captionEn": "In the engine room inside the room with the password"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  }
+]
