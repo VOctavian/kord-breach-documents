@@ -97,7 +97,8 @@ export function langToggle() {
   return el('div', { class: 'lang-toggle', title: t('langToggleTitle') }, mk('ru'), mk('en'));
 }
 
-function overlay(id, ...content) {
+/** Затемнение + окно по центру. Показывается классом `open`, закрывается кликом мимо окна. */
+export function overlay(id, ...content) {
   const box = el('div', { class: 'pop-box' }, ...content);
   const node = el('div', { class: 'pop-overlay', id }, box);
   node.addEventListener('click', (e) => {

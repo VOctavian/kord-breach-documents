@@ -5,8 +5,10 @@
 //   node scripts/publish.mjs --all        добавить в коммит вообще все изменения, не только данные
 //   node scripts/publish.mjs -m "текст"   своё сообщение коммита
 //   node scripts/publish.mjs --no-wait    не ждать деплой
+//   node scripts/publish.mjs --no-changelog     не добавлять запись в «Что нового»
+//   node scripts/publish.mjs --changelog-only   только записать «Что нового», без коммита
 import { execSync, execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
@@ -18,6 +20,7 @@ const has = (flag) => argv.includes(flag);
 const DRY = has('--dry-run');
 const ALL = has('--all');
 const WAIT = !has('--no-wait');
+const CHANGELOG = !has('--no-changelog');
 const message = argv[argv.indexOf('-m') + 1] && argv.includes('-m') ? argv[argv.indexOf('-m') + 1] : null;
 
 const git = (args, opts = {}) => execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', ...opts }).trim();
@@ -73,21 +76,72 @@ if (unplaced.length) warn(`${unplaced.length} без координат — на
 
 /* ---------- 2. что изменилось ---------- */
 
+const CHANGELOG_FILE = `${ROOT}data/changelog.json`;
+
+/**
+ * Запись для попапа «Что нового»: точки, изменившиеся с прошлого коммита,
+ * разложенные по локациям на «новые» и «исправления».
+ *
+ * Считаем только то, что видно посетителю: заготовки без описания и точки без
+ * координат в changelog не попадают — они появятся в той публикации, в которой
+ * их наконец разметят.
+ */
+function buildRelease(was) {
+  const visible = (s) => Boolean(s && (s.caption?.trim() || s.images?.length) && s.x != null);
+  const item = (s) => ({ id: s.id, caption: s.caption ?? '', captionEn: s.captionEn ?? '' });
+  const sameImages = (a, b) => JSON.stringify(a.images ?? []) === JSON.stringify(b.images ?? []);
+
+  const groups = [];
+  for (const map of maps) {
+    const added = [];
+    const fixed = [];
+
+    for (const s of spawns.filter((s) => s.map === map.id && visible(s))) {
+      const before = was.get(s.id);
+      // Точка, которой раньше не было на карте: либо новая, либо наконец размеченная.
+      if (!visible(before)) added.push(item(s));
+      else if (before.x !== s.x || before.y !== s.y || before.caption !== s.caption || !sameImages(before, s)) {
+        fixed.push(item(s));
+      }
+    }
+
+    if (added.length || fixed.length) groups.push({ map: map.id, added, fixed });
+  }
+
+  if (!groups.length) return null;
+
+  const now = new Date();
+  const pad = (n) => String(n).padStart(2, '0');
+  const day = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  const time = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  // `at` — местное время публикации, его же показывает попап.
+  return { id: `${day}-${time.replace(':', '')}`, at: `${day}T${time}`, maps: groups };
+}
+
 const changed = git(['status', '--porcelain', '--', ...(ALL ? ['.'] : PATHS)]);
 if (!changed) {
   console.log('\nИзменений нет — публиковать нечего.\n');
   process.exit(0);
 }
 
-let summary = [];
+let was = null;
 try {
-  const before = JSON.parse(git(['show', 'HEAD:data/spawns.json']));
-  const was = new Map(before.map((s) => [s.id, s]));
+  was = new Map(JSON.parse(git(['show', 'HEAD:data/spawns.json'])).map((s) => [s.id, s]));
+} catch {
+  // Первая публикация: сравнивать не с чем.
+}
+
+const summary = [];
+let release = null;
+
+if (!was) {
+  summary.push('обновление данных');
+} else {
   const now = new Map(spawns.map((s) => [s.id, s]));
 
   const added = spawns.filter((s) => !was.has(s.id));
-  const removed = before.filter((s) => !now.has(s.id));
-  const newlyPlaced = spawns.filter((s) => was.get(s.id)?.x == null && s.x != null);
+  const removed = [...was.values()].filter((s) => !now.has(s.id));
+  const newlyPlaced = spawns.filter((s) => was.has(s.id) && was.get(s.id).x == null && s.x != null);
   const moved = spawns.filter((s) => {
     const b = was.get(s.id);
     return b && b.x != null && s.x != null && (b.x !== s.x || b.y !== s.y);
@@ -99,8 +153,8 @@ try {
   if (newlyPlaced.length) summary.push(`размечено: ${newlyPlaced.length}`);
   if (moved.length) summary.push(`сдвинуто: ${moved.length}`);
   if (retitled.length) summary.push(`описаний правлено: ${retitled.length}`);
-} catch {
-  summary.push('обновление данных');
+
+  if (CHANGELOG) release = buildRelease(was);
 }
 
 const subject = message ?? `Обновление спавнов: ${summary.join(', ') || 'правки данных'}`;
@@ -115,12 +169,50 @@ console.log(
 );
 console.log(`\nКоммит\n  ${subject}\n  ${body}`);
 
+/* ---------- 3. запись «Что нового» ---------- */
+
+if (release) {
+  const mapName = (id) => maps.find((m) => m.id === id).name;
+  console.log(`\nЧто нового (${release.at.replace('T', ', ')})`);
+  for (const g of release.maps) {
+    const parts = [];
+    if (g.added.length) parts.push(`новых: ${g.added.length}`);
+    if (g.fixed.length) parts.push(`исправлено: ${g.fixed.length}`);
+    console.log(`  ${mapName(g.map)} — ${parts.join(', ')}`);
+  }
+} else if (CHANGELOG) {
+  console.log('\nЧто нового\n  видимых для посетителя изменений нет — запись не добавляется');
+}
+
 if (DRY) {
   console.log('\n--dry-run: ничего не сделано.\n');
   process.exit(0);
 }
 
-/* ---------- 3. коммит и пуш ---------- */
+if (release) {
+  const history = existsSync(CHANGELOG_FILE) ? JSON.parse(readFileSync(CHANGELOG_FILE, 'utf8')) : [];
+  let committed = new Set();
+  try {
+    const head = git(['show', 'HEAD:data/changelog.json'], { stdio: ['ignore', 'pipe', 'ignore'] });
+    committed = new Set(JSON.parse(head).map((r) => r.id));
+  } catch {
+    // Файла ещё нет в истории — значит вся локальная версия черновая.
+  }
+  // Верхнюю запись мог оставить прогон с --changelog-only. Раз её нет в коммите,
+  // это черновик той же публикации: заменяем, иначе на одно обновление вышло бы две.
+  const draft = history[0] && !committed.has(history[0].id) ? history[0] : null;
+
+  // Новое сверху: попап показывает всё, что посетитель ещё не закрывал.
+  writeFileSync(CHANGELOG_FILE, JSON.stringify([release, ...history.slice(draft ? 1 : 0)], null, 2) + '\n');
+  if (draft) ok(`«Что нового»: черновая запись ${draft.id} заменена на ${release.id}`);
+}
+
+if (has('--changelog-only')) {
+  console.log('\ndata/changelog.json обновлён. Посмотри попап локально и запусти публикацию обычным прогоном.\n');
+  process.exit(0);
+}
+
+/* ---------- 4. коммит и пуш ---------- */
 
 console.log('\nПубликация');
 git(['add', '--', ...(ALL ? ['.'] : PATHS)]);
@@ -134,7 +226,7 @@ if (!WAIT) {
   process.exit(0);
 }
 
-/* ---------- 4. ожидание деплоя ---------- */
+/* ---------- 5. ожидание деплоя ---------- */
 
 try {
   execSync('gh --version', { stdio: 'ignore' });
@@ -194,7 +286,7 @@ if (result !== 'success') {
 }
 ok('деплой прошёл');
 
-/* ---------- 5. проверка живого сайта ---------- */
+/* ---------- 6. проверка живого сайта ---------- */
 
 const live = await fetch(`${SITE}/data/spawns.json`, { cache: 'no-store' }).then((r) => r.json());
 if (live.length === spawns.length) ok(`сайт отдаёт ${live.length} точек — совпадает`);

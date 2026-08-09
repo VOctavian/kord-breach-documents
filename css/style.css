@@ -542,7 +542,8 @@ a:hover { color: #e0cfa4; }
 }
 
 #btn-coffee,
-#btn-feedback {
+#btn-feedback,
+#btn-changelog {
   border: none;
   border-radius: 22px;
   padding: 9px 16px;
@@ -562,6 +563,9 @@ a:hover { color: #e0cfa4; }
 #btn-coffee:hover { animation-play-state: paused; filter: brightness(1.1); }
 #btn-feedback { background: linear-gradient(135deg, #5865f2, #3b45b5); color: #fff; }
 #btn-feedback:hover { filter: brightness(1.12); }
+/* Кнопка вспомогательная — не спорит за внимание с кофе и фидбэком. */
+#btn-changelog { background: var(--bg-3); color: var(--text-dim); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); }
+#btn-changelog:hover { background: var(--bg-2); color: var(--text); }
 
 @keyframes coffee-jiggle {
   0%, 82%, 100% { transform: rotate(0deg) scale(1); }
@@ -632,9 +636,63 @@ a:hover { color: #e0cfa4; }
 .discord-btn { display: block; text-align: center; margin-bottom: 12px; background: #5865f2; border-color: #5865f2; color: #fff; }
 .discord-btn:hover { background: #4752c4; color: #fff; }
 
+/* ---------- «Что нового» ---------- */
+
+#changelog-overlay .pop-box { width: 520px; }
+#changelog-overlay .btn.primary { width: 100%; margin-top: 4px; }
+
+.cl-release + .cl-release { border-top: 1px solid var(--line); margin-top: 16px; padding-top: 14px; }
+.cl-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.cl-map {
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.cl-map-name { font-size: 14px; font-weight: 700; color: var(--accent-hot); margin-bottom: 6px; }
+.cl-group + .cl-group { margin-top: 8px; }
+.cl-group-title { font-size: 12px; font-weight: 700; color: var(--text-dim); }
+.cl-list { margin: 4px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.45; }
+.cl-list li { margin-bottom: 2px; }
+.cl-more { color: var(--text-dim); list-style: none; margin-left: -18px; }
+
+.cl-history { border-top: 1px solid var(--line); margin-top: 16px; padding-top: 14px; }
+.cl-history-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.cl-past > summary {
+  cursor: pointer;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-dim);
+  list-style: none;
+}
+.cl-past > summary::-webkit-details-marker { display: none; }
+.cl-past > summary::before { content: "▸ "; }
+.cl-past[open] > summary { color: var(--accent-hot); margin-bottom: 8px; }
+.cl-past[open] > summary::before { content: "▾ "; }
+.cl-past > summary:hover { background: var(--bg-3); color: var(--text); }
+.cl-past + .cl-past { margin-top: 6px; }
+
 @media (max-width: 560px) {
   .float-buttons { right: 10px; bottom: 10px; }
-  #btn-coffee, #btn-feedback { font-size: 0; padding: 10px 12px; }
+  #btn-coffee, #btn-feedback, #btn-changelog { font-size: 0; padding: 10px 12px; }
   #btn-coffee::before { content: "☕"; font-size: 16px; }
   #btn-feedback::before { content: "💬"; font-size: 15px; }
+  #btn-changelog::before { content: "📋"; font-size: 15px; }
 }

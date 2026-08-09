@@ -4,6 +4,7 @@ import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent, mountUmami } from './analytics.js';
 import { mountOnlineBadge } from './online.js';
+import { mountChangelog } from './changelog.js';
 
 document.title = t('pageTitleIndex');
 mountUmami();
@@ -16,6 +17,7 @@ mountWidgets();
 
 const data = await loadData();
 const { maps, docs, docById } = data;
+mountChangelog(data.mapById);
 const spawns = data.spawns.filter(isPublished);
 const grid = document.getElementById('grid');
 

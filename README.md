@@ -77,6 +77,8 @@ site.
 | `-m "text"` | custom commit message instead of the generated one |
 | `--all` | commit everything, not just `data/` and `assets/screenshots/` |
 | `--no-wait` | don't wait for the deploy |
+| `--no-changelog` | don't add a "What's new" entry |
+| `--changelog-only` | only write "What's new" and exit — to preview the popup before pushing |
 
 Before committing it checks: unique ids, that the location and document type
 exist, that every screenshot file is present. If anything is off, publishing is
@@ -91,6 +93,34 @@ almost always a GitHub outage — check [githubstatus.com](https://www.githubsta
 
 In Claude Code the same thing is available as `/publish`.
 
+## What's new popup
+
+On every publish that changes something a visitor can see, `publish.mjs` appends
+an entry to `data/changelog.json`: the publish time (field `at`, local, to the
+minute) plus the affected points grouped by location and split into "new" and
+"fixes". A point counts as new the first time it becomes visible on the map —
+whether it was just created or finally got coordinates.
+
+The "What's new" popup opens by itself when there are entries the visitor hasn't
+dismissed. Once dismissed it stays away until the next publish; the read marker
+lives in `localStorage` under `kord_breach_changelog_v1`. Unread entries are
+expanded, everything older sits in collapsed `<details>` under "Past updates".
+First-time visitors only get the three most recent entries expanded, and long
+lists collapse into "N more".
+
+The "📋 Updates" button next to "Buy me a coffee" reopens the popup at any time.
+When opened by hand the latest entry is always expanded, even if it was already
+read.
+
+Preview the popup before pushing:
+
+```
+node scripts/publish.mjs --changelog-only
+```
+
+That writes the file without committing. A normal run afterwards picks the entry
+up instead of duplicating it.
+
 ## Data
 
 | File | Contents |
@@ -98,6 +128,7 @@ In Claude Code the same thing is available as `/publish`.
 | `data/spawns.json` | points: map, document type, `caption`/`captionEn`, `images` array, `x`/`y` as percentages of the map size |
 | `data/maps.json` | 12 locations: map file, type (`raster`/`svg`), dimensions |
 | `data/docs.json` | 8 document types: ru/en name, icon, marker colour |
+| `data/changelog.json` | update history for the "What's new" popup, newest first |
 | `assets/screenshots/` | spawn screenshots |
 | `assets/maps/` | location maps |
 | `documentations/` | document type icons |
@@ -154,6 +185,8 @@ Extra events are sent by `js/analytics.js`:
 | `spawn-view-<id>` | opening the screenshot viewer (paging with arrows doesn't count) |
 | `lang-switch-<ru\|en>` | switching language |
 | `coffee-open`, `feedback-open`, `discord-open` | support and feedback buttons |
+| `changelog-new-<id>` | the "What's new" popup opened by itself |
+| `changelog-open` | the popup was opened with the button |
 | `social-<platform>` | social icons in the header |
 
 ## Scripts

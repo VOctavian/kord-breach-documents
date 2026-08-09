@@ -39,6 +39,16 @@ const DICT = {
   onlineLabel: { ru: '{n} онлайн', en: '{n} online' },
   onlineTitle: { ru: 'Сейчас на сайте', en: 'Currently on the site' },
 
+  changelogTitle: { ru: 'Что нового', en: "What's new" },
+  changelogIntro: { ru: 'Карта обновилась — вот что изменилось.', en: 'The map has been updated — here is what changed.' },
+  changelogAdded: { ru: 'Новые точки', en: 'New points' },
+  changelogFixed: { ru: 'Исправления', en: 'Fixes' },
+  changelogMore: { ru: 'и ещё {n}', en: '{n} more' },
+  changelogGot: { ru: 'Понятно', en: 'Got it' },
+  changelogHistory: { ru: 'Прошлые обновления', en: 'Past updates' },
+  changelogBtnLabel: { ru: '📋 Обновления', en: '📋 Updates' },
+  changelogBtnTitle: { ru: 'Что изменилось на карте', en: 'What changed on the map' },
+
   coffeeBtnLabel: { ru: '☕ Угостить кофе', en: '☕ Buy me a coffee' },
   coffeeBtnTitle: { ru: 'Поддержать разработчика', en: 'Support the developer' },
   coffeeIntro: {

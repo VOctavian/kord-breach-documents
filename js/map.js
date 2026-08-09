@@ -4,6 +4,7 @@ import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent, mountUmami } from './analytics.js';
 import { mountOnlineBadge } from './online.js';
+import { mountChangelog } from './changelog.js';
 
 document.title = t('pageTitleMap');
 mountUmami();
@@ -14,6 +15,7 @@ applyI18n();
 mountWidgets();
 
 const { mapById, docById, spawns } = await loadData();
+mountChangelog(mapById);
 const mapId = new URLSearchParams(location.search).get('map');
 const map = mapById[mapId];
 if (!map) location.replace('index.html');
