@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-09-2200",
+    "at": "2026-08-09T22:00",
+    "maps": [
+      {
+        "map": "reserve",
+        "added": [],
+        "fixed": [
+          {
+            "id": "reserve-cmsm2v0qt",
+            "caption": "Эта тумба справа",
+            "captionEn": "This cabinet is on the right"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-09-2030",
     "at": "2026-08-09T20:30",
     "maps": [
