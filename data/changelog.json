@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-09-1827",
+    "at": "2026-08-09T18:27",
+    "maps": [
+      {
+        "map": "woods",
+        "added": [],
+        "fixed": [
+          {
+            "id": "woods-cmsitd7yl",
+            "caption": "Под антенной",
+            "captionEn": "Under Antenna"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-09-1318",
     "at": "2026-08-09T13:18",
     "maps": [
