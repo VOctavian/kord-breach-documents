@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-09-2202",
+    "at": "2026-08-09T22:02",
+    "maps": [
+      {
+        "map": "groundzero",
+        "added": [
+          {
+            "id": "groundzero-cmslm4nqh",
+            "caption": "На скамейке рядом с шоурумом",
+            "captionEn": "On a bench next to the showroom"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-09-2200",
     "at": "2026-08-09T22:00",
     "maps": [
