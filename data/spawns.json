@@ -82,8 +82,8 @@
     "doc": "finansovaea",
     "docName": "Финансовая документация",
     "caption": "2 этаж библиотеки",
-    "x": 65.025,
-    "y": 7.586,
+    "x": 65.055,
+    "y": 9.15,
     "floor": "Second_Floor",
     "images": [
       "assets/screenshots/customs-finansovaea-f3e73363.jpg"
@@ -97,8 +97,8 @@
     "doc": "finansovaea",
     "docName": "Финансовая документация",
     "caption": "2 этаж библиотеки",
-    "x": 65.043,
-    "y": 8.476,
+    "x": 65.077,
+    "y": 8.071,
     "floor": "Second_Floor",
     "images": [
       "assets/screenshots/customs-finansovaea-ffb79280.jpg"
@@ -412,8 +412,8 @@
     "doc": "proectnaea",
     "docName": "Проектная документация",
     "caption": "2 этаж в Библиотеке",
-    "x": 64.789,
-    "y": 8.055,
+    "x": 64.488,
+    "y": 9.144,
     "floor": "Second_Floor",
     "images": [
       "assets/screenshots/customs-proectnaea-2967e39b.jpg"

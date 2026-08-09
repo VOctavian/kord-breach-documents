@@ -673,7 +673,11 @@ a:hover { color: #e0cfa4; }
   letter-spacing: 0.04em;
   margin-bottom: 8px;
 }
-.cl-past > summary {
+.cl-past > summary,
+.cl-bucket > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
   padding: 7px 10px;
   border: 1px solid var(--line);
@@ -682,12 +686,35 @@ a:hover { color: #e0cfa4; }
   color: var(--text-dim);
   list-style: none;
 }
-.cl-past > summary::-webkit-details-marker { display: none; }
-.cl-past > summary::before { content: "▸ "; }
-.cl-past[open] > summary { color: var(--accent-hot); margin-bottom: 8px; }
-.cl-past[open] > summary::before { content: "▾ "; }
-.cl-past > summary:hover { background: var(--bg-3); color: var(--text); }
-.cl-past + .cl-past { margin-top: 6px; }
+.cl-past > summary::-webkit-details-marker,
+.cl-bucket > summary::-webkit-details-marker { display: none; }
+.cl-past > summary::before,
+.cl-bucket > summary::before { content: "▸"; }
+.cl-past[open] > summary,
+.cl-bucket[open] > summary { color: var(--accent-hot); margin-bottom: 8px; }
+.cl-past[open] > summary::before,
+.cl-bucket[open] > summary::before { content: "▾"; }
+.cl-past > summary:hover,
+.cl-bucket > summary:hover { background: var(--bg-3); color: var(--text); }
+.cl-past + .cl-past,
+.cl-past + .cl-bucket,
+.cl-bucket + .cl-bucket,
+.cl-bucket + .cl-past { margin-top: 6px; }
+
+/* Папки месяцев и годов: заголовок весомее отдельного обновления. */
+.cl-bucket > summary { font-weight: 700; }
+.cl-count {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-dim);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1px 7px;
+}
+/* Вложенность видно по отступу с линией, а не по одним заголовкам. */
+.cl-bucket-body { margin-left: 9px; padding-left: 10px; border-left: 1px solid var(--line); }
 
 @media (max-width: 560px) {
   .float-buttons { right: 10px; bottom: 10px; }

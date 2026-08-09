@@ -108,6 +108,11 @@ expanded, everything older sits in collapsed `<details>` under "Past updates".
 First-time visitors only get the three most recent entries expanded, and long
 lists collapse into "N more".
 
+History folds up as it ages: this month's updates sit in a flat list, earlier
+months become "July 2026" folders, and past years become a year folder holding
+months holding the updates themselves. Each folder shows how many entries it
+holds.
+
 The "📋 Updates" button next to "Buy me a coffee" reopens the popup at any time.
 When opened by hand the latest entry is always expanded, even if it was already
 read.
