@@ -1,5 +1,50 @@
 [
   {
+    "id": "2026-08-09-2030",
+    "at": "2026-08-09T20:30",
+    "maps": [
+      {
+        "map": "customs",
+        "added": [
+          {
+            "id": "customs-cmsm2s6px",
+            "caption": " в разбитой тумбе",
+            "captionEn": "in a broken nightstand"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsm2v0qt",
+            "caption": "Эта тумба справа",
+            "captionEn": "This cabinet is on the right"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "reserve-21",
+            "caption": "Комната ключ РБ-ОБ",
+            "captionEn": "RB-OB key room"
+          }
+        ]
+      },
+      {
+        "map": "woods",
+        "added": [],
+        "fixed": [
+          {
+            "id": "woods-03c02982",
+            "caption": "У запертого бункера на склоне горы",
+            "captionEn": "By the locked bunker on the mountain slope"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-09-1922",
     "at": "2026-08-09T19:22",
     "maps": [

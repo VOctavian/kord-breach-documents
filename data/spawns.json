@@ -292,8 +292,8 @@
     "doc": "personal",
     "docName": "Личные данные ЧВК",
     "caption": "Комната ключ РБ-ОБ",
-    "x": 90.657,
-    "y": 65.009,
+    "x": 90.648,
+    "y": 64.98,
     "floor": null,
     "images": [
       "assets/screenshots/reserve-personal-1d8e1e9a.jpg"
@@ -2412,8 +2412,8 @@
     "images": [
       "assets/screenshots/woods-expluatationnaea-03c02982.jpg"
     ],
-    "x": 55.905,
-    "y": 46.39,
+    "x": 57.158,
+    "y": 46.887,
     "floor": null
   },
   {
@@ -3177,6 +3177,36 @@
     ],
     "x": 57.709,
     "y": 42.118,
+    "floor": null
+  },
+  {
+    "id": "customs-cmsm2s6px",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": " в разбитой тумбе",
+    "captionEn": "in a broken nightstand",
+    "images": [
+      "assets/screenshots/customs-finansovaea-ffd4f1a4.png"
+    ],
+    "x": 64.245,
+    "y": 83.614,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsm2v0qt",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Эта тумба справа",
+    "captionEn": "This cabinet is on the right",
+    "images": [
+      "assets/screenshots/reserve-personal-85fb376f.png"
+    ],
+    "x": 91.121,
+    "y": 65.678,
     "floor": null
   }
 ]
