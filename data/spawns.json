@@ -3315,5 +3315,35 @@
     "x": 59.114,
     "y": 18,
     "floor": null
+  },
+  {
+    "id": "lab-cmsnqrr6v",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Комната управления дверями ангара (кнопка)",
+    "captionEn": "Hangar door control room (button)",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-7944f9e1.png"
+    ],
+    "x": 91.071,
+    "y": 32.516,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsnqskqv",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2й этаж, комната офисов.",
+    "captionEn": "2nd floor, office room.",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-82a386b0.png"
+    ],
+    "x": 69.467,
+    "y": 25.736,
+    "floor": null
   }
 ]

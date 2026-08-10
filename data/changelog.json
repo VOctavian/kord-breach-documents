@@ -1,5 +1,27 @@
 [
   {
+    "id": "2026-08-11-0028",
+    "at": "2026-08-11T00:28",
+    "maps": [
+      {
+        "map": "lab",
+        "added": [
+          {
+            "id": "lab-cmsnqrr6v",
+            "caption": "Комната управления дверями ангара (кнопка)",
+            "captionEn": "Hangar door control room (button)"
+          },
+          {
+            "id": "lab-cmsnqskqv",
+            "caption": "2й этаж, комната офисов.",
+            "captionEn": "2nd floor, office room."
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-10-2217",
     "at": "2026-08-10T22:17",
     "maps": [
