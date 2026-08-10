@@ -1642,8 +1642,8 @@
     "doc": "expluatationnaea",
     "docName": "Эксплуатационная документация",
     "caption": "В одном из ангаров на Базе Контрабандистов",
-    "x": 58.675,
-    "y": 38.251,
+    "x": 58.782,
+    "y": 37.795,
     "floor": null,
     "images": [
       "assets/screenshots/shoreline-expluatationnaea-f2c51000.jpg"
@@ -3207,6 +3207,66 @@
     ],
     "x": 91.125,
     "y": 71.476,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsn2bzsv",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Заправка (закрытая дальняя дверь)\n",
+    "captionEn": "Gas station (closed far door)",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-b99c210b.png"
+    ],
+    "x": 36.763,
+    "y": 82.227,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsn2cx5z",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "218 восточка",
+    "captionEn": "218 EAST",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-2077dafd.png"
+    ],
+    "x": 91.238,
+    "y": 85.493,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsn2ex47",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "212 восточка, в шкафу, вход через 211",
+    "captionEn": "212 East, in the closet, entrance through 211",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-3ff6f242.png"
+    ],
+    "x": 87.302,
+    "y": 88.696,
+    "floor": null
+  },
+  {
+    "id": "factory-cmsn2gy00",
+    "map": "factory",
+    "mapName": "Завод",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "между книгами на полу",
+    "captionEn": "between the books on the floor",
+    "images": [
+      "assets/screenshots/factory-proectnaea-24a59ca3.png"
+    ],
+    "x": 53.445,
+    "y": 57.08,
     "floor": null
   }
 ]

@@ -1,5 +1,49 @@
 [
   {
+    "id": "2026-08-10-1307",
+    "at": "2026-08-10T13:07",
+    "maps": [
+      {
+        "map": "factory",
+        "added": [
+          {
+            "id": "factory-cmsn2gy00",
+            "caption": "между книгами на полу",
+            "captionEn": "between the books on the floor"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "shoreline",
+        "added": [
+          {
+            "id": "shoreline-cmsn2bzsv",
+            "caption": "Заправка (закрытая дальняя дверь)\n",
+            "captionEn": "Gas station (closed far door)"
+          },
+          {
+            "id": "shoreline-cmsn2cx5z",
+            "caption": "218 восточка",
+            "captionEn": "218 EAST"
+          },
+          {
+            "id": "shoreline-cmsn2ex47",
+            "caption": "212 восточка, в шкафу, вход через 211",
+            "captionEn": "212 East, in the closet, entrance through 211"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "shoreline-111",
+            "caption": "В одном из ангаров на Базе Контрабандистов",
+            "captionEn": "In one of the hangars at the Smugglers' base"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-09-2202",
     "at": "2026-08-09T22:02",
     "maps": [
