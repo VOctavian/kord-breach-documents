@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-10-2217",
+    "at": "2026-08-10T22:17",
+    "maps": [
+      {
+        "map": "reserve",
+        "added": [],
+        "fixed": [
+          {
+            "id": "reserve-cmsll5zrd",
+            "caption": "На столе в комнате с сейфом",
+            "captionEn": "On the table in the room with the safe"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-10-2130",
     "at": "2026-08-10T21:30",
     "maps": [
