@@ -3283,5 +3283,20 @@
     "x": 78.155,
     "y": 41.008,
     "floor": null
+  },
+  {
+    "id": "groundzero-cmsnf0r76",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Кафе на перекрестке, на столике",
+    "captionEn": "Cafe at the crossroads, on a table",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-22c47610.png"
+    ],
+    "x": 37.932,
+    "y": 45.746,
+    "floor": null
   }
 ]

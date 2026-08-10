@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-10-1858",
+    "at": "2026-08-10T18:58",
+    "maps": [
+      {
+        "map": "groundzero",
+        "added": [
+          {
+            "id": "groundzero-cmsnf0r76",
+            "caption": "Кафе на перекрестке, на столике",
+            "captionEn": "Cafe at the crossroads, on a table"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-10-1540",
     "at": "2026-08-10T15:40",
     "maps": [
