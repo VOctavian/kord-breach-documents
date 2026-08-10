@@ -292,8 +292,8 @@
     "doc": "personal",
     "docName": "Личные данные ЧВК",
     "caption": "Комната ключ РБ-ОБ",
-    "x": 90.648,
-    "y": 64.98,
+    "x": 90.703,
+    "y": 65.035,
     "floor": null,
     "images": [
       "assets/screenshots/reserve-personal-1d8e1e9a.jpg"
@@ -3344,6 +3344,66 @@
     ],
     "x": 69.467,
     "y": 25.736,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsnqujh3",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2й этаж, комната офисов (центральные столы)",
+    "captionEn": "2nd floor, office room (central desks)",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-1e30c7e5.png"
+    ],
+    "x": 70.38,
+    "y": 26.944,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsnqy1fr",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Справа от картотек",
+    "captionEn": "To the right of the card files",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-84dbc398.png"
+    ],
+    "x": 46.537,
+    "y": 82.131,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsnr07zs",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "2й этаж, комната рядом с \"Синей\"",
+    "captionEn": "2nd floor, room next to \"Blue\"",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-81955d09.png"
+    ],
+    "x": 72.265,
+    "y": 41.49,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsnt0tbl",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Пироны, средний левый ангар, на тумбочке",
+    "captionEn": "Pirons, middle left hangar, on the nightstand",
+    "images": [
+      "assets/screenshots/reserve-personal-44a5cdd6.png"
+    ],
+    "x": 27.343,
+    "y": 32.96,
     "floor": null
   }
 ]

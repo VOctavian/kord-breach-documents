@@ -1,5 +1,49 @@
 [
   {
+    "id": "2026-08-11-0130",
+    "at": "2026-08-11T01:30",
+    "maps": [
+      {
+        "map": "lab",
+        "added": [
+          {
+            "id": "lab-cmsnqujh3",
+            "caption": "2й этаж, комната офисов (центральные столы)",
+            "captionEn": "2nd floor, office room (central desks)"
+          },
+          {
+            "id": "lab-cmsnr07zs",
+            "caption": "2й этаж, комната рядом с \"Синей\"",
+            "captionEn": "2nd floor, room next to \"Blue\""
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsnqy1fr",
+            "caption": "Справа от картотек",
+            "captionEn": "To the right of the card files"
+          },
+          {
+            "id": "reserve-cmsnt0tbl",
+            "caption": "Пироны, средний левый ангар, на тумбочке",
+            "captionEn": "Pirons, middle left hangar, on the nightstand"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "reserve-21",
+            "caption": "Комната ключ РБ-ОБ",
+            "captionEn": "RB-OB key room"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-11-0028",
     "at": "2026-08-11T00:28",
     "maps": [
