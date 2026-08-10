@@ -3268,5 +3268,20 @@
     "x": 53.445,
     "y": 57.08,
     "floor": null
+  },
+  {
+    "id": "woods-cmsn7yjbv",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На полу между книг",
+    "captionEn": "On the floor between the books",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-0c712a23.png"
+    ],
+    "x": 78.155,
+    "y": 41.008,
+    "floor": null
   }
 ]

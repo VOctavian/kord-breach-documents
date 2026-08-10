@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-10-1540",
+    "at": "2026-08-10T15:40",
+    "maps": [
+      {
+        "map": "woods",
+        "added": [
+          {
+            "id": "woods-cmsn7yjbv",
+            "caption": "На полу между книг",
+            "captionEn": "On the floor between the books"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-10-1307",
     "at": "2026-08-10T13:07",
     "maps": [
