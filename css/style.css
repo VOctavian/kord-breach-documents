@@ -53,6 +53,56 @@ a:hover { color: #e0cfa4; }
 .topbar .sub { color: var(--text-dim); font-size: 13px; }
 .topbar .spacer { flex: 1; }
 
+/* ---------- логотип автора ---------- */
+
+.brand {
+  position: relative;
+  display: flex;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* Шапка разделена gap: 16px, а логотип должен читаться заодно с названием. */
+  margin-right: -8px;
+  border-radius: 50%;
+}
+.brand img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  opacity: 0.85;
+  transition: opacity 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.brand:hover img,
+.brand:focus-visible img {
+  opacity: 1;
+  transform: scale(1.06);
+  box-shadow: 0 0 0 2px #3fe0c8, 0 0 12px rgba(63, 224, 200, 0.45);
+}
+/* Своя подсказка вместо title: нативная всплывает с задержкой и её легко пропустить. */
+.brand::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 40;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-3);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.brand:hover::after,
+.brand:focus-visible::after { opacity: 1; transform: none; }
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -635,6 +685,48 @@ a:hover { color: #e0cfa4; }
 .pop-qr[hidden] { display: none; }
 .discord-btn { display: block; text-align: center; margin-bottom: 12px; background: #5865f2; border-color: #5865f2; color: #fff; }
 .discord-btn:hover { background: #4752c4; color: #fff; }
+
+/* ---------- попап автора ---------- */
+
+.author-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.author-logo { width: 52px; height: 52px; border-radius: 50%; }
+#author-overlay .social-links { gap: 6px; margin-bottom: 16px; }
+#author-overlay .social-links a { width: 38px; height: 38px; border: 1px solid var(--line); }
+#author-overlay .social-links svg { width: 20px; height: 20px; }
+#author-overlay .btn { width: 100%; }
+
+.author-section {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.proj {
+  display: block;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.proj:hover { border-color: var(--accent); color: var(--text); }
+.proj-name { font-weight: 700; color: var(--accent-hot); margin-bottom: 3px; }
+.proj-desc { font-size: 13px; color: var(--text-dim); }
+/* Проект заморожен — предупреждение должно быть видно до клика, а не после. */
+.proj-warn {
+  margin-top: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: rgba(180, 99, 79, 0.16);
+  border: 1px solid var(--danger);
+  color: #e0a08e;
+  font-size: 12px;
+  line-height: 1.35;
+}
 
 /* ---------- «Что нового» ---------- */
 

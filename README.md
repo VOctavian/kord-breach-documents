@@ -192,6 +192,8 @@ Extra events are sent by `js/analytics.js`:
 | `coffee-open`, `feedback-open`, `discord-open` | support and feedback buttons |
 | `changelog-new-<id>` | the "What's new" popup opened by itself |
 | `changelog-open` | the popup was opened with the button |
+| `author-open` | the header logo was clicked |
+| `project-<id>` | a click through to another project |
 | `social-<platform>` | social icons in the header |
 
 ## Scripts
@@ -232,6 +234,11 @@ Which files exactly are pulled from the wiki: see the `WIKI_FILES` table in
 because the bottom half of the original is empty.
 
 ## Author
+
+The header logo (`assets/Icon_2_512x512.png`) opens a popup with links and other
+projects — the list lives in `PROJECTS` in [js/author.js](js/author.js). Setting
+`stale: true` puts a warning on the card that the project is no longer kept up to
+date with the current game version.
 
 [YouTube](https://www.youtube.com/@MasterMD_yt) ·
 [Twitch](https://www.twitch.tv/mastermd_ttv) ·

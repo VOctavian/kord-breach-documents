@@ -46,6 +46,17 @@ const DICT = {
   changelogMore: { ru: 'и ещё {n}', en: '{n} more' },
   changelogGot: { ru: 'Понятно', en: 'Got it' },
   changelogHistory: { ru: 'Прошлые обновления', en: 'Past updates' },
+
+  authorTip: { ru: 'Проекты и ссылки автора', en: "Author's projects and links" },
+  authorIntro: {
+    ru: 'Гайды и карты по Таркову. Заходите в Discord и на стримы — там же можно предложить точку.',
+    en: 'Tarkov guides and maps. Drop by the Discord or the streams — you can suggest a spawn there too.',
+  },
+  authorProjects: { ru: 'Другие проекты', en: 'Other projects' },
+  projectStale: {
+    ru: '⚠ Актуально до версии Таркова 1.1.0 — часть заданий с тех пор изменилась',
+    en: '⚠ Up to date for Tarkov 1.1.0 — some quests have changed since',
+  },
   changelogBtnLabel: { ru: '📋 Обновления', en: '📋 Updates' },
   changelogBtnTitle: { ru: 'Что изменилось на карте', en: 'What changed on the map' },
 

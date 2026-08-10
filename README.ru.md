@@ -190,6 +190,8 @@ curl -s "https://discord.com/api/v10/invites/UErdQwg7ww?with_expiration=true"
 | `coffee-open`, `feedback-open`, `discord-open` | кнопки поддержки и фидбэка |
 | `changelog-new-<id>` | попап «Что нового» открылся сам |
 | `changelog-open` | попап открыли кнопкой |
+| `author-open` | клик по логотипу в шапке |
+| `project-<id>` | переход в другой проект автора |
 | `social-<площадка>` | иконки соцсетей в шапке |
 
 ## Скрипты
@@ -229,6 +231,11 @@ Pages. Редактор, `server.mjs` и `scripts/` в сборку не поп�
 что нижняя половина исходника пустая.
 
 ## Автор
+
+Логотип в шапке (`assets/Icon_2_512x512.png`) открывает попап со ссылками и
+другими проектами — список лежит в `PROJECTS` в [js/author.js](js/author.js).
+Флаг `stale: true` вешает на карточку предупреждение, что проект больше не
+обновляется под свежие версии игры.
 
 [YouTube](https://www.youtube.com/@MasterMD_yt) ·
 [Twitch](https://www.twitch.tv/mastermd_ttv) ·
