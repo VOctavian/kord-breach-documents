@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-10-1919",
+    "at": "2026-08-10T19:19",
+    "maps": [
+      {
+        "map": "woods",
+        "added": [],
+        "fixed": [
+          {
+            "id": "woods-95a5432a",
+            "caption": "На лесопилке во времянке с цифрой 3",
+            "captionEn": "At the sawmill, in the shack marked with the number 3"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-10-1858",
     "at": "2026-08-10T18:58",
     "maps": [
