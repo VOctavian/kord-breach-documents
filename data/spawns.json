@@ -2859,7 +2859,9 @@
     "docName": "Личные данные ЧВК",
     "caption": "В белом коне на третьем этаже, на полу рядом со шкафом",
     "captionEn": "In the white horse on the third floor, on the floor next to the closet",
-    "images": [],
+    "images": [
+      "assets/screenshots/reserve-personal-bc673543.png"
+    ],
     "x": 8.514,
     "y": 83.498,
     "floor": null
@@ -3297,6 +3299,21 @@
     ],
     "x": 37.932,
     "y": 45.746,
+    "floor": null
+  },
+  {
+    "id": "customs-cmsnkgcam",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Времянка справа от основного входа в библиотеку",
+    "captionEn": "Temporary building to the right of the main entrance to the library",
+    "images": [
+      "assets/screenshots/customs-proectnaea-877d717d.png"
+    ],
+    "x": 59.114,
+    "y": 18,
     "floor": null
   }
 ]

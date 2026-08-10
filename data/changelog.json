@@ -1,5 +1,33 @@
 [
   {
+    "id": "2026-08-10-2130",
+    "at": "2026-08-10T21:30",
+    "maps": [
+      {
+        "map": "customs",
+        "added": [
+          {
+            "id": "customs-cmsnkgcam",
+            "caption": "Времянка справа от основного входа в библиотеку",
+            "captionEn": "Temporary building to the right of the main entrance to the library"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "reserve",
+        "added": [],
+        "fixed": [
+          {
+            "id": "reserve-cmsll39ex",
+            "caption": "В белом коне на третьем этаже, на полу рядом со шкафом",
+            "captionEn": "In the white horse on the third floor, on the floor next to the closet"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-10-1919",
     "at": "2026-08-10T19:19",
     "maps": [
