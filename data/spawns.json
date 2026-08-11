@@ -4115,11 +4115,133 @@
     "mapName": "Лабиринт",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "",
-    "captionEn": "",
-    "images": [],
+    "caption": "На пакете с трупом рядом со спавном с токсичным бассейном",
+    "captionEn": "On a package with a corpse next to the toxic pool spawn",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-bcb5d711.png"
+    ],
     "x": 70.419,
     "y": 32.056,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod10p1",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Под железными решетками меченой комнаты\n",
+    "captionEn": "Under the iron bars of the marked room",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-0ef45eb9.png"
+    ],
+    "x": 29.54,
+    "y": 61.282,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod1i51",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В комнате наблюдения",
+    "captionEn": "In the observation room",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-8394e314.png"
+    ],
+    "x": 40.114,
+    "y": 61.128,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod1v64",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Рядом с выходом «Путь Ариадны»",
+    "captionEn": "Near the exit \"Ariadne's Path\"",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-a7eef58d.png"
+    ],
+    "x": 40.458,
+    "y": 67.746,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod2bx8",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В руках у трупа подопытного в центральной комнате с Изделием 1156",
+    "captionEn": "In the hands of the test subject's corpse in the central room with Item 1156",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-fcf7f9d8.png"
+    ],
+    "x": 56.476,
+    "y": 47.179,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod2qgk",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На маленькой коробке в центральной комнате с Изделием 1156",
+    "captionEn": "On a small box in the central room with Item 1156",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-e7e89732.png"
+    ],
+    "x": 61.004,
+    "y": 43.561,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod3518",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На коробке в центральной комнате рядом с белой доской",
+    "captionEn": "On a box in the central room next to the whiteboard",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-f00070f8.png"
+    ],
+    "x": 67.079,
+    "y": 46.128,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod3h44",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На паллете",
+    "captionEn": "On a pallet",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-e48cd5ee.png"
+    ],
+    "x": 66.763,
+    "y": 28.932,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod45od",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В коробках рядом с выходом у дробовиков",
+    "captionEn": "In the boxes next to the exit near the shotguns",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-267e8b8a.png"
+    ],
+    "x": 79.487,
+    "y": 41.984,
     "floor": null
   }
 ]

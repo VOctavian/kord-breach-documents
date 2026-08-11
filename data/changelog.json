@@ -1,5 +1,62 @@
 [
   {
+    "id": "2026-08-11-1053",
+    "at": "2026-08-11T10:53",
+    "maps": [
+      {
+        "map": "labyrinth",
+        "added": [
+          {
+            "id": "labyrinth-cmsod0g7g",
+            "caption": "На пакете с трупом рядом со спавном с токсичным бассейном",
+            "captionEn": "On a package with a corpse next to the toxic pool spawn"
+          },
+          {
+            "id": "labyrinth-cmsod10p1",
+            "caption": "Под железными решетками меченой комнаты\n",
+            "captionEn": "Under the iron bars of the marked room"
+          },
+          {
+            "id": "labyrinth-cmsod1i51",
+            "caption": "В комнате наблюдения",
+            "captionEn": "In the observation room"
+          },
+          {
+            "id": "labyrinth-cmsod1v64",
+            "caption": "Рядом с выходом «Путь Ариадны»",
+            "captionEn": "Near the exit \"Ariadne's Path\""
+          },
+          {
+            "id": "labyrinth-cmsod2bx8",
+            "caption": "В руках у трупа подопытного в центральной комнате с Изделием 1156",
+            "captionEn": "In the hands of the test subject's corpse in the central room with Item 1156"
+          },
+          {
+            "id": "labyrinth-cmsod2qgk",
+            "caption": "На маленькой коробке в центральной комнате с Изделием 1156",
+            "captionEn": "On a small box in the central room with Item 1156"
+          },
+          {
+            "id": "labyrinth-cmsod3518",
+            "caption": "На коробке в центральной комнате рядом с белой доской",
+            "captionEn": "On a box in the central room next to the whiteboard"
+          },
+          {
+            "id": "labyrinth-cmsod3h44",
+            "caption": "На паллете",
+            "captionEn": "On a pallet"
+          },
+          {
+            "id": "labyrinth-cmsod45od",
+            "caption": "В коробках рядом с выходом у дробовиков",
+            "captionEn": "In the boxes next to the exit near the shotguns"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-11-1049",
     "at": "2026-08-11T10:49",
     "maps": [
