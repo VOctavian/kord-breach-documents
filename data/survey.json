@@ -1,9 +1,9 @@
 {
-  "activeId": null,
+  "activeIds": [],
   "surveys": [
     {
       "id": "2026-08-map-feedback",
-      "title": "Пара вопросов о карте",
+      "title": "Пара вопросов о карте ",
       "titleEn": "A couple of questions about the map",
       "intro": "Отвечать необязательно — но так я пойму, что доделывать в первую очередь.",
       "introEn": "Answering is optional — but it tells me what to work on next.",
@@ -27,6 +27,68 @@
           "id": "q2",
           "text": "Что показалось неудобным?",
           "textEn": "What felt inconvenient?",
+          "multiline": true,
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "template",
+      "title": "Template",
+      "titleEn": "Template",
+      "intro": "",
+      "introEn": "",
+      "images": [],
+      "questions": [
+        {
+          "id": "qmsonpb28",
+          "text": "Никнэйм",
+          "textEn": "Nickname",
+          "multiline": false,
+          "images": []
+        },
+        {
+          "id": "qmsonpmll",
+          "text": "Discord",
+          "textEn": "Discord",
+          "multiline": false,
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "smsonq9dk",
+      "title": "Опрос 1",
+      "titleEn": "Survey 1",
+      "intro": "",
+      "introEn": "",
+      "images": [],
+      "questions": [
+        {
+          "id": "qmsonq9dk0",
+          "text": "Никнэйм",
+          "textEn": "Nickname",
+          "multiline": false,
+          "images": []
+        },
+        {
+          "id": "qmsonq9dk1",
+          "text": "Discord",
+          "textEn": "Discord",
+          "multiline": false,
+          "images": []
+        },
+        {
+          "id": "qmsonrsyw",
+          "text": "Есть ли то что хотели бы изменить или добавить? Также можно обсудить на нашем Discord сервере",
+          "textEn": "Is there anything you would like to change or add? You can also discuss this on our Discord server.",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsonubop",
+          "text": "",
+          "textEn": "",
           "multiline": true,
           "images": []
         }

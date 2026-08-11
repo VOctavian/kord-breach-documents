@@ -1,19 +1,20 @@
-// Опрос посетителей: боковая панель + квадратная кнопка у правого края.
-// Вопросы лежат в data/survey.json (правятся survey-editor.html), ответы уходят
-// в таблицу Supabase. Клиент Supabase не тянем — здесь достаточно одного POST.
+// Опросы посетителей: столбик квадратных кнопок у правого края и панель на
+// каждый включённый опрос. Вопросы лежат в data/survey.json (правятся
+// survey-editor.html), ответы уходят в таблицу Supabase. Клиент Supabase не
+// тянем — здесь достаточно одного POST.
 import { el } from './common.js';
 import { t, lang, localized } from './i18n.js';
 import { trackEvent } from './analytics.js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './config.js';
 
-const LS_KEY = 'kord_breach_survey_v1';
-// Показываем не сразу: человек должен успеть поработать с картой, иначе ему
-// нечего ответить.
-const AUTO_OPEN_MS = 45_000;
+// v2: счётчик пройденного стал раздельным по опросам — включённых теперь может
+// быть несколько, и зелёная полоса у каждой кнопки своя.
+const LS_KEY = 'kord_breach_survey_v2';
 
 function readState() {
   try {
-    return JSON.parse(localStorage.getItem(LS_KEY)) ?? {};
+    const s = JSON.parse(localStorage.getItem(LS_KEY));
+    return s && typeof s === 'object' ? s : {};
   } catch {
     return {};
   }
@@ -49,47 +50,33 @@ function gallery(images) {
   );
 }
 
-export async function mountSurvey() {
-  let file;
-  try {
-    const res = await fetch('data/survey.json');
-    if (!res.ok) return;
-    file = await res.json();
-  } catch {
-    // Файла нет — опроса просто не существует.
-    return;
-  }
+/**
+ * Кнопка и панель одного опроса. `onOpen` даёт хозяину закрыть остальные панели:
+ * они лежат друг на друге у правого края, две открытые перекрыли бы одна другую.
+ */
+function buildSurvey(survey, state, rail, onOpen) {
+  const name = localized(survey, 'title');
 
-  // Опросов может быть много, показываем выбранный. activeId пуст — не показываем ничего.
-  const survey = (file?.surveys ?? []).find((s) => s.id === file.activeId);
-  if (!survey?.questions?.length) return;
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
-
-  const state = readState();
-
-  /* ---------- кнопка ---------- */
-
+  // Ярлык свисает с кнопки влево — он остаётся на виду, даже когда сама кнопка
+  // наполовину спрятана за краем экрана.
+  const badge = el('span', { class: 'survey-new' }, t('surveyNew'));
   const button = el(
     'button',
-    {
-      class: 'survey-tab',
-      type: 'button',
-      title: state.done ? t('surveyBtnDone') : t('surveyBtnTitle'),
-      onclick: () => open('button'),
-    },
+    { class: 'survey-tab', type: 'button', onclick: () => open('button') },
+    badge,
     '📝'
   );
   const paintButton = () => {
-    button.classList.toggle('done', Boolean(state.done));
-    button.title = state.done ? t('surveyBtnDone') : t('surveyBtnTitle');
+    const done = state[survey.id] > 0;
+    button.classList.toggle('done', done);
+    badge.hidden = done;
+    // Кнопок может быть несколько, поэтому в подсказке ещё и название опроса.
+    button.title = `${name} — ${done ? t('surveyBtnDone') : t('surveyBtnTitle')}`;
   };
-
-  /* ---------- панель ---------- */
 
   const fields = new Map();
   const body = el('div', { class: 'survey-body' });
   const status = el('div', { class: 'survey-status' });
-
   const submit = el('button', { class: 'btn primary survey-send', type: 'button', onclick: () => onSubmit() }, t('surveySend'));
 
   function buildForm() {
@@ -137,7 +124,7 @@ export async function mountSurvey() {
       return;
     }
 
-    state.done = (state.done ?? 0) + 1;
+    state[survey.id] = (state[survey.id] ?? 0) + 1;
     writeState(state);
     paintButton();
     trackEvent('survey-submit');
@@ -156,7 +143,7 @@ export async function mountSurvey() {
     el(
       'div',
       { class: 'survey-head' },
-      el('h2', {}, localized(survey, 'title')),
+      el('h2', {}, name),
       // Закрыть можно только крестиком — ни Esc, ни клик мимо панель не убирают.
       el('button', { class: 'survey-x', type: 'button', title: t('surveyClose'), onclick: close }, '✕')
     ),
@@ -166,31 +153,54 @@ export async function mountSurvey() {
   );
 
   function open(source) {
+    onOpen(close);
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
-    button.classList.add('hidden');
+    // Прячем весь столбик: панель всё равно перекрывает правый край.
+    rail.classList.add('hidden');
     if (source === 'button') trackEvent('survey-open');
   }
 
   function close() {
     panel.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
-    button.classList.remove('hidden');
+    rail.classList.remove('hidden');
   }
 
   buildForm();
   paintButton();
-  document.body.append(button, panel);
+  return { button, panel };
+}
 
-  if (state.prompted !== survey.id) {
-    setTimeout(() => {
-      // За 45 секунд человек мог открыть панель сам — второй раз не лезем.
-      if (!panel.classList.contains('open')) {
-        open('auto');
-        trackEvent('survey-auto');
-      }
-      state.prompted = survey.id;
-      writeState(state);
-    }, AUTO_OPEN_MS);
+export async function mountSurvey() {
+  let file;
+  try {
+    const res = await fetch('data/survey.json');
+    if (!res.ok) return;
+    file = await res.json();
+  } catch {
+    // Файла нет — опросов просто не существует.
+    return;
   }
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
+
+  // Включённых опросов может быть сколько угодно. activeId — прежний формат
+  // с одним опросом: читаем его, пока файл не пересохранён редактором.
+  const active = Array.isArray(file?.activeIds) ? file.activeIds : [file?.activeId].filter(Boolean);
+  const list = (file?.surveys ?? []).filter((s) => active.includes(s.id) && s.questions?.length);
+  if (!list.length) return;
+
+  const state = readState();
+  const rail = el('div', { class: 'survey-rail' });
+
+  // Открыта всегда не больше одной панели: следующая закрывает предыдущую.
+  let closeOpen = null;
+  const onOpen = (close) => {
+    if (closeOpen && closeOpen !== close) closeOpen();
+    closeOpen = close;
+  };
+
+  const parts = list.map((s) => buildSurvey(s, state, rail, onOpen));
+  rail.append(...parts.map((p) => p.button));
+  document.body.append(rail, ...parts.map((p) => p.panel));
 }

@@ -77,10 +77,14 @@ createServer(async (req, res) => {
     try {
       const data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
       if (!Array.isArray(data?.surveys)) throw new Error('surveys должен быть массивом');
+      // Отказываем вместо тихой починки: иначе вкладка со старым кодом молча
+      // затирала бы список включённых опросов при каждом сохранении.
+      if (!Array.isArray(data?.activeIds))
+        throw new Error('нет списка activeIds — перезагрузите вкладку редактора, формат файла изменился');
       if (data.surveys.some((s) => !s.id)) throw new Error('у каждого опроса должен быть id');
       await writeFile(join(ROOT, 'data/survey.json'), JSON.stringify(data, null, 2) + '\n', 'utf8');
       json(res, 200, { ok: true });
-      console.log(`опросы сохранены: ${data.surveys.length}, активен ${data.activeId ?? 'ни один'}`);
+      console.log(`опросы сохранены: ${data.surveys.length}, включено ${data.activeIds.length}`);
     } catch (e) {
       json(res, 400, { error: String(e.message ?? e) });
     }

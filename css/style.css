@@ -851,12 +851,33 @@ a:hover { color: #e0cfa4; }
 
 /* ---------- опрос ---------- */
 
-.survey-tab {
+/* Столбик кнопок у правого края — по одной на каждый включённый опрос.
+   В покое кнопки наполовину утоплены в край и выезжают под курсором. */
+.survey-rail {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(23px, -50%);
   z-index: 70;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+/* :focus-within — чтобы кнопки выезжали и при обходе с клавиатуры. */
+.survey-rail:hover,
+.survey-rail:focus-within { transform: translate(0, -50%); }
+/* Без курсора выезжать нечему: на тач-экране столбик просто стоит целиком. */
+@media (hover: none) {
+  .survey-rail { transform: translate(0, -50%); }
+}
+/* Пока открыта панель, столбик уезжает: панель всё равно накрыла бы его собой.
+   Правило идёт после :hover, иначе при равной специфичности победило бы оно. */
+.survey-rail.hidden { opacity: 0; pointer-events: none; transform: translate(100%, -50%); }
+
+.survey-tab {
+  /* Позиционированный предок для полосы ::after. */
+  position: relative;
   width: 46px;
   height: 46px;
   padding: 0;
@@ -868,7 +889,7 @@ a:hover { color: #e0cfa4; }
   font-size: 19px;
   line-height: 1;
   cursor: pointer;
-  transition: background 0.15s, transform 0.15s, opacity 0.2s;
+  transition: background 0.15s;
 }
 .survey-tab:hover { background: var(--bg-3); }
 /* Полоса снизу: янтарная — опрос ещё не проходили, зелёная — проходили. */
@@ -883,7 +904,29 @@ a:hover { color: #e0cfa4; }
   background: var(--accent-hot);
 }
 .survey-tab.done::after { background: var(--ok); }
-.survey-tab.hidden { opacity: 0; pointer-events: none; transform: translate(100%, -50%); }
+
+/* Ярлык непройденного опроса: левый верхний угол кнопки, свисает влево.
+   Поэтому он виден и тогда, когда кнопка наполовину утоплена в край. */
+.survey-new {
+  position: absolute;
+  top: -7px;
+  /* Ровно на глубину утопления кнопки: в покое ярлык целиком остаётся в кадре. */
+  left: -23px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+  /* Нажатие должно доставаться кнопке, а не ярлыку. */
+  pointer-events: none;
+}
+/* Без этого `position: absolute` перебивает атрибут hidden и ярлык не гаснет. */
+.survey-new[hidden] { display: none; }
 
 .survey-panel {
   position: fixed;

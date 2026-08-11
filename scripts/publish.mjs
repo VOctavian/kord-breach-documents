@@ -66,7 +66,11 @@ if (existsSync(`${ROOT}data/survey.json`)) {
       const ids = (s.questions ?? []).map((q) => q.id);
       return ids.some((id, i) => ids.indexOf(id) !== i);
     });
-    const active = surveys.find((s) => s.id === file.activeId);
+    // Включённых опросов может быть несколько — каждому своя кнопка на сайте.
+    const activeIds = Array.isArray(file.activeIds) ? file.activeIds : [file.activeId].filter(Boolean);
+    const lostActive = activeIds.filter((id) => !surveys.some((s) => s.id === id));
+    const active = surveys.filter((s) => activeIds.includes(s.id));
+    const emptyActive = active.filter((s) => !s.questions?.length);
     const shots = surveys.flatMap((s) => [...(s.images ?? []), ...(s.questions ?? []).flatMap((q) => q.images ?? [])]);
     const lostShots = shots.filter((p) => !existsSync(ROOT + p));
 
@@ -74,9 +78,9 @@ if (existsSync(`${ROOT}data/survey.json`)) {
     else if (dup.length) fail(`повторяющиеся id опросов: ${[...new Set(dup)].join(', ')}`);
     else if (badQ.length) fail(`повторяющиеся id вопросов в: ${badQ.map((s) => s.id).join(', ')}`);
     else if (lostShots.length) fail(`нет картинок опроса:\n      ${lostShots.join('\n      ')}`);
-    else if (file.activeId && !active) fail(`активным указан несуществующий опрос: ${file.activeId}`);
-    else if (active && !active.questions?.length) fail(`опрос «${active.id}» включён, но вопросов в нём нет`);
-    else if (active) ok(`опрос «${active.id}» включён: ${active.questions.length} вопросов`);
+    else if (lostActive.length) fail(`включены несуществующие опросы: ${lostActive.join(', ')}`);
+    else if (emptyActive.length) fail(`включены опросы без вопросов: ${emptyActive.map((s) => s.id).join(', ')}`);
+    else if (active.length) ok(`включено опросов: ${active.map((s) => `${s.id} (${s.questions.length} вопр.)`).join(', ')}`);
   } catch (e) {
     fail(`data/survey.json не читается: ${e.message}`);
   }

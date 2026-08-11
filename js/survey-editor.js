@@ -5,7 +5,30 @@ import { el } from './common.js';
 
 const $ = (id) => document.getElementById(id);
 
-const EMPTY = { activeId: null, surveys: [] };
+/**
+ * Запрос к локальному серверу. Ответ читается текстом и разбирается вручную:
+ * если маршрута нет, сервер отдаёт статикой «404: /api/survey», и слепой
+ * `res.json()` жаловался бы на символ в позиции 3 вместо того, чтобы сказать,
+ * что запущен старый процесс. Node не перечитывает server.mjs на лету.
+ */
+async function api(path, init) {
+  const res = await fetch(path, init);
+  const text = await res.text();
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    throw new Error(
+      res.status === 404
+        ? `сервер не знает ${path.split('?')[0]} — перезапустите node server.mjs`
+        : `сервер ответил не JSON: ${text.slice(0, 120)}`
+    );
+  }
+  if (!res.ok) throw new Error(data.error ?? `сервер вернул ${res.status}`);
+  return data;
+}
+
+const EMPTY = { activeIds: [], surveys: [] };
 
 const file = await fetch('data/survey.json')
   .then((r) => (r.ok ? r.json() : null))
@@ -16,6 +39,12 @@ if (!Array.isArray(file.surveys)) {
   const old = file.id ? [{ ...file, images: [], enabled: undefined }] : [];
   Object.assign(file, { activeId: file.enabled ? file.id : null, surveys: old });
 }
+// Формат с одним включённым опросом: activeId → список activeIds.
+if (!Array.isArray(file.activeIds)) {
+  file.activeIds = file.activeId ? [file.activeId] : [];
+}
+delete file.activeId;
+
 file.surveys.forEach((s) => {
   s.images ??= [];
   s.questions ??= [];
@@ -42,18 +71,20 @@ function renderList() {
         el(
           'button',
           {
-            class: 'sv-item-on' + (file.activeId === s.id ? ' on' : ''),
+            class: 'sv-item-on' + (isOn(s) ? ' on' : ''),
             type: 'button',
-            title: file.activeId === s.id ? 'Показывается на сайте — выключить' : 'Показывать этот опрос на сайте',
+            title: isOn(s) ? 'Показывается на сайте — выключить' : 'Показывать этот опрос на сайте',
             onclick: () => {
-              // Активен всегда ровно один опрос либо ни одного.
-              file.activeId = file.activeId === s.id ? null : s.id;
+              // Включённых опросов может быть сколько угодно: у каждого своя
+              // кнопка в столбике справа.
+              if (isOn(s)) file.activeIds.splice(file.activeIds.indexOf(s.id), 1);
+              else file.activeIds.push(s.id);
               renderList();
               renderActiveNote();
               save();
             },
           },
-          file.activeId === s.id ? '●' : '○'
+          isOn(s) ? '●' : '○'
         )
       )
     )
@@ -61,9 +92,13 @@ function renderList() {
   if (!file.surveys.length) box.append(el('div', { class: 'sub' }, 'пока ни одного'));
 }
 
+const isOn = (s) => file.activeIds.includes(s.id);
+
 function renderActiveNote() {
-  const active = file.surveys.find((s) => s.id === file.activeId);
-  $('active-note').textContent = active ? `на сайте: ${active.title || active.id}` : 'на сайте: опрос выключен';
+  const on = file.surveys.filter(isOn);
+  $('active-note').textContent = on.length
+    ? `на сайте: ${on.map((s) => s.title || s.id).join(', ')}`
+    : 'на сайте: ни одного опроса';
 }
 
 function select(s) {
@@ -100,7 +135,7 @@ function duplicate(s) {
 function removeSurvey(s) {
   if (!confirm(`Удалить опрос «${s.title || s.id}»? Ответы в базе останутся.`)) return;
   file.surveys.splice(file.surveys.indexOf(s), 1);
-  if (file.activeId === s.id) file.activeId = null;
+  if (isOn(s)) file.activeIds.splice(file.activeIds.indexOf(s.id), 1);
   current = file.surveys[0] ?? null;
   renderList();
   renderActiveNote();
@@ -192,8 +227,9 @@ function renderEditor() {
   idInput.oninput = () => {
     const v = idInput.value.replace(/[^a-zA-Z0-9._-]/g, '');
     idInput.value = v;
-    // Активный опрос узнаётся по id, поэтому переименование тянет ссылку за собой.
-    if (file.activeId === current.id) file.activeId = v;
+    // Включённые опросы перечислены по id, поэтому переименование тянет ссылку за собой.
+    const at = file.activeIds.indexOf(current.id);
+    if (at !== -1) file.activeIds[at] = v;
     current.id = v;
     renderList();
     renderActiveNote();
@@ -294,12 +330,11 @@ async function flush() {
   clearTimeout(timer);
   setStatus('сохраняю…');
   try {
-    const res = await fetch('/api/survey', {
+    await api('/api/survey', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(file),
     });
-    if (!res.ok) throw new Error((await res.json()).error ?? res.status);
     setStatus('сохранено ✓', 'ok');
     return true;
   } catch (e) {
@@ -346,10 +381,7 @@ async function loadResults() {
   }
   box.replaceChildren(el('div', { class: 'sub' }, 'загружаю…'));
   try {
-    const res = await fetch(`/api/survey-results?survey=${encodeURIComponent(current.id)}`);
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error ?? res.status);
-    rows = data;
+    rows = await api(`/api/survey-results?survey=${encodeURIComponent(current.id)}`);
   } catch (e) {
     box.replaceChildren(el('div', { class: 'status err' }, String(e.message)));
     $('sv-count').textContent = '';
@@ -391,9 +423,10 @@ function renderResults() {
 
 async function drop(id) {
   if (!confirm('Удалить этот ответ?')) return;
-  const res = await fetch(`/api/survey-results?id=${id}`, { method: 'DELETE' });
-  if (!res.ok) {
-    alert('не удалось: ' + ((await res.json()).error ?? res.status));
+  try {
+    await api(`/api/survey-results?id=${id}`, { method: 'DELETE' });
+  } catch (e) {
+    alert('не удалось: ' + e.message);
     return;
   }
   rows = rows.filter((r) => r.id !== id);

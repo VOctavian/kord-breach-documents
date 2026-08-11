@@ -132,18 +132,25 @@ up instead of duplicating it.
 
 ## Visitor survey
 
-A side panel with questions: slides in by itself 45 seconds after arrival (once
-per survey `id`), closes only via the ✕, and leaves a square button pinned to the
-right edge. The bar under the button is amber until the survey is answered and
-green afterwards; answering any number of times is allowed.
+A side panel with questions, opened by a square button pinned to the right edge
+and closed only via the ✕. It never slides in on its own — visitors open it when
+they feel like it. The button sits half-sunk into the edge and slides all the way
+out on hover (and on keyboard focus); on touch screens, where there is nothing to
+hover with, it stands out in full. The bar under the button is amber until the
+survey is answered and green afterwards; answering any number of times is
+allowed. An unanswered survey gets a red "Новый"/"NEW" tag hanging off the
+button's top-left corner — offset far enough left to stay visible while the
+button is sunk.
 
-There can be any number of surveys; the site shows the one whose `id` sits in
-`activeId`. Leave it empty and neither the panel nor the button exists.
+Any number of surveys can be live at once: their `id`s are listed in `activeIds`,
+and each gets its own button in the column on the right. Only one panel is ever
+open — opening the next one closes the previous. Leave the list empty and neither
+the buttons nor the panels exist.
 
 Everything is edited locally in `survey-editor.html` (run `node server.mjs`, then
 use the "Редактор опросов" link in the header — it only appears on localhost).
-The list on the left: the circle activates a survey on the site, the buttons
-create, duplicate and delete. Duplicating copies the survey with its questions
+The list on the left: the circle switches a survey on and off (several may be lit
+at once), the buttons create, duplicate and delete. Duplicating copies the survey with its questions
 and images but hands out fresh `id`s to the survey and every question —
 otherwise responses from two surveys would blend together in the export.
 
@@ -195,7 +202,7 @@ in the editor.
 | `data/maps.json` | 12 locations: map file, type (`raster`/`svg`), dimensions |
 | `data/docs.json` | 8 document types: ru/en name, icon, marker colour |
 | `data/changelog.json` | update history for the "What's new" popup, newest first |
-| `data/survey.json` | surveys: the list plus the `activeId` that is shown |
+| `data/survey.json` | surveys: the list plus the `activeIds` that are shown |
 | `assets/survey/` | images for the survey and question galleries |
 | `assets/screenshots/` | spawn screenshots |
 | `assets/maps/` | location maps |
@@ -256,7 +263,7 @@ Extra events are sent by `js/analytics.js`:
 | `changelog-new-<id>` | the "What's new" popup opened by itself |
 | `changelog-open` | the popup was opened with the button |
 | `author-open` | the header logo was clicked |
-| `survey-open`, `survey-auto` | survey opened by button / slid in on its own |
+| `survey-open` | survey opened by its button |
 | `survey-submit` | a response was stored successfully |
 | `project-<id>` | a click through to another project |
 | `social-<platform>` | social icons in the header |

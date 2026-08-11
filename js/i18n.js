@@ -52,6 +52,7 @@ const DICT = {
 
   surveyBtnTitle: { ru: 'Пройти опрос', en: 'Take the survey' },
   surveyBtnDone: { ru: 'Опрос пройден — можно ответить ещё раз', en: 'Survey done — you can answer again' },
+  surveyNew: { ru: 'Новый', en: 'NEW' },
   surveyClose: { ru: 'Закрыть опрос', en: 'Close the survey' },
   surveySend: { ru: 'Отправить', en: 'Send' },
   surveySending: { ru: 'Отправляю…', en: 'Sending…' },
