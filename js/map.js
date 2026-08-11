@@ -178,6 +178,22 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowRight') step(1);
 });
 
+/* ---------- сворачивание боковой панели ---------- */
+
+const SIDEBAR_KEY = 'kord_breach_sidebar_v1';
+const layout = document.querySelector('.layout');
+const sidebarBtn = $('sidebar-toggle');
+
+function setSidebar(off) {
+  layout.classList.toggle('sidebar-off', off);
+  sidebarBtn.textContent = off ? '›' : '‹';
+  sidebarBtn.title = t(off ? 'sidebarShow' : 'sidebarHide');
+  localStorage.setItem(SIDEBAR_KEY, off ? 'off' : 'on');
+}
+
+setSidebar(localStorage.getItem(SIDEBAR_KEY) === 'off');
+sidebarBtn.onclick = () => layout.classList.contains('sidebar-off') ? setSidebar(false) : setSidebar(true);
+
 $('fit').onclick = () => view.fit();
 $('zin').onclick = () => zoomCenter(1.3);
 $('zout').onclick = () => zoomCenter(1 / 1.3);

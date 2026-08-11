@@ -22,6 +22,8 @@ const DICT = {
   spawnListHeader: { ru: 'Точки спавна', en: 'Spawn points' },
   floorHeader: { ru: 'Этаж', en: 'Floor' },
   allLayers: { ru: 'Все слои', en: 'All layers' },
+  sidebarHide: { ru: 'Скрыть панель', en: 'Hide the panel' },
+  sidebarShow: { ru: 'Показать панель', en: 'Show the panel' },
   mapHint: {
     ru: 'Колесо — зум · перетаскивание — сдвиг · клик по иконке — скриншот',
     en: 'Wheel — zoom · drag — pan · click an icon — screenshot',

@@ -327,6 +327,30 @@ a:hover { color: #e0cfa4; }
 }
 .viewport.grabbing { cursor: grabbing; }
 
+/* Сворачивание боковой панели: на маленьком экране карта важнее списка. */
+.layout.sidebar-off .sidebar { display: none; }
+
+.sidebar-toggle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 12;
+  width: 18px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  background: var(--bg-2);
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.sidebar-toggle:hover { background: var(--bg-3); color: var(--accent-hot); }
+
 /* ---------- редактор опроса ---------- */
 
 .sv-toggle { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text-dim); cursor: pointer; }
