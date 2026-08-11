@@ -90,6 +90,23 @@ function place(spawn, x, y) {
   save();
 }
 
+/**
+ * Вторые координаты той же точки — она же на схеме этажей, нарисованной с краю
+ * карты. На карте пара соединяется линией и открывает один и тот же просмотрщик.
+ */
+function placeAlt(spawn, x, y) {
+  spawn.x2 = +x.toFixed(3);
+  spawn.y2 = +y.toFixed(3);
+  render();
+  save();
+}
+
+function clearAlt(spawn) {
+  spawn.x2 = spawn.y2 = null;
+  render();
+  save();
+}
+
 /* ---------- контекстное меню ---------- */
 
 let menu = null;
@@ -116,6 +133,20 @@ function openMenu(x, y, e) {
     item(s ? 'Переместить сюда' : 'Переместить сюда (точка не выбрана)', !s, () => {
       closeMenu();
       place(s, x, y);
+    }),
+    // Второстепенная привязана к основной, поэтому без неё ставить некуда.
+    item(
+      'Установить второстепенную точку' +
+        (!s ? ' (точка не выбрана)' : s.x == null ? ' (сначала основная)' : ''),
+      !s || s.x == null,
+      () => {
+        closeMenu();
+        placeAlt(s, x, y);
+      }
+    ),
+    item('Удалить второстепенную точку', !s || s.x2 == null, () => {
+      closeMenu();
+      clearAlt(s);
     })
   );
 
@@ -181,15 +212,15 @@ function render() {
   view.clearMarkers();
   for (const sp of list) {
     if (sp.x == null) continue;
-    const node = view.addMarker(sp, docById[sp.doc], {
+    view.addMarker(sp, docById[sp.doc], {
       onClick: (target) => {
         idx = list.indexOf(target);
         shotIdx = 0;
         render();
       },
     });
-    if (sp === s) node.classList.add('active');
   }
+  view.setActive(s?.id);
 
   const box = $('spawn-list');
   box.replaceChildren();
@@ -300,6 +331,8 @@ function createSpawn() {
     images: [],
     x: null,
     y: null,
+    x2: null,
+    y2: null,
     floor: null,
   };
   spawns.push(spawn);
@@ -388,7 +421,8 @@ $('next-empty').onclick = () => {
 $('clear').onclick = () => {
   const s = current();
   if (!s) return;
-  s.x = s.y = null;
+  // Второстепенная без основной висела бы в воздухе — снимаем обе.
+  s.x = s.y = s.x2 = s.y2 = null;
   s.floor = null;
   render();
   save();

@@ -133,7 +133,7 @@ function render() {
 
 function highlight() {
   const id = slides[current]?.spawn.id;
-  for (const [mid, node] of view.markers) node.classList.toggle('active', mid === id);
+  view.setActive(id);
   listBox.querySelectorAll('.spawn-item').forEach((n) => n.classList.toggle('active', n.dataset.id === id));
 }
 

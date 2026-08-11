@@ -515,6 +515,46 @@ a:hover { color: #e0cfa4; }
 .marker.active { border-color: #fff; background: #3a3123; z-index: 6; }
 .marker.dim { opacity: 0.28; }
 
+/* Второй маркер той же точки — она же на схеме этажей, нарисованной с краю
+   карты. Пунктирная рамка и меньший размер отличают его от настоящего места. */
+.marker.alt {
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border-style: dashed;
+}
+.marker.alt img { width: 16px; height: 20px; }
+
+/* Связь между парой маркеров одной точки. */
+.link-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Слой лежит поверх карты и не должен перехватывать протяжку и клики. */
+  pointer-events: none;
+  overflow: visible;
+}
+.link-wire {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  opacity: 0.7;
+  /* Толщина в экранных пикселях: на любом зуме линия остаётся тонкой. */
+  vector-effect: non-scaling-stroke;
+  transition: opacity 0.12s, stroke 0.12s, stroke-width 0.12s;
+}
+/* Прозрачный дублёр пошире: в полуторапиксельную линию курсором не попасть.
+   События включаем точечно — сам слой их по-прежнему не ловит. */
+.link-hit {
+  stroke: transparent;
+  stroke-width: 12;
+  vector-effect: non-scaling-stroke;
+  pointer-events: stroke;
+}
+.link:hover .link-wire,
+.link.hot .link-wire { opacity: 1; stroke: var(--accent-hot); stroke-width: 2.5; }
+.link.active .link-wire { opacity: 1; stroke: #fff; }
+
 .zoom-ctl {
   position: absolute;
   right: 14px;
@@ -857,11 +897,11 @@ a:hover { color: #e0cfa4; }
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translate(23px, -50%);
+  transform: translate(35px, -50%);
   z-index: 70;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 9px;
   transition: opacity 0.2s, transform 0.2s;
 }
 /* :focus-within — чтобы кнопки выезжали и при обходе с клавиатуры. */
@@ -878,15 +918,15 @@ a:hover { color: #e0cfa4; }
 .survey-tab {
   /* Позиционированный предок для полосы ::after. */
   position: relative;
-  width: 46px;
-  height: 46px;
+  width: 70px;
+  height: 70px;
   padding: 0;
   border: 1px solid var(--line);
   border-right: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 12px 0 0 12px;
   background: var(--bg-2);
   box-shadow: var(--shadow);
-  font-size: 19px;
+  font-size: 28px;
   line-height: 1;
   cursor: pointer;
   transition: background 0.15s;
@@ -896,11 +936,11 @@ a:hover { color: #e0cfa4; }
 .survey-tab::after {
   content: "";
   position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 6px;
-  height: 3px;
-  border-radius: 2px;
+  left: 12px;
+  right: 12px;
+  bottom: 9px;
+  height: 4px;
+  border-radius: 3px;
   background: var(--accent-hot);
 }
 .survey-tab.done::after { background: var(--ok); }
@@ -909,16 +949,16 @@ a:hover { color: #e0cfa4; }
    Поэтому он виден и тогда, когда кнопка наполовину утоплена в край. */
 .survey-new {
   position: absolute;
-  top: -7px;
+  top: -10px;
   /* Ровно на глубину утопления кнопки: в покое ярлык целиком остаётся в кадре. */
-  left: -23px;
-  padding: 1px 5px;
-  border-radius: 4px;
+  left: -35px;
+  padding: 2px 8px;
+  border-radius: 6px;
   background: var(--danger);
   color: #fff;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 14px;
+  line-height: 21px;
   letter-spacing: 0.02em;
   white-space: nowrap;
   box-shadow: var(--shadow);

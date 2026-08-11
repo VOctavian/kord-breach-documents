@@ -23,6 +23,15 @@ export function isPublished(spawn) {
   return Boolean(spawn.caption?.trim() || spawn.images?.length);
 }
 
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+/** То же, что `el`, но в пространстве имён SVG: иначе браузер не отрисует тег. */
+function svgEl(tag, attrs = {}) {
+  const node = document.createElementNS(SVG_NS, tag);
+  for (const [k, v] of Object.entries(attrs)) if (v != null) node.setAttribute(k, String(v));
+  return node;
+}
+
 export function el(tag, attrs = {}, ...kids) {
   const node = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
@@ -52,6 +61,9 @@ export class MapView {
     this.minScale = 0.1;
     this.maxScale = 12;
     this.markers = new Map();
+    // Вторые маркеры тех же точек и связи между парами — по одному на точку.
+    this.alts = new Map();
+    this.links = new Map();
     this._bindPointer();
   }
 
@@ -59,6 +71,8 @@ export class MapView {
     this.map = map;
     this.stage.replaceChildren();
     this.markers.clear();
+    this.alts.clear();
+    this.links.clear();
 
     if (map.type === 'svg') {
       const text = await fetch(map.file).then((r) => r.text());
@@ -78,6 +92,10 @@ export class MapView {
       const img = el('img', { src: map.file, draggable: 'false', alt: map.name });
       this.stage.append(img);
     }
+
+    // Слой связей кладём до маркеров: они добавляются позже и потому окажутся выше.
+    this.linkLayer = svgEl('svg', { class: 'link-layer', viewBox: `0 0 ${this.w} ${this.h}` });
+    this.stage.append(this.linkLayer);
 
     this.stage.style.width = this.w + 'px';
     this.stage.style.height = this.h + 'px';
@@ -111,7 +129,8 @@ export class MapView {
   apply() {
     this.stage.style.transform = `translate(${this.tx}px, ${this.ty}px) scale(${this.scale})`;
     const inv = 1 / this.scale;
-    for (const m of this.markers.values()) m.style.transform = `scale(${inv})`;
+    for (const box of [this.markers, this.alts])
+      for (const m of box.values()) m.style.transform = `scale(${inv})`;
   }
 
   zoomAt(clientX, clientY, factor) {
@@ -137,11 +156,34 @@ export class MapView {
     setTimeout(() => (this.stage.style.transition = ''), 260);
   }
 
+  /**
+   * Маркер точки. Если заданы вторые координаты (`x2`/`y2` — та же точка на
+   * схеме этажей, нарисованной с краю карты), рядом появляется второй маркер и
+   * тонкая линия между ними. Возвращает основной маркер.
+   */
   addMarker(spawn, doc, { onClick } = {}) {
+    const main = this._marker(spawn, doc, onClick, false);
+    this.markers.set(spawn.id, main);
+    if (spawn.x2 == null || spawn.y2 == null) return main;
+
+    const alt = this._marker(spawn, doc, onClick, true);
+    this.alts.set(spawn.id, alt);
+    const link = this._link(spawn);
+    this.links.set(spawn.id, link);
+    // Наведение на любой из маркеров подсвечивает связь: в тонкую линию попасть
+    // курсором трудно, а понять, куда она ведёт, нужно именно от маркера.
+    for (const node of [main, alt]) {
+      node.addEventListener('mouseenter', () => link.classList.add('hot'));
+      node.addEventListener('mouseleave', () => link.classList.remove('hot'));
+    }
+    return main;
+  }
+
+  _marker(spawn, doc, onClick, alt) {
     const node = el(
       'div',
       {
-        class: 'marker',
+        class: 'marker' + (alt ? ' alt' : ''),
         title: spawn.caption,
         'data-id': spawn.id,
         onclick: (e) => {
@@ -151,18 +193,39 @@ export class MapView {
       },
       el('img', { src: doc.icon, alt: doc.name })
     );
-    node.style.left = spawn.x + '%';
-    node.style.top = spawn.y + '%';
+    node.style.left = (alt ? spawn.x2 : spawn.x) + '%';
+    node.style.top = (alt ? spawn.y2 : spawn.y) + '%';
     node.style.borderColor = doc.color;
     node.style.transform = `scale(${1 / this.scale})`;
     this.stage.append(node);
-    this.markers.set(spawn.id, node);
     return node;
   }
 
+  /** Линия между основным и второстепенным маркерами одной точки. */
+  _link(spawn) {
+    const ends = {
+      x1: (spawn.x / 100) * this.w,
+      y1: (spawn.y / 100) * this.h,
+      x2: (spawn.x2 / 100) * this.w,
+      y2: (spawn.y2 / 100) * this.h,
+    };
+    const g = svgEl('g', { class: 'link', 'data-id': spawn.id });
+    g.append(svgEl('line', { class: 'link-hit', ...ends }), svgEl('line', { class: 'link-wire', ...ends }));
+    this.linkLayer.append(g);
+    return g;
+  }
+
+  /** Подсветить точку: оба её маркера и связь между ними. */
+  setActive(id) {
+    for (const box of [this.markers, this.alts, this.links])
+      for (const [mid, node] of box) node.classList.toggle('active', mid === id);
+  }
+
   clearMarkers() {
-    for (const m of this.markers.values()) m.remove();
-    this.markers.clear();
+    for (const box of [this.markers, this.alts, this.links]) {
+      for (const node of box.values()) node.remove();
+      box.clear();
+    }
   }
 
   _bindPointer() {
