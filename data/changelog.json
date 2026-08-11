@@ -1,5 +1,215 @@
 [
   {
+    "id": "2026-08-11-1019",
+    "at": "2026-08-11T10:19",
+    "maps": [
+      {
+        "map": "customs",
+        "added": [
+          {
+            "id": "customs-cmsoakamd",
+            "caption": "В ангаре с машиной, необходимой по квесту \"Реагент. Часть 4\"",
+            "captionEn": "In the hangar with the vehicle needed for the quest \"Reagent. Part 4\""
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "interchange",
+        "added": [
+          {
+            "id": "interchange-cmsoamcoe",
+            "caption": "На скамейке детской площадки внутри ТЦ\n",
+            "captionEn": "On a bench at a children's playground inside a shopping center"
+          },
+          {
+            "id": "interchange-cmsoarogu",
+            "caption": "Комната внутри офиса между IDEA и Goshan\n",
+            "captionEn": "A room inside the office between IDEA and Goshan"
+          },
+          {
+            "id": "interchange-cmsoasqeu",
+            "caption": "На столе, слева от раскладушек.",
+            "captionEn": "On the table, to the left of the folding beds."
+          },
+          {
+            "id": "interchange-cmsoaufxa",
+            "caption": "В офисах между Goshan и OLI",
+            "captionEn": "In the offices between Goshan and OLI"
+          },
+          {
+            "id": "interchange-cmsoawdzh",
+            "caption": "Расположены на столе в центре помещения. Для входа необходим ключ от офиса службы логистики OLI.",
+            "captionEn": "Located on a table in the center of the room. A key from the OLI logistics service office is required for entry.\n"
+          },
+          {
+            "id": "interchange-cmsoax4d1",
+            "caption": "На компьютерном столе островка компании OLI",
+            "captionEn": "Located on the computer desk of the OLI island"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "interchange-15",
+            "caption": "В офисах между Goshan и OLI",
+            "captionEn": "Offices between Goshan and OLI"
+          }
+        ]
+      },
+      {
+        "map": "lighthouse",
+        "added": [
+          {
+            "id": "lighthouse-cmsob9bye",
+            "caption": "Находятся в складском помещение ангара.",
+            "captionEn": "They are located in the hangar storage area."
+          },
+          {
+            "id": "lighthouse-cmsobaf78",
+            "caption": "Внутри палатки расположенной на крыше.",
+            "captionEn": "Inside the tent located on the roof."
+          },
+          {
+            "id": "lighthouse-cmsobc7o4",
+            "caption": "Второй этаж первого ангара, на столе.",
+            "captionEn": "Second floor of the first hangar, on the table."
+          },
+          {
+            "id": "lighthouse-cmsobcxvp",
+            "caption": "2 этаж первого ангара, в стелаже справа от стола.",
+            "captionEn": "2nd floor of the first hangar, in the rack to the right of the table."
+          },
+          {
+            "id": "lighthouse-cmsobds91",
+            "caption": "Барак около магазина, на втором этаже в левой комнате",
+            "captionEn": "The barracks are near the store, on the second floor in the left room"
+          },
+          {
+            "id": "lighthouse-cmsobfazw",
+            "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег», в комнате с красным компьютером",
+            "captionEn": "On the second floor of a brick house in the village next to the \"Crossing to the Shore\" exit, in the room with the red computer"
+          },
+          {
+            "id": "lighthouse-cmsobfuck",
+            "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
+            "captionEn": "On the second floor of a brick house in the village next to the \"Passage to the Shore\" exit"
+          },
+          {
+            "id": "lighthouse-cmsobgbdw",
+            "caption": "В нижнем яхтклубе, на втором этаже",
+            "captionEn": "In the lower yacht club, on the second floor"
+          },
+          {
+            "id": "lighthouse-cmsobligl",
+            "caption": "Первый этаж нижнего шале",
+            "captionEn": "Ground floor of the lower chalet"
+          },
+          {
+            "id": "lighthouse-cmsobm5xo",
+            "caption": "Расположены в самой последней комнате второго этажа.",
+            "captionEn": "Located in the very last room on the second floor."
+          },
+          {
+            "id": "lighthouse-cmsobn9fw",
+            "caption": "В палатке на теннисном корте",
+            "captionEn": "In a tent on the tennis court"
+          },
+          {
+            "id": "lighthouse-cmsobnsml",
+            "caption": "В спальне на втором этаже верхнего шале",
+            "captionEn": "In the bedroom on the second floor of the upper chalet"
+          },
+          {
+            "id": "lighthouse-cmsobokt0",
+            "caption": "Центральная комната с камином в верхнем шале",
+            "captionEn": "Central room with fireplace in the upper chalet"
+          },
+          {
+            "id": "lighthouse-cmsobp4lg",
+            "caption": "Второй этаж дебаркадера, на кровати",
+            "captionEn": "Second floor of the landing stage, on the bed"
+          },
+          {
+            "id": "lighthouse-cmsobpris",
+            "caption": "Второй этаж дебаркадера в стелаже",
+            "captionEn": "The second floor of the landing stage in the rack"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "lighthouse-e8345406",
+            "caption": "3 этаж нижнего шале у комода за кроватью",
+            "captionEn": "3rd floor of the lower chalet, by the dresser behind the bed"
+          }
+        ]
+      },
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsobry1h",
+            "caption": "Третий этаж короля",
+            "captionEn": "The King's Third Floor"
+          },
+          {
+            "id": "reserve-cmsobtxad",
+            "caption": "Второй этаж белой пешки, в комнате со стороны левого подъезда",
+            "captionEn": "The second floor of the white pawn, in the room on the left side of the entrance"
+          },
+          {
+            "id": "reserve-cmsobuy71",
+            "caption": "2 этаж, хоз. помещение у левой лестницы\n",
+            "captionEn": "2nd floor, utility room near the left staircase"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "shoreline",
+        "added": [
+          {
+            "id": "shoreline-cmsoazdfq",
+            "caption": "В стелаже времянки по правую сторону от платного выхода",
+            "captionEn": "In the temporary shelving unit on the right side of the toll gate"
+          },
+          {
+            "id": "shoreline-cmsob121h",
+            "caption": "Внутри стола на горящей заправке",
+            "captionEn": "Inside a table at a burning gas station"
+          },
+          {
+            "id": "shoreline-cmsob1zot",
+            "caption": "Смотровая площадка под санаторием, на лавочке",
+            "captionEn": "Observation deck under the sanatorium, on a bench"
+          },
+          {
+            "id": "shoreline-cmsob3gzx",
+            "caption": "На кровати 211 комнаты западного крыла",
+            "captionEn": "On bed 211 in room 211 of the west wing"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "woods",
+        "added": [
+          {
+            "id": "woods-cmsob6yyd",
+            "caption": "На пассажирском месте в сгоревшей машине",
+            "captionEn": "In the passenger seat of a burned-out car"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "woods-63",
+            "caption": "База МЧС в контейнере с трупом",
+            "captionEn": "EMERCOM base, in the container with the corpse"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-11-0939",
     "at": "2026-08-11T09:39",
     "maps": [

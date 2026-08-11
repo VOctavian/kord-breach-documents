@@ -13,7 +13,8 @@ let floor = null;
 let shotIdx = 0;
 
 const $ = (id) => document.getElementById(id);
-const view = new MapView($('viewport'), { onMapClick: place });
+// Левая кнопка только двигает карту: случайный клик больше не сбивает координаты.
+const view = new MapView($('viewport'), { onMapContext: openMenu });
 const current = () => list[idx];
 
 /* ---------- выбор локации ---------- */
@@ -81,17 +82,60 @@ function applyFloor(id) {
 
 /* ---------- постановка точки ---------- */
 
-function place(x, y) {
-  const s = current();
-  if (!s) return;
-  s.x = +x.toFixed(3);
-  s.y = +y.toFixed(3);
-  s.floor = floor ?? null;
-  const nextEmpty = list.findIndex((v, i) => i > idx && v.x == null);
-  idx = nextEmpty >= 0 ? nextEmpty : Math.min(idx + 1, list.length - 1);
+function place(spawn, x, y) {
+  spawn.x = +x.toFixed(3);
+  spawn.y = +y.toFixed(3);
+  spawn.floor = floor ?? null;
   render();
   save();
 }
+
+/* ---------- контекстное меню ---------- */
+
+let menu = null;
+
+function closeMenu() {
+  menu?.remove();
+  menu = null;
+}
+
+function openMenu(x, y, e) {
+  closeMenu();
+  const s = current();
+  const item = (label, disabled, onclick) =>
+    el('button', { class: 'ctx-item', type: 'button', disabled: disabled ? '' : null, onclick }, label);
+
+  menu = el(
+    'div',
+    { class: 'ctx-menu' },
+    item('Новая точка здесь', false, () => {
+      closeMenu();
+      place(createSpawn(), x, y);
+      $('e-cap-ru').focus();
+    }),
+    item(s ? 'Переместить сюда' : 'Переместить сюда (точка не выбрана)', !s, () => {
+      closeMenu();
+      place(s, x, y);
+    })
+  );
+
+  document.body.append(menu);
+  // Рядом с краем окна меню развернулось бы за экран — двигаем внутрь.
+  const r = menu.getBoundingClientRect();
+  menu.style.left = Math.min(e.clientX, innerWidth - r.width - 6) + 'px';
+  menu.style.top = Math.min(e.clientY, innerHeight - r.height - 6) + 'px';
+}
+
+addEventListener('pointerdown', (e) => {
+  if (menu && !e.target.closest('.ctx-menu')) closeMenu();
+});
+// Ловим на перехвате: правый клик мимо карты до MapView не доходит, а старое
+// меню закрыть всё равно надо.
+addEventListener('contextmenu', closeMenu, true);
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
+});
+addEventListener('blur', closeMenu);
 
 /* ---------- отрисовка ---------- */
 
@@ -242,7 +286,8 @@ $('del-shot').onclick = () => {
 
 /* ---------- добавление и удаление точек ---------- */
 
-$('new-spawn').onclick = () => {
+/** Пустая точка текущей локации; координат нет, пока её куда-нибудь не поставят. */
+function createSpawn() {
   const doc = $('e-doc').value || docs[0].id;
   const spawn = {
     id: `${mapId}-c${Date.now().toString(36)}`,
@@ -261,6 +306,11 @@ $('new-spawn').onclick = () => {
   list = spawns.filter((s) => s.map === mapId);
   idx = list.indexOf(spawn);
   shotIdx = 0;
+  return spawn;
+}
+
+$('new-spawn').onclick = () => {
+  createSpawn();
   render();
   $('e-cap-ru').focus();
   save();

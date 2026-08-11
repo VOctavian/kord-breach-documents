@@ -8,6 +8,8 @@ data/spawns.backup-*.json
 
 # Локальное
 node_modules/
+.idea/
+.vscode/
 .claude/*
 !.claude/commands/
 _site/

@@ -37,17 +37,18 @@ all you need.
 
 Run `node server.mjs` and open `editor.html`.
 
-- **Place a point** — pick a location in the header, the current spawn's
-  screenshot and description show up on the left, click the map where it
-  belongs. The marker drops and the editor moves on to the next unplaced point.
+- **Place a point** — right-click the map for a menu: "Новая точка здесь"
+  creates a point with those coordinates, "Переместить сюда" moves the current
+  one. The left button only pans, so a stray click can't knock coordinates off.
 - **Edit descriptions** — the "Описание (RU)" and "Описание (EN)" fields save as
   you type.
 - **Change document type** — the dropdown above the description.
 - **Screenshots** — "+ Скриншот" uploads files (jpeg/png/webp, up to 12 MB) into
   `assets/screenshots/`; "Убрать фото" drops the current frame from the point
   (the file stays on disk). With more than one frame, thumbnails appear below.
-- **New spawn** — "+ Новый спавн" creates an empty point: fill in the
-  description, add a screenshot, then click the map.
+- **New spawn** — "+ Новый спавн" creates an empty point with no coordinates:
+  fill in the description, add a screenshot, then place it from the right-click
+  menu.
 - **Delete point** — "Удалить точку".
 
 Everything saves automatically (`POST /api/spawns` → `data/spawns.json`); the

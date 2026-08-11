@@ -202,8 +202,8 @@
     "doc": "finansovaea",
     "docName": "Финансовая документация",
     "caption": "В офисах между Goshan и OLI",
-    "x": 82.438,
-    "y": 60.618,
+    "x": 82.181,
+    "y": 60.421,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-finansovaea-7070dfe6.jpg"
@@ -922,8 +922,8 @@
     "doc": "testovaea",
     "docName": "Тестовая документация",
     "caption": "База МЧС в контейнере с трупом",
-    "x": 60.394,
-    "y": 82.453,
+    "x": 60.391,
+    "y": 82.467,
     "floor": null,
     "images": [
       "assets/screenshots/woods-testovaea-4da9dae4.jpg"
@@ -2502,8 +2502,8 @@
     "images": [
       "assets/screenshots/lighthouse-expluatationnaea-e8345406.jpg"
     ],
-    "x": 82.7,
-    "y": 61.206,
+    "x": 82.663,
+    "y": 61.315,
     "floor": null
   },
   {
@@ -2927,21 +2927,6 @@
     "floor": null
   },
   {
-    "id": "reserve-cmsllarb5",
-    "map": "reserve",
-    "mapName": "Резерв",
-    "doc": "proectnaea",
-    "docName": "Проектная документация",
-    "caption": "2 этаж, хоз. помещение у левой лестницы",
-    "captionEn": "2nd floor, utility room near the left staircase",
-    "images": [
-      "assets/screenshots/reserve-proectnaea-d32d332f.png"
-    ],
-    "x": 88.72,
-    "y": 65.377,
-    "floor": null
-  },
-  {
     "id": "reserve-cmslld3wq",
     "map": "reserve",
     "mapName": "Резерв",
@@ -3170,8 +3155,8 @@
     "id": "shoreline-cmslmppey",
     "map": "shoreline",
     "mapName": "Берег",
-    "doc": "expluatationnaea",
-    "docName": "Эксплуатационная документация",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
     "caption": "база контрабандистов первый ангар ",
     "captionEn": "Smugglers' Base, First Hangar",
     "images": [
@@ -3419,6 +3404,454 @@
     ],
     "x": 14.476,
     "y": 16.511,
+    "floor": null
+  },
+  {
+    "id": "customs-cmsoakamd",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "В ангаре с машиной, необходимой по квесту \"Реагент. Часть 4\"",
+    "captionEn": "In the hangar with the vehicle needed for the quest \"Reagent. Part 4\"",
+    "images": [
+      "assets/screenshots/customs-finansovaea-c991fc06.png"
+    ],
+    "x": 20.499,
+    "y": 41.136,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsoamcoe",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На скамейке детской площадки внутри ТЦ\n",
+    "captionEn": "On a bench at a children's playground inside a shopping center",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-335fc068.png"
+    ],
+    "x": 76.276,
+    "y": 36.942,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsoarogu",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Комната внутри офиса между IDEA и Goshan\n",
+    "captionEn": "A room inside the office between IDEA and Goshan",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-59d9b108.png"
+    ],
+    "x": 82.1,
+    "y": 41.094,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsoasqeu",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На столе, слева от раскладушек.",
+    "captionEn": "On the table, to the left of the folding beds.",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-15f4b6ce.png"
+    ],
+    "x": 76.9,
+    "y": 43.987,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsoaufxa",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В офисах между Goshan и OLI",
+    "captionEn": "In the offices between Goshan and OLI",
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-72221d9e.png"
+    ],
+    "x": 82.605,
+    "y": 61.086,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsoawdzh",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Расположены на столе в центре помещения. Для входа необходим ключ от офиса службы логистики OLI.",
+    "captionEn": "Located on a table in the center of the room. A key from the OLI logistics service office is required for entry.\n",
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-af9e1ad5.png"
+    ],
+    "x": 73.865,
+    "y": 67.365,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsoax4d1",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На компьютерном столе островка компании OLI",
+    "captionEn": "Located on the computer desk of the OLI island",
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-1e0b9bfb.png"
+    ],
+    "x": 76.516,
+    "y": 70.458,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsoazdfq",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В стелаже времянки по правую сторону от платного выхода",
+    "captionEn": "In the temporary shelving unit on the right side of the toll gate",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-861308c9.png"
+    ],
+    "x": 54.189,
+    "y": 30.233,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsob121h",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Внутри стола на горящей заправке",
+    "captionEn": "Inside a table at a burning gas station",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-8e8349c0.png"
+    ],
+    "x": 36.722,
+    "y": 82.414,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsob1zot",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Смотровая площадка под санаторием, на лавочке",
+    "captionEn": "Observation deck under the sanatorium, on a bench",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-892f4f0b.png"
+    ],
+    "x": 37.886,
+    "y": 55.76,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsob3gzx",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На кровати 211 комнаты западного крыла",
+    "captionEn": "On bed 211 in room 211 of the west wing",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-66e72405.png"
+    ],
+    "x": 88.339,
+    "y": 44.213,
+    "floor": null
+  },
+  {
+    "id": "woods-cmsob6yyd",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На пассажирском месте в сгоревшей машине",
+    "captionEn": "In the passenger seat of a burned-out car",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-f3e6d62c.png"
+    ],
+    "x": 49.844,
+    "y": 47.333,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsob9bye",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Находятся в складском помещение ангара.",
+    "captionEn": "They are located in the hangar storage area.",
+    "images": [
+      "assets/screenshots/lighthouse-personal-c1b25445.png"
+    ],
+    "x": 54.707,
+    "y": 24.258,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobaf78",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Внутри палатки расположенной на крыше.",
+    "captionEn": "Inside the tent located on the roof.",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-b61bb07d.png"
+    ],
+    "x": 56.537,
+    "y": 23.864,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobc7o4",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Второй этаж первого ангара, на столе.",
+    "captionEn": "Second floor of the first hangar, on the table.",
+    "images": [
+      "assets/screenshots/lighthouse-personal-d4862c16.png"
+    ],
+    "x": 43.649,
+    "y": 29.393,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobcxvp",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "2 этаж первого ангара, в стелаже справа от стола.",
+    "captionEn": "2nd floor of the first hangar, in the rack to the right of the table.",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-a7d25cb2.png"
+    ],
+    "x": 43.534,
+    "y": 29.355,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobds91",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Барак около магазина, на втором этаже в левой комнате",
+    "captionEn": "The barracks are near the store, on the second floor in the left room",
+    "images": [
+      "assets/screenshots/lighthouse-personal-955ca54f.png"
+    ],
+    "x": 55.562,
+    "y": 48.596,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobfazw",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег», в комнате с красным компьютером",
+    "captionEn": "On the second floor of a brick house in the village next to the \"Crossing to the Shore\" exit, in the room with the red computer",
+    "images": [
+      "assets/screenshots/lighthouse-personal-7c702e53.png"
+    ],
+    "x": 65.581,
+    "y": 52.167,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobfuck",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
+    "captionEn": "On the second floor of a brick house in the village next to the \"Passage to the Shore\" exit",
+    "images": [],
+    "x": 66.412,
+    "y": 52.273,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobgbdw",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В нижнем яхтклубе, на втором этаже",
+    "captionEn": "In the lower yacht club, on the second floor",
+    "images": [
+      "assets/screenshots/lighthouse-personal-e0bd7c2a.png"
+    ],
+    "x": 35.645,
+    "y": 56.032,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobligl",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Первый этаж нижнего шале",
+    "captionEn": "Ground floor of the lower chalet",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-b4a26e1a.png"
+    ],
+    "x": 56.34,
+    "y": 58.444,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobm5xo",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Расположены в самой последней комнате второго этажа.",
+    "captionEn": "Located in the very last room on the second floor.",
+    "images": [
+      "assets/screenshots/lighthouse-personal-f29bbb11.png"
+    ],
+    "x": 59.789,
+    "y": 62.163,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobn9fw",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В палатке на теннисном корте",
+    "captionEn": "In a tent on the tennis court",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-f4aa0f9e.png"
+    ],
+    "x": 55.159,
+    "y": 69.073,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobnsml",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В спальне на втором этаже верхнего шале",
+    "captionEn": "In the bedroom on the second floor of the upper chalet",
+    "images": [
+      "assets/screenshots/lighthouse-personal-c4c14509.png"
+    ],
+    "x": 83.48,
+    "y": 71.615,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobokt0",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Центральная комната с камином в верхнем шале",
+    "captionEn": "Central room with fireplace in the upper chalet",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-c6df0c5e.png"
+    ],
+    "x": 59.539,
+    "y": 68.167,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobp4lg",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Второй этаж дебаркадера, на кровати",
+    "captionEn": "Second floor of the landing stage, on the bed",
+    "images": [
+      "assets/screenshots/lighthouse-personal-8b710bdf.png"
+    ],
+    "x": 36.237,
+    "y": 78.596,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsobpris",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Второй этаж дебаркадера в стелаже",
+    "captionEn": "The second floor of the landing stage in the rack",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-67cc9eda.png"
+    ],
+    "x": 36.252,
+    "y": 78.879,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsobry1h",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Третий этаж короля",
+    "captionEn": "The King's Third Floor",
+    "images": [
+      "assets/screenshots/reserve-personal-ab210162.png"
+    ],
+    "x": 23.509,
+    "y": 91.877,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsobtxad",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Второй этаж белой пешки, в комнате со стороны левого подъезда",
+    "captionEn": "The second floor of the white pawn, in the room on the left side of the entrance",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-97824cb9.png"
+    ],
+    "x": 96.398,
+    "y": 93.901,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsobuy71",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж, хоз. помещение у левой лестницы\n",
+    "captionEn": "2nd floor, utility room near the left staircase",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-d32d332f.png"
+    ],
+    "x": 88.53,
+    "y": 71.802,
     "floor": null
   }
 ]

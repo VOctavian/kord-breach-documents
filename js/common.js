@@ -40,9 +40,10 @@ export function el(tag, attrs = {}, ...kids) {
  * от натурального размера карты, поэтому не зависят от масштаба показа.
  */
 export class MapView {
-  constructor(viewport, { onMapClick } = {}) {
+  constructor(viewport, { onMapClick, onMapContext } = {}) {
     this.viewport = viewport;
     this.onMapClick = onMapClick;
+    this.onMapContext = onMapContext;
     this.stage = el('div', { class: 'stage' });
     this.viewport.append(this.stage);
     this.scale = 1;
@@ -207,14 +208,19 @@ export class MapView {
       captured = false;
       vp.classList.remove('grabbing');
       if (moved < 4 && this.onMapClick && !e.target.closest('.marker')) {
-        const r = vp.getBoundingClientRect();
-        const x = ((e.clientX - r.left - this.tx) / this.scale / this.w) * 100;
-        const y = ((e.clientY - r.top - this.ty) / this.scale / this.h) * 100;
-        if (x >= 0 && x <= 100 && y >= 0 && y <= 100) this.onMapClick(x, y);
+        const p = this.pointAt(e.clientX, e.clientY);
+        if (p) this.onMapClick(p.x, p.y);
       }
     };
     vp.addEventListener('pointerup', end);
     vp.addEventListener('pointercancel', () => (dragging = false));
+
+    vp.addEventListener('contextmenu', (e) => {
+      if (!this.onMapContext) return;
+      e.preventDefault();
+      const p = this.pointAt(e.clientX, e.clientY);
+      if (p) this.onMapContext(p.x, p.y, e);
+    });
 
     vp.addEventListener(
       'wheel',
@@ -224,5 +230,13 @@ export class MapView {
       },
       { passive: false }
     );
+  }
+
+  /** Экранная точка → проценты карты. `null`, если ткнули мимо изображения. */
+  pointAt(clientX, clientY) {
+    const r = this.viewport.getBoundingClientRect();
+    const x = ((clientX - r.left - this.tx) / this.scale / this.w) * 100;
+    const y = ((clientY - r.top - this.ty) / this.scale / this.h) * 100;
+    return x >= 0 && x <= 100 && y >= 0 && y <= 100 ? { x, y } : null;
   }
 }
