@@ -66,14 +66,15 @@ Shortcuts: `←` / `→` previous / next point, `Esc` closes the enlarged screen
 
 ## Publishing updates
 
-Marked up new points? Publish with one command:
+Marked up new points, or edited a survey? Publish with one command:
 
 ```
 node scripts/publish.mjs
 ```
 
 It validates the data, commits, pushes and waits for the update to reach the
-site.
+site. Surveys need no separate command: `data/survey.json` and the gallery images
+in `assets/survey/` ride along in the same run.
 
 | Flag | What it does |
 | --- | --- |
@@ -85,12 +86,29 @@ site.
 | `--changelog-only` | only write "What's new" and exit — to preview the popup before pushing |
 
 Before committing it checks: unique ids, that the location and document type
-exist, that every screenshot file is present. If anything is off, publishing is
-aborted. It separately warns about points without coordinates, empty drafts, and
-screenshots not attached to any point.
+exist, that every screenshot file is present. Surveys are checked separately:
+unique survey and question ids, gallery images present, no live survey that is
+missing from the list or has no questions. If anything is off, publishing is
+aborted. It warns about points without coordinates, empty drafts, and screenshots
+not attached to any point.
 
-The commit message is built from the diff against the previous version, e.g.
-`Обновление спавнов: новых точек: 4, размечено: 4, сдвинуто: 2`.
+The commit subject is built from the diff against the previous version and
+follows what actually changed:
+
+| What changed | Commit subject |
+| --- | --- |
+| points only | `Обновление спавнов: новых точек: 4, сдвинуто: 2` |
+| survey only | `Опрос: включён «Пара вопросов о карте»` |
+| both | subject stays about points, the survey line moves into the body |
+
+A long subject is cut at 72 characters and repeated in full in the body —
+otherwise `git log --oneline` truncates it on its own, and badly.
+
+**Not every file gets swept into the commit.** Tracked changes go in as a whole,
+but a *new* file under `assets/` is only added when the data actually references
+it. Unattached images are listed under "в коммит не пойдёт, ни к чему не
+привязано" and left on disk. `git add` on a directory once dragged in 1.5 MB of
+junk that then shipped with every build.
 
 If the deploy fails, the script reruns it once. When the rerun fails too it's
 almost always a GitHub outage — check [githubstatus.com](https://www.githubstatus.com/).

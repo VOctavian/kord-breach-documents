@@ -56,9 +56,12 @@ const broken = spawns.flatMap((s) => (s.images ?? []).filter((p) => !existsSync(
 if (broken.length) fail(`нет файлов скриншотов:\n      ${broken.join('\n      ')}`);
 
 // Опрос уезжает на сайт вместе с данными, поэтому битый survey.json ловим здесь.
+// Разобранный файл нужен и дальше — для темы коммита и для списка картинок.
+let surveyData = null;
 if (existsSync(`${ROOT}data/survey.json`)) {
   try {
     const file = JSON.parse(readFileSync(`${ROOT}data/survey.json`, 'utf8'));
+    surveyData = file;
     const surveys = file.surveys ?? [];
     const dup = surveys.map((s) => s.id).filter((id, i, a) => a.indexOf(id) !== i);
     const noId = surveys.filter((s) => !s.id);
@@ -99,6 +102,15 @@ const used = new Set(spawns.flatMap((s) => s.images ?? []));
 const orphans = readdirSync(`${ROOT}assets/screenshots`)
   .map((f) => `assets/screenshots/${f}`)
   .filter((p) => !used.has(p));
+
+/** Все картинки, на которые есть ссылка из данных: точки плюс галереи опросов. */
+const referenced = new Set([
+  ...used,
+  ...(surveyData?.surveys ?? []).flatMap((s) => [
+    ...(s.images ?? []),
+    ...(s.questions ?? []).flatMap((q) => q.images ?? []),
+  ]),
+]);
 
 ok(`${spawns.length} точек, ссылки на скриншоты целы`);
 if (drafts) warn(`${drafts} пустых заготовок — на сайт не попадут`);
@@ -149,11 +161,27 @@ function buildRelease(was) {
   return { id: `${day}-${time.replace(':', '')}`, at: `${day}T${time}`, maps: groups };
 }
 
-const changed = git(['status', '--porcelain', '--', ...(ALL ? ['.'] : PATHS)]);
+const paths = ALL ? ['.'] : PATHS;
+const changed = git(['status', '--porcelain', '--', ...paths]);
 if (!changed) {
   console.log('\nИзменений нет — публиковать нечего.\n');
   process.exit(0);
 }
+
+// `git()` обрезает выдачу целиком, поэтому у первой строки порцелейна пропадает
+// ведущий пробел и позиция пути «съезжает». Отрезаем статус по образцу, не по счёту.
+const touched = new Set(changed.split('\n').map((l) => l.replace(/^\s*\S{1,2}\s+/, '')));
+const spawnsTouched = touched.has('data/spawns.json');
+const surveyTouched = touched.has('data/survey.json');
+
+// Новые файлы придётся добавлять поимённо: `git add <каталог>` подбирает и
+// неприкаянные картинки. Именно так в a40e20b уехали 1.5 МБ, о которых сам же
+// скрипт предупредил строкой выше.
+const untracked = git(['ls-files', '--others', '--exclude-standard', '--', ...paths])
+  .split('\n')
+  .filter(Boolean);
+const toAdd = untracked.filter((p) => !p.startsWith('assets/') || referenced.has(p));
+const notAdded = untracked.filter((p) => !toAdd.includes(p));
 
 let was = null;
 try {
@@ -188,8 +216,80 @@ if (!was) {
   if (CHANGELOG) release = buildRelease(was);
 }
 
-const subject = message ?? `Обновление спавнов: ${summary.join(', ') || 'правки данных'}`;
-const body = `Итого ${published.length} точек, из них ${published.length - unplaced.length} с координатами.`;
+/** Что стало с опросами по сравнению с прошлым коммитом — для темы коммита. */
+function surveySummary() {
+  if (!surveyData) return [];
+  let before;
+  try {
+    // stdio: файла может не быть в истории, и git тогда шумит в stderr.
+    before = JSON.parse(git(['show', 'HEAD:data/survey.json'], { stdio: ['ignore', 'pipe', 'ignore'] }));
+  } catch {
+    return ['первая публикация'];
+  }
+
+  const wasList = before.surveys ?? [];
+  const nowList = surveyData.surveys ?? [];
+  // activeId — прежний формат с одним включённым опросом.
+  const wasOn = Array.isArray(before.activeIds) ? before.activeIds : [before.activeId].filter(Boolean);
+  const nowOn = surveyData.activeIds ?? [];
+  const name = (id) => {
+    const s = nowList.find((s) => s.id === id) ?? wasList.find((s) => s.id === id);
+    const title = (s?.title || id).trim();
+    // После дублирования у опросов одинаковые названия — без id их не различить.
+    const twins = new Set(
+      [...nowList, ...wasList].filter((x) => (x.title || x.id).trim() === title).map((x) => x.id)
+    );
+    return twins.size > 1 ? `«${title}» (${id})` : `«${title}»`;
+  };
+
+  const born = nowList.filter((s) => !wasList.some((w) => w.id === s.id));
+  const gone = wasList.filter((w) => !nowList.some((s) => s.id === w.id));
+  const on = nowOn.filter((id) => !wasOn.includes(id));
+  const off = wasOn.filter((id) => !nowOn.includes(id));
+  // Вопросы считаем только у переживших опросов, которые не названы выше:
+  // про новые, удалённые и только что включённые уже сказано.
+  const named = new Set([...born.map((s) => s.id), ...gone.map((s) => s.id), ...on, ...off]);
+  const edited = nowList.filter((s) => {
+    const w = wasList.find((w) => w.id === s.id);
+    return w && !named.has(s.id) && JSON.stringify(w.questions ?? []) !== JSON.stringify(s.questions ?? []);
+  });
+
+  const out = [];
+  if (born.length) out.push(`новых опросов: ${born.length}`);
+  if (gone.length) out.push(`удалено опросов: ${gone.length}`);
+  if (on.length) out.push(`${on.length > 1 ? 'включены' : 'включён'} ${on.map(name).join(', ')}`);
+  if (off.length) out.push(`${off.length > 1 ? 'выключены' : 'выключен'} ${off.map(name).join(', ')}`);
+  if (edited.length === 1) out.push(`правлены вопросы в ${name(edited[0].id)}`);
+  else if (edited.length) out.push(`вопросы правлены в ${edited.length} опросах`);
+  return out;
+}
+
+const surveyParts = surveyTouched ? surveySummary() : [];
+
+// Тема не должна врать: правка одного опроса — это не «обновление спавнов».
+// Когда изменилось и то и другое, тема остаётся про точки, а опрос уходит в тело.
+const generated =
+  surveyTouched && !spawnsTouched
+    ? `Опрос: ${surveyParts.join(', ') || 'правки'}`
+    : `Обновление спавнов: ${summary.join(', ') || 'правки данных'}`;
+
+// Длинную тему `git log --oneline` обрезает сам и криво — лучше обрежем мы,
+// а целиком перечисление уедет в тело. Своё сообщение из -m не трогаем.
+const LIMIT = 72;
+const cut = !message && generated.length > LIMIT;
+const subject = message ?? (cut ? generated.slice(0, LIMIT - 1).trimEnd() + '…' : generated);
+
+const body = [
+  cut ? generated : null,
+  spawnsTouched || !surveyTouched
+    ? `Итого ${published.length} точек, из них ${published.length - unplaced.length} с координатами.`
+    : null,
+  surveyTouched && surveyData
+    ? `Опросов ${(surveyData.surveys ?? []).length}, включено ${(surveyData.activeIds ?? []).length}.`
+    : null,
+]
+  .filter(Boolean)
+  .join('\n');
 
 console.log('\nИзменения');
 console.log(
@@ -198,7 +298,8 @@ console.log(
     .map((l) => '  ' + l)
     .join('\n')
 );
-console.log(`\nКоммит\n  ${subject}\n  ${body}`);
+if (notAdded.length) warn(`в коммит не пойдёт, ни к чему не привязано:\n      ${notAdded.join('\n      ')}`);
+console.log(`\nКоммит\n  ${subject}\n${body.split('\n').map((l) => '  ' + l).join('\n')}`);
 
 /* ---------- 3. запись «Что нового» ---------- */
 
@@ -246,7 +347,8 @@ if (has('--changelog-only')) {
 /* ---------- 4. коммит и пуш ---------- */
 
 console.log('\nПубликация');
-git(['add', '--', ...(ALL ? ['.'] : PATHS)]);
+git(['add', '--update', '--', ...paths]);
+if (toAdd.length) git(['add', '--', ...toAdd]);
 git(['commit', '-m', subject, '-m', body, '-m', 'Co-Authored-By: Claude <noreply@anthropic.com>']);
 const sha = git(['rev-parse', 'HEAD']).slice(0, 7);
 git(['push', 'origin', 'HEAD']);
@@ -322,5 +424,22 @@ ok('деплой прошёл');
 const live = await fetch(`${SITE}/data/spawns.json`, { cache: 'no-store' }).then((r) => r.json());
 if (live.length === spawns.length) ok(`сайт отдаёт ${live.length} точек — совпадает`);
 else warn(`сайт отдаёт ${live.length} точек, локально ${spawns.length} — CDN мог не успеть обновиться`);
+
+// Опрос проверяем отдельно: числа точек он никак не касается, а включить его
+// и не заметить, что он не доехал, — самая обидная из возможных промашек.
+if (surveyData) {
+  const want = surveyData.activeIds ?? [];
+  try {
+    const liveSurvey = await fetch(`${SITE}/data/survey.json`, { cache: 'no-store' }).then((r) => r.json());
+    const got = liveSurvey.activeIds ?? [];
+    if (JSON.stringify(got) === JSON.stringify(want)) {
+      ok(`опросов на сайте ${liveSurvey.surveys?.length ?? 0}, включено ${got.length} — совпадает`);
+    } else {
+      warn(`на сайте включено [${got.join(', ')}], локально [${want.join(', ')}] — CDN мог не успеть обновиться`);
+    }
+  } catch (e) {
+    warn(`опрос с сайта не прочитался: ${e.message}`);
+  }
+}
 
 console.log(`\n${SITE}\n`);
