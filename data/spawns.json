@@ -12,7 +12,9 @@
     "images": [
       "assets/screenshots/customs-finansovaea-c39a854c.jpg"
     ],
-    "captionEn": "Reshala's base, in the central room"
+    "captionEn": "Reshala's base, in the central room",
+    "x2": 46.627,
+    "y2": 28.455
   },
   {
     "id": "customs-2",
@@ -27,7 +29,9 @@
     "images": [
       "assets/screenshots/customs-finansovaea-dc58c28b.jpg"
     ],
-    "captionEn": "3rd floor of the three-story dorms (room 304)"
+    "captionEn": "3rd floor of the three-story dorms (room 304)",
+    "x2": 49.106,
+    "y2": 79.498
   },
   {
     "id": "customs-3",
@@ -73,7 +77,9 @@
       "assets/screenshots/customs-finansovaea-22af2577.jpg",
       "assets/screenshots/customs-finansovaea-6b02b372.jpg"
     ],
-    "captionEn": "2nd floor of the three-story dorms (room 212), by the outside stairs to the car"
+    "captionEn": "2nd floor of the three-story dorms (room 212), by the outside stairs to the car",
+    "x2": 48.912,
+    "y2": 85.139
   },
   {
     "id": "customs-7",
@@ -88,7 +94,9 @@
     "images": [
       "assets/screenshots/customs-finansovaea-f3e73363.jpg"
     ],
-    "captionEn": "2nd floor of the Library"
+    "captionEn": "2nd floor of the Library",
+    "x2": 57.972,
+    "y2": 20.856
   },
   {
     "id": "customs-8",
@@ -103,7 +111,9 @@
     "images": [
       "assets/screenshots/customs-finansovaea-ffb79280.jpg"
     ],
-    "captionEn": "2nd floor of the Library"
+    "captionEn": "2nd floor of the Library",
+    "x2": 58.162,
+    "y2": 21.988
   },
   {
     "id": "customs-9",
@@ -148,7 +158,9 @@
     "images": [
       "assets/screenshots/customs-finansovaea-2a0cf8b3.jpg"
     ],
-    "captionEn": "Two-story dorms, room locked with the dorm checkpoint key"
+    "captionEn": "Two-story dorms, room locked with the dorm checkpoint key",
+    "x2": 43.971,
+    "y2": 77.663
   },
   {
     "id": "customs-12",
@@ -178,7 +190,9 @@
     "images": [
       "assets/screenshots/customs-finansovaea-8e356705.jpg"
     ],
-    "captionEn": "2nd floor of the Tarcone offices"
+    "captionEn": "2nd floor of the Tarcone offices",
+    "x2": 84.825,
+    "y2": 33.818
   },
   {
     "id": "customs-14",
@@ -298,7 +312,9 @@
     "images": [
       "assets/screenshots/reserve-personal-1d8e1e9a.jpg"
     ],
-    "captionEn": "RB-OB key room"
+    "captionEn": "RB-OB key room",
+    "x2": 55.59,
+    "y2": 50.609
   },
   {
     "id": "reserve-22",
@@ -313,7 +329,9 @@
     "images": [
       "assets/screenshots/reserve-personal-470cfcf2.jpg"
     ],
-    "captionEn": "Commandant's room in the Queen building (dead end) RB-KORL key"
+    "captionEn": "Commandant's room in the Queen building (dead end) RB-KORL key",
+    "x2": 43.029,
+    "y2": 80.46
   },
   {
     "id": "reserve-23",
@@ -328,7 +346,9 @@
     "images": [
       "assets/screenshots/reserve-personal-7b4b5846.jpg"
     ],
-    "captionEn": "3rd floor of the Black Knight (the room with computers)"
+    "captionEn": "3rd floor of the Black Knight (the room with computers)",
+    "x2": 34.297,
+    "y2": 47.85
   },
   {
     "id": "reserve-24",
@@ -343,7 +363,9 @@
     "images": [
       "assets/screenshots/reserve-personal-b970edc5.jpg"
     ],
-    "captionEn": "Room at the radar station next to the server room (needs the RB-RLSA key)"
+    "captionEn": "Room at the radar station next to the server room (needs the RB-RLSA key)",
+    "x2": 43.251,
+    "y2": 83.084
   },
   {
     "id": "reserve-25",
@@ -358,7 +380,9 @@
     "images": [
       "assets/screenshots/reserve-personal-f6c1683c.jpg"
     ],
-    "captionEn": "Basements under the Black Bishop"
+    "captionEn": "Basements under the Black Bishop",
+    "x2": 49.054,
+    "y2": 42.785
   },
   {
     "id": "customs-26",
@@ -373,7 +397,9 @@
     "images": [
       "assets/screenshots/customs-proectnaea-17b9886f.jpg"
     ],
-    "captionEn": "2nd floor of the three-story dorms (room 212)"
+    "captionEn": "2nd floor of the three-story dorms (room 212)",
+    "x2": 49.057,
+    "y2": 83.659
   },
   {
     "id": "customs-27",
@@ -418,7 +444,9 @@
     "images": [
       "assets/screenshots/customs-proectnaea-2967e39b.jpg"
     ],
-    "captionEn": "2nd floor of the Library"
+    "captionEn": "2nd floor of the Library",
+    "x2": 57.803,
+    "y2": 19.644
   },
   {
     "id": "customs-30",
@@ -433,7 +461,9 @@
     "images": [
       "assets/screenshots/customs-proectnaea-9afb3a8d.jpg"
     ],
-    "captionEn": "2nd floor of the Library"
+    "captionEn": "2nd floor of the Library",
+    "x2": 58.289,
+    "y2": 23.079
   },
   {
     "id": "customs-31",
@@ -463,7 +493,9 @@
     "images": [
       "assets/screenshots/customs-proectnaea-bc6db6a5.jpg"
     ],
-    "captionEn": "2nd floor of the locked Tarcone offices"
+    "captionEn": "2nd floor of the locked Tarcone offices",
+    "x2": 84.825,
+    "y2": 31.136
   },
   {
     "id": "customs-33",
@@ -493,7 +525,9 @@
     "images": [
       "assets/screenshots/customs-proectnaea-d02f2e19.jpg"
     ],
-    "captionEn": "Room 216 of the two-story dorms"
+    "captionEn": "Room 216 of the two-story dorms",
+    "x2": 43.176,
+    "y2": 80.365
   },
   {
     "id": "factory-35",
@@ -688,7 +722,9 @@
     "images": [
       "assets/screenshots/reserve-proectnaea-b454c5aa.jpg"
     ],
-    "captionEn": "Room in the Queen building next to the server room (needs the RB-RLSA key)"
+    "captionEn": "Room in the Queen building next to the server room (needs the RB-RLSA key)",
+    "x2": 43.251,
+    "y2": 81.585
   },
   {
     "id": "interchange-48",
@@ -1123,7 +1159,9 @@
     "images": [
       "assets/screenshots/streets-polzovatelskoe-dfb59121.jpg"
     ],
-    "captionEn": "2nd floor of the financial institution opposite Shestyorochka, next to the \"Sewer River\" extract (the folder for the \"Audit\" quest used to be here)"
+    "captionEn": "2nd floor of the financial institution opposite Shestyorochka, next to the \"Sewer River\" extract (the folder for the \"Audit\" quest used to be here)",
+    "x2": 69.389,
+    "y2": 59.792
   },
   {
     "id": "groundzero-77",
@@ -1168,7 +1206,9 @@
     "images": [
       "assets/screenshots/groundzero-polzovatelskoe-6958e3c5.jpg"
     ],
-    "captionEn": "\"Fusion\" restaurant on the 2nd floor"
+    "captionEn": "\"Fusion\" restaurant on the 2nd floor",
+    "x2": 32.424,
+    "y2": 49.047
   },
   {
     "id": "groundzero-80",
@@ -1423,7 +1463,9 @@
     "images": [
       "assets/screenshots/groundzero-meditsinskaea-d17a3cd7.jpg"
     ],
-    "captionEn": "2nd floor of the \"Oasis\" building"
+    "captionEn": "2nd floor of the \"Oasis\" building",
+    "x2": 34.615,
+    "y2": 44.149
   },
   {
     "id": "groundzero-97",
@@ -1618,7 +1660,9 @@
     "images": [
       "assets/screenshots/shoreline-expluatationnaea-53926fe5.jpg"
     ],
-    "captionEn": "Health Resort, administrative building, in the room with the open safe"
+    "captionEn": "Health Resort, administrative building, in the room with the open safe",
+    "x2": 40.709,
+    "y2": 44.513
   },
   {
     "id": "shoreline-113",
@@ -1648,7 +1692,9 @@
     "images": [
       "assets/screenshots/shoreline-expluatationnaea-776726f7.jpg"
     ],
-    "captionEn": "3rd floor of the east wing of the Health Resort"
+    "captionEn": "3rd floor of the east wing of the Health Resort",
+    "x2": 41.137,
+    "y2": 48.011
   },
   {
     "id": "woods-115",
@@ -1693,7 +1739,9 @@
     "images": [
       "assets/screenshots/woods-expluatationnaea-ec8956e7.jpg"
     ],
-    "captionEn": "Underground bunker near the village"
+    "captionEn": "Underground bunker near the village",
+    "x2": 66.299,
+    "y2": 37.126
   },
   {
     "id": "woods-118",
@@ -1783,7 +1831,9 @@
     ],
     "x": 79.88,
     "y": 68.075,
-    "floor": null
+    "floor": null,
+    "x2": 69.147,
+    "y2": 59.851
   },
   {
     "id": "reserve-8ea1eb18",
@@ -1873,7 +1923,9 @@
     ],
     "x": 79.968,
     "y": 61.485,
-    "floor": null
+    "floor": null,
+    "x2": 57.48,
+    "y2": 59.195
   },
   {
     "id": "customs-073e8815",
@@ -1888,7 +1940,9 @@
     ],
     "x": 58.575,
     "y": 14.465,
-    "floor": null
+    "floor": null,
+    "x2": 47.683,
+    "y2": 31.689
   },
   {
     "id": "customs-0d68bf19",
@@ -1979,7 +2033,9 @@
     ],
     "x": 93.284,
     "y": 64.381,
-    "floor": null
+    "floor": null,
+    "x2": 55.675,
+    "y2": 49.753
   },
   {
     "id": "factory-4249cd02",
@@ -2429,7 +2485,9 @@
     ],
     "x": 82.663,
     "y": 61.315,
-    "floor": null
+    "floor": null,
+    "x2": 57.509,
+    "y2": 59.611
   },
   {
     "id": "woods-cmsitd7yl",
@@ -2474,7 +2532,9 @@
     ],
     "x": 86.944,
     "y": 88.603,
-    "floor": null
+    "floor": null,
+    "x2": 53.797,
+    "y2": 43.664
   },
   {
     "id": "shoreline-cmsjdhsre",
@@ -2489,7 +2549,9 @@
     ],
     "x": 54.258,
     "y": 7.548,
-    "floor": null
+    "floor": null,
+    "x2": 39.425,
+    "y2": 44.2
   },
   {
     "id": "shoreline-cmskijfp2",
@@ -2534,7 +2596,9 @@
     ],
     "x": 64.365,
     "y": 94.759,
-    "floor": null
+    "floor": null,
+    "x2": 43.882,
+    "y2": 80.365
   },
   {
     "id": "customs-cmslk1c7t",
@@ -2564,7 +2628,9 @@
     ],
     "x": 22.04,
     "y": 21.734,
-    "floor": null
+    "floor": null,
+    "x2": 11.26,
+    "y2": 37.861
   },
   {
     "id": "factory-cmslkauo2",
@@ -2774,7 +2840,9 @@
     ],
     "x": 10.088,
     "y": 83.449,
-    "floor": null
+    "floor": null,
+    "x2": 27.821,
+    "y2": 52.098
   },
   {
     "id": "reserve-cmsll39ex",
@@ -2789,7 +2857,9 @@
     ],
     "x": 8.514,
     "y": 83.498,
-    "floor": null
+    "floor": null,
+    "x2": 26.378,
+    "y2": 52.036
   },
   {
     "id": "reserve-cmsll4bw1",
@@ -2804,7 +2874,9 @@
     ],
     "x": 8.129,
     "y": 90.636,
-    "floor": null
+    "floor": null,
+    "x2": 34.297,
+    "y2": 49.474
   },
   {
     "id": "reserve-cmsll5zrd",
@@ -2849,7 +2921,9 @@
     ],
     "x": 69.957,
     "y": 80.045,
-    "floor": null
+    "floor": null,
+    "x2": 42.437,
+    "y2": 83.396
   },
   {
     "id": "reserve-cmslld3wq",
@@ -2864,7 +2938,9 @@
     ],
     "x": 92.334,
     "y": 89.689,
-    "floor": null
+    "floor": null,
+    "x2": 48.617,
+    "y2": 62.593
   },
   {
     "id": "streets-cmslledey",
@@ -2909,7 +2985,9 @@
     ],
     "x": 24.853,
     "y": 33.409,
-    "floor": null
+    "floor": null,
+    "x2": 44.001,
+    "y2": 33.67
   },
   {
     "id": "streets-cmsllnfht",
@@ -2954,7 +3032,9 @@
     ],
     "x": 65.938,
     "y": 19.023,
-    "floor": null
+    "floor": null,
+    "x2": 58.131,
+    "y2": 31.619
   },
   {
     "id": "streets-cmsllut6p",
@@ -2969,7 +3049,9 @@
     ],
     "x": 83.279,
     "y": 45.949,
-    "floor": null
+    "floor": null,
+    "x2": 61.66,
+    "y2": 41.49
   },
   {
     "id": "streets-cmsllwieh",
@@ -2984,7 +3066,9 @@
     ],
     "x": 84.254,
     "y": 47.771,
-    "floor": null
+    "floor": null,
+    "x2": 62.276,
+    "y2": 42.859
   },
   {
     "id": "groundzero-cmslm201e",
@@ -3104,7 +3188,9 @@
     ],
     "x": 64.245,
     "y": 83.614,
-    "floor": null
+    "floor": null,
+    "x2": 43.441,
+    "y2": 77.663
   },
   {
     "id": "reserve-cmsm2v0qt",
@@ -3119,7 +3205,9 @@
     ],
     "x": 91.125,
     "y": 71.476,
-    "floor": null
+    "floor": null,
+    "x2": 55.59,
+    "y2": 56.611
   },
   {
     "id": "shoreline-cmsn2bzsv",
@@ -3149,7 +3237,9 @@
     ],
     "x": 91.238,
     "y": 85.493,
-    "floor": null
+    "floor": null,
+    "x2": 43.747,
+    "y2": 48.761
   },
   {
     "id": "shoreline-cmsn2ex47",
@@ -3164,7 +3254,9 @@
     ],
     "x": 87.302,
     "y": 88.696,
-    "floor": null
+    "floor": null,
+    "x2": 42.806,
+    "y2": 49.386
   },
   {
     "id": "factory-cmsn2gy00",
@@ -3494,7 +3586,9 @@
     ],
     "x": 88.339,
     "y": 44.213,
-    "floor": null
+    "floor": null,
+    "x2": 36.815,
+    "y2": 49.386
   },
   {
     "id": "woods-cmsob6yyd",
@@ -3687,7 +3781,9 @@
     ],
     "x": 83.48,
     "y": 71.615,
-    "floor": null
+    "floor": null,
+    "x2": 59.57,
+    "y2": 69.223
   },
   {
     "id": "lighthouse-cmsobokt0",
@@ -3747,7 +3843,9 @@
     ],
     "x": 23.509,
     "y": 91.877,
-    "floor": null
+    "floor": null,
+    "x2": 44.546,
+    "y2": 49.537
   },
   {
     "id": "reserve-cmsobtxad",
@@ -3762,7 +3860,9 @@
     ],
     "x": 96.398,
     "y": 93.901,
-    "floor": null
+    "floor": null,
+    "x2": 52.28,
+    "y2": 62.593
   },
   {
     "id": "reserve-cmsobuy71",
@@ -3777,7 +3877,9 @@
     ],
     "x": 88.53,
     "y": 71.802,
-    "floor": null
+    "floor": null,
+    "x2": 55.11,
+    "y2": 56.668
   },
   {
     "id": "reserve-cmsobyctg",
@@ -3785,14 +3887,16 @@
     "mapName": "Резерв",
     "doc": "proectnaea",
     "docName": "Проектная документация",
-    "caption": "2 этаж чёрного слона в комнате со стороны совместного выхода с Диким",
-    "captionEn": "the black bishop 2 floor in the room on the side of the shared exit with the Scav",
+    "caption": "3 этаж чёрного слона в комнате со стороны совместного выхода с Диким",
+    "captionEn": "the black bishop 3 floor in the room on the side of the shared exit with the Scav",
     "images": [
       "assets/screenshots/reserve-proectnaea-002e7517.png"
     ],
     "x": 87.863,
     "y": 79.786,
-    "floor": null
+    "floor": null,
+    "x2": 54.315,
+    "y2": 41.79
   },
   {
     "id": "streets-cmsoc1vl1",
