@@ -347,7 +347,12 @@ if (has('--changelog-only')) {
 /* ---------- 4. коммит и пуш ---------- */
 
 console.log('\nПубликация');
-git(['add', '--update', '--', ...paths]);
+// Отслеживаемое добавляем ровно тем списком, который git сам показал изменённым.
+// `git add -u -- <каталоги>` тут не годится: на каталоге без единого
+// отслеживаемого файла (пустой assets/survey) он падает с «pathspec did not
+// match any file(s) known to git» и роняет всю публикацию.
+const modified = [...touched].filter((p) => !untracked.includes(p));
+if (modified.length) git(['add', '--', ...modified]);
 if (toAdd.length) git(['add', '--', ...toAdd]);
 git(['commit', '-m', subject, '-m', body, '-m', 'Co-Authored-By: Claude <noreply@anthropic.com>']);
 const sha = git(['rev-parse', 'HEAD']).slice(0, 7);
