@@ -4243,5 +4243,20 @@
     "x": 79.487,
     "y": 41.984,
     "floor": null
+  },
+  {
+    "id": "streets-cmsooxij4",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На столе",
+    "captionEn": "On the table",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-86329f08.png"
+    ],
+    "x": 41.316,
+    "y": 52.634,
+    "floor": null
   }
 ]

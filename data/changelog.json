@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-11-1623",
+    "at": "2026-08-11T16:23",
+    "maps": [
+      {
+        "map": "streets",
+        "added": [
+          {
+            "id": "streets-cmsooxij4",
+            "caption": "На столе",
+            "captionEn": "On the table"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-11-1508",
     "at": "2026-08-11T15:08",
     "maps": [
