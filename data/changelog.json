@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-11-1508",
+    "at": "2026-08-11T15:08",
+    "maps": [
+      {
+        "map": "groundzero",
+        "added": [],
+        "fixed": [
+          {
+            "id": "groundzero-cmsoc3izx",
+            "caption": "В центре парковки здания TerraGroup, под открытой правой дверью чёрной машины",
+            "captionEn": "In the center of the TerraGroup building parking lot, under the open right door of a black car"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-11-1053",
     "at": "2026-08-11T10:53",
     "maps": [

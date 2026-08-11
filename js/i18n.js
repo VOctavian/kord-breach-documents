@@ -47,6 +47,17 @@ const DICT = {
   changelogGot: { ru: 'Понятно', en: 'Got it' },
   changelogHistory: { ru: 'Прошлые обновления', en: 'Past updates' },
 
+  surveyBtnTitle: { ru: 'Пройти опрос', en: 'Take the survey' },
+  surveyBtnDone: { ru: 'Опрос пройден — можно ответить ещё раз', en: 'Survey done — you can answer again' },
+  surveyClose: { ru: 'Закрыть опрос', en: 'Close the survey' },
+  surveySend: { ru: 'Отправить', en: 'Send' },
+  surveySending: { ru: 'Отправляю…', en: 'Sending…' },
+  surveyEmpty: { ru: 'Заполните хотя бы один ответ', en: 'Fill in at least one answer' },
+  surveyError: { ru: 'Не отправилось: {e}', en: 'Could not send: {e}' },
+  surveyThanks: { ru: 'Спасибо!', en: 'Thank you!' },
+  surveyThanksNote: { ru: 'Ответ записан — он реально влияет на то, что я доделаю следующим.', en: 'Your answer is saved — it really does shape what I build next.' },
+  surveyAgain: { ru: 'Ответить ещё раз', en: 'Answer again' },
+
   authorTip: { ru: 'Проекты и ссылки автора', en: "Author's projects and links" },
   authorIntro: {
     ru: 'Гайды и карты по Таркову. Заходите в Discord и на стримы — там же можно предложить точку.',

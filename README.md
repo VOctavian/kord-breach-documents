@@ -19,6 +19,7 @@ Interface and descriptions in Russian and English.
 | `index.html` | location picker: map preview, spawn count, document types present |
 | `map.html?map=<id>` | map with icons, filter by document type, screenshot viewer |
 | `editor.html?map=<id>` | editing points — **local only**, never published |
+| `survey-editor.html` | the survey and its responses — **local only** |
 
 The editor link only shows up when the site is opened from `localhost`, and the
 page itself is excluded from the GitHub Pages build: the published site is
@@ -129,6 +130,51 @@ node scripts/publish.mjs --changelog-only
 That writes the file without committing. A normal run afterwards picks the entry
 up instead of duplicating it.
 
+## Visitor survey
+
+A side panel with questions: slides in by itself 45 seconds after arrival (once
+per survey `id`), closes only via the ✕, and leaves a square button pinned to the
+right edge. The bar under the button is amber until the survey is answered and
+green afterwards; answering any number of times is allowed.
+
+Questions are edited locally in `survey-editor.html` (run `node server.mjs`, then
+open the page). The same page has an "Ответы" tab: browse responses, export CSV,
+delete spam. The "Опрос включён" toggle removes the panel and button from the
+site entirely.
+
+Responses go into a Supabase table. Run this once in the project's SQL Editor:
+
+```sql
+create table public.survey_responses (
+  id         bigint generated always as identity primary key,
+  created_at timestamptz not null default now(),
+  survey_id  text not null check (survey_id ~ '^[a-zA-Z0-9._-]{1,64}$'),
+  lang       text check (lang in ('ru', 'en')),
+  answers    jsonb not null check (pg_column_size(answers) < 8192)
+);
+
+alter table public.survey_responses enable row level security;
+
+-- Visitors may only write: with no select policy, the anon key cannot read
+-- anyone else's answers.
+create policy survey_insert_anon on public.survey_responses
+  for insert to anon with check (true);
+```
+
+The insert must carry a `Prefer: return=minimal` header — otherwise PostgREST
+tries to return the inserted row, hits the missing select policy and answers 401.
+
+Responses are read by the local server using the `service_role` key from
+`.env.local` (see `.env.local.example`). That key bypasses RLS entirely, so the
+file is in `.gitignore` and **must never go into `js/config.js`**, which ships to
+the browser. Without the file the site works as usual and only the "Ответы" tab
+explains what is missing.
+
+The size limit on `answers` and the format check on `survey_id` live in the table
+itself: the anon key is public, so it should not be possible to push arbitrary
+junk through it. That is not full spam protection — cleanup is the delete button
+in the editor.
+
 ## Data
 
 | File | Contents |
@@ -137,6 +183,7 @@ up instead of duplicating it.
 | `data/maps.json` | 12 locations: map file, type (`raster`/`svg`), dimensions |
 | `data/docs.json` | 8 document types: ru/en name, icon, marker colour |
 | `data/changelog.json` | update history for the "What's new" popup, newest first |
+| `data/survey.json` | survey: title, questions, enabled flag |
 | `assets/screenshots/` | spawn screenshots |
 | `assets/maps/` | location maps |
 | `documentations/` | document type icons |
@@ -196,6 +243,8 @@ Extra events are sent by `js/analytics.js`:
 | `changelog-new-<id>` | the "What's new" popup opened by itself |
 | `changelog-open` | the popup was opened with the button |
 | `author-open` | the header logo was clicked |
+| `survey-open`, `survey-auto` | survey opened by button / slid in on its own |
+| `survey-submit` | a response was stored successfully |
 | `project-<id>` | a click through to another project |
 | `social-<platform>` | social icons in the header |
 

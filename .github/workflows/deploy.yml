@@ -27,9 +27,11 @@ jobs:
           mkdir -p _site
           cp index.html map.html _site/
           cp -r css js data assets documentations _site/
-          rm -f _site/js/editor.js
+          rm -f _site/js/editor.js _site/js/survey-editor.js
           touch _site/.nojekyll
           test ! -e _site/editor.html && test ! -e _site/js/editor.js && test ! -e _site/server.mjs
+          test ! -e _site/survey-editor.html && test ! -e _site/js/survey-editor.js
+          test ! -e _site/.env.local
 
       - uses: actions/upload-pages-artifact@v3
         with:

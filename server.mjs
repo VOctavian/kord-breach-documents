@@ -1,15 +1,45 @@
-// Статический сервер + endpoint для сохранения координат из редактора.
+// Статический сервер + endpoint'ы редакторов: координаты точек и опрос.
 // Запуск: node server.mjs   →   http://localhost:5173
 import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SUPABASE_URL } from './js/config.js';
 
 const ROOT = fileURLToPath(new URL('.', import.meta.url));
 const PORT = Number(process.env.PORT) || 5173;
 const MAX_UPLOAD = 12 * 1024 * 1024;
 const UPLOAD_EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+
+/**
+ * service_role ключ Supabase — им читаются ответы опроса, потому что anon-ключу
+ * доступ на чтение закрыт политикой. Файл `.env.local` в .gitignore и на сайт
+ * не уезжает: этот ключ обходит RLS, в браузере ему делать нечего.
+ */
+const SERVICE_KEY = (() => {
+  const file = join(ROOT, '.env.local');
+  if (!existsSync(file)) return null;
+  const m = readFileSync(file, 'utf8').match(/^\s*SUPABASE_SERVICE_KEY\s*=\s*(.+)$/m);
+  return m ? m[1].trim().replace(/^['"]|['"]$/g, '') : null;
+})();
+
+const TABLE = `${SUPABASE_URL}/rest/v1/survey_responses`;
+
+/** Запрос к Supabase от имени service_role. */
+async function supabase(path, init = {}) {
+  if (!SERVICE_KEY) throw new Error('нет .env.local с SUPABASE_SERVICE_KEY — см. README');
+  const res = await fetch(TABLE + path, {
+    ...init,
+    headers: { apikey: SERVICE_KEY, authorization: `Bearer ${SERVICE_KEY}`, ...init.headers },
+  });
+  if (!res.ok) throw new Error(`Supabase ${res.status}: ${await res.text()}`);
+  return res;
+}
+
+const json = (res, code, body) =>
+  res.writeHead(code, { 'content-type': 'application/json; charset=utf-8' }).end(JSON.stringify(body));
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -37,6 +67,45 @@ createServer(async (req, res) => {
       console.log(`сохранено: ${data.filter((s) => s.x != null).length}/${data.length} размечено`);
     } catch (e) {
       res.writeHead(400, { 'content-type': 'application/json' }).end(JSON.stringify({ error: String(e) }));
+    }
+    return;
+  }
+
+  if (req.method === 'POST' && url.pathname === '/api/survey') {
+    const chunks = [];
+    for await (const c of req) chunks.push(c);
+    try {
+      const data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+      if (!data?.id) throw new Error('у опроса должен быть id');
+      if (!Array.isArray(data.questions)) throw new Error('questions должен быть массивом');
+      await writeFile(join(ROOT, 'data/survey.json'), JSON.stringify(data, null, 2) + '\n', 'utf8');
+      json(res, 200, { ok: true });
+      console.log(`опрос сохранён: ${data.questions.length} вопросов, ${data.enabled ? 'включён' : 'выключен'}`);
+    } catch (e) {
+      json(res, 400, { error: String(e.message ?? e) });
+    }
+    return;
+  }
+
+  if (url.pathname === '/api/survey-results') {
+    try {
+      if (req.method === 'GET') {
+        const r = await supabase('?select=*&order=created_at.desc&limit=1000');
+        const rows = await r.json();
+        json(res, 200, rows);
+        return;
+      }
+      if (req.method === 'DELETE') {
+        const id = url.searchParams.get('id');
+        if (!/^\d+$/.test(id ?? '')) throw new Error('нужен числовой id');
+        await supabase(`?id=eq.${id}`, { method: 'DELETE' });
+        json(res, 200, { ok: true });
+        console.log(`ответ ${id} удалён`);
+        return;
+      }
+      json(res, 405, { error: 'метод не поддерживается' });
+    } catch (e) {
+      json(res, 400, { error: String(e.message ?? e) });
     }
     return;
   }
@@ -85,4 +154,7 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' }).end('404: ' + path);
   }
-}).listen(PORT, () => console.log(`http://localhost:${PORT}`));
+}).listen(PORT, () => {
+  console.log(`http://localhost:${PORT}`);
+  if (!SERVICE_KEY) console.log('ответы опроса недоступны: нет .env.local с SUPABASE_SERVICE_KEY');
+});

@@ -1,0 +1,28 @@
+{
+  "id": "2026-08-map-feedback",
+  "enabled": false,
+  "title": "Пара вопросов о карте",
+  "titleEn": "A couple of questions about the map",
+  "intro": "Отвечать необязательно — но так я пойму, что доделывать в первую очередь.",
+  "introEn": "Answering is optional — but it tells me what to work on next.",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Чего не хватает на сайте?",
+      "textEn": "What is missing on the site?",
+      "multiline": true
+    },
+    {
+      "id": "q3",
+      "text": "Откуда вы про него узнали?",
+      "textEn": "Where did you hear about it?",
+      "multiline": false
+    },
+    {
+      "id": "q2",
+      "text": "Что показалось неудобным?",
+      "textEn": "What felt inconvenient?",
+      "multiline": true
+    }
+  ]
+}

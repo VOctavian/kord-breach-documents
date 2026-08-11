@@ -55,6 +55,21 @@ if (badDoc.length) fail(`неизвестный тип документации:
 const broken = spawns.flatMap((s) => (s.images ?? []).filter((p) => !existsSync(ROOT + p)).map((p) => `${s.id} → ${p}`));
 if (broken.length) fail(`нет файлов скриншотов:\n      ${broken.join('\n      ')}`);
 
+// Опрос уезжает на сайт вместе с данными, поэтому битый survey.json ловим здесь.
+if (existsSync(`${ROOT}data/survey.json`)) {
+  try {
+    const survey = JSON.parse(readFileSync(`${ROOT}data/survey.json`, 'utf8'));
+    const qs = survey.questions ?? [];
+    const dupQ = qs.map((q) => q.id).filter((id, i, a) => a.indexOf(id) !== i);
+    if (!survey.id) fail('у опроса пустой id');
+    else if (dupQ.length) fail(`повторяющиеся id вопросов: ${[...new Set(dupQ)].join(', ')}`);
+    else if (survey.enabled && !qs.length) fail('опрос включён, но вопросов нет');
+    else if (survey.enabled) ok(`опрос включён: ${qs.length} вопросов`);
+  } catch (e) {
+    fail(`data/survey.json не читается: ${e.message}`);
+  }
+}
+
 if (process.exitCode) {
   console.error('\nПубликация отменена: сначала почини данные.\n');
   process.exit(1);

@@ -7,6 +7,8 @@ spawns-raw.json
 data/spawns.backup-*.json
 
 # Локальное
+# service_role ключ Supabase для просмотра ответов опроса — только на своей машине
+.env.local
 node_modules/
 .idea/
 .vscode/

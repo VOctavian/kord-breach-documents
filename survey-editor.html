@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Редактор опроса — Kord Breach</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="btn" href="index.html">← На сайт</a>
+    <h1>Опрос</h1>
+    <label class="sv-toggle">
+      <input type="checkbox" id="sv-enabled">
+      <span>Опрос включён</span>
+    </label>
+    <span class="spacer"></span>
+    <span class="status" id="status"></span>
+    <button class="btn primary" id="done" title="Дописать правки и открыть сайт">Готово</button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="group editor-panel">
+        <label class="fld">
+          <span>Идентификатор опроса</span>
+          <input type="text" id="sv-id" placeholder="2026-08-map-feedback">
+        </label>
+        <div class="hint sv-hint">Смените его, чтобы панель снова показалась всем один раз.</div>
+
+        <label class="fld">
+          <span>Название (RU)</span>
+          <input type="text" id="sv-title-ru">
+        </label>
+        <label class="fld">
+          <span>Название (EN)</span>
+          <input type="text" id="sv-title-en">
+        </label>
+
+        <label class="fld">
+          <span>Вступление (RU)</span>
+          <textarea id="sv-intro-ru" rows="2"></textarea>
+        </label>
+        <label class="fld">
+          <span>Вступление (EN)</span>
+          <textarea id="sv-intro-en" rows="2"></textarea>
+        </label>
+      </div>
+    </aside>
+
+    <main class="sv-main">
+      <div class="sv-tabs">
+        <button class="sv-tab active" id="tab-questions" type="button">Вопросы</button>
+        <button class="sv-tab" id="tab-results" type="button">Ответы</button>
+      </div>
+
+      <section id="pane-questions">
+        <div id="sv-questions"></div>
+        <button class="btn" id="sv-add" type="button">+ Вопрос</button>
+      </section>
+
+      <section id="pane-results" hidden>
+        <div class="sv-results-bar">
+          <span id="sv-count" class="sub"></span>
+          <span class="spacer"></span>
+          <button class="btn" id="sv-reload" type="button">Обновить</button>
+          <button class="btn" id="sv-csv" type="button">Выгрузить CSV</button>
+        </div>
+        <div id="sv-results"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/survey-editor.js"></script>
+</body>
+</html>

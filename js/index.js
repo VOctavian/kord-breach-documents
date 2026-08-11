@@ -6,6 +6,7 @@ import { trackEvent, mountUmami } from './analytics.js';
 import { mountOnlineBadge } from './online.js';
 import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
+import { mountSurvey } from './survey.js';
 
 document.title = t('pageTitleIndex');
 mountUmami();
@@ -20,6 +21,7 @@ mountWidgets();
 const data = await loadData();
 const { maps, docs, docById } = data;
 mountChangelog(data.mapById);
+mountSurvey();
 const spawns = data.spawns.filter(isPublished);
 const grid = document.getElementById('grid');
 

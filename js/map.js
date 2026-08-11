@@ -6,6 +6,7 @@ import { trackEvent, mountUmami } from './analytics.js';
 import { mountOnlineBadge } from './online.js';
 import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
+import { mountSurvey } from './survey.js';
 
 document.title = t('pageTitleMap');
 mountUmami();
@@ -18,6 +19,7 @@ mountWidgets();
 
 const { mapById, docById, spawns } = await loadData();
 mountChangelog(mapById);
+mountSurvey();
 const mapId = new URLSearchParams(location.search).get('map');
 const map = mapById[mapId];
 if (!map) location.replace('index.html');
