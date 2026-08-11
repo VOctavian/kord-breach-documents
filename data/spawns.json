@@ -3405,5 +3405,20 @@
     "x": 27.343,
     "y": 32.96,
     "floor": null
+  },
+  {
+    "id": "reserve-cmsoahs5q",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Казарма рядом с меченкой рб-во, дальняя комната слева.",
+    "captionEn": "The barracks are next to the RB-VO marker, the far room is on the left.",
+    "images": [
+      "assets/screenshots/reserve-personal-556979e6.png"
+    ],
+    "x": 14.476,
+    "y": 16.511,
+    "floor": null
   }
 ]
