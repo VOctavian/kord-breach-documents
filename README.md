@@ -79,7 +79,7 @@ site.
 | --- | --- |
 | `--dry-run` | validation and commit preview only |
 | `-m "text"` | custom commit message instead of the generated one |
-| `--all` | commit everything, not just `data/` and `assets/screenshots/` |
+| `--all` | commit everything, not just `data/`, `assets/screenshots/` and `assets/survey/` |
 | `--no-wait` | don't wait for the deploy |
 | `--no-changelog` | don't add a "What's new" entry |
 | `--changelog-only` | only write "What's new" and exit — to preview the popup before pushing |
@@ -137,10 +137,22 @@ per survey `id`), closes only via the ✕, and leaves a square button pinned to 
 right edge. The bar under the button is amber until the survey is answered and
 green afterwards; answering any number of times is allowed.
 
-Questions are edited locally in `survey-editor.html` (run `node server.mjs`, then
-open the page). The same page has an "Ответы" tab: browse responses, export CSV,
-delete spam. The "Опрос включён" toggle removes the panel and button from the
-site entirely.
+There can be any number of surveys; the site shows the one whose `id` sits in
+`activeId`. Leave it empty and neither the panel nor the button exists.
+
+Everything is edited locally in `survey-editor.html` (run `node server.mjs`, then
+use the "Редактор опросов" link in the header — it only appears on localhost).
+The list on the left: the circle activates a survey on the site, the buttons
+create, duplicate and delete. Duplicating copies the survey with its questions
+and images but hands out fresh `id`s to the survey and every question —
+otherwise responses from two surveys would blend together in the export.
+
+The survey and each question have their own gallery: "+ Картинка" drops the file
+into `assets/survey/`, the site shows thumbnails and a click opens the original.
+The "✕" on a thumbnail removes it from the gallery; the file stays on disk.
+
+The "Ответы" tab shows the responses of the selected survey: browse, export CSV,
+delete spam.
 
 Responses go into a Supabase table. Run this once in the project's SQL Editor:
 
@@ -183,7 +195,8 @@ in the editor.
 | `data/maps.json` | 12 locations: map file, type (`raster`/`svg`), dimensions |
 | `data/docs.json` | 8 document types: ru/en name, icon, marker colour |
 | `data/changelog.json` | update history for the "What's new" popup, newest first |
-| `data/survey.json` | survey: title, questions, enabled flag |
+| `data/survey.json` | surveys: the list plus the `activeId` that is shown |
+| `assets/survey/` | images for the survey and question galleries |
 | `assets/screenshots/` | spawn screenshots |
 | `assets/maps/` | location maps |
 | `documentations/` | document type icons |

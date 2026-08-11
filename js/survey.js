@@ -37,17 +37,32 @@ async function send(survey, answers) {
   if (!res.ok) throw new Error(`${res.status} ${(await res.text()).slice(0, 120)}`);
 }
 
+/** Картинки опроса или вопроса: клик открывает оригинал в новой вкладке. */
+function gallery(images) {
+  if (!images?.length) return null;
+  return el(
+    'div',
+    { class: 'survey-gallery' },
+    images.map((src) =>
+      el('a', { href: src, target: '_blank', rel: 'noopener noreferrer' }, el('img', { src, alt: '', loading: 'lazy' }))
+    )
+  );
+}
+
 export async function mountSurvey() {
-  let survey;
+  let file;
   try {
     const res = await fetch('data/survey.json');
     if (!res.ok) return;
-    survey = await res.json();
+    file = await res.json();
   } catch {
     // Файла нет — опроса просто не существует.
     return;
   }
-  if (!survey?.enabled || !survey.questions?.length) return;
+
+  // Опросов может быть много, показываем выбранный. activeId пуст — не показываем ничего.
+  const survey = (file?.surveys ?? []).find((s) => s.id === file.activeId);
+  if (!survey?.questions?.length) return;
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
 
   const state = readState();
@@ -81,12 +96,13 @@ export async function mountSurvey() {
     fields.clear();
     body.replaceChildren(
       el('p', { class: 'survey-intro' }, localized(survey, 'intro') || ''),
+      gallery(survey.images),
       ...survey.questions.map((q) => {
         const input = q.multiline
           ? el('textarea', { rows: 3, id: `sv-${q.id}` })
           : el('input', { type: 'text', id: `sv-${q.id}` });
         fields.set(q.id, input);
-        return el('label', { class: 'fld survey-q' }, el('span', {}, localized(q, 'text')), input);
+        return el('div', { class: 'survey-q' }, el('label', { class: 'fld' }, el('span', {}, localized(q, 'text')), input), gallery(q.images));
       })
     );
     status.textContent = '';

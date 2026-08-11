@@ -16,6 +16,7 @@ const DICT = {
 
   backToMaps: { ru: '← Локации', en: '← Locations' },
   editorLink: { ru: 'Редактор точек', en: 'Point editor' },
+  surveyEditorLink: { ru: 'Редактор опросов', en: 'Survey editor' },
   editorShort: { ru: 'Редактор', en: 'Editor' },
   fitLabel: { ru: 'Вписать', en: 'Fit' },
   docTypeHeader: { ru: 'Тип документации', en: 'Document type' },

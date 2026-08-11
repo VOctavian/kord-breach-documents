@@ -14,7 +14,8 @@ mountAuthor(document.getElementById('logo-slot'));
 mountOnlineBadge(document.getElementById('online-slot'));
 document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
-if (!isLocal) document.getElementById('editor-link').remove();
+// Редакторы работают только с локальным сервером — на сайте ссылок на них нет.
+if (!isLocal) for (const id of ['editor-link', 'survey-editor-link']) document.getElementById(id).remove();
 applyI18n();
 mountWidgets();
 

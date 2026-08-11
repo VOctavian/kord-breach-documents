@@ -76,11 +76,11 @@ createServer(async (req, res) => {
     for await (const c of req) chunks.push(c);
     try {
       const data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
-      if (!data?.id) throw new Error('у опроса должен быть id');
-      if (!Array.isArray(data.questions)) throw new Error('questions должен быть массивом');
+      if (!Array.isArray(data?.surveys)) throw new Error('surveys должен быть массивом');
+      if (data.surveys.some((s) => !s.id)) throw new Error('у каждого опроса должен быть id');
       await writeFile(join(ROOT, 'data/survey.json'), JSON.stringify(data, null, 2) + '\n', 'utf8');
       json(res, 200, { ok: true });
-      console.log(`опрос сохранён: ${data.questions.length} вопросов, ${data.enabled ? 'включён' : 'выключен'}`);
+      console.log(`опросы сохранены: ${data.surveys.length}, активен ${data.activeId ?? 'ни один'}`);
     } catch (e) {
       json(res, 400, { error: String(e.message ?? e) });
     }
@@ -90,9 +90,10 @@ createServer(async (req, res) => {
   if (url.pathname === '/api/survey-results') {
     try {
       if (req.method === 'GET') {
-        const r = await supabase('?select=*&order=created_at.desc&limit=1000');
-        const rows = await r.json();
-        json(res, 200, rows);
+        const survey = url.searchParams.get('survey');
+        const filter = survey ? `&survey_id=eq.${encodeURIComponent(survey)}` : '';
+        const r = await supabase(`?select=*&order=created_at.desc&limit=1000${filter}`);
+        json(res, 200, await r.json());
         return;
       }
       if (req.method === 'DELETE') {
@@ -114,6 +115,9 @@ createServer(async (req, res) => {
     try {
       const ext = UPLOAD_EXT[(req.headers['content-type'] ?? '').split(';')[0].trim()];
       if (!ext) throw new Error('поддерживаются только jpeg, png и webp');
+      // Каталог только из списка: имя приходит из браузера, гулять по диску им нельзя.
+      const dir = { screenshots: 'assets/screenshots', survey: 'assets/survey' }[url.searchParams.get('dir') ?? 'screenshots'];
+      if (!dir) throw new Error('неизвестный каталог загрузки');
 
       const chunks = [];
       let size = 0;
@@ -127,10 +131,10 @@ createServer(async (req, res) => {
       const name = `${slug(url.searchParams.get('map'))}-${slug(url.searchParams.get('doc'))}` +
         `-${createHash('sha1').update(buf).digest('hex').slice(0, 8)}.${ext}`;
 
-      await mkdir(join(ROOT, 'assets/screenshots'), { recursive: true });
-      await writeFile(join(ROOT, 'assets/screenshots', name), buf);
+      await mkdir(join(ROOT, dir), { recursive: true });
+      await writeFile(join(ROOT, dir, name), buf);
       res.writeHead(200, { 'content-type': 'application/json' })
-        .end(JSON.stringify({ path: `assets/screenshots/${name}` }));
+        .end(JSON.stringify({ path: `${dir}/${name}` }));
       console.log(`загружен скриншот: ${name} (${(buf.length / 1024).toFixed(0)} КБ)`);
     } catch (e) {
       res.writeHead(400, { 'content-type': 'text/plain; charset=utf-8' }).end(String(e.message ?? e));

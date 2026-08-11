@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SITE = 'https://voctavian.github.io/kord-breach-documents';
-const PATHS = ['data', 'assets/screenshots'];
+const PATHS = ['data', 'assets/screenshots', 'assets/survey'];
 
 const argv = process.argv.slice(2);
 const has = (flag) => argv.includes(flag);
@@ -58,13 +58,25 @@ if (broken.length) fail(`нет файлов скриншотов:\n      ${brok
 // Опрос уезжает на сайт вместе с данными, поэтому битый survey.json ловим здесь.
 if (existsSync(`${ROOT}data/survey.json`)) {
   try {
-    const survey = JSON.parse(readFileSync(`${ROOT}data/survey.json`, 'utf8'));
-    const qs = survey.questions ?? [];
-    const dupQ = qs.map((q) => q.id).filter((id, i, a) => a.indexOf(id) !== i);
-    if (!survey.id) fail('у опроса пустой id');
-    else if (dupQ.length) fail(`повторяющиеся id вопросов: ${[...new Set(dupQ)].join(', ')}`);
-    else if (survey.enabled && !qs.length) fail('опрос включён, но вопросов нет');
-    else if (survey.enabled) ok(`опрос включён: ${qs.length} вопросов`);
+    const file = JSON.parse(readFileSync(`${ROOT}data/survey.json`, 'utf8'));
+    const surveys = file.surveys ?? [];
+    const dup = surveys.map((s) => s.id).filter((id, i, a) => a.indexOf(id) !== i);
+    const noId = surveys.filter((s) => !s.id);
+    const badQ = surveys.filter((s) => {
+      const ids = (s.questions ?? []).map((q) => q.id);
+      return ids.some((id, i) => ids.indexOf(id) !== i);
+    });
+    const active = surveys.find((s) => s.id === file.activeId);
+    const shots = surveys.flatMap((s) => [...(s.images ?? []), ...(s.questions ?? []).flatMap((q) => q.images ?? [])]);
+    const lostShots = shots.filter((p) => !existsSync(ROOT + p));
+
+    if (noId.length) fail(`у опроса пустой id (${noId.length} шт.)`);
+    else if (dup.length) fail(`повторяющиеся id опросов: ${[...new Set(dup)].join(', ')}`);
+    else if (badQ.length) fail(`повторяющиеся id вопросов в: ${badQ.map((s) => s.id).join(', ')}`);
+    else if (lostShots.length) fail(`нет картинок опроса:\n      ${lostShots.join('\n      ')}`);
+    else if (file.activeId && !active) fail(`активным указан несуществующий опрос: ${file.activeId}`);
+    else if (active && !active.questions?.length) fail(`опрос «${active.id}» включён, но вопросов в нём нет`);
+    else if (active) ok(`опрос «${active.id}» включён: ${active.questions.length} вопросов`);
   } catch (e) {
     fail(`data/survey.json не читается: ${e.message}`);
   }

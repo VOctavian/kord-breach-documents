@@ -1,47 +1,223 @@
-// Редактор опроса (только локально): вопросы в data/survey.json и просмотр
-// ответов из Supabase. Ответы читает сервер по service_role ключу — anon-ключу
+// Редактор опросов (только локально): список опросов, вопросы, картинки и
+// просмотр ответов. Ответы читает сервер по service_role ключу — anon-ключу
 // доступ на чтение закрыт политикой, и это правильно.
 import { el } from './common.js';
 
 const $ = (id) => document.getElementById(id);
 
-const survey = await fetch('data/survey.json')
+const EMPTY = { activeId: null, surveys: [] };
+
+const file = await fetch('data/survey.json')
   .then((r) => (r.ok ? r.json() : null))
-  .catch(() => null) ?? { id: '', enabled: false, title: '', titleEn: '', intro: '', introEn: '', questions: [] };
+  .catch(() => null) ?? EMPTY;
 
-survey.questions ??= [];
+// Старый формат — один опрос в корне файла. Заворачиваем, чтобы правки не потерялись.
+if (!Array.isArray(file.surveys)) {
+  const old = file.id ? [{ ...file, images: [], enabled: undefined }] : [];
+  Object.assign(file, { activeId: file.enabled ? file.id : null, surveys: old });
+}
+file.surveys.forEach((s) => {
+  s.images ??= [];
+  s.questions ??= [];
+  s.questions.forEach((q) => (q.images ??= []));
+});
 
-/* ---------- поля опроса ---------- */
+let current = file.surveys[0] ?? null;
 
-const BINDINGS = [
-  ['sv-id', 'id'],
-  ['sv-title-ru', 'title'],
-  ['sv-title-en', 'titleEn'],
-  ['sv-intro-ru', 'intro'],
-  ['sv-intro-en', 'introEn'],
-];
+/* ---------- список опросов ---------- */
 
-for (const [nodeId, key] of BINDINGS) {
-  const node = $(nodeId);
-  node.value = survey[key] ?? '';
-  node.oninput = () => {
-    survey[key] = node.value;
-    save();
-  };
+function renderList() {
+  const box = $('sv-list');
+  box.replaceChildren(
+    ...file.surveys.map((s) =>
+      el(
+        'div',
+        { class: 'sv-item' + (s === current ? ' current' : '') },
+        el(
+          'button',
+          { class: 'sv-item-name', type: 'button', onclick: () => select(s) },
+          s.title || s.id || 'без названия',
+          el('span', { class: 'sv-item-sub' }, `${s.questions.length} вопр.`)
+        ),
+        el(
+          'button',
+          {
+            class: 'sv-item-on' + (file.activeId === s.id ? ' on' : ''),
+            type: 'button',
+            title: file.activeId === s.id ? 'Показывается на сайте — выключить' : 'Показывать этот опрос на сайте',
+            onclick: () => {
+              // Активен всегда ровно один опрос либо ни одного.
+              file.activeId = file.activeId === s.id ? null : s.id;
+              renderList();
+              renderActiveNote();
+              save();
+            },
+          },
+          file.activeId === s.id ? '●' : '○'
+        )
+      )
+    )
+  );
+  if (!file.surveys.length) box.append(el('div', { class: 'sub' }, 'пока ни одного'));
 }
 
-$('sv-enabled').checked = Boolean(survey.enabled);
-$('sv-enabled').onchange = () => {
-  survey.enabled = $('sv-enabled').checked;
+function renderActiveNote() {
+  const active = file.surveys.find((s) => s.id === file.activeId);
+  $('active-note').textContent = active ? `на сайте: ${active.title || active.id}` : 'на сайте: опрос выключен';
+}
+
+function select(s) {
+  current = s;
+  renderList();
+  renderEditor();
+  if (!$('pane-results').hidden) loadResults();
+}
+
+$('sv-new').onclick = () => {
+  current = { id: newId('s'), title: 'Новый опрос', titleEn: '', intro: '', introEn: '', images: [], questions: [] };
+  file.surveys.push(current);
+  renderList();
+  renderEditor();
   save();
 };
 
-/* ---------- вопросы ---------- */
+/** id уходит в survey_id в базе, поэтому только латиница, цифры, точка, дефис. */
+const newId = (p) => `${p}${Date.now().toString(36)}`;
 
-function renderQuestions() {
-  const box = $('sv-questions');
-  box.replaceChildren(
-    ...survey.questions.map((q, i) =>
+function duplicate(s) {
+  const copy = structuredClone(s);
+  copy.id = newId('s');
+  copy.title = (s.title || s.id) + ' (копия)';
+  // id вопросов тоже новые: иначе ответы двух опросов смешаются в выгрузке.
+  copy.questions.forEach((q, i) => (q.id = `q${Date.now().toString(36)}${i}`));
+  file.surveys.splice(file.surveys.indexOf(s) + 1, 0, copy);
+  current = copy;
+  renderList();
+  renderEditor();
+  save();
+}
+
+function removeSurvey(s) {
+  if (!confirm(`Удалить опрос «${s.title || s.id}»? Ответы в базе останутся.`)) return;
+  file.surveys.splice(file.surveys.indexOf(s), 1);
+  if (file.activeId === s.id) file.activeId = null;
+  current = file.surveys[0] ?? null;
+  renderList();
+  renderActiveNote();
+  renderEditor();
+  save();
+}
+
+/* ---------- поля ---------- */
+
+function textField(label, obj, key, multiline = false) {
+  const input = multiline ? el('textarea', { rows: 2 }) : el('input', { type: 'text' });
+  input.value = obj[key] ?? '';
+  input.oninput = () => {
+    obj[key] = input.value;
+    if (key === 'title') renderList();
+    save();
+  };
+  return el('label', { class: 'fld' }, el('span', {}, label), input);
+}
+
+/** Галерея: загрузка файлов в assets/survey и удаление из списка. */
+function galleryBlock(owner) {
+  const strip = el(
+    'div',
+    { class: 'sv-gallery' },
+    owner.images.map((src) =>
+      el(
+        'div',
+        { class: 'sv-thumb' },
+        el('img', { src, alt: '' }),
+        el(
+          'button',
+          {
+            class: 'sv-thumb-x',
+            type: 'button',
+            title: 'Убрать из галереи (файл на диске останется)',
+            onclick: () => {
+              owner.images.splice(owner.images.indexOf(src), 1);
+              renderEditor();
+              save();
+            },
+          },
+          '✕'
+        )
+      )
+    )
+  );
+
+  const picker = el('input', { type: 'file', accept: 'image/*', multiple: '', style: 'display:none' });
+  picker.onchange = async () => {
+    for (const f of picker.files) {
+      try {
+        const res = await fetch(`/api/upload?dir=survey&map=survey&doc=img`, {
+          method: 'POST',
+          headers: { 'content-type': f.type },
+          body: f,
+        });
+        if (!res.ok) throw new Error(await res.text());
+        const { path } = await res.json();
+        if (!owner.images.includes(path)) owner.images.push(path);
+      } catch (e) {
+        setStatus('не загрузилось: ' + e.message, 'err');
+      }
+    }
+    picker.value = '';
+    renderEditor();
+    save();
+  };
+
+  return el(
+    'div',
+    { class: 'sv-gallery-block' },
+    strip,
+    el('button', { class: 'btn small', type: 'button', onclick: () => picker.click() }, '+ Картинка'),
+    picker
+  );
+}
+
+/* ---------- редактор опроса ---------- */
+
+function renderEditor() {
+  const pane = $('pane-edit');
+  if (!current) {
+    pane.replaceChildren(el('div', { class: 'sub' }, 'Создайте опрос слева.'));
+    return;
+  }
+
+  const idInput = el('input', { type: 'text', value: current.id });
+  idInput.oninput = () => {
+    const v = idInput.value.replace(/[^a-zA-Z0-9._-]/g, '');
+    idInput.value = v;
+    // Активный опрос узнаётся по id, поэтому переименование тянет ссылку за собой.
+    if (file.activeId === current.id) file.activeId = v;
+    current.id = v;
+    renderList();
+    renderActiveNote();
+    save();
+  };
+
+  pane.replaceChildren(
+    el(
+      'div',
+      { class: 'sv-head-row' },
+      el('button', { class: 'btn small', type: 'button', onclick: () => duplicate(current) }, 'Дублировать'),
+      el('button', { class: 'btn small danger', type: 'button', onclick: () => removeSurvey(current) }, 'Удалить опрос')
+    ),
+    el('div', { class: 'sv-card' },
+      el('label', { class: 'fld' }, el('span', {}, 'Идентификатор (уходит в базу вместе с ответами)'), idInput),
+      textField('Название (RU)', current, 'title'),
+      textField('Название (EN)', current, 'titleEn'),
+      textField('Вступление (RU)', current, 'intro', true),
+      textField('Вступление (EN)', current, 'introEn', true),
+      el('div', { class: 'sv-sub-label' }, 'Галерея опроса'),
+      galleryBlock(current)
+    ),
+    el('div', { class: 'sv-sub-label' }, 'Вопросы'),
+    ...current.questions.map((q, i) =>
       el(
         'div',
         { class: 'sv-question' },
@@ -50,12 +226,13 @@ function renderQuestions() {
           { class: 'sv-q-head' },
           el('span', { class: 'sv-q-num' }, `#${i + 1}`),
           el('span', { class: 'spacer' }),
-          el('button', { class: 'btn small', type: 'button', title: 'Выше', disabled: i === 0 ? '' : null, onclick: () => move(i, -1) }, '↑'),
-          el('button', { class: 'btn small', type: 'button', title: 'Ниже', disabled: i === survey.questions.length - 1 ? '' : null, onclick: () => move(i, 1) }, '↓'),
-          el('button', { class: 'btn small danger', type: 'button', onclick: () => remove(i) }, 'Удалить')
+          el('button', { class: 'btn small', type: 'button', title: 'Выше', disabled: i === 0 ? '' : null, onclick: () => moveQ(i, -1) }, '↑'),
+          el('button', { class: 'btn small', type: 'button', title: 'Ниже', disabled: i === current.questions.length - 1 ? '' : null, onclick: () => moveQ(i, 1) }, '↓'),
+          el('button', { class: 'btn small', type: 'button', onclick: () => duplicateQ(i) }, 'Дублировать'),
+          el('button', { class: 'btn small danger', type: 'button', onclick: () => removeQ(i) }, 'Удалить')
         ),
-        field('Вопрос (RU)', q, 'text'),
-        field('Вопрос (EN)', q, 'textEn'),
+        textField('Вопрос (RU)', q, 'text'),
+        textField('Вопрос (EN)', q, 'textEn'),
         el(
           'label',
           { class: 'sv-toggle' },
@@ -68,41 +245,42 @@ function renderQuestions() {
             },
           }),
           el('span', {}, 'Многострочный ответ')
-        )
+        ),
+        el('div', { class: 'sv-sub-label' }, 'Галерея вопроса'),
+        galleryBlock(q)
       )
-    )
+    ),
+    el('button', { class: 'btn', id: 'sv-add', type: 'button', onclick: addQ }, '+ Вопрос')
   );
 }
 
-function field(label, obj, key) {
-  const input = el('input', { type: 'text', value: obj[key] ?? '' });
-  input.oninput = () => {
-    obj[key] = input.value;
-    save();
-  };
-  return el('label', { class: 'fld' }, el('span', {}, label), input);
-}
-
-function move(i, d) {
-  const [q] = survey.questions.splice(i, 1);
-  survey.questions.splice(i + d, 0, q);
-  renderQuestions();
+function addQ() {
+  current.questions.push({ id: newId('q'), text: '', textEn: '', multiline: true, images: [] });
+  renderEditor();
   save();
 }
 
-function remove(i) {
-  if (!confirm(`Удалить вопрос «${survey.questions[i].text || 'без текста'}»?`)) return;
-  survey.questions.splice(i, 1);
-  renderQuestions();
+function moveQ(i, d) {
+  const [q] = current.questions.splice(i, 1);
+  current.questions.splice(i + d, 0, q);
+  renderEditor();
   save();
 }
 
-$('sv-add').onclick = () => {
-  // id вопроса попадает в ключи JSON с ответами, поэтому он должен быть коротким и стабильным.
-  survey.questions.push({ id: `q${Date.now().toString(36)}`, text: '', textEn: '', multiline: true });
-  renderQuestions();
+function duplicateQ(i) {
+  const copy = structuredClone(current.questions[i]);
+  copy.id = newId('q');
+  current.questions.splice(i + 1, 0, copy);
+  renderEditor();
   save();
-};
+}
+
+function removeQ(i) {
+  if (!confirm(`Удалить вопрос «${current.questions[i].text || 'без текста'}»?`)) return;
+  current.questions.splice(i, 1);
+  renderEditor();
+  save();
+}
 
 /* ---------- сохранение ---------- */
 
@@ -119,7 +297,7 @@ async function flush() {
     const res = await fetch('/api/survey', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(survey),
+      body: JSON.stringify(file),
     });
     if (!res.ok) throw new Error((await res.json()).error ?? res.status);
     setStatus('сохранено ✓', 'ok');
@@ -147,13 +325,13 @@ $('done').onclick = async () => {
 /* ---------- вкладки ---------- */
 
 const showTab = (results) => {
-  $('tab-questions').classList.toggle('active', !results);
+  $('tab-edit').classList.toggle('active', !results);
   $('tab-results').classList.toggle('active', results);
-  $('pane-questions').hidden = results;
+  $('pane-edit').hidden = results;
   $('pane-results').hidden = !results;
   if (results) loadResults();
 };
-$('tab-questions').onclick = () => showTab(false);
+$('tab-edit').onclick = () => showTab(false);
 $('tab-results').onclick = () => showTab(true);
 
 /* ---------- ответы ---------- */
@@ -162,9 +340,13 @@ let rows = [];
 
 async function loadResults() {
   const box = $('sv-results');
+  if (!current) {
+    box.replaceChildren(el('div', { class: 'sub' }, 'нет выбранного опроса'));
+    return;
+  }
   box.replaceChildren(el('div', { class: 'sub' }, 'загружаю…'));
   try {
-    const res = await fetch('/api/survey-results');
+    const res = await fetch(`/api/survey-results?survey=${encodeURIComponent(current.id)}`);
     const data = await res.json();
     if (!res.ok) throw new Error(data.error ?? res.status);
     rows = data;
@@ -178,8 +360,8 @@ async function loadResults() {
 
 function renderResults() {
   const box = $('sv-results');
-  const byId = new Map(survey.questions.map((q) => [q.id, q.text || q.id]));
-  $('sv-count').textContent = `${rows.length} ответов`;
+  const byId = new Map(current.questions.map((q) => [q.id, q.text || q.id]));
+  $('sv-count').textContent = `${rows.length} ответов на «${current.title || current.id}»`;
 
   if (!rows.length) {
     box.replaceChildren(el('div', { class: 'sub' }, 'пока пусто'));
@@ -221,18 +403,20 @@ async function drop(id) {
 $('sv-reload').onclick = loadResults;
 
 $('sv-csv').onclick = () => {
-  const ids = survey.questions.map((q) => q.id);
+  const ids = current.questions.map((q) => q.id);
   const esc = (v) => `"${String(v ?? '').replaceAll('"', '""')}"`;
   const csv = [
-    ['Дата', 'Язык', ...survey.questions.map((q) => q.text || q.id)].map(esc).join(','),
+    ['Дата', 'Язык', ...current.questions.map((q) => q.text || q.id)].map(esc).join(','),
     ...rows.map((r) => [new Date(r.created_at).toISOString(), r.lang ?? '', ...ids.map((id) => r.answers?.[id] ?? '')].map(esc).join(',')),
   ].join('\n');
 
   // BOM, иначе Excel откроет кириллицу кракозябрами.
   const url = URL.createObjectURL(new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' }));
-  const a = el('a', { href: url, download: `survey-${survey.id || 'export'}.csv` });
+  const a = el('a', { href: url, download: `survey-${current.id}.csv` });
   a.click();
   URL.revokeObjectURL(url);
 };
 
-renderQuestions();
+renderList();
+renderActiveNote();
+renderEditor();

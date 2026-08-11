@@ -371,6 +371,71 @@ a:hover { color: #e0cfa4; }
 }
 .sv-tab.active { color: var(--accent-hot); border-bottom-color: var(--accent-hot); }
 
+/* список опросов */
+.sv-list { margin-bottom: 10px; }
+.sv-item { display: flex; align-items: stretch; gap: 4px; margin-bottom: 4px; }
+.sv-item-name {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg-3);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+.sv-item.current .sv-item-name { border-color: var(--accent); color: var(--accent-hot); }
+.sv-item-name:hover { border-color: var(--accent); }
+.sv-item-sub { display: block; font-size: 11px; color: var(--text-dim); }
+.sv-item-on {
+  flex: none;
+  width: 32px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg-3);
+  color: var(--text-dim);
+  font-size: 14px;
+  cursor: pointer;
+}
+/* Точка горит зелёным у того опроса, который сейчас показывается на сайте. */
+.sv-item-on.on { color: var(--ok); border-color: var(--ok); }
+
+.sv-head-row { display: flex; gap: 6px; margin-bottom: 12px; }
+.sv-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sv-sub-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); margin: 4px 0; }
+
+/* галерея в редакторе */
+.sv-gallery { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.sv-thumb { position: relative; width: 84px; height: 60px; }
+.sv-thumb img { width: 100%; height: 100%; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; }
+.sv-thumb-x {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg-2);
+  color: var(--text-dim);
+  font-size: 10px;
+  cursor: pointer;
+}
+.sv-thumb-x:hover { color: var(--danger); border-color: var(--danger); }
+
 .sv-question {
   background: var(--bg-2);
   border: 1px solid var(--line);
@@ -858,6 +923,19 @@ a:hover { color: #e0cfa4; }
 
 .survey-intro { margin: 0 0 14px; font-size: 13px; color: var(--text-dim); }
 .survey-q { margin-bottom: 12px; }
+
+/* Картинки опроса и вопросов: клик открывает оригинал в новой вкладке. */
+.survey-gallery { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+.survey-gallery img {
+  display: block;
+  width: 78px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+.survey-gallery a:hover img { border-color: var(--accent); }
 .survey-send { width: 100%; }
 .survey-again { width: 100%; margin-top: 12px; }
 .survey-status { min-height: 18px; margin-bottom: 8px; font-size: 12px; color: var(--text-dim); }
