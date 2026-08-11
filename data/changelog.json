@@ -1,5 +1,213 @@
 [
   {
+    "id": "2026-08-11-1049",
+    "at": "2026-08-11T10:49",
+    "maps": [
+      {
+        "map": "groundzero",
+        "added": [
+          {
+            "id": "groundzero-cmsoc2txx",
+            "caption": "Между красной и синей машиной на скамейке",
+            "captionEn": "Between the red and blue cars on the bench"
+          },
+          {
+            "id": "groundzero-cmsoc3izx",
+            "caption": "В центре парковки здания TerraGroup, под открытой правой дверью чёрной машины",
+            "captionEn": "In the center of the TerraGroup building parking lot, under the open right door of a black car"
+          },
+          {
+            "id": "groundzero-cmsoc4xj9",
+            "caption": "В синей полке на первом этаже здания TarBank",
+            "captionEn": "In the blue shelf on the first floor of the TarBank building"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "lab",
+        "added": [
+          {
+            "id": "lab-cmsoceprx",
+            "caption": "Стойка рядом с лифтами между бойлерной и казармой",
+            "captionEn": "The stand next to the elevators between the boiler room and the barracks"
+          },
+          {
+            "id": "lab-cmsoch69h",
+            "caption": "На столе в офисе управляющего",
+            "captionEn": "On the desk in the manager's office"
+          },
+          {
+            "id": "lab-cmsociatp",
+            "caption": "На столе под офисом управляющего рядом с куполом",
+            "captionEn": "On the table under the manager's office next to the dome"
+          },
+          {
+            "id": "lab-cmsocjsn9",
+            "caption": "Кафетерия в серверной на втором этаже",
+            "captionEn": "Cafeteria in the server room on the second floor"
+          },
+          {
+            "id": "lab-cmsocnhit",
+            "caption": "2 этаж в открытых палатах",
+            "captionEn": "2nd floor in open wards"
+          },
+          {
+            "id": "lab-cmsocstx1",
+            "caption": "В офисе на втором этаже",
+            "captionEn": "In the office on the second floor"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "lab-84",
+            "caption": "Шкаф в «Молекуле»",
+            "captionEn": "Cabinet in the \"Molecule\""
+          },
+          {
+            "id": "lab-99",
+            "caption": "В зоне для экспериментов запертой на «Ключ-карта TerraGroup Labs (Черная)»",
+            "captionEn": "Experiment area locked with the TerraGroup Labs keycard (Black)"
+          },
+          {
+            "id": "lab-100",
+            "caption": "3 этаж в открытых палатах",
+            "captionEn": "3rd floor, in the open wards"
+          },
+          {
+            "id": "lab-102",
+            "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Синяя)»",
+            "captionEn": "On the table in the room locked with the TerraGroup keycard (Blue)"
+          },
+          {
+            "id": "lab-103",
+            "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»",
+            "captionEn": "On the table in the room locked with the TerraGroup keycard (Green)"
+          },
+          {
+            "id": "lab-106",
+            "caption": "3 этаж в открытой лаборатории",
+            "captionEn": "3rd floor, in the open laboratory"
+          },
+          {
+            "id": "lab-107",
+            "caption": "В лаборатории запертой на «Ключ-карта TerraGroup Labs (Синяя)»",
+            "captionEn": "Laboratory locked with the TerraGroup Labs keycard (Blue)"
+          },
+          {
+            "id": "lab-108",
+            "caption": "На столе лаборанта рядом с запертой лабараторией на «Ключ-карта TerraGroup Labs (Синяя)»",
+            "captionEn": "On the lab assistant's table next to the laboratory locked with the TerraGroup Labs keycard (Blue)"
+          },
+          {
+            "id": "lab-927d9828",
+            "caption": "На 3 этаже в открытой секции с палатами",
+            "captionEn": "3rd floor, in the open ward section"
+          },
+          {
+            "id": "lab-2fe1203c",
+            "caption": "На полу в комнате закрытой на «Ключ-карта TerraGroup (Синяя)»",
+            "captionEn": "On the floor in the room locked with the TerraGroup keycard (Blue)"
+          },
+          {
+            "id": "lab-8053eb6f",
+            "caption": "3 этаж в коридоре на кровати",
+            "captionEn": "3rd floor, on a bed in the corridor"
+          }
+        ]
+      },
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsobyctg",
+            "caption": "2 этаж чёрного слона в комнате со стороны совместного выхода с Диким",
+            "captionEn": "the black bishop 2 floor in the room on the side of the shared exit with the Scav"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "streets",
+        "added": [
+          {
+            "id": "streets-cmsoc1vl1",
+            "caption": "Первый этаж Финансового учреждения. В стелаже. Для открытия комнаты необходим ключ от малого кабинета в финучреждении",
+            "captionEn": "First floor of the Financial Institution. In a rack. To open the room, you need a key to the small office in the financial institution."
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "labyrinth",
+        "added": [
+          {
+            "id": "labyrinth-cmsocx2vo",
+            "caption": "На стене рядом с мченой комнатой",
+            "captionEn": "On the wall next to the rush room"
+          },
+          {
+            "id": "labyrinth-cmsocxtzw",
+            "caption": "Комната наблюдения",
+            "captionEn": "Observation room"
+          },
+          {
+            "id": "labyrinth-cmsocy79g",
+            "caption": "На трупе медработника (рядом с комнатой наблюдения)",
+            "captionEn": "On the body of a medical worker (near the observation room)"
+          },
+          {
+            "id": "labyrinth-cmsocylwc",
+            "caption": "На окровавленных бочках в помещении напротив комнаты наблюдения",
+            "captionEn": "On the bloody barrels in the room opposite the observation room"
+          },
+          {
+            "id": "labyrinth-cmsocyxro",
+            "caption": "В центральном проходе рядом с трупом учёного",
+            "captionEn": "In the central passage next to the scientist's corpse"
+          },
+          {
+            "id": "labyrinth-cmsoczamc",
+            "caption": "На коробке в центральной комнате с Изделием 1156",
+            "captionEn": "On the box in the central room with Item 1156"
+          },
+          {
+            "id": "labyrinth-cmsocztcs",
+            "caption": "Около трупа учёного в комнате с Изделием 1156\n",
+            "captionEn": "Near the scientist's corpse in the room with Item 1156"
+          },
+          {
+            "id": "labyrinth-cmsod04st",
+            "caption": "На трупе рядом с изделием",
+            "captionEn": "On the corpse next to the product"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "icebreaker",
+        "added": [
+          {
+            "id": "icebreaker-cmsocb7ou",
+            "caption": "Комната заседаний, на полу среди папок",
+            "captionEn": "The meeting room, on the floor among the folders"
+          },
+          {
+            "id": "icebreaker-cmsocccx9",
+            "caption": "Левая комната на проходе к вертолётной площадке",
+            "captionEn": "Left room on the passage to the helipad"
+          },
+          {
+            "id": "icebreaker-cmsocd31p",
+            "caption": "В комнате под вертолётной площадкой",
+            "captionEn": "In the room under the helipad"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-11-1019",
     "at": "2026-08-11T10:19",
     "maps": [

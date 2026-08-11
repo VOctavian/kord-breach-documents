@@ -51,8 +51,10 @@ Run `node server.mjs` and open `editor.html`.
   menu.
 - **Delete point** — "Удалить точку".
 
-Everything saves automatically (`POST /api/spawns` → `data/spawns.json`); the
-"Сохранить" button is only there for manual saves.
+Everything saves automatically half a second after an edit
+(`POST /api/spawns` → `data/spawns.json`). The "Готово" button flushes anything
+still pending and opens the normal map for that location; if the write fails the
+editor stays put and shows the error.
 
 Shortcuts: `←` / `→` previous / next point, `Esc` closes the enlarged screenshot.
 

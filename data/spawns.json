@@ -1237,8 +1237,8 @@
     "doc": "polzovatelskoe",
     "docName": "Пользовательская документация",
     "caption": "Шкаф в «Молекуле»",
-    "x": 77.04,
-    "y": 8.234,
+    "x": 76.363,
+    "y": 10.792,
     "floor": null,
     "images": [
       "assets/screenshots/lab-polzovatelskoe-c1d1db70.jpg"
@@ -1462,8 +1462,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "В зоне для экспериментов запертой на «Ключ-карта TerraGroup Labs (Черная)»",
-    "x": 45.016,
-    "y": 80.88,
+    "x": 45.445,
+    "y": 82.957,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-9487c3fc.jpg"
@@ -1477,26 +1477,11 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "3 этаж в открытых палатах",
-    "x": 70.968,
-    "y": 43.833,
+    "x": 71.511,
+    "y": 45.858,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-95debea1.jpg"
-    ],
-    "captionEn": "3rd floor, in the open wards"
-  },
-  {
-    "id": "lab-101",
-    "map": "lab",
-    "mapName": "Лаборатория",
-    "doc": "meditsinskaea",
-    "docName": "Медицинская документация",
-    "caption": "3 этаж в открытых палатах",
-    "x": 70.555,
-    "y": 43.833,
-    "floor": null,
-    "images": [
-      "assets/screenshots/lab-meditsinskaea-2b7a6a2a.jpg"
     ],
     "captionEn": "3rd floor, in the open wards"
   },
@@ -1507,8 +1492,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Синяя)»",
-    "x": 37.42,
-    "y": 80.846,
+    "x": 36.551,
+    "y": 80.963,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-f6fd1b19.jpg"
@@ -1522,8 +1507,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»",
-    "x": 77.027,
-    "y": 43.705,
+    "x": 74.706,
+    "y": 45.684,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-c14316bf.jpg"
@@ -1567,8 +1552,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "3 этаж в открытой лаборатории",
-    "x": 70.78,
-    "y": 44.59,
+    "x": 69.366,
+    "y": 42.114,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-bb4832d6.jpg"
@@ -1582,8 +1567,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "В лаборатории запертой на «Ключ-карта TerraGroup Labs (Синяя)»",
-    "x": 37.445,
-    "y": 81.692,
+    "x": 38.079,
+    "y": 79.564,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-da110a91.jpg"
@@ -1597,43 +1582,13 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "На столе лаборанта рядом с запертой лабараторией на «Ключ-карта TerraGroup Labs (Синяя)»",
-    "x": 37.581,
-    "y": 80.188,
+    "x": 35.649,
+    "y": 79.957,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-db320295.jpg"
     ],
     "captionEn": "On the lab assistant's table next to the laboratory locked with the TerraGroup Labs keycard (Blue)"
-  },
-  {
-    "id": "labyrinth-109",
-    "map": "labyrinth",
-    "mapName": "Лабиринт",
-    "doc": "meditsinskaea",
-    "docName": "Медицинская документация",
-    "caption": "Комната наблюдения",
-    "x": 13.668,
-    "y": 73.474,
-    "floor": null,
-    "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-d4e7d610.jpg"
-    ],
-    "captionEn": "Observation room"
-  },
-  {
-    "id": "labyrinth-110",
-    "map": "labyrinth",
-    "mapName": "Лабиринт",
-    "doc": "meditsinskaea",
-    "docName": "Медицинская документация",
-    "caption": "На трупе медработника (рядом с комнатой наблюдения)",
-    "x": 21.977,
-    "y": 77.509,
-    "floor": null,
-    "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-f4e7853b.jpg"
-    ],
-    "captionEn": "On the medic's corpse (next to the observation room)"
   },
   {
     "id": "shoreline-111",
@@ -2322,8 +2277,8 @@
     "images": [
       "assets/screenshots/lab-meditsinskaea-927d9828.jpg"
     ],
-    "x": 70.254,
-    "y": 44.493,
+    "x": 72.174,
+    "y": 44.975,
     "floor": null
   },
   {
@@ -2337,8 +2292,8 @@
     "images": [
       "assets/screenshots/lab-meditsinskaea-2fe1203c.jpg"
     ],
-    "x": 37.875,
-    "y": 80.986,
+    "x": 36.664,
+    "y": 78.558,
     "floor": null
   },
   {
@@ -2352,38 +2307,8 @@
     "images": [
       "assets/screenshots/lab-meditsinskaea-8053eb6f.jpg"
     ],
-    "x": 43.335,
-    "y": 84.721,
-    "floor": null
-  },
-  {
-    "id": "lab-4030228d",
-    "map": "lab",
-    "mapName": "Лаборатория",
-    "doc": "meditsinskaea",
-    "docName": "Медицинская документация",
-    "caption": "2 этаж в открытых лабораториях (смежное помещение с лабораторией закрытой на «Ключ-карта TerraGroup Labs (Синяя)»)",
-    "captionEn": "2nd floor open laboratories (the room adjoining the lab locked with the TerraGroup Labs keycard (Blue))",
-    "images": [
-      "assets/screenshots/lab-meditsinskaea-4030228d.jpg"
-    ],
-    "x": 35.844,
-    "y": 80.845,
-    "floor": null
-  },
-  {
-    "id": "labyrinth-debd8b47",
-    "map": "labyrinth",
-    "mapName": "Лабиринт",
-    "doc": "meditsinskaea",
-    "docName": "Медицинская документация",
-    "caption": "На пакете с трупом рядом со спавном с токсичным бассейном",
-    "captionEn": "On the body bag next to the spawn with the toxic pool",
-    "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-debd8b47.jpg"
-    ],
-    "x": 29.871,
-    "y": 82.173,
+    "x": 79.237,
+    "y": 48.221,
     "floor": null
   },
   {
@@ -3852,6 +3777,349 @@
     ],
     "x": 88.53,
     "y": 71.802,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsobyctg",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "2 этаж чёрного слона в комнате со стороны совместного выхода с Диким",
+    "captionEn": "the black bishop 2 floor in the room on the side of the shared exit with the Scav",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-002e7517.png"
+    ],
+    "x": 87.826,
+    "y": 86.398,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsoc1vl1",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Первый этаж Финансового учреждения. В стелаже. Для открытия комнаты необходим ключ от малого кабинета в финучреждении",
+    "captionEn": "First floor of the Financial Institution. In a rack. To open the room, you need a key to the small office in the financial institution.",
+    "images": [
+      "assets/screenshots/streets-finansovaea-d7640abf.png"
+    ],
+    "x": 69.828,
+    "y": 58.681,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmsoc2txx",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Между красной и синей машиной на скамейке",
+    "captionEn": "Between the red and blue cars on the bench",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-5df55fb4.png"
+    ],
+    "x": 33.054,
+    "y": 14.349,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmsoc3izx",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В центре парковки здания TerraGroup, под открытой правой дверью чёрной машины",
+    "captionEn": "In the center of the TerraGroup building parking lot, under the open right door of a black car",
+    "images": [
+      "assets/screenshots/groundzero-meditsinskaea-27036dd4.png"
+    ],
+    "x": 48.176,
+    "y": 20.613,
+    "floor": null
+  },
+  {
+    "id": "groundzero-cmsoc4xj9",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В синей полке на первом этаже здания TarBank",
+    "captionEn": "In the blue shelf on the first floor of the TarBank building",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-586ef926.png"
+    ],
+    "x": 42.251,
+    "y": 50.273,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsocb7ou",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Комната заседаний, на полу среди папок",
+    "captionEn": "The meeting room, on the floor among the folders",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-79133b9c.png"
+    ],
+    "x": 40.012,
+    "y": 44.418,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsocccx9",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Левая комната на проходе к вертолётной площадке",
+    "captionEn": "Left room on the passage to the helipad",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-8181a47a.png"
+    ],
+    "x": 59.894,
+    "y": 21.854,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsocd31p",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В комнате под вертолётной площадкой",
+    "captionEn": "In the room under the helipad",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-ab3366c3.png"
+    ],
+    "x": 74.977,
+    "y": 10.721,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsoceprx",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Стойка рядом с лифтами между бойлерной и казармой",
+    "captionEn": "The stand next to the elevators between the boiler room and the barracks",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-f30cfd65.png"
+    ],
+    "x": 80.737,
+    "y": 5.716,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsoch69h",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На столе в офисе управляющего",
+    "captionEn": "On the desk in the manager's office",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-5f3a66c0.png"
+    ],
+    "x": 80.817,
+    "y": 32.418,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsociatp",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе под офисом управляющего рядом с куполом",
+    "captionEn": "On the table under the manager's office next to the dome",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-c665fc27.png"
+    ],
+    "x": 43.552,
+    "y": 67.032,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsocjsn9",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Кафетерия в серверной на втором этаже",
+    "captionEn": "Cafeteria in the server room on the second floor",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-f80fcd07.png"
+    ],
+    "x": 91.318,
+    "y": 42.805,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsocnhit",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "2 этаж в открытых палатах",
+    "captionEn": "2nd floor in open wards",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-5af7b564.png"
+    ],
+    "x": 72.802,
+    "y": 41.627,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsocstx1",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В офисе на втором этаже",
+    "captionEn": "In the office on the second floor",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-b85675b2.png"
+    ],
+    "x": 69.007,
+    "y": 39.06,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsocx2vo",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На стене рядом с мченой комнатой",
+    "captionEn": "On the wall next to the rush room",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-75d2b461.png"
+    ],
+    "x": 29.752,
+    "y": 59.879,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsocxtzw",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Комната наблюдения",
+    "captionEn": "Observation room",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-e982a6b8.png"
+    ],
+    "x": 40.863,
+    "y": 62.217,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsocy79g",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На трупе медработника (рядом с комнатой наблюдения)",
+    "captionEn": "On the body of a medical worker (near the observation room)",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-89f29890.png"
+    ],
+    "x": 45.863,
+    "y": 67.134,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsocylwc",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На окровавленных бочках в помещении напротив комнаты наблюдения",
+    "captionEn": "On the bloody barrels in the room opposite the observation room",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-ef11ef52.png"
+    ],
+    "x": 53.252,
+    "y": 64.196,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsocyxro",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В центральном проходе рядом с трупом учёного",
+    "captionEn": "In the central passage next to the scientist's corpse",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-91620217.png"
+    ],
+    "x": 53.252,
+    "y": 55.621,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsoczamc",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На коробке в центральной комнате с Изделием 1156",
+    "captionEn": "On the box in the central room with Item 1156",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-471763a2.png"
+    ],
+    "x": 62.975,
+    "y": 46.327,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsocztcs",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Около трупа учёного в комнате с Изделием 1156\n",
+    "captionEn": "Near the scientist's corpse in the room with Item 1156",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-2ebc9e66.png"
+    ],
+    "x": 63.03,
+    "y": 48.486,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod04st",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На трупе рядом с изделием",
+    "captionEn": "On the corpse next to the product",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-a27e1cd7.png"
+    ],
+    "x": 66.197,
+    "y": 38.832,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsod0g7g",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "",
+    "captionEn": "",
+    "images": [],
+    "x": 70.419,
+    "y": 32.056,
     "floor": null
   }
 ]

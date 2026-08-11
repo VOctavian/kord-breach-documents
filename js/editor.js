@@ -332,22 +332,26 @@ $('del-spawn').onclick = () => {
 let timer;
 function save() {
   clearTimeout(timer);
-  $('save').disabled = false;
-  timer = setTimeout(async () => {
-    setStatus('сохраняю…');
-    try {
-      const res = await fetch('/api/spawns', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(spawns),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      $('save').disabled = true;
-      setStatus('сохранено ✓', 'ok');
-    } catch (e) {
-      setStatus('ошибка сохранения: ' + e.message, 'err');
-    }
-  }, 500);
+  timer = setTimeout(flush, 500);
+}
+
+/** Записать немедленно, не дожидаясь автосохранения. `false` — запись не удалась. */
+async function flush() {
+  clearTimeout(timer);
+  setStatus('сохраняю…');
+  try {
+    const res = await fetch('/api/spawns', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(spawns),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    setStatus('сохранено ✓', 'ok');
+    return true;
+  } catch (e) {
+    setStatus('ошибка сохранения: ' + e.message, 'err');
+    return false;
+  }
 }
 
 function setStatus(text, cls = '') {
@@ -359,7 +363,14 @@ function setStatus(text, cls = '') {
 
 /* ---------- управление ---------- */
 
-$('save').onclick = save;
+$('done').onclick = async () => {
+  const btn = $('done');
+  btn.disabled = true;
+  // Правка могла случиться меньше секунды назад — дописываем её, а не уходим молча.
+  // Если запись не прошла, остаёмся на странице: иначе правки просто пропадут.
+  if (await flush()) location.href = `map.html?map=${mapId}`;
+  else btn.disabled = false;
+};
 const step = (d) => {
   if (!list.length) return;
   idx = (idx + d + list.length) % list.length;
@@ -411,5 +422,4 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowRight') step(1);
 });
 
-$('save').disabled = true;
 await openMap();
