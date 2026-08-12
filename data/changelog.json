@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-08-12-2111",
+    "at": "2026-08-12T21:11",
+    "features": [
+      {
+        "caption": "Планирование рейда: правым кликом по карте ставятся контрольные точки — куда зайти и что забрать. К каждой можно добавить комментарий в плавающем окошке, отметить её выполненной или убрать. План хранится только в вашем браузере и никуда не отправляется.",
+        "captionEn": "Raid planning: right-click the map to drop checkpoints — where to go and what to pick up. Each one takes a comment in a floating note, can be marked as done or removed. The plan is kept in your browser only and is never sent anywhere."
+      },
+      {
+        "caption": "Проекции: часть точек продублирована на схемах этажей по краям карты и соединена с настоящим местом тонкой линией. В боковой панели появился тумблер «Проекции» — им эти дубли можно убрать.",
+        "captionEn": "Projections: some points are mirrored onto the floor plans at the map edges and joined to the real spot by a thin line. The new \"Projections\" switch in the sidebar hides those duplicates."
+      }
+    ],
+    "maps": []
+  },
+  {
     "id": "2026-08-12-1955",
     "at": "2026-08-12T19:55",
     "maps": [

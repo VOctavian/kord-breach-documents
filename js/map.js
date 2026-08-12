@@ -6,6 +6,7 @@ import { trackEvent, mountUmami } from './analytics.js';
 import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
 import { mountSurvey } from './survey.js';
+import { mountPlanning } from './planning.js';
 
 document.title = t('pageTitleMap');
 mountUmami();
@@ -35,14 +36,38 @@ const editLink = document.getElementById('edit-link');
 if (isLocal) editLink.href = `editor.html?map=${mapId}`;
 else editLink.remove();
 
-const view = new MapView(document.getElementById('viewport'));
+// Планирование поднимается после загрузки карты, а меню нужно уже конструктору —
+// отсюда ссылка через переменную.
+let planning = null;
+const viewport = document.getElementById('viewport');
+const view = new MapView(viewport, { onMapContext: (x, y, e) => planning?.mapMenu(x, y, e) });
 await view.load(map);
+planning = mountPlanning(view, mapId, viewport);
 
 const hidden = new Set();
 let floor = null;
 let visible = [];
 let slides = [];
 let current = -1;
+
+/* ---------- схема этажей ---------- */
+
+// Тумблер показываем только там, где есть что выключать: на локациях без вторых
+// координат он бы ничего не делал — как и группа этажей, которая скрыта по тому
+// же принципу.
+const ALT_KEY = 'kord_breach_alt_points_v1';
+const altToggle = document.getElementById('alt-toggle');
+let showAlt = localStorage.getItem(ALT_KEY) !== 'off';
+altToggle.checked = showAlt;
+
+if (placed.some((s) => s.x2 != null && s.y2 != null)) {
+  document.getElementById('alt-group').hidden = false;
+  altToggle.addEventListener('change', () => {
+    showAlt = altToggle.checked;
+    localStorage.setItem(ALT_KEY, showAlt ? 'on' : 'off');
+    render();
+  });
+}
 
 /* ---------- фильтры по типу документации ---------- */
 
@@ -102,7 +127,10 @@ function render() {
   slides = visible.flatMap((s) => s.images.map((image, i) => ({ spawn: s, image, i, of: s.images.length })));
   view.clearMarkers();
   for (const s of visible) {
-    view.addMarker(s, docById[s.doc], { onClick: (sp) => open(slides.findIndex((sl) => sl.spawn === sp)) });
+    view.addMarker(s, docById[s.doc], {
+      onClick: (sp) => open(slides.findIndex((sl) => sl.spawn === sp)),
+      alt: showAlt,
+    });
   }
 
   listBox.replaceChildren();

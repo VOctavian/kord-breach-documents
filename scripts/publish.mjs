@@ -6,9 +6,12 @@
 //   node scripts/publish.mjs -m "текст"   своё сообщение коммита
 //   node scripts/publish.mjs --no-wait    не ждать деплой
 //   node scripts/publish.mjs --no-changelog     не добавлять запись в «Что нового»
+//
+// Если найдутся картинки, на которые нет ссылок из данных, скрипт спросит, какие
+// удалить: Enter — оставить всё, `all` — все, либо номера через запятую (2, 4-6).
 //   node scripts/publish.mjs --changelog-only   только записать «Что нового», без коммита
 import { execSync, execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
@@ -99,9 +102,6 @@ const unplaced = published.filter((s) => s.x == null);
 const drafts = spawns.length - published.length;
 
 const used = new Set(spawns.flatMap((s) => s.images ?? []));
-const orphans = readdirSync(`${ROOT}assets/screenshots`)
-  .map((f) => `assets/screenshots/${f}`)
-  .filter((p) => !used.has(p));
 
 /** Все картинки, на которые есть ссылка из данных: точки плюс галереи опросов. */
 const referenced = new Set([
@@ -112,10 +112,71 @@ const referenced = new Set([
   ]),
 ]);
 
+// Смотрим оба каталога картинок: в assets/survey сироты заводятся так же легко —
+// картинку загрузили в редакторе опросов и тут же убрали из вопроса.
+const scan = (dir) => (existsSync(ROOT + dir) ? readdirSync(ROOT + dir).map((f) => `${dir}/${f}`) : []);
+const orphans = [...scan('assets/screenshots'), ...scan('assets/survey')].filter((p) => !referenced.has(p));
+
 ok(`${spawns.length} точек, ссылки на скриншоты целы`);
 if (drafts) warn(`${drafts} пустых заготовок — на сайт не попадут`);
-if (orphans.length) warn(`${orphans.length} скриншотов ничем не используется:\n      ${orphans.join('\n      ')}`);
 if (unplaced.length) warn(`${unplaced.length} без координат — на карте не покажутся: ${unplaced.map((s) => s.id).join(', ')}`);
+
+/* ---------- 1a. уборка несвязанных картинок ---------- */
+
+/**
+ * Спрашиваем, что удалить из ненужных картинок. Не спрашиваем при `--dry-run`
+ * (он ничего не меняет) и когда консоль не интерактивна — иначе прогон из
+ * скрипта или CI повис бы на приглашении ввода.
+ */
+async function askOrphans(list) {
+  const { createInterface } = await import('node:readline/promises');
+  console.log('');
+  list.forEach((p, i) => console.log(`   ${String(i + 1).padStart(2)}. ${p}`));
+  const rl = createInterface({ input: process.stdin, output: process.stdout });
+  try {
+    const ans = (
+      await rl.question('\n  Удалить? [Enter — оставить всё · all — все · номера через запятую, можно 2-4]: ')
+    )
+      .trim()
+      .toLowerCase();
+    if (!ans || ans === 'n' || ans === 'нет') return [];
+    if (ans === 'all' || ans === 'все') return [...list];
+
+    const picked = new Set();
+    for (const part of ans.split(/[\s,]+/).filter(Boolean)) {
+      const range = part.match(/^(\d+)\s*-\s*(\d+)$/);
+      if (range) {
+        const [from, to] = [+range[1], +range[2]].sort((a, b) => a - b);
+        for (let i = from; i <= to; i++) if (list[i - 1]) picked.add(list[i - 1]);
+      } else if (/^\d+$/.test(part) && list[+part - 1]) picked.add(list[+part - 1]);
+      else warn(`не понял «${part}» — пропускаю`);
+    }
+    return [...picked];
+  } finally {
+    rl.close();
+  }
+}
+
+if (orphans.length) {
+  warn(`${orphans.length} картинок ничем не используется:`);
+  if (DRY || !process.stdin.isTTY) {
+    for (const p of orphans) console.log(`      ${p}`);
+    if (!DRY) warn('консоль не интерактивна — оставляю как есть');
+  } else {
+    const doomed = await askOrphans(orphans);
+    if (doomed.length) {
+      // Отслеживаемое убираем через git, чтобы удаление попало в коммит; остальное
+      // просто стираем с диска.
+      const tracked = new Set(git(['ls-files', '--', ...doomed]).split('\n').filter(Boolean));
+      const inGit = doomed.filter((p) => tracked.has(p));
+      if (inGit.length) git(['rm', '--quiet', '--', ...inGit]);
+      for (const p of doomed.filter((p) => !tracked.has(p))) unlinkSync(ROOT + p);
+      ok(`удалено картинок: ${doomed.length}`);
+    } else {
+      ok('ничего не удаляю');
+    }
+  }
+}
 
 /* ---------- 2. что изменилось ---------- */
 

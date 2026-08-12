@@ -63,15 +63,24 @@ export async function mountChangelog(mapById) {
   const when = (r) => new Date(r.at ?? `${r.date}T00:00`);
   const stamp = (r) => fmtDate.format(when(r));
 
-  const body = (r) => r.maps.map((g) =>
-    el(
-      'div',
-      { class: 'cl-map' },
-      el('div', { class: 'cl-map-name' }, localized(mapById[g.map]) || g.map),
-      group('changelogAdded', g.added),
-      group('changelogFixed', g.fixed)
-    )
-  );
+  // Новое в самом сайте — отдельным зелёным блоком над правками точек: это не
+  // про спавны, и путать их не стоит.
+  const features = (r) =>
+    r.features?.length ? el('div', { class: 'cl-feat' }, group('changelogFeatures', r.features)) : null;
+
+  const body = (r) => [
+    features(r),
+    // Запись бывает и без правок точек — только про новые возможности сайта.
+    ...(r.maps ?? []).map((g) =>
+      el(
+        'div',
+        { class: 'cl-map' },
+        el('div', { class: 'cl-map-name' }, localized(mapById[g.map]) || g.map),
+        group('changelogAdded', g.added),
+        group('changelogFixed', g.fixed)
+      )
+    ),
+  ];
 
   const release = (r) => el('details', { class: 'cl-past' }, el('summary', {}, stamp(r)), body(r));
   const bucket = (label, count, kids) =>

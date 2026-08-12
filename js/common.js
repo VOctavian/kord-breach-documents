@@ -44,6 +44,57 @@ export function el(tag, attrs = {}, ...kids) {
   return node;
 }
 
+let ctxMenu = null;
+
+export function closeContextMenu() {
+  ctxMenu?.remove();
+  ctxMenu = null;
+}
+
+/**
+ * Контекстное меню у курсора. `items` — тройки `[подпись, выключен, действие]`;
+ * `null` в списке пропускается, действие вызывается уже после закрытия меню.
+ */
+export function contextMenu(e, items) {
+  closeContextMenu();
+  ctxMenu = el(
+    'div',
+    { class: 'ctx-menu' },
+    items.filter(Boolean).map(([label, disabled, onClick]) =>
+      el(
+        'button',
+        {
+          class: 'ctx-item',
+          type: 'button',
+          disabled: disabled ? '' : null,
+          onclick: () => {
+            closeContextMenu();
+            onClick();
+          },
+        },
+        label
+      )
+    )
+  );
+  document.body.append(ctxMenu);
+  // Рядом с краем окна меню развернулось бы за экран — двигаем внутрь.
+  const r = ctxMenu.getBoundingClientRect();
+  ctxMenu.style.left = Math.min(e.clientX, innerWidth - r.width - 6) + 'px';
+  ctxMenu.style.top = Math.min(e.clientY, innerHeight - r.height - 6) + 'px';
+  return ctxMenu;
+}
+
+addEventListener('pointerdown', (e) => {
+  if (ctxMenu && !e.target.closest('.ctx-menu')) closeContextMenu();
+});
+// Ловим на перехвате: правый клик мимо карты до обработчика не дойдёт, а старое
+// меню закрыть всё равно надо.
+addEventListener('contextmenu', closeContextMenu, true);
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeContextMenu();
+});
+addEventListener('blur', closeContextMenu);
+
 /**
  * Карта с зумом/панорамой. Координаты маркеров хранятся в процентах (0..100)
  * от натурального размера карты, поэтому не зависят от масштаба показа.
@@ -64,6 +115,8 @@ export class MapView {
     // Вторые маркеры тех же точек и связи между парами — по одному на точку.
     this.alts = new Map();
     this.links = new Map();
+    // Прочие узлы, привязанные к координатам карты (метки планирования).
+    this.overlays = new Set();
     this._bindPointer();
   }
 
@@ -73,6 +126,7 @@ export class MapView {
     this.markers.clear();
     this.alts.clear();
     this.links.clear();
+    this.overlays.clear();
 
     if (map.type === 'svg') {
       const text = await fetch(map.file).then((r) => r.text());
@@ -131,6 +185,8 @@ export class MapView {
     const inv = 1 / this.scale;
     for (const box of [this.markers, this.alts])
       for (const m of box.values()) m.style.transform = `scale(${inv})`;
+    // Точку отсчёта задаёт CSS каждого узла — здесь только гасим масштаб карты.
+    for (const node of this.overlays) node.style.transform = `scale(${inv})`;
   }
 
   zoomAt(clientX, clientY, factor) {
@@ -159,12 +215,12 @@ export class MapView {
   /**
    * Маркер точки. Если заданы вторые координаты (`x2`/`y2` — та же точка на
    * схеме этажей, нарисованной с краю карты), рядом появляется второй маркер и
-   * тонкая линия между ними. Возвращает основной маркер.
+   * тонкая линия между ними; `alt: false` их не рисует. Возвращает основной маркер.
    */
-  addMarker(spawn, doc, { onClick } = {}) {
+  addMarker(spawn, doc, { onClick, alt: withAlt = true } = {}) {
     const main = this._marker(spawn, doc, onClick, false);
     this.markers.set(spawn.id, main);
-    if (spawn.x2 == null || spawn.y2 == null) return main;
+    if (!withAlt || spawn.x2 == null || spawn.y2 == null) return main;
 
     const alt = this._marker(spawn, doc, onClick, true);
     this.alts.set(spawn.id, alt);
@@ -213,6 +269,41 @@ export class MapView {
     g.append(svgEl('line', { class: 'link-hit', ...ends }), svgEl('line', { class: 'link-wire', ...ends }));
     this.linkLayer.append(g);
     return g;
+  }
+
+  /** Узел, привязанный к координатам карты (в процентах); при зуме не растёт. */
+  addOverlay(node, x, y) {
+    node.style.transform = `scale(${1 / this.scale})`;
+    this.stage.append(node);
+    this.overlays.add(node);
+    return this.moveOverlay(node, x, y);
+  }
+
+  moveOverlay(node, x, y) {
+    node.style.left = x + '%';
+    node.style.top = y + '%';
+    return node;
+  }
+
+  removeOverlay(node) {
+    this.overlays.delete(node);
+    node.remove();
+  }
+
+  /** Линия в слое связей; концы задаются в процентах карты. */
+  addLine(cls) {
+    const line = svgEl('line', { class: cls });
+    this.linkLayer.append(line);
+    return {
+      node: line,
+      at: (x1, y1, x2, y2) => {
+        line.setAttribute('x1', (x1 / 100) * this.w);
+        line.setAttribute('y1', (y1 / 100) * this.h);
+        line.setAttribute('x2', (x2 / 100) * this.w);
+        line.setAttribute('y2', (y2 / 100) * this.h);
+      },
+      remove: () => line.remove(),
+    };
   }
 
   /** Подсветить точку: оба её маркера и связь между ними. */

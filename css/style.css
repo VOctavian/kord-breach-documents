@@ -284,6 +284,48 @@ a:hover { color: #e0cfa4; }
 .filter-row .lbl { flex: 1; font-size: 13px; }
 .filter-row .n { color: var(--text-dim); font-size: 12px; }
 
+/* Тумблер в боковой панели. Настоящий чекбокс спрятан, но остаётся в потоке
+   фокуса — переключается с клавиатуры, а метка-обёртка ловит клик по дорожке. */
+.switch-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+.switch-row:hover { background: var(--bg-3); }
+.switch-row .lbl { flex: 1; font-size: 13px; color: var(--text-dim); }
+.switch-row input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.switch {
+  position: relative;
+  flex: none;
+  width: 32px;
+  height: 18px;
+  border-radius: 9px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  transition: background 0.15s, border-color 0.15s;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  transition: transform 0.15s, background 0.15s;
+}
+.switch-row input:checked + .switch { background: var(--accent); border-color: var(--accent-hot); }
+.switch-row input:checked + .switch::after { transform: translateX(14px); background: #17130c; }
+.switch-row input:checked ~ .lbl { color: var(--text); }
+/* Обводка по фокусу — на дорожке: сам чекбокс не виден и рамку показать негде. */
+.switch-row input:focus-visible + .switch { outline: 2px solid var(--accent-hot); outline-offset: 2px; }
+
 .floor-list { display: flex; flex-direction: column; gap: 4px; }
 .floor-btn {
   text-align: left;
@@ -554,6 +596,93 @@ a:hover { color: #e0cfa4; }
 .link:hover .link-wire,
 .link.hot .link-wire { opacity: 1; stroke: var(--accent-hot); stroke-width: 2.5; }
 .link.active .link-wire { opacity: 1; stroke: #fff; }
+
+/* ---------- планирование рейда ---------- */
+
+/* Контрольная точка посетителя. От меток документации отличается красной
+   оконтовкой, а выполненная — зелёной. */
+.plan-marker {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border-radius: 50%;
+  background: rgba(20, 24, 27, 0.92);
+  border: 2px solid var(--danger);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  transform-origin: center;
+  z-index: 7;
+}
+.plan-marker.done { border-color: var(--ok); }
+
+/* Значок реплики у метки без комментария — по нажатию открывается ввод. */
+.plan-note {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg-2);
+  color: var(--text-dim);
+  font-size: 9px;
+  line-height: 1;
+  cursor: pointer;
+}
+.plan-note:hover { border-color: var(--accent-hot); }
+
+.plan-box {
+  position: absolute;
+  z-index: 8;
+  width: max-content;
+  max-width: 190px;
+  padding: 6px 8px;
+  background: var(--bg-2);
+  border: 1px solid var(--danger);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--text);
+  cursor: move;
+  /* Точка отсчёта — угол у якоря: масштаб гасится, а привязка не уезжает. */
+  transform-origin: 0 0;
+}
+.plan-box.done { border-color: var(--ok); }
+.plan-box.editing { cursor: default; }
+.plan-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.plan-input {
+  display: block;
+  width: 170px;
+  padding: 4px 6px;
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  resize: none;
+}
+.plan-ok { margin-top: 5px; padding: 3px 10px; font-size: 12px; }
+
+.plan-line {
+  stroke: var(--danger);
+  stroke-width: 1.5;
+  opacity: 0.7;
+  /* Толщина в экранных пикселях: на любом зуме линия остаётся тонкой. */
+  vector-effect: non-scaling-stroke;
+}
+.plan-line.done { stroke: var(--ok); }
+
+.plan-reset { position: absolute; left: 14px; top: 14px; z-index: 10; }
 
 .zoom-ctl {
   position: absolute;
@@ -1060,6 +1189,10 @@ a:hover { color: #e0cfa4; }
 }
 .cl-map-name { font-size: 14px; font-weight: 700; color: var(--accent-hot); margin-bottom: 6px; }
 .cl-group + .cl-group { margin-top: 8px; }
+/* Новые возможности сайта — зелёным, чтобы не путать с правками точек. */
+.cl-feat { margin-bottom: 12px; padding-left: 10px; border-left: 2px solid var(--ok); }
+.cl-feat .cl-group-title { color: var(--ok); text-transform: uppercase; letter-spacing: 0.04em; }
+.cl-feat .cl-list li::marker { color: var(--ok); }
 .cl-group-title { font-size: 12px; font-weight: 700; color: var(--text-dim); }
 .cl-list { margin: 4px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.45; }
 .cl-list li { margin-bottom: 2px; }

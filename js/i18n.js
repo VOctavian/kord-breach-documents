@@ -23,6 +23,33 @@ const DICT = {
   spawnListHeader: { ru: 'Точки спавна', en: 'Spawn points' },
   floorHeader: { ru: 'Этаж', en: 'Floor' },
   allLayers: { ru: 'Все слои', en: 'All layers' },
+  altHeader: { ru: 'Функции', en: 'Features' },
+  altToggle: { ru: 'Проекции', en: 'Projections' },
+  altToggleTitle: {
+    ru: 'Дубли точек на схеме этажей с краю карты и линии к ним',
+    en: 'Duplicate markers on the floor plan at the map edge, and the lines to them',
+  },
+
+  planAdd: { ru: 'Контрольная точка здесь', en: 'Checkpoint here' },
+  planDone: { ru: 'Отметить выполненной', en: 'Mark as done' },
+  planUndone: { ru: 'Снять отметку', en: 'Mark as not done' },
+  planDelete: { ru: 'Удалить точку', en: 'Delete the checkpoint' },
+  planReset: { ru: 'Сбросить планирование', en: 'Clear planning' },
+  planResetAsk: {
+    ru: 'Удалить все контрольные точки на этой локации ({n})?',
+    en: 'Delete every checkpoint on this location ({n})?',
+  },
+  planMarkerTitle: {
+    ru: 'Контрольная точка · правый клик — отметить или удалить',
+    en: 'Checkpoint · right-click to mark or delete',
+  },
+  planNoteAdd: { ru: 'Добавить комментарий', en: 'Add a comment' },
+  planNoteHint: { ru: 'Комментарий — можно оставить пустым', en: 'A comment — may be left empty' },
+  planNoteSave: { ru: 'Готово', en: 'Save' },
+  planBoxTitle: {
+    ru: 'Перетащить — двигать · двойной клик — изменить',
+    en: 'Drag to move · double-click to edit',
+  },
   sidebarHide: { ru: 'Скрыть панель', en: 'Hide the panel' },
   sidebarShow: { ru: 'Показать панель', en: 'Show the panel' },
   mapHint: {
@@ -42,6 +69,7 @@ const DICT = {
 
   changelogTitle: { ru: 'Что нового', en: "What's new" },
   changelogIntro: { ru: 'Карта обновилась — вот что изменилось.', en: 'The map has been updated — here is what changed.' },
+  changelogFeatures: { ru: 'Новое на сайте', en: 'New on the site' },
   changelogAdded: { ru: 'Новые точки', en: 'New points' },
   changelogFixed: { ru: 'Исправления', en: 'Fixes' },
   changelogMore: { ru: 'и ещё {n}', en: '{n} more' },
