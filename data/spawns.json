@@ -4396,5 +4396,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "shoreline-cmsqip3y0",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "в приоткрытом ящике тумбочки справа от зеленой кровати",
+    "captionEn": "in the half-open drawer of the nightstand to the right of the green bed",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-f767e670.png"
+    ],
+    "x": 96.903,
+    "y": 76.239,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
