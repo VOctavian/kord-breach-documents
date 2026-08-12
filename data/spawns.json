@@ -4379,5 +4379,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "icebreaker-cmsqbw2ap",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "вот тут не помню точно где\nлибо полка\nлибо на компе слево. by \"Valentino\"",
+    "captionEn": "I don't remember exactly where it is, either on the shelf or on the left side of the computer. by \"Valentino\"",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-99078866.png"
+    ],
+    "x": 74.676,
+    "y": 45.674,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
