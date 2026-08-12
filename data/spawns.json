@@ -4362,5 +4362,22 @@
     "x": 41.316,
     "y": 52.634,
     "floor": null
+  },
+  {
+    "id": "icebreaker-cmsqbpwjs",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На тумбе",
+    "captionEn": "On the stand",
+    "images": [
+      "assets/screenshots/icebreaker-personal-8f430366.png"
+    ],
+    "x": 67.616,
+    "y": 55.345,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
