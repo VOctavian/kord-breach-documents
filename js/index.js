@@ -3,7 +3,6 @@ import { loadData, el, isPublished } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent, mountUmami } from './analytics.js';
-import { mountOnlineBadge } from './online.js';
 import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
 import { mountSurvey } from './survey.js';
@@ -11,7 +10,6 @@ import { mountSurvey } from './survey.js';
 document.title = t('pageTitleIndex');
 mountUmami();
 mountAuthor(document.getElementById('logo-slot'));
-mountOnlineBadge(document.getElementById('online-slot'));
 document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
 // Редакторы работают только с локальным сервером — на сайте ссылок на них нет.

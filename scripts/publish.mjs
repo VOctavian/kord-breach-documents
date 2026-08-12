@@ -352,7 +352,13 @@ console.log('\nПубликация');
 // отслеживаемого файла (пустой assets/survey) он падает с «pathspec did not
 // match any file(s) known to git» и роняет всю публикацию.
 const modified = [...touched].filter((p) => !untracked.includes(p));
-if (modified.length) git(['add', '--', ...modified]);
+// Удаления: `-A` нужен, чтобы git принял путь пропавшего файла. Но если удаление
+// уже в индексе (сделали `git rm`), пути нет ни на диске, ни в индексе — тогда
+// `git add` падает с «pathspec did not match any files», а добавлять и нечего:
+// такое удаление уже готово к коммиту.
+const inIndex = new Set(git(['ls-files', '--', ...paths]).split('\n').filter(Boolean));
+const addable = modified.filter((p) => existsSync(ROOT + p) || inIndex.has(p));
+if (addable.length) git(['add', '-A', '--', ...addable]);
 if (toAdd.length) git(['add', '--', ...toAdd]);
 git(['commit', '-m', subject, '-m', body, '-m', 'Co-Authored-By: Claude <noreply@anthropic.com>']);
 const sha = git(['rev-parse', 'HEAD']).slice(0, 7);

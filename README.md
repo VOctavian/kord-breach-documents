@@ -236,19 +236,17 @@ are treated as drafts and never reach the site.
 Third-party service keys live in [js/config.js](js/config.js). An empty value
 simply turns the service off.
 
-**Online counter** in the header — Supabase Realtime Presence. Every tab holds a
-websocket and announces itself in the shared `kord-breach-online` channel; the
-number of channel members is the online count. No server of your own, no
-database involved.
+**Supabase** is what the survey needs: answers go into the `survey_responses`
+table (its schema and policies are in the "Surveys" section above).
 
 1. Create a project at [supabase.com](https://supabase.com) (free tier).
 2. Project Settings → API → copy **Project URL** and **anon public key**.
 3. Put them into `SUPABASE_URL` and `SUPABASE_ANON_KEY`.
 
-The free tier caps at 200 concurrent connections; past that the extra visitors
-just don't connect and the site keeps working. The `anon` key is meant to be
-public, but keep this project to Realtime only — no tables, no storage. If you
-ever add tables, turn RLS on, and never put the `service_role` key here.
+The `anon` key is meant to be public and ships to the site along with the rest
+of the code — what protects you is RLS on the table, so never turn the
+insert-only policy off. Never put the `service_role` key here: it belongs in
+`.env.local` and nowhere else.
 
 **Discord invite** — `DISCORD_INVITE`, used by both the feedback button and the
 header icon. The current invite never expires; Discord hands out 7-day links by

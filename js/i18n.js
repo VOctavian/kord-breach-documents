@@ -39,8 +39,6 @@ const DICT = {
   prevTitle: { ru: 'Предыдущий (←)', en: 'Previous (←)' },
   nextTitle: { ru: 'Следующий (→)', en: 'Next (→)' },
   langToggleTitle: { ru: 'Переключить язык', en: 'Switch language' },
-  onlineLabel: { ru: '{n} онлайн', en: '{n} online' },
-  onlineTitle: { ru: 'Сейчас на сайте', en: 'Currently on the site' },
 
   changelogTitle: { ru: 'Что нового', en: "What's new" },
   changelogIntro: { ru: 'Карта обновилась — вот что изменилось.', en: 'The map has been updated — here is what changed.' },
