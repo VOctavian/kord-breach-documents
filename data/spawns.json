@@ -4430,5 +4430,22 @@
     "x2": 42.992,
     "y2": 49.094,
     "floor": null
+  },
+  {
+    "id": "streets-cmsqkc5yl",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В офисе за белугой",
+    "captionEn": "In the office for beluga",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-87beff0e.png"
+    ],
+    "x": 58.276,
+    "y": 23.853,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
