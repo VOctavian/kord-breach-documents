@@ -246,8 +246,8 @@
     "doc": "finansovaea",
     "docName": "Финансовая документация",
     "caption": "В офисах между Goshan и IDEA",
-    "x": 82.388,
-    "y": 41.466,
+    "x": 82.629,
+    "y": 41.862,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-finansovaea-b8d6456f.jpg"
@@ -542,7 +542,9 @@
     "images": [
       "assets/screenshots/factory-proectnaea-24de8d5c.jpg"
     ],
-    "captionEn": "3rd floor offices (the room you kick open)"
+    "captionEn": "3rd floor offices (the room you kick open)",
+    "x2": 53.007,
+    "y2": 52.046
   },
   {
     "id": "factory-36",
@@ -557,7 +559,9 @@
     "images": [
       "assets/screenshots/factory-proectnaea-fef307dd.jpg"
     ],
-    "captionEn": "TerraGroup utility room locked with the TerraGroup storage keycard"
+    "captionEn": "TerraGroup utility room locked with the TerraGroup storage keycard",
+    "x2": 52.695,
+    "y2": 75.863
   },
   {
     "id": "factory-37",
@@ -602,7 +606,9 @@
     "images": [
       "assets/screenshots/factory-proectnaea-b31d2cdc.jpg"
     ],
-    "captionEn": "In the transformers next to the \"1986\" writing on the wall"
+    "captionEn": "In the transformers next to the \"1986\" writing on the wall",
+    "x2": 56.45,
+    "y2": 76.775
   },
   {
     "id": "factory-40",
@@ -632,7 +638,9 @@
     "images": [
       "assets/screenshots/factory-proectnaea-ca8c5c11.jpg"
     ],
-    "captionEn": "3rd floor of the plant offices, in the room with the safe"
+    "captionEn": "3rd floor of the plant offices, in the room with the safe",
+    "x2": 53.011,
+    "y2": 53.685
   },
   {
     "id": "factory-42",
@@ -647,7 +655,9 @@
     "images": [
       "assets/screenshots/factory-proectnaea-d40ab6b1.jpg"
     ],
-    "captionEn": "2nd floor of the laboratory"
+    "captionEn": "2nd floor of the laboratory",
+    "x2": 65.025,
+    "y2": 48.082
   },
   {
     "id": "factory-43",
@@ -677,7 +687,9 @@
     "images": [
       "assets/screenshots/factory-proectnaea-b19c6f35.jpg"
     ],
-    "captionEn": "3rd floor plant office, in the room with the safe"
+    "captionEn": "3rd floor plant office, in the room with the safe",
+    "x2": 52.977,
+    "y2": 51.39
   },
   {
     "id": "reserve-45",
@@ -733,8 +745,8 @@
     "doc": "tehnicheskaea",
     "docName": "Чертежи и тех. документация",
     "caption": "Офис между Goshan и IDEA",
-    "x": 82.452,
-    "y": 41.66,
+    "x": 82.796,
+    "y": 42.102,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-tehnicheskaea-d8222685.jpg"
@@ -814,7 +826,9 @@
     "images": [
       "assets/screenshots/factory-tehnicheskaea-911667f8.jpg"
     ],
-    "captionEn": "3rd floor of the plant offices, in the room with the safe"
+    "captionEn": "3rd floor of the plant offices, in the room with the safe",
+    "x2": 53.014,
+    "y2": 52.621
   },
   {
     "id": "factory-54",
@@ -859,7 +873,9 @@
     "images": [
       "assets/screenshots/factory-tehnicheskaea-6619945a.jpg"
     ],
-    "captionEn": "3rd floor of the plant offices (room locked with the Factory key)"
+    "captionEn": "3rd floor of the plant offices (room locked with the Factory key)",
+    "x2": 52.872,
+    "y2": 49.611
   },
   {
     "id": "factory-57",
@@ -919,7 +935,9 @@
     "images": [
       "assets/screenshots/factory-tehnicheskaea-dd7a9f36.jpg"
     ],
-    "captionEn": "3rd floor of the plant offices, in the open filing cabinet in the corridor"
+    "captionEn": "3rd floor of the plant offices, in the open filing cabinet in the corridor",
+    "x2": 52.924,
+    "y2": 50.781
   },
   {
     "id": "factory-61",
@@ -2003,7 +2021,9 @@
     ],
     "x": 75.946,
     "y": 64.332,
-    "floor": null
+    "floor": null,
+    "x2": 51.735,
+    "y2": 62.885
   },
   {
     "id": "reserve-4b6bed63",
@@ -2065,7 +2085,9 @@
     ],
     "x": 5.887,
     "y": 56.876,
-    "floor": null
+    "floor": null,
+    "x2": 53.009,
+    "y2": 53.225
   },
   {
     "id": "factory-92e6dea0",
@@ -2080,7 +2102,9 @@
     ],
     "x": 89.681,
     "y": 53.178,
-    "floor": null
+    "floor": null,
+    "x2": 65.177,
+    "y2": 53.179
   },
   {
     "id": "woods-dda02a64",
@@ -2517,7 +2541,9 @@
     ],
     "x": 6.046,
     "y": 47.665,
-    "floor": null
+    "floor": null,
+    "x2": 52.893,
+    "y2": 50.319
   },
   {
     "id": "reserve-cmsjd9izw",
@@ -2581,7 +2607,9 @@
     ],
     "x": 43.487,
     "y": 47.784,
-    "floor": null
+    "floor": null,
+    "x2": 66.994,
+    "y2": 47.68
   },
   {
     "id": "customs-cmslk0pxl",
@@ -2645,7 +2673,9 @@
     ],
     "x": 77.033,
     "y": 76.92,
-    "floor": null
+    "floor": null,
+    "x2": 52.716,
+    "y2": 77.353
   },
   {
     "id": "interchange-cmslkca5u",
@@ -3580,7 +3610,7 @@
     "doc": "testovaea",
     "docName": "Тестовая документация",
     "caption": "На кровати 211 комнаты западного крыла",
-    "captionEn": "On bed 211 in room 211 of the west wing",
+    "captionEn": "On bed in room 211 of the west wing",
     "images": [
       "assets/screenshots/shoreline-testovaea-66e72405.png"
     ],
@@ -3719,8 +3749,8 @@
     "images": [
       "assets/screenshots/lighthouse-personal-e0bd7c2a.png"
     ],
-    "x": 35.645,
-    "y": 56.032,
+    "x": 36.168,
+    "y": 53.295,
     "floor": null
   },
   {
@@ -4444,6 +4474,312 @@
     ],
     "x": 58.276,
     "y": 23.853,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsr6x6xn",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На компьютерном столе островка компании OLI ближе к складским помещениям",
+    "captionEn": "On the computer desk of the OLI island closer to the storage areas",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-6d24a51e.png"
+    ],
+    "x": 81.08,
+    "y": 68.509,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsr702ya",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Маленькая комната в офисе между IDEA и Goshan",
+    "captionEn": "A small room in the office between IDEA and Goshan",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-f83a1f34.png"
+    ],
+    "x": 82.209,
+    "y": 41.184,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsr724x6",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "316 комната западного крыла",
+    "captionEn": "Room 316 of the West Wing",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-8e979dab.png"
+    ],
+    "x": 83.183,
+    "y": 35.286,
+    "x2": 36.147,
+    "y2": 49.526,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsr74cde",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "212 комната западного крыла санатория",
+    "captionEn": "Room 212 of the western wing of the sanatorium",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-9c7e6d14.png"
+    ],
+    "x": 87.467,
+    "y": 43.933,
+    "x2": 37.058,
+    "y2": 49.598,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmsr75hxm",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На столе у 301 комнаты западного крыла",
+    "captionEn": "On the table outside room 301 in the west wing",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-0b43d881.png"
+    ],
+    "x": 94.026,
+    "y": 27.482,
+    "x2": 38.968,
+    "y2": 47.807,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsr78cd8",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На 2 этаже барака под аудиосистемой",
+    "captionEn": "On the 2nd floor of the barracks under the audio system",
+    "images": [
+      "assets/screenshots/lighthouse-personal-46b956fe.png"
+    ],
+    "x": 55.876,
+    "y": 47.516,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsr7df3m",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Во времянке под ключом от схрона Usec отступников",
+    "captionEn": "In a temporary building under the key to the cache of Usec renegades",
+    "images": [
+      "assets/screenshots/lighthouse-personal-77115944.png"
+    ],
+    "x": 44.077,
+    "y": 33.814,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsr7eabf",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "Второй этаж третьего ангара",
+    "captionEn": "Second floor of the third hangar",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-863ac1b5.png"
+    ],
+    "x": 64.886,
+    "y": 28.788,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsr7eur7",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В шкафу ангара на нижней полке",
+    "captionEn": "In the hangar closet on the bottom shelf",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-b4a3e21b.png"
+    ],
+    "x": 45.221,
+    "y": 18.377,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsr7gnvf",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Диван на втором этаже Белуги со стороны отеля Pinewood",
+    "captionEn": "A sofa on the second floor of the Beluga, facing the Pinewood Hotel.",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-de79b594.png"
+    ],
+    "x": 65.186,
+    "y": 19.275,
+    "x2": 57.496,
+    "y2": 31.485,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsr7i2n7",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Около мешков на полу рямдом с книжной полкой среди разбросанных книг (нет скрина)",
+    "captionEn": "Near the bags on the floor next to a bookshelf among scattered books (no screenshot)",
+    "images": [
+      "assets/screenshots/streets-finansovaea-6824d87b.png"
+    ],
+    "x": 42.992,
+    "y": 33.4,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsr7nmrn",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Здание ЖК Cardinal, квартира Круглова, в гостиной на столе (нужен ключ от ключ от апартаментов в ЖК Cardinal)",
+    "captionEn": "Cardinal Residential Complex building, Kruglov's apartment, on the table in the living room (you need a key to the apartment in the Cardinal Residential Complex)",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-c36147d7.png"
+    ],
+    "x": 24.847,
+    "y": 32.813,
+    "x2": 44.026,
+    "y2": 33.385,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsr7pijf",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "Стол с компьютером на втором этаже Конкордии в корпусе, расположенном ближе к базе Кабана",
+    "captionEn": "A desk with a computer on the second floor of Concordia in the building located closer to the Kabana base",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-ad367030.png"
+    ],
+    "x": 43.845,
+    "y": 75.217,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsr7r1dv",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Перед входом в уборную с кальяном под стеллажом в офисе IT компании",
+    "captionEn": "In front of the entrance to the restroom with a hookah under the shelf in the office of an IT company",
+    "images": [
+      "assets/screenshots/streets-finansovaea-071cccdf.png"
+    ],
+    "x": 41.459,
+    "y": 52.882,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsr7se97",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На коробке в углу комнаты рядом с алтарем",
+    "captionEn": "On a box in the corner of the room next to the altar",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-4f4d5f22.png"
+    ],
+    "x": 51.58,
+    "y": 66.837,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsr7svmb",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На поддоне в комнате с трупом учёного",
+    "captionEn": "On a pallet in the room with the scientist's corpse",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-9b146cd7.png"
+    ],
+    "x": 62.539,
+    "y": 60.488,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsr7tkvv",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "В комнате с газовым баллоном около трупа учёного",
+    "captionEn": "In the room with the gas cylinder near the scientist's body",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-fcf6f2ca.png"
+    ],
+    "x": 64.956,
+    "y": 61.561,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsr7ultn",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Около трупа подопытного в центральном проходе",
+    "captionEn": "Near the test subject's corpse in the central passage",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-055f65d2.png"
+    ],
+    "x": 66.245,
+    "y": 53.038,
     "x2": null,
     "y2": null,
     "floor": null

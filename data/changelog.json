@@ -1,5 +1,148 @@
 [
   {
+    "id": "2026-08-13-1055",
+    "at": "2026-08-13T10:55",
+    "maps": [
+      {
+        "map": "interchange",
+        "added": [
+          {
+            "id": "interchange-cmsr6x6xn",
+            "caption": "На компьютерном столе островка компании OLI ближе к складским помещениям",
+            "captionEn": "On the computer desk of the OLI island closer to the storage areas"
+          },
+          {
+            "id": "interchange-cmsr702ya",
+            "caption": "Маленькая комната в офисе между IDEA и Goshan",
+            "captionEn": "A small room in the office between IDEA and Goshan"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "interchange-17",
+            "caption": "В офисах между Goshan и IDEA",
+            "captionEn": "Offices between Goshan and IDEA"
+          },
+          {
+            "id": "interchange-48",
+            "caption": "Офис между Goshan и IDEA",
+            "captionEn": "Office between Goshan and IDEA"
+          }
+        ]
+      },
+      {
+        "map": "lighthouse",
+        "added": [
+          {
+            "id": "lighthouse-cmsr78cd8",
+            "caption": "На 2 этаже барака под аудиосистемой",
+            "captionEn": "On the 2nd floor of the barracks under the audio system"
+          },
+          {
+            "id": "lighthouse-cmsr7df3m",
+            "caption": "Во времянке под ключом от схрона Usec отступников",
+            "captionEn": "In a temporary building under the key to the cache of Usec renegades"
+          },
+          {
+            "id": "lighthouse-cmsr7eabf",
+            "caption": "Второй этаж третьего ангара",
+            "captionEn": "Second floor of the third hangar"
+          },
+          {
+            "id": "lighthouse-cmsr7eur7",
+            "caption": "В шкафу ангара на нижней полке",
+            "captionEn": "In the hangar closet on the bottom shelf"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "lighthouse-cmsobgbdw",
+            "caption": "В нижнем яхтклубе, на втором этаже",
+            "captionEn": "In the lower yacht club, on the second floor"
+          }
+        ]
+      },
+      {
+        "map": "shoreline",
+        "added": [
+          {
+            "id": "shoreline-cmsr724x6",
+            "caption": "316 комната западного крыла",
+            "captionEn": "Room 316 of the West Wing"
+          },
+          {
+            "id": "shoreline-cmsr74cde",
+            "caption": "212 комната западного крыла санатория",
+            "captionEn": "Room 212 of the western wing of the sanatorium"
+          },
+          {
+            "id": "shoreline-cmsr75hxm",
+            "caption": "На столе у 301 комнаты западного крыла",
+            "captionEn": "On the table outside room 301 in the west wing"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "streets",
+        "added": [
+          {
+            "id": "streets-cmsr7gnvf",
+            "caption": "Диван на втором этаже Белуги со стороны отеля Pinewood",
+            "captionEn": "A sofa on the second floor of the Beluga, facing the Pinewood Hotel."
+          },
+          {
+            "id": "streets-cmsr7i2n7",
+            "caption": "Около мешков на полу рямдом с книжной полкой среди разбросанных книг (нет скрина)",
+            "captionEn": "Near the bags on the floor next to a bookshelf among scattered books (no screenshot)"
+          },
+          {
+            "id": "streets-cmsr7nmrn",
+            "caption": "Здание ЖК Cardinal, квартира Круглова, в гостиной на столе (нужен ключ от ключ от апартаментов в ЖК Cardinal)",
+            "captionEn": "Cardinal Residential Complex building, Kruglov's apartment, on the table in the living room (you need a key to the apartment in the Cardinal Residential Complex)"
+          },
+          {
+            "id": "streets-cmsr7pijf",
+            "caption": "Стол с компьютером на втором этаже Конкордии в корпусе, расположенном ближе к базе Кабана",
+            "captionEn": "A desk with a computer on the second floor of Concordia in the building located closer to the Kabana base"
+          },
+          {
+            "id": "streets-cmsr7r1dv",
+            "caption": "Перед входом в уборную с кальяном под стеллажом в офисе IT компании",
+            "captionEn": "In front of the entrance to the restroom with a hookah under the shelf in the office of an IT company"
+          }
+        ],
+        "fixed": []
+      },
+      {
+        "map": "labyrinth",
+        "added": [
+          {
+            "id": "labyrinth-cmsr7se97",
+            "caption": "На коробке в углу комнаты рядом с алтарем",
+            "captionEn": "On a box in the corner of the room next to the altar"
+          },
+          {
+            "id": "labyrinth-cmsr7svmb",
+            "caption": "На поддоне в комнате с трупом учёного",
+            "captionEn": "On a pallet in the room with the scientist's corpse"
+          },
+          {
+            "id": "labyrinth-cmsr7tkvv",
+            "caption": "В комнате с газовым баллоном около трупа учёного",
+            "captionEn": "In the room with the gas cylinder near the scientist's body"
+          },
+          {
+            "id": "labyrinth-cmsr7ultn",
+            "caption": "Около трупа подопытного в центральном проходе",
+            "captionEn": "Near the test subject's corpse in the central passage"
+          }
+        ],
+        "fixed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-12-2314",
     "at": "2026-08-12T23:14",
     "maps": [

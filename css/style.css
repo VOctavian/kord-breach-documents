@@ -564,6 +564,9 @@ a:hover { color: #e0cfa4; }
   height: 28px;
   margin: -14px 0 0 -14px;
   border-style: dashed;
+  /* Та же «юбка», что у меток плана, но белая, ровная и чуть шире: схемы этажей
+     светлые, без свечения проекция на них теряется, а мельтешить ей незачем. */
+  box-shadow: 0 0 9px 3px rgba(255, 255, 255, 0.85);
 }
 .marker.alt img { width: 16px; height: 20px; }
 
@@ -617,8 +620,26 @@ a:hover { color: #e0cfa4; }
   line-height: 1;
   transform-origin: center;
   z-index: 7;
+  /* Пульсация: на пёстрой карте иначе теряется среди меток документации. */
+  animation: plan-pulse-red 1.8s ease-out infinite;
 }
-.plan-marker.done { border-color: var(--ok); }
+.plan-marker.done { border-color: var(--ok); animation-name: plan-pulse-green; }
+
+@keyframes plan-pulse-red {
+  0% { box-shadow: 0 0 7px 1px rgba(255, 70, 45, 0.9), 0 0 0 0 rgba(255, 70, 45, 0.7); }
+  70% { box-shadow: 0 0 7px 1px rgba(255, 70, 45, 0.45), 0 0 0 13px rgba(255, 70, 45, 0); }
+  100% { box-shadow: 0 0 7px 1px rgba(255, 70, 45, 0.9), 0 0 0 0 rgba(255, 70, 45, 0); }
+}
+@keyframes plan-pulse-green {
+  0% { box-shadow: 0 0 7px 1px rgba(74, 235, 108, 0.9), 0 0 0 0 rgba(74, 235, 108, 0.7); }
+  70% { box-shadow: 0 0 7px 1px rgba(74, 235, 108, 0.45), 0 0 0 13px rgba(74, 235, 108, 0); }
+  100% { box-shadow: 0 0 7px 1px rgba(74, 235, 108, 0.9), 0 0 0 0 rgba(74, 235, 108, 0); }
+}
+/* Кому мельтешение мешает — остаётся ровное свечение того же цвета. */
+@media (prefers-reduced-motion: reduce) {
+  .plan-marker { animation: none; box-shadow: 0 0 7px 1px rgba(255, 70, 45, 0.9); }
+  .plan-marker.done { box-shadow: 0 0 7px 1px rgba(74, 235, 108, 0.9); }
+}
 
 /* Значок реплики у метки без комментария — по нажатию открывается ввод. */
 .plan-note {
@@ -683,6 +704,9 @@ a:hover { color: #e0cfa4; }
 .plan-line.done { stroke: var(--ok); }
 
 .plan-reset { position: absolute; left: 14px; top: 14px; z-index: 10; }
+/* Без этого `display: inline-flex` от `.btn` перебивает браузерное правило для
+   [hidden] и кнопка висит на карте даже без единой метки плана. */
+.plan-reset[hidden] { display: none; }
 
 .zoom-ctl {
   position: absolute;

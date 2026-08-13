@@ -241,7 +241,12 @@ const surveyTouched = touched.has('data/survey.json');
 const untracked = git(['ls-files', '--others', '--exclude-standard', '--', ...paths])
   .split('\n')
   .filter(Boolean);
-const toAdd = untracked.filter((p) => !p.startsWith('assets/') || referenced.has(p));
+// Оформление сайта живёт в assets/, но на него ссылается разметка, а не данные —
+// правило «в assets/ только то, на что ссылаются точки» его бы отбросило.
+const CHROME = ['assets/favicon/'];
+const toAdd = untracked.filter(
+  (p) => !p.startsWith('assets/') || referenced.has(p) || CHROME.some((dir) => p.startsWith(dir))
+);
 const notAdded = untracked.filter((p) => !toAdd.includes(p));
 
 let was = null;

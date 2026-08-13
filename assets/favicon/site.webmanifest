@@ -1,0 +1,11 @@
+{
+  "name": "Kord Breach — спавны секретных документов",
+  "short_name": "Kord Breach",
+  "icons": [
+    { "src": "android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#14181b",
+  "background_color": "#14181b",
+  "display": "standalone"
+}
