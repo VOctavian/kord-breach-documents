@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-13-1455",
+    "at": "2026-08-13T14:55",
+    "maps": [
+      {
+        "map": "groundzero",
+        "added": [],
+        "fixed": [
+          {
+            "id": "groundzero-cmsqj1a25",
+            "caption": "Tarbank 2 этаж в полке",
+            "captionEn": "Tarbank 2nd floor in the shelf"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-13-1055",
     "at": "2026-08-13T10:55",
     "maps": [
