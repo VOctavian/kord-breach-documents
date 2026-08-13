@@ -4785,5 +4785,39 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "lighthouse-cmss4jtfm",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В нижнем яхтклубе, в комнате на втором этаже, под телевизором",
+    "captionEn": "In the lower yacht club, in a room on the second floor, under the TV",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-25f9c912.png"
+    ],
+    "x": 35.932,
+    "y": 56.183,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmss4kzma",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "на ящике",
+    "captionEn": "on the box",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-a5d7386c.png"
+    ],
+    "x": 34.043,
+    "y": 54.315,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
