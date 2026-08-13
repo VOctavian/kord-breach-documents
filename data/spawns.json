@@ -3733,7 +3733,9 @@
     "docName": "Личные данные ЧВК",
     "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
     "captionEn": "On the second floor of a brick house in the village next to the \"Passage to the Shore\" exit",
-    "images": [],
+    "images": [
+      "assets/screenshots/lighthouse-personal-19f8b4d0.png"
+    ],
     "x": 66.412,
     "y": 52.273,
     "floor": null

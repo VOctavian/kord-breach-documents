@@ -57,6 +57,7 @@ const DICT = {
     en: 'Wheel — zoom · drag — pan · click an icon — screenshot',
   },
   noCaption: { ru: '(без описания)', en: '(no description)' },
+  noShot: { ru: 'Скриншота пока нет', en: 'No screenshot yet' },
   unplacedTitle: { ru: 'Точка ещё не размечена на карте', en: 'This point is not placed on the map yet' },
   placedCounter: { ru: 'точек размечено', en: 'points placed' },
   photoOf: { ru: 'фото {n} из {total}', en: 'photo {n} of {total}' },

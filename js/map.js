@@ -124,11 +124,17 @@ const listBox = document.getElementById('spawn-list');
 function render() {
   visible = placed.filter((s) => !hidden.has(s.doc) && (floor == null || !s.floor || s.floor === floor));
   // Плоский список кадров: у точки может быть несколько скриншотов, стрелки листают их подряд.
-  slides = visible.flatMap((s) => s.images.map((image, i) => ({ spawn: s, image, i, of: s.images.length })));
+  // Точке без единого скриншота всё равно даём кадр — иначе клик по её маркеру
+  // молча ничего не делал бы, хотя описание у неё есть.
+  slides = visible.flatMap((s) =>
+    s.images.length
+      ? s.images.map((image, i) => ({ spawn: s, image, i, of: s.images.length }))
+      : [{ spawn: s, image: null, i: 0, of: 0 }]
+  );
   view.clearMarkers();
   for (const s of visible) {
     view.addMarker(s, docById[s.doc], {
-      onClick: (sp) => open(slides.findIndex((sl) => sl.spawn === sp)),
+      onClick: (sp) => openSpawn(sp),
       alt: showAlt,
     });
   }
@@ -168,8 +174,17 @@ function highlight() {
 const modal = document.getElementById('modal');
 const $ = (id) => document.getElementById(id);
 
+/** Открыть первый кадр точки; ничего не делает, если её кадров нет на карте. */
+function openSpawn(spawn) {
+  const i = slides.findIndex((sl) => sl.spawn === spawn);
+  if (i >= 0) open(i);
+}
+
+// Номер нормализуем по кругу: `step(-1)` с первого кадра должен уводить на
+// последний. Отсутствие кадра отсекают вызывающие — иначе `-1` от `findIndex`
+// молча открывал бы последний кадр вместо ничего.
 function open(i) {
-  if (i < 0 || !slides.length) return;
+  if (!slides.length) return;
   current = (i + slides.length) % slides.length;
   const { spawn: s, image, i: shot, of } = slides[current];
   const doc = docById[s.doc];
@@ -177,7 +192,11 @@ function open(i) {
   $('m-doc').textContent = localized(doc);
   $('m-cap').textContent =
     (localized(s, 'caption') || '—') + (of > 1 ? ` — ${t('photoOf', { n: shot + 1, total: of })}` : '');
-  $('m-shot').src = image;
+  // Пустой src заставил бы браузер тянуть саму страницу и показать битую картинку.
+  $('m-shot').hidden = !image;
+  $('m-noshot').hidden = Boolean(image);
+  if (image) $('m-shot').src = image;
+  else $('m-shot').removeAttribute('src');
   $('m-counter').textContent = `${current + 1} / ${slides.length}`;
   $('m-map').textContent = localized(map);
   $('m-floor').textContent = s.floor ? map.floors?.find((f) => f.id === s.floor)?.name ?? '' : '';

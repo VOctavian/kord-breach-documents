@@ -782,6 +782,10 @@ a:hover { color: #e0cfa4; }
 
 .modal-body { position: relative; background: #0b0e10; display: flex; align-items: center; justify-content: center; min-height: 0; }
 .modal-body img.shot { max-width: 100%; max-height: calc(92vh - 110px); display: block; }
+/* Без этого `display: block` выше перебивает браузерное правило для [hidden]
+   и на месте отсутствующего скриншота остаётся битая картинка. */
+.modal-body img.shot[hidden] { display: none; }
+.no-shot { padding: 60px 30px; color: var(--text-dim); font-size: 14px; text-align: center; }
 
 .nav-btn {
   position: absolute;
