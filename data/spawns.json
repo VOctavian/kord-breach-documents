@@ -1567,8 +1567,8 @@
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
     "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»",
-    "x": 74.706,
-    "y": 45.684,
+    "x": 76.111,
+    "y": 45.848,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-c14316bf.jpg"
@@ -1815,7 +1815,7 @@
     "caption": "Норвинка перед входом",
     "captionEn": "Norvinsk in front of main enter",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-88e6d773.png"
+      "assets/screenshots/shoreline-expluatationnaea-2a5dede9.jpg"
     ],
     "x": 43.227,
     "y": 90.055,
@@ -2522,7 +2522,7 @@
     "caption": "Под антенной",
     "captionEn": "Under Antenna",
     "images": [
-      "assets/screenshots/woods-testovaea-fc671533.png"
+      "assets/screenshots/woods-expluatationnaea-a657c7b7.jpg"
     ],
     "x": 31.08,
     "y": 16.971,
@@ -2537,7 +2537,7 @@
     "caption": "В тумбочке",
     "captionEn": "In the nightstand",
     "images": [
-      "assets/screenshots/factory-proectnaea-6e4e9e57.png"
+      "assets/screenshots/factory-proectnaea-eb10dc10.jpg"
     ],
     "x": 6.046,
     "y": 47.665,
@@ -2554,7 +2554,7 @@
     "caption": "Тумбочка 2 этаж, 2 подъезд",
     "captionEn": "Nightstand 2 floor",
     "images": [
-      "assets/screenshots/reserve-personal-d3d19467.png"
+      "assets/screenshots/reserve-personal-ab809276.jpg"
     ],
     "x": 86.944,
     "y": 88.603,
@@ -2571,7 +2571,7 @@
     "caption": "На полу",
     "captionEn": "On the floor",
     "images": [
-      "assets/screenshots/shoreline-testovaea-4b4e434d.png"
+      "assets/screenshots/shoreline-testovaea-c07693e5.jpg"
     ],
     "x": 54.258,
     "y": 7.548,
@@ -2588,7 +2588,7 @@
     "caption": "на полу бытовки",
     "captionEn": "on the floor of the trailer",
     "images": [
-      "assets/screenshots/shoreline-testovaea-c358146c.png"
+      "assets/screenshots/shoreline-expluatationnaea-ab8ecf60.jpg"
     ],
     "x": 63.194,
     "y": 62.028,
@@ -2603,7 +2603,7 @@
     "caption": "",
     "captionEn": "",
     "images": [
-      "assets/screenshots/factory-proectnaea-c8ebf593.png"
+      "assets/screenshots/factory-tehnicheskaea-c2bfc335.jpg"
     ],
     "x": 43.487,
     "y": 47.784,
@@ -2620,7 +2620,7 @@
     "caption": "Под кроватью",
     "captionEn": "Under the bed",
     "images": [
-      "assets/screenshots/customs-finansovaea-bed16116.png"
+      "assets/screenshots/customs-finansovaea-c8654d9b.jpg"
     ],
     "x": 64.365,
     "y": 94.759,
@@ -2637,7 +2637,7 @@
     "caption": "Сторожка у Таркона",
     "captionEn": "Gatehouse over the Tarcone",
     "images": [
-      "assets/screenshots/customs-finansovaea-aa92d51f.png"
+      "assets/screenshots/customs-proectnaea-0073e73f.jpg"
     ],
     "x": 83.243,
     "y": 16.917,
@@ -2652,7 +2652,7 @@
     "caption": "За паллетами на 2 этаже",
     "captionEn": "Behind the pallets on the 2nd floor",
     "images": [
-      "assets/screenshots/customs-proectnaea-5b8f33d0.png"
+      "assets/screenshots/customs-proectnaea-9788c789.jpg"
     ],
     "x": 22.04,
     "y": 21.734,
@@ -2669,7 +2669,7 @@
     "caption": "В комнате закрытый на ключ-карту «Полихим»",
     "captionEn": "The room is locked with a Polikhim key card.",
     "images": [
-      "assets/screenshots/factory-proectnaea-412ae90f.png"
+      "assets/screenshots/factory-tehnicheskaea-855f7332.jpg"
     ],
     "x": 77.033,
     "y": 76.92,
@@ -2686,7 +2686,7 @@
     "caption": "На полке в подземной станции ARRS (нужен пропуск на объект 14-4 KORD)",
     "captionEn": "On a shelf in the ARRS underground station (requires a pass to facility 14-4 KORD)",
     "images": [
-      "assets/screenshots/interchange-finansovaea-73e61b3d.png"
+      "assets/screenshots/interchange-finansovaea-701ad818.jpg"
     ],
     "x": 43.132,
     "y": 21.707,
@@ -2701,7 +2701,7 @@
     "caption": "В офисах IDEA ",
     "captionEn": "IDEA offices ",
     "images": [
-      "assets/screenshots/interchange-tehnicheskaea-3750fb32.png"
+      "assets/screenshots/interchange-tehnicheskaea-d60c19f1.jpg"
     ],
     "x": 78.385,
     "y": 28.288,
@@ -2716,7 +2716,7 @@
     "caption": "На раковине в уборной",
     "captionEn": "On the sink in the restroom",
     "images": [
-      "assets/screenshots/interchange-finansovaea-a0e125e1.png"
+      "assets/screenshots/interchange-finansovaea-5ce8cdcc.jpg"
     ],
     "x": 79.694,
     "y": 40.421,
@@ -2731,7 +2731,7 @@
     "caption": "На нижней полке",
     "captionEn": "On the bottom shelf",
     "images": [
-      "assets/screenshots/shoreline-testovaea-0fbdc9a5.png"
+      "assets/screenshots/shoreline-testovaea-eb7f6d26.jpg"
     ],
     "x": 63.324,
     "y": 62.123,
@@ -2746,7 +2746,7 @@
     "caption": "В здании метеостанции на втором этаже",
     "captionEn": "In the weather station building on the second floor",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-c5687bfd.png"
+      "assets/screenshots/shoreline-testovaea-5f2aa852.jpg"
     ],
     "x": 53.175,
     "y": 72.143,
@@ -2761,7 +2761,7 @@
     "caption": "На контейнерах перед коттеджем",
     "captionEn": "On containers in front of the cottage",
     "images": [
-      "assets/screenshots/shoreline-testovaea-643068f7.png"
+      "assets/screenshots/shoreline-testovaea-ce306cbe.jpg"
     ],
     "x": 22.067,
     "y": 62.021,
@@ -2776,7 +2776,7 @@
     "caption": "На крыльце коттеджа",
     "captionEn": "On the porch of the cottage",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-1ce1e349.png"
+      "assets/screenshots/shoreline-expluatationnaea-1623501e.jpg"
     ],
     "x": 22.357,
     "y": 63.401,
@@ -2791,7 +2791,7 @@
     "caption": "На заднем сиденье пикапа",
     "captionEn": "In the back seat of a pickup truck",
     "images": [
-      "assets/screenshots/woods-testovaea-9a09d0da.png"
+      "assets/screenshots/woods-testovaea-1e0e430d.jpg"
     ],
     "x": 42.591,
     "y": 62.632,
@@ -2806,7 +2806,7 @@
     "caption": "В домике на картотеках",
     "captionEn": "In the house on the filing cabinets",
     "images": [
-      "assets/screenshots/woods-testovaea-28a87b50.png"
+      "assets/screenshots/woods-testovaea-46464012.jpg"
     ],
     "x": 48.394,
     "y": 69.444,
@@ -2821,7 +2821,7 @@
     "caption": "В разбитом лагере, у остановки БТР «Развилка»",
     "captionEn": "At the set-up camp, near the Razvilka armored personnel carrier stop",
     "images": [
-      "assets/screenshots/woods-expluatationnaea-b36f4162.png"
+      "assets/screenshots/woods-expluatationnaea-5cb2b6e2.jpg"
     ],
     "x": 51.238,
     "y": 31.882,
@@ -2836,7 +2836,7 @@
     "caption": "На стуле в беседке",
     "captionEn": "On a chair in the gazebo",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-14e9b7f3.png"
+      "assets/screenshots/lighthouse-expluatationnaea-20cbaf1c.jpg"
     ],
     "x": 54.343,
     "y": 56.136,
@@ -2851,7 +2851,7 @@
     "caption": "В палатке на теннисном корте",
     "captionEn": "In a tent on the tennis court",
     "images": [
-      "assets/screenshots/lighthouse-personal-c3a5ff0d.png"
+      "assets/screenshots/lighthouse-personal-d55a0ead.jpg"
     ],
     "x": 54.968,
     "y": 69.051,
@@ -2866,7 +2866,7 @@
     "caption": "В белом коне на третьем этаже",
     "captionEn": "In a white horse on the third floor",
     "images": [
-      "assets/screenshots/reserve-proectnaea-af28956c.png"
+      "assets/screenshots/reserve-proectnaea-93ac6136.jpg"
     ],
     "x": 10.088,
     "y": 83.449,
@@ -2883,7 +2883,7 @@
     "caption": "В белом коне на третьем этаже, на полу рядом со шкафом",
     "captionEn": "In the white horse on the third floor, on the floor next to the closet",
     "images": [
-      "assets/screenshots/reserve-personal-bc673543.png"
+      "assets/screenshots/reserve-personal-1c719e65.jpg"
     ],
     "x": 8.514,
     "y": 83.498,
@@ -2900,7 +2900,7 @@
     "caption": "На третьем этаже чёрного коня (комната с компьютерами)",
     "captionEn": "3rd floor of the Black Knight (the room with computers)",
     "images": [
-      "assets/screenshots/reserve-proectnaea-6503cc1b.png"
+      "assets/screenshots/reserve-proectnaea-4dcfc64b.jpg"
     ],
     "x": 8.129,
     "y": 90.636,
@@ -2917,7 +2917,7 @@
     "caption": "На столе в комнате с сейфом",
     "captionEn": "On the table in the room with the safe",
     "images": [
-      "assets/screenshots/reserve-personal-e3d9d77e.png"
+      "assets/screenshots/reserve-personal-d19b906c.jpg"
     ],
     "x": 87.153,
     "y": 39.967,
@@ -2932,7 +2932,7 @@
     "caption": "На подоконнике КПП",
     "captionEn": "On the windowsill of the checkpoint",
     "images": [
-      "assets/screenshots/reserve-personal-898e305e.png"
+      "assets/screenshots/reserve-personal-579ca86b.jpg"
     ],
     "x": 45.864,
     "y": 80.291,
@@ -2947,7 +2947,7 @@
     "caption": "В комнате запертой на «Ключ РБ-РС»",
     "captionEn": "In a room locked with the RB-RS Key",
     "images": [
-      "assets/screenshots/reserve-personal-2ed8e69d.png"
+      "assets/screenshots/reserve-personal-b8f9b6e0.jpg"
     ],
     "x": 69.957,
     "y": 80.045,
@@ -2964,7 +2964,7 @@
     "caption": "2 этаж, хоз. помещение у левых лестниц",
     "captionEn": "2nd floor, utility room near the left stairs",
     "images": [
-      "assets/screenshots/reserve-proectnaea-74d0a0ea.png"
+      "assets/screenshots/reserve-proectnaea-c86a15b9.jpg"
     ],
     "x": 92.334,
     "y": 89.689,
@@ -2981,7 +2981,7 @@
     "caption": "Задний двор ТЦ Климова в пристройке на втором этаже",
     "captionEn": "The backyard of the Klimova shopping center in the extension on the second floor",
     "images": [
-      "assets/screenshots/streets-finansovaea-c474f114.png"
+      "assets/screenshots/streets-finansovaea-732962e6.jpg"
     ],
     "x": 57.802,
     "y": 23.732,
@@ -2996,7 +2996,7 @@
     "caption": "В офисе TerraGroup на столе",
     "captionEn": "On the desk in the TerraGroup office",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-542474fb.png"
+      "assets/screenshots/streets-polzovatelskoe-6d1098f3.jpg"
     ],
     "x": 49.973,
     "y": 29.321,
@@ -3011,7 +3011,7 @@
     "caption": "Здание ЖК Cardinal, на кухне в корпоративной квартире TerraGroup (нужен ключ от корпоративной квартиры TerraGroup)",
     "captionEn": "Cardinal residential complex, in the kitchen of the TerraGroup corporate apartment (requires a key to the TerraGroup corporate apartment)",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-7d961fbc.png"
+      "assets/screenshots/streets-polzovatelskoe-ff9de2ba.jpg"
     ],
     "x": 24.853,
     "y": 33.409,
@@ -3028,7 +3028,7 @@
     "caption": "В ресторане на Примерском проспекте около спуска в подземный переход\n",
     "captionEn": "In a restaurant on Primersky Prospekt near the entrance to the underground passage",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-6562a7a6.png"
+      "assets/screenshots/streets-polzovatelskoe-8e468378.jpg"
     ],
     "x": 51.49,
     "y": 39.108,
@@ -3043,7 +3043,7 @@
     "caption": "Офис IT компании, средний зал, на столе справа от входа в комнату",
     "captionEn": "IT company office, middle hall, on the table to the right of the entrance to the room",
     "images": [
-      "assets/screenshots/streets-finansovaea-5cd14162.png"
+      "assets/screenshots/streets-finansovaea-34452022.jpg"
     ],
     "x": 42.244,
     "y": 51.279,
@@ -3058,7 +3058,7 @@
     "caption": "Второй этаж ресторана Белуга на барной стойке",
     "captionEn": "The second floor of the Beluga restaurant at the bar counter",
     "images": [
-      "assets/screenshots/streets-finansovaea-9a67d1a2.png"
+      "assets/screenshots/streets-finansovaea-e0b139d6.jpg"
     ],
     "x": 65.938,
     "y": 19.023,
@@ -3075,7 +3075,7 @@
     "caption": "На столе в номере 208",
     "captionEn": "On the table in room 208",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-f803fb7a.png"
+      "assets/screenshots/streets-polzovatelskoe-cb0fdd94.jpg"
     ],
     "x": 83.279,
     "y": 45.949,
@@ -3092,7 +3092,7 @@
     "caption": "В комнате 212 на столе с кактусом",
     "captionEn": "In room 212 on the table with a cactus",
     "images": [
-      "assets/screenshots/streets-finansovaea-fd588774.png"
+      "assets/screenshots/streets-finansovaea-cae915f4.jpg"
     ],
     "x": 84.254,
     "y": 47.771,
@@ -3109,7 +3109,7 @@
     "caption": "На стуле рядом со стойкой",
     "captionEn": "On a chair next to the counter",
     "images": [
-      "assets/screenshots/groundzero-polzovatelskoe-f7b64911.png"
+      "assets/screenshots/groundzero-polzovatelskoe-c140ff29.jpg"
     ],
     "x": 68.313,
     "y": 36.804,
@@ -3124,7 +3124,7 @@
     "caption": "В коробках у перевёрнутого контейнера",
     "captionEn": "In boxes near an overturned container",
     "images": [
-      "assets/screenshots/groundzero-meditsinskaea-2fd8890e.png"
+      "assets/screenshots/groundzero-meditsinskaea-a6debc9d.jpg"
     ],
     "x": 87.658,
     "y": 44.469,
@@ -3139,7 +3139,7 @@
     "caption": "На скамейке рядом с шоурумом",
     "captionEn": "On a bench next to the showroom",
     "images": [
-      "assets/screenshots/groundzero-polzovatelskoe-d7331eed.png"
+      "assets/screenshots/groundzero-polzovatelskoe-f74763c7.jpg"
     ],
     "x": 34.822,
     "y": 58.567,
@@ -3154,7 +3154,7 @@
     "caption": "В машине с открытым багажником",
     "captionEn": "In a car with the trunk open",
     "images": [
-      "assets/screenshots/groundzero-meditsinskaea-7fa3d278.png"
+      "assets/screenshots/groundzero-meditsinskaea-ae120b3f.jpg"
     ],
     "x": 27.528,
     "y": 63.541,
@@ -3169,7 +3169,7 @@
     "caption": "На скамейке в аллее",
     "captionEn": "On a bench in the alley",
     "images": [
-      "assets/screenshots/groundzero-meditsinskaea-e20eea42.png"
+      "assets/screenshots/groundzero-meditsinskaea-02a5172c.jpg"
     ],
     "x": 43.035,
     "y": 65.652,
@@ -3184,7 +3184,7 @@
     "caption": "В машинном отделении внутри комнаты с паролем",
     "captionEn": "In the engine room inside the room with the password",
     "images": [
-      "assets/screenshots/icebreaker-personal-e392a6db.png"
+      "assets/screenshots/icebreaker-personal-303a0d6c.jpg"
     ],
     "x": 87.474,
     "y": 26.847,
@@ -3199,7 +3199,7 @@
     "caption": "база контрабандистов первый ангар ",
     "captionEn": "Smugglers' Base, First Hangar",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-b273496c.png"
+      "assets/screenshots/shoreline-testovaea-d64ba900.jpg"
     ],
     "x": 57.709,
     "y": 42.118,
@@ -3214,7 +3214,7 @@
     "caption": " в разбитой тумбе",
     "captionEn": "in a broken nightstand",
     "images": [
-      "assets/screenshots/customs-finansovaea-ffd4f1a4.png"
+      "assets/screenshots/customs-finansovaea-be28c5bb.jpg"
     ],
     "x": 64.245,
     "y": 83.614,
@@ -3231,7 +3231,7 @@
     "caption": "Эта тумба справа",
     "captionEn": "This cabinet is on the right",
     "images": [
-      "assets/screenshots/reserve-personal-85fb376f.png"
+      "assets/screenshots/reserve-personal-99695fb3.jpg"
     ],
     "x": 91.125,
     "y": 71.476,
@@ -3248,7 +3248,7 @@
     "caption": "Заправка (закрытая дальняя дверь)\n",
     "captionEn": "Gas station (closed far door)",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-b99c210b.png"
+      "assets/screenshots/shoreline-expluatationnaea-f6b74224.jpg"
     ],
     "x": 36.763,
     "y": 82.227,
@@ -3263,7 +3263,7 @@
     "caption": "218 восточка",
     "captionEn": "218 EAST",
     "images": [
-      "assets/screenshots/shoreline-testovaea-2077dafd.png"
+      "assets/screenshots/shoreline-testovaea-752e5dc4.jpg"
     ],
     "x": 91.238,
     "y": 85.493,
@@ -3280,7 +3280,7 @@
     "caption": "212 восточка, в шкафу, вход через 211",
     "captionEn": "212 East, in the closet, entrance through 211",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-3ff6f242.png"
+      "assets/screenshots/shoreline-expluatationnaea-31c1686d.jpg"
     ],
     "x": 87.302,
     "y": 88.696,
@@ -3297,7 +3297,7 @@
     "caption": "между книгами на полу",
     "captionEn": "between the books on the floor",
     "images": [
-      "assets/screenshots/factory-proectnaea-24a59ca3.png"
+      "assets/screenshots/factory-proectnaea-5788275d.jpg"
     ],
     "x": 53.445,
     "y": 57.08,
@@ -3312,7 +3312,7 @@
     "caption": "На полу между книг",
     "captionEn": "On the floor between the books",
     "images": [
-      "assets/screenshots/woods-expluatationnaea-0c712a23.png"
+      "assets/screenshots/woods-expluatationnaea-a50b1d9c.jpg"
     ],
     "x": 78.155,
     "y": 41.008,
@@ -3327,7 +3327,7 @@
     "caption": "Кафе на перекрестке, на столике",
     "captionEn": "Cafe at the crossroads, on a table",
     "images": [
-      "assets/screenshots/groundzero-meditsinskaea-22c47610.png"
+      "assets/screenshots/groundzero-meditsinskaea-46fb716b.jpg"
     ],
     "x": 37.932,
     "y": 45.746,
@@ -3342,7 +3342,7 @@
     "caption": "Времянка справа от основного входа в библиотеку",
     "captionEn": "Temporary building to the right of the main entrance to the library",
     "images": [
-      "assets/screenshots/customs-proectnaea-877d717d.png"
+      "assets/screenshots/customs-proectnaea-91f35f98.jpg"
     ],
     "x": 59.114,
     "y": 18,
@@ -3357,7 +3357,7 @@
     "caption": "Комната управления дверями ангара (кнопка)",
     "captionEn": "Hangar door control room (button)",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-7944f9e1.png"
+      "assets/screenshots/lab-polzovatelskoe-fb88462c.jpg"
     ],
     "x": 91.071,
     "y": 32.516,
@@ -3372,7 +3372,7 @@
     "caption": "2й этаж, комната офисов.",
     "captionEn": "2nd floor, office room.",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-82a386b0.png"
+      "assets/screenshots/lab-polzovatelskoe-667cb343.jpg"
     ],
     "x": 69.467,
     "y": 25.736,
@@ -3387,7 +3387,7 @@
     "caption": "2й этаж, комната офисов (центральные столы)",
     "captionEn": "2nd floor, office room (central desks)",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-1e30c7e5.png"
+      "assets/screenshots/lab-polzovatelskoe-5f808d2c.jpg"
     ],
     "x": 70.38,
     "y": 26.944,
@@ -3402,7 +3402,7 @@
     "caption": "Справа от картотек",
     "captionEn": "To the right of the card files",
     "images": [
-      "assets/screenshots/reserve-proectnaea-84dbc398.png"
+      "assets/screenshots/reserve-proectnaea-0d774292.jpg"
     ],
     "x": 46.537,
     "y": 82.131,
@@ -3417,7 +3417,7 @@
     "caption": "2й этаж, комната рядом с \"Синей\"",
     "captionEn": "2nd floor, room next to \"Blue\"",
     "images": [
-      "assets/screenshots/lab-meditsinskaea-81955d09.png"
+      "assets/screenshots/lab-meditsinskaea-0d3ba99d.jpg"
     ],
     "x": 72.265,
     "y": 41.49,
@@ -3432,7 +3432,7 @@
     "caption": "Пироны, средний левый ангар, на тумбочке",
     "captionEn": "Pirons, middle left hangar, on the nightstand",
     "images": [
-      "assets/screenshots/reserve-personal-44a5cdd6.png"
+      "assets/screenshots/reserve-personal-22ef6abb.jpg"
     ],
     "x": 27.343,
     "y": 32.96,
@@ -3447,7 +3447,7 @@
     "caption": "Казарма рядом с меченкой рб-во, дальняя комната слева.",
     "captionEn": "The barracks are next to the RB-VO marker, the far room is on the left.",
     "images": [
-      "assets/screenshots/reserve-personal-556979e6.png"
+      "assets/screenshots/reserve-personal-88929938.jpg"
     ],
     "x": 14.476,
     "y": 16.511,
@@ -3462,7 +3462,7 @@
     "caption": "В ангаре с машиной, необходимой по квесту \"Реагент. Часть 4\"",
     "captionEn": "In the hangar with the vehicle needed for the quest \"Reagent. Part 4\"",
     "images": [
-      "assets/screenshots/customs-finansovaea-c991fc06.png"
+      "assets/screenshots/customs-finansovaea-8236b4bd.jpg"
     ],
     "x": 20.499,
     "y": 41.136,
@@ -3477,7 +3477,7 @@
     "caption": "На скамейке детской площадки внутри ТЦ\n",
     "captionEn": "On a bench at a children's playground inside a shopping center",
     "images": [
-      "assets/screenshots/interchange-finansovaea-335fc068.png"
+      "assets/screenshots/interchange-finansovaea-effe3ae3.jpg"
     ],
     "x": 76.276,
     "y": 36.942,
@@ -3492,7 +3492,7 @@
     "caption": "Комната внутри офиса между IDEA и Goshan\n",
     "captionEn": "A room inside the office between IDEA and Goshan",
     "images": [
-      "assets/screenshots/interchange-finansovaea-59d9b108.png"
+      "assets/screenshots/interchange-finansovaea-3a1ebf99.jpg"
     ],
     "x": 82.1,
     "y": 41.094,
@@ -3507,7 +3507,7 @@
     "caption": "На столе, слева от раскладушек.",
     "captionEn": "On the table, to the left of the folding beds.",
     "images": [
-      "assets/screenshots/interchange-finansovaea-15f4b6ce.png"
+      "assets/screenshots/interchange-finansovaea-650ac800.jpg"
     ],
     "x": 76.9,
     "y": 43.987,
@@ -3522,7 +3522,7 @@
     "caption": "В офисах между Goshan и OLI",
     "captionEn": "In the offices between Goshan and OLI",
     "images": [
-      "assets/screenshots/interchange-tehnicheskaea-72221d9e.png"
+      "assets/screenshots/interchange-tehnicheskaea-d9fc95e9.jpg"
     ],
     "x": 82.605,
     "y": 61.086,
@@ -3537,7 +3537,7 @@
     "caption": "Расположены на столе в центре помещения. Для входа необходим ключ от офиса службы логистики OLI.",
     "captionEn": "Located on a table in the center of the room. A key from the OLI logistics service office is required for entry.\n",
     "images": [
-      "assets/screenshots/interchange-tehnicheskaea-af9e1ad5.png"
+      "assets/screenshots/interchange-tehnicheskaea-448a01b7.jpg"
     ],
     "x": 73.865,
     "y": 67.365,
@@ -3552,7 +3552,7 @@
     "caption": "На компьютерном столе островка компании OLI",
     "captionEn": "Located on the computer desk of the OLI island",
     "images": [
-      "assets/screenshots/interchange-tehnicheskaea-1e0b9bfb.png"
+      "assets/screenshots/interchange-tehnicheskaea-800a3f7e.jpg"
     ],
     "x": 76.516,
     "y": 70.458,
@@ -3567,7 +3567,7 @@
     "caption": "В стелаже времянки по правую сторону от платного выхода",
     "captionEn": "In the temporary shelving unit on the right side of the toll gate",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-861308c9.png"
+      "assets/screenshots/shoreline-expluatationnaea-49bcce99.jpg"
     ],
     "x": 54.189,
     "y": 30.233,
@@ -3582,7 +3582,7 @@
     "caption": "Внутри стола на горящей заправке",
     "captionEn": "Inside a table at a burning gas station",
     "images": [
-      "assets/screenshots/shoreline-testovaea-8e8349c0.png"
+      "assets/screenshots/shoreline-testovaea-fe7106c4.jpg"
     ],
     "x": 36.722,
     "y": 82.414,
@@ -3597,7 +3597,7 @@
     "caption": "Смотровая площадка под санаторием, на лавочке",
     "captionEn": "Observation deck under the sanatorium, on a bench",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-892f4f0b.png"
+      "assets/screenshots/shoreline-expluatationnaea-9b3c4a0e.jpg"
     ],
     "x": 37.886,
     "y": 55.76,
@@ -3612,7 +3612,7 @@
     "caption": "На кровати 211 комнаты западного крыла",
     "captionEn": "On bed in room 211 of the west wing",
     "images": [
-      "assets/screenshots/shoreline-testovaea-66e72405.png"
+      "assets/screenshots/shoreline-testovaea-1e3f8a33.jpg"
     ],
     "x": 88.339,
     "y": 44.213,
@@ -3629,7 +3629,7 @@
     "caption": "На пассажирском месте в сгоревшей машине",
     "captionEn": "In the passenger seat of a burned-out car",
     "images": [
-      "assets/screenshots/woods-expluatationnaea-f3e6d62c.png"
+      "assets/screenshots/woods-expluatationnaea-fa88075c.jpg"
     ],
     "x": 49.844,
     "y": 47.333,
@@ -3644,7 +3644,7 @@
     "caption": "Находятся в складском помещение ангара.",
     "captionEn": "They are located in the hangar storage area.",
     "images": [
-      "assets/screenshots/lighthouse-personal-c1b25445.png"
+      "assets/screenshots/lighthouse-personal-10c8ce92.jpg"
     ],
     "x": 54.707,
     "y": 24.258,
@@ -3659,7 +3659,7 @@
     "caption": "Внутри палатки расположенной на крыше.",
     "captionEn": "Inside the tent located on the roof.",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-b61bb07d.png"
+      "assets/screenshots/lighthouse-expluatationnaea-e49d5010.jpg"
     ],
     "x": 56.537,
     "y": 23.864,
@@ -3674,7 +3674,7 @@
     "caption": "Второй этаж первого ангара, на столе.",
     "captionEn": "Second floor of the first hangar, on the table.",
     "images": [
-      "assets/screenshots/lighthouse-personal-d4862c16.png"
+      "assets/screenshots/lighthouse-personal-672f4a73.jpg"
     ],
     "x": 43.649,
     "y": 29.393,
@@ -3689,7 +3689,7 @@
     "caption": "2 этаж первого ангара, в стелаже справа от стола.",
     "captionEn": "2nd floor of the first hangar, in the rack to the right of the table.",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-a7d25cb2.png"
+      "assets/screenshots/lighthouse-expluatationnaea-2f68557d.jpg"
     ],
     "x": 43.534,
     "y": 29.355,
@@ -3704,7 +3704,7 @@
     "caption": "Барак около магазина, на втором этаже в левой комнате",
     "captionEn": "The barracks are near the store, on the second floor in the left room",
     "images": [
-      "assets/screenshots/lighthouse-personal-955ca54f.png"
+      "assets/screenshots/lighthouse-personal-1fb497bf.jpg"
     ],
     "x": 55.562,
     "y": 48.596,
@@ -3719,7 +3719,7 @@
     "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег», в комнате с красным компьютером",
     "captionEn": "On the second floor of a brick house in the village next to the \"Crossing to the Shore\" exit, in the room with the red computer",
     "images": [
-      "assets/screenshots/lighthouse-personal-7c702e53.png"
+      "assets/screenshots/lighthouse-personal-2994556b.jpg"
     ],
     "x": 65.581,
     "y": 52.167,
@@ -3734,7 +3734,7 @@
     "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
     "captionEn": "On the second floor of a brick house in the village next to the \"Passage to the Shore\" exit",
     "images": [
-      "assets/screenshots/lighthouse-personal-19f8b4d0.png"
+      "assets/screenshots/lighthouse-personal-e292e425.jpg"
     ],
     "x": 66.412,
     "y": 52.273,
@@ -3749,7 +3749,7 @@
     "caption": "В нижнем яхтклубе, на втором этаже",
     "captionEn": "In the lower yacht club, on the second floor",
     "images": [
-      "assets/screenshots/lighthouse-personal-e0bd7c2a.png"
+      "assets/screenshots/lighthouse-personal-4384c499.jpg"
     ],
     "x": 36.168,
     "y": 53.295,
@@ -3764,7 +3764,7 @@
     "caption": "Первый этаж нижнего шале",
     "captionEn": "Ground floor of the lower chalet",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-b4a26e1a.png"
+      "assets/screenshots/lighthouse-expluatationnaea-c92ee3b3.jpg"
     ],
     "x": 56.34,
     "y": 58.444,
@@ -3779,7 +3779,7 @@
     "caption": "Расположены в самой последней комнате второго этажа.",
     "captionEn": "Located in the very last room on the second floor.",
     "images": [
-      "assets/screenshots/lighthouse-personal-f29bbb11.png"
+      "assets/screenshots/lighthouse-personal-6f0f243e.jpg"
     ],
     "x": 59.789,
     "y": 62.163,
@@ -3794,7 +3794,7 @@
     "caption": "В палатке на теннисном корте",
     "captionEn": "In a tent on the tennis court",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-f4aa0f9e.png"
+      "assets/screenshots/lighthouse-expluatationnaea-c4c7499f.jpg"
     ],
     "x": 55.159,
     "y": 69.073,
@@ -3809,7 +3809,7 @@
     "caption": "В спальне на втором этаже верхнего шале",
     "captionEn": "In the bedroom on the second floor of the upper chalet",
     "images": [
-      "assets/screenshots/lighthouse-personal-c4c14509.png"
+      "assets/screenshots/lighthouse-personal-9c58e61d.jpg"
     ],
     "x": 83.48,
     "y": 71.615,
@@ -3826,7 +3826,7 @@
     "caption": "Центральная комната с камином в верхнем шале",
     "captionEn": "Central room with fireplace in the upper chalet",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-c6df0c5e.png"
+      "assets/screenshots/lighthouse-expluatationnaea-a5b6d289.jpg"
     ],
     "x": 59.539,
     "y": 68.167,
@@ -3841,7 +3841,7 @@
     "caption": "Второй этаж дебаркадера, на кровати",
     "captionEn": "Second floor of the landing stage, on the bed",
     "images": [
-      "assets/screenshots/lighthouse-personal-8b710bdf.png"
+      "assets/screenshots/lighthouse-personal-63eeabe1.jpg"
     ],
     "x": 36.237,
     "y": 78.596,
@@ -3856,7 +3856,7 @@
     "caption": "Второй этаж дебаркадера в стелаже",
     "captionEn": "The second floor of the landing stage in the rack",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-67cc9eda.png"
+      "assets/screenshots/lighthouse-expluatationnaea-072200d5.jpg"
     ],
     "x": 36.252,
     "y": 78.879,
@@ -3871,7 +3871,7 @@
     "caption": "Третий этаж короля",
     "captionEn": "The King's Third Floor",
     "images": [
-      "assets/screenshots/reserve-personal-ab210162.png"
+      "assets/screenshots/reserve-proectnaea-c2d9f839.jpg"
     ],
     "x": 23.509,
     "y": 91.877,
@@ -3888,7 +3888,7 @@
     "caption": "Второй этаж белой пешки, в комнате со стороны левого подъезда",
     "captionEn": "The second floor of the white pawn, in the room on the left side of the entrance",
     "images": [
-      "assets/screenshots/reserve-proectnaea-97824cb9.png"
+      "assets/screenshots/reserve-proectnaea-a3f790bc.jpg"
     ],
     "x": 96.398,
     "y": 93.901,
@@ -3905,7 +3905,7 @@
     "caption": "2 этаж, хоз. помещение у левой лестницы\n",
     "captionEn": "2nd floor, utility room near the left staircase",
     "images": [
-      "assets/screenshots/reserve-proectnaea-d32d332f.png"
+      "assets/screenshots/reserve-proectnaea-0736c42e.jpg"
     ],
     "x": 88.53,
     "y": 71.802,
@@ -3922,7 +3922,7 @@
     "caption": "3 этаж чёрного слона в комнате со стороны совместного выхода с Диким",
     "captionEn": "the black bishop 3 floor in the room on the side of the shared exit with the Scav",
     "images": [
-      "assets/screenshots/reserve-proectnaea-002e7517.png"
+      "assets/screenshots/reserve-proectnaea-3061efb5.jpg"
     ],
     "x": 87.863,
     "y": 79.786,
@@ -3939,7 +3939,7 @@
     "caption": "Первый этаж Финансового учреждения. В стелаже. Для открытия комнаты необходим ключ от малого кабинета в финучреждении",
     "captionEn": "First floor of the Financial Institution. In a rack. To open the room, you need a key to the small office in the financial institution.",
     "images": [
-      "assets/screenshots/streets-finansovaea-d7640abf.png"
+      "assets/screenshots/streets-finansovaea-a7ec718e.jpg"
     ],
     "x": 69.828,
     "y": 58.681,
@@ -3954,7 +3954,7 @@
     "caption": "Между красной и синей машиной на скамейке",
     "captionEn": "Between the red and blue cars on the bench",
     "images": [
-      "assets/screenshots/groundzero-meditsinskaea-5df55fb4.png"
+      "assets/screenshots/groundzero-meditsinskaea-2e529221.jpg"
     ],
     "x": 33.054,
     "y": 14.349,
@@ -3969,7 +3969,7 @@
     "caption": "В центре парковки здания TerraGroup, под открытой правой дверью чёрной машины",
     "captionEn": "In the center of the TerraGroup building parking lot, under the open right door of a black car",
     "images": [
-      "assets/screenshots/groundzero-meditsinskaea-27036dd4.png"
+      "assets/screenshots/groundzero-polzovatelskoe-6eb07a6d.jpg"
     ],
     "x": 48.714,
     "y": 18.969,
@@ -3984,7 +3984,7 @@
     "caption": "В синей полке на первом этаже здания TarBank",
     "captionEn": "In the blue shelf on the first floor of the TarBank building",
     "images": [
-      "assets/screenshots/groundzero-polzovatelskoe-586ef926.png"
+      "assets/screenshots/groundzero-polzovatelskoe-12a2a7ed.jpg"
     ],
     "x": 42.251,
     "y": 50.273,
@@ -3999,7 +3999,7 @@
     "caption": "Комната заседаний, на полу среди папок",
     "captionEn": "The meeting room, on the floor among the folders",
     "images": [
-      "assets/screenshots/icebreaker-testovaea-79133b9c.png"
+      "assets/screenshots/icebreaker-testovaea-a43a8b34.jpg"
     ],
     "x": 40.012,
     "y": 44.418,
@@ -4014,7 +4014,7 @@
     "caption": "Левая комната на проходе к вертолётной площадке",
     "captionEn": "Left room on the passage to the helipad",
     "images": [
-      "assets/screenshots/icebreaker-testovaea-8181a47a.png"
+      "assets/screenshots/icebreaker-testovaea-06b1f77f.jpg"
     ],
     "x": 59.894,
     "y": 21.854,
@@ -4029,7 +4029,7 @@
     "caption": "В комнате под вертолётной площадкой",
     "captionEn": "In the room under the helipad",
     "images": [
-      "assets/screenshots/icebreaker-testovaea-ab3366c3.png"
+      "assets/screenshots/icebreaker-testovaea-fa7a554c.jpg"
     ],
     "x": 74.977,
     "y": 10.721,
@@ -4044,7 +4044,7 @@
     "caption": "Стойка рядом с лифтами между бойлерной и казармой",
     "captionEn": "The stand next to the elevators between the boiler room and the barracks",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-f30cfd65.png"
+      "assets/screenshots/lab-polzovatelskoe-c9f8fb4f.jpg"
     ],
     "x": 80.737,
     "y": 5.716,
@@ -4059,7 +4059,7 @@
     "caption": "На столе в офисе управляющего",
     "captionEn": "On the desk in the manager's office",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-5f3a66c0.png"
+      "assets/screenshots/lab-polzovatelskoe-dd586dbf.jpg"
     ],
     "x": 80.817,
     "y": 32.418,
@@ -4074,7 +4074,7 @@
     "caption": "На столе под офисом управляющего рядом с куполом",
     "captionEn": "On the table under the manager's office next to the dome",
     "images": [
-      "assets/screenshots/lab-meditsinskaea-c665fc27.png"
+      "assets/screenshots/lab-meditsinskaea-130fe558.jpg"
     ],
     "x": 43.552,
     "y": 67.032,
@@ -4089,7 +4089,7 @@
     "caption": "Кафетерия в серверной на втором этаже",
     "captionEn": "Cafeteria in the server room on the second floor",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-f80fcd07.png"
+      "assets/screenshots/lab-polzovatelskoe-84f396d4.jpg"
     ],
     "x": 91.318,
     "y": 42.805,
@@ -4104,7 +4104,7 @@
     "caption": "2 этаж в открытых палатах",
     "captionEn": "2nd floor in open wards",
     "images": [
-      "assets/screenshots/lab-meditsinskaea-5af7b564.png"
+      "assets/screenshots/lab-meditsinskaea-3f721af1.jpg"
     ],
     "x": 72.802,
     "y": 41.627,
@@ -4119,7 +4119,7 @@
     "caption": "В офисе на втором этаже",
     "captionEn": "In the office on the second floor",
     "images": [
-      "assets/screenshots/lab-polzovatelskoe-b85675b2.png"
+      "assets/screenshots/lab-polzovatelskoe-f715519e.jpg"
     ],
     "x": 69.007,
     "y": 39.06,
@@ -4134,7 +4134,7 @@
     "caption": "На стене рядом с мченой комнатой",
     "captionEn": "On the wall next to the rush room",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-75d2b461.png"
+      "assets/screenshots/labyrinth-meditsinskaea-b692b3a9.jpg"
     ],
     "x": 29.752,
     "y": 59.879,
@@ -4149,7 +4149,7 @@
     "caption": "Комната наблюдения",
     "captionEn": "Observation room",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-e982a6b8.png"
+      "assets/screenshots/labyrinth-meditsinskaea-607d37fe.jpg"
     ],
     "x": 40.863,
     "y": 62.217,
@@ -4164,7 +4164,7 @@
     "caption": "На трупе медработника (рядом с комнатой наблюдения)",
     "captionEn": "On the body of a medical worker (near the observation room)",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-89f29890.png"
+      "assets/screenshots/labyrinth-meditsinskaea-83ee63ef.jpg"
     ],
     "x": 45.863,
     "y": 67.134,
@@ -4179,7 +4179,7 @@
     "caption": "На окровавленных бочках в помещении напротив комнаты наблюдения",
     "captionEn": "On the bloody barrels in the room opposite the observation room",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-ef11ef52.png"
+      "assets/screenshots/labyrinth-meditsinskaea-32f57754.jpg"
     ],
     "x": 53.252,
     "y": 64.196,
@@ -4194,7 +4194,7 @@
     "caption": "В центральном проходе рядом с трупом учёного",
     "captionEn": "In the central passage next to the scientist's corpse",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-91620217.png"
+      "assets/screenshots/labyrinth-meditsinskaea-dcb79d8e.jpg"
     ],
     "x": 53.252,
     "y": 55.621,
@@ -4209,7 +4209,7 @@
     "caption": "На коробке в центральной комнате с Изделием 1156",
     "captionEn": "On the box in the central room with Item 1156",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-471763a2.png"
+      "assets/screenshots/labyrinth-meditsinskaea-60a68a20.jpg"
     ],
     "x": 62.975,
     "y": 46.327,
@@ -4224,7 +4224,7 @@
     "caption": "Около трупа учёного в комнате с Изделием 1156\n",
     "captionEn": "Near the scientist's corpse in the room with Item 1156",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-2ebc9e66.png"
+      "assets/screenshots/labyrinth-meditsinskaea-74ff4725.jpg"
     ],
     "x": 63.03,
     "y": 48.486,
@@ -4239,7 +4239,7 @@
     "caption": "На трупе рядом с изделием",
     "captionEn": "On the corpse next to the product",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-a27e1cd7.png"
+      "assets/screenshots/labyrinth-meditsinskaea-4d69c74a.jpg"
     ],
     "x": 66.197,
     "y": 38.832,
@@ -4254,7 +4254,7 @@
     "caption": "На пакете с трупом рядом со спавном с токсичным бассейном",
     "captionEn": "On a package with a corpse next to the toxic pool spawn",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-bcb5d711.png"
+      "assets/screenshots/labyrinth-meditsinskaea-cb0dd29b.jpg"
     ],
     "x": 70.419,
     "y": 32.056,
@@ -4269,7 +4269,7 @@
     "caption": "Под железными решетками меченой комнаты\n",
     "captionEn": "Under the iron bars of the marked room",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-0ef45eb9.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-3f765017.jpg"
     ],
     "x": 29.54,
     "y": 61.282,
@@ -4284,7 +4284,7 @@
     "caption": "В комнате наблюдения",
     "captionEn": "In the observation room",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-8394e314.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-ef890f8f.jpg"
     ],
     "x": 40.114,
     "y": 61.128,
@@ -4299,7 +4299,7 @@
     "caption": "Рядом с выходом «Путь Ариадны»",
     "captionEn": "Near the exit \"Ariadne's Path\"",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-a7eef58d.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-4f8e564e.jpg"
     ],
     "x": 40.458,
     "y": 67.746,
@@ -4314,7 +4314,7 @@
     "caption": "В руках у трупа подопытного в центральной комнате с Изделием 1156",
     "captionEn": "In the hands of the test subject's corpse in the central room with Item 1156",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-fcf7f9d8.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-8e70be40.jpg"
     ],
     "x": 56.476,
     "y": 47.179,
@@ -4329,7 +4329,7 @@
     "caption": "На маленькой коробке в центральной комнате с Изделием 1156",
     "captionEn": "On a small box in the central room with Item 1156",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-e7e89732.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-e47a765b.jpg"
     ],
     "x": 61.004,
     "y": 43.561,
@@ -4344,7 +4344,7 @@
     "caption": "На коробке в центральной комнате рядом с белой доской",
     "captionEn": "On a box in the central room next to the whiteboard",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-f00070f8.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-870c4a6a.jpg"
     ],
     "x": 67.079,
     "y": 46.128,
@@ -4359,7 +4359,7 @@
     "caption": "На паллете",
     "captionEn": "On a pallet",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-e48cd5ee.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-e403b01a.jpg"
     ],
     "x": 66.763,
     "y": 28.932,
@@ -4374,7 +4374,7 @@
     "caption": "В коробках рядом с выходом у дробовиков",
     "captionEn": "In the boxes next to the exit near the shotguns",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-267e8b8a.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-c696d22e.jpg"
     ],
     "x": 79.487,
     "y": 41.984,
@@ -4389,7 +4389,7 @@
     "caption": "На столе",
     "captionEn": "On the table",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-86329f08.png"
+      "assets/screenshots/streets-polzovatelskoe-80003a54.jpg"
     ],
     "x": 41.316,
     "y": 52.634,
@@ -4404,7 +4404,7 @@
     "caption": "На тумбе",
     "captionEn": "On the stand",
     "images": [
-      "assets/screenshots/icebreaker-personal-8f430366.png"
+      "assets/screenshots/icebreaker-personal-8e775195.jpg"
     ],
     "x": 67.616,
     "y": 55.345,
@@ -4421,7 +4421,7 @@
     "caption": "вот тут не помню точно где\nлибо полка\nлибо на компе слево. by \"Valentino\"",
     "captionEn": "I don't remember exactly where it is, either on the shelf or on the left side of the computer. by \"Valentino\"",
     "images": [
-      "assets/screenshots/icebreaker-testovaea-99078866.png"
+      "assets/screenshots/icebreaker-personal-cb79fcf9.jpg"
     ],
     "x": 74.676,
     "y": 45.674,
@@ -4438,7 +4438,7 @@
     "caption": "в приоткрытом ящике тумбочки справа от зеленой кровати",
     "captionEn": "in the half-open drawer of the nightstand to the right of the green bed",
     "images": [
-      "assets/screenshots/shoreline-testovaea-f767e670.png"
+      "assets/screenshots/shoreline-testovaea-79170055.jpg"
     ],
     "x": 96.903,
     "y": 76.239,
@@ -4455,7 +4455,7 @@
     "caption": "Tarbank 2 этаж в полке",
     "captionEn": "Tarbank 2nd floor in the shelf",
     "images": [
-      "assets/screenshots/groundzero-polzovatelskoe-bb19e270.png"
+      "assets/screenshots/groundzero-polzovatelskoe-ce20ddb0.jpg"
     ],
     "x": 52.022,
     "y": 56.683,
@@ -4472,7 +4472,7 @@
     "caption": "В офисе за белугой",
     "captionEn": "In the office for beluga",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-87beff0e.png"
+      "assets/screenshots/streets-polzovatelskoe-8bb181d1.jpg"
     ],
     "x": 58.276,
     "y": 23.853,
@@ -4489,7 +4489,7 @@
     "caption": "На компьютерном столе островка компании OLI ближе к складским помещениям",
     "captionEn": "On the computer desk of the OLI island closer to the storage areas",
     "images": [
-      "assets/screenshots/interchange-finansovaea-6d24a51e.png"
+      "assets/screenshots/interchange-tehnicheskaea-b2eacc95.jpg"
     ],
     "x": 81.08,
     "y": 68.509,
@@ -4506,7 +4506,7 @@
     "caption": "Маленькая комната в офисе между IDEA и Goshan",
     "captionEn": "A small room in the office between IDEA and Goshan",
     "images": [
-      "assets/screenshots/interchange-finansovaea-f83a1f34.png"
+      "assets/screenshots/interchange-tehnicheskaea-4a75e76b.jpg"
     ],
     "x": 82.209,
     "y": 41.184,
@@ -4523,7 +4523,7 @@
     "caption": "316 комната западного крыла",
     "captionEn": "Room 316 of the West Wing",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-8e979dab.png"
+      "assets/screenshots/shoreline-expluatationnaea-a59f1aaa.jpg"
     ],
     "x": 83.183,
     "y": 35.286,
@@ -4540,7 +4540,7 @@
     "caption": "212 комната западного крыла санатория",
     "captionEn": "Room 212 of the western wing of the sanatorium",
     "images": [
-      "assets/screenshots/shoreline-expluatationnaea-9c7e6d14.png"
+      "assets/screenshots/shoreline-expluatationnaea-2ceb4ce8.jpg"
     ],
     "x": 87.467,
     "y": 43.933,
@@ -4557,7 +4557,7 @@
     "caption": "На столе у 301 комнаты западного крыла",
     "captionEn": "On the table outside room 301 in the west wing",
     "images": [
-      "assets/screenshots/shoreline-testovaea-0b43d881.png"
+      "assets/screenshots/shoreline-testovaea-499e8922.jpg"
     ],
     "x": 94.026,
     "y": 27.482,
@@ -4574,7 +4574,7 @@
     "caption": "На 2 этаже барака под аудиосистемой",
     "captionEn": "On the 2nd floor of the barracks under the audio system",
     "images": [
-      "assets/screenshots/lighthouse-personal-46b956fe.png"
+      "assets/screenshots/lighthouse-personal-039360cb.jpg"
     ],
     "x": 55.876,
     "y": 47.516,
@@ -4591,7 +4591,7 @@
     "caption": "Во времянке под ключом от схрона Usec отступников",
     "captionEn": "In a temporary building under the key to the cache of Usec renegades",
     "images": [
-      "assets/screenshots/lighthouse-personal-77115944.png"
+      "assets/screenshots/lighthouse-personal-c6f72b72.jpg"
     ],
     "x": 44.077,
     "y": 33.814,
@@ -4608,7 +4608,7 @@
     "caption": "Второй этаж третьего ангара",
     "captionEn": "Second floor of the third hangar",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-863ac1b5.png"
+      "assets/screenshots/lighthouse-expluatationnaea-282efd06.jpg"
     ],
     "x": 64.886,
     "y": 28.788,
@@ -4625,7 +4625,7 @@
     "caption": "В шкафу ангара на нижней полке",
     "captionEn": "In the hangar closet on the bottom shelf",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-b4a3e21b.png"
+      "assets/screenshots/lighthouse-expluatationnaea-68aeedaf.jpg"
     ],
     "x": 45.221,
     "y": 18.377,
@@ -4642,7 +4642,7 @@
     "caption": "Диван на втором этаже Белуги со стороны отеля Pinewood",
     "captionEn": "A sofa on the second floor of the Beluga, facing the Pinewood Hotel.",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-de79b594.png"
+      "assets/screenshots/streets-polzovatelskoe-33a453a1.jpg"
     ],
     "x": 65.186,
     "y": 19.275,
@@ -4659,7 +4659,7 @@
     "caption": "Около мешков на полу рямдом с книжной полкой среди разбросанных книг (нет скрина)",
     "captionEn": "Near the bags on the floor next to a bookshelf among scattered books (no screenshot)",
     "images": [
-      "assets/screenshots/streets-finansovaea-1742e136.png"
+      "assets/screenshots/streets-finansovaea-c6ceb671.jpg"
     ],
     "x": 42.992,
     "y": 33.4,
@@ -4676,7 +4676,7 @@
     "caption": "Здание ЖК Cardinal, квартира Круглова, в гостиной на столе (нужен ключ от ключ от апартаментов в ЖК Cardinal)",
     "captionEn": "Cardinal Residential Complex building, Kruglov's apartment, on the table in the living room (you need a key to the apartment in the Cardinal Residential Complex)",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-c36147d7.png"
+      "assets/screenshots/streets-polzovatelskoe-89b2e785.jpg"
     ],
     "x": 24.847,
     "y": 32.813,
@@ -4693,7 +4693,7 @@
     "caption": "Стол с компьютером на втором этаже Конкордии в корпусе, расположенном ближе к базе Кабана",
     "captionEn": "A desk with a computer on the second floor of Concordia in the building located closer to the Kabana base",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-ad367030.png"
+      "assets/screenshots/streets-polzovatelskoe-cdf94682.jpg"
     ],
     "x": 43.845,
     "y": 75.217,
@@ -4710,7 +4710,7 @@
     "caption": "Перед входом в уборную с кальяном под стеллажом в офисе IT компании",
     "captionEn": "In front of the entrance to the restroom with a hookah under the shelf in the office of an IT company",
     "images": [
-      "assets/screenshots/streets-finansovaea-071cccdf.png"
+      "assets/screenshots/streets-finansovaea-08db5e93.jpg"
     ],
     "x": 41.459,
     "y": 52.882,
@@ -4727,7 +4727,7 @@
     "caption": "На коробке в углу комнаты рядом с алтарем",
     "captionEn": "On a box in the corner of the room next to the altar",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-4f4d5f22.png"
+      "assets/screenshots/labyrinth-meditsinskaea-eac4fe11.jpg"
     ],
     "x": 51.58,
     "y": 66.837,
@@ -4744,7 +4744,7 @@
     "caption": "На поддоне в комнате с трупом учёного",
     "captionEn": "On a pallet in the room with the scientist's corpse",
     "images": [
-      "assets/screenshots/labyrinth-tehnicheskaea-9b146cd7.png"
+      "assets/screenshots/labyrinth-tehnicheskaea-d6a59756.jpg"
     ],
     "x": 62.539,
     "y": 60.488,
@@ -4761,7 +4761,7 @@
     "caption": "В комнате с газовым баллоном около трупа учёного",
     "captionEn": "In the room with the gas cylinder near the scientist's body",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-fcf6f2ca.png"
+      "assets/screenshots/labyrinth-meditsinskaea-ff7eabec.jpg"
     ],
     "x": 64.956,
     "y": 61.561,
@@ -4778,7 +4778,7 @@
     "caption": "Около трупа подопытного в центральном проходе",
     "captionEn": "Near the test subject's corpse in the central passage",
     "images": [
-      "assets/screenshots/labyrinth-meditsinskaea-055f65d2.png"
+      "assets/screenshots/labyrinth-meditsinskaea-3fdc1662.jpg"
     ],
     "x": 66.245,
     "y": 53.038,
@@ -4795,7 +4795,7 @@
     "caption": "В нижнем яхтклубе, в комнате на втором этаже, под телевизором",
     "captionEn": "In the lower yacht club, in a room on the second floor, under the TV",
     "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-25f9c912.png"
+      "assets/screenshots/lighthouse-expluatationnaea-24fe69f8.jpg"
     ],
     "x": 36.557,
     "y": 53.252,
@@ -4812,7 +4812,7 @@
     "caption": "на ящике",
     "captionEn": "on the box",
     "images": [
-      "assets/screenshots/shoreline-testovaea-a5d7386c.png"
+      "assets/screenshots/shoreline-testovaea-03818169.jpg"
     ],
     "x": 34.043,
     "y": 54.315,

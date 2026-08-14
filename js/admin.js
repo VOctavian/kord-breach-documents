@@ -34,6 +34,7 @@ function render() {
 }
 
 function renderMessage(title, text) {
+  $('nav').hidden = true;
   root.replaceChildren(el('div', { class: 'sv-card' }, el('h2', {}, title), el('p', { class: 'pop-intro' }, text)));
 }
 
@@ -46,36 +47,60 @@ function setStatus(text, cls = '') {
 
 /* ---------- каркас ---------- */
 
-const TABS = [
-  { id: 'results', label: 'Ответы', build: buildResults },
-  { id: 'active', label: 'Активные опросы', build: buildActive },
-  { id: 'roles', label: 'Роли', build: buildRoles },
+// Разделы слева. Дальше сюда добавятся спавны и настройки сайта, поэтому меню —
+// список данных, а не разметка.
+const SECTIONS = [
+  {
+    group: 'Пользователи',
+    items: [{ id: 'roles', label: 'Роли', build: buildRoles }],
+  },
+  {
+    group: 'Опросы',
+    items: [
+      { id: 'active', label: 'Активные', build: buildActive },
+      { id: 'results', label: 'Ответы', build: buildResults },
+    ],
+  },
 ];
 
+const ALL = SECTIONS.flatMap((s) => s.items);
+
 function renderPanel() {
+  const nav = $('nav');
   const pane = el('section');
-  const tabs = el(
-    'div',
-    { class: 'sv-tabs' },
-    TABS.map((tab, i) =>
+  nav.hidden = false;
+
+  const open = (item) => {
+    location.hash = item.id;
+    nav.querySelectorAll('.admin-nav-item').forEach((b) => b.classList.toggle('active', b.dataset.id === item.id));
+    pane.replaceChildren();
+    item.build(pane);
+  };
+
+  nav.replaceChildren(
+    ...SECTIONS.map((section) =>
       el(
-        'button',
-        {
-          class: 'sv-tab' + (i === 0 ? ' active' : ''),
-          type: 'button',
-          onclick: (e) => {
-            tabs.querySelectorAll('.sv-tab').forEach((b) => b.classList.remove('active'));
-            e.currentTarget.classList.add('active');
-            pane.replaceChildren();
-            tab.build(pane);
-          },
-        },
-        tab.label
+        'div',
+        { class: 'group' },
+        el('h3', {}, section.group),
+        el(
+          'div',
+          { class: 'admin-nav' },
+          section.items.map((item) =>
+            el(
+              'button',
+              { class: 'admin-nav-item', type: 'button', 'data-id': item.id, onclick: () => open(item) },
+              item.label
+            )
+          )
+        )
       )
     )
   );
-  root.replaceChildren(tabs, pane);
-  TABS[0].build(pane);
+
+  root.replaceChildren(pane);
+  // Раздел в адресе, чтобы перезагрузка возвращала туда же.
+  open(ALL.find((i) => i.id === location.hash.slice(1)) ?? ALL[0]);
 }
 
 /* ---------- вкладка «Ответы» ---------- */

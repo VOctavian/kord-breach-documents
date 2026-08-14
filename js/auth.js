@@ -258,8 +258,11 @@ export function mountAuth(slot) {
   document.body.append(pop);
   const box = pop.querySelector('.pop-box');
 
+  // Отдельная кнопка в шапке: админ ходит в панель часто, прятать её в попап
+  // аккаунта неудобно. Гостю и обычному пользователю она не показывается.
+  const adminLink = el('a', { class: 'btn auth-admin-link', href: 'admin.html', hidden: '' }, t('authAdminPanel'));
   const button = el('button', { class: 'btn auth-btn', type: 'button', onclick: open });
-  slot.append(button);
+  slot.append(adminLink, button);
 
   function open() {
     render();
@@ -336,6 +339,7 @@ export function mountAuth(slot) {
 
   function paint() {
     const me = profile();
+    adminLink.hidden = !hasRole('admin');
     button.replaceChildren();
     button.title = me ? me.email : t('authSignInTitle');
     if (me) {

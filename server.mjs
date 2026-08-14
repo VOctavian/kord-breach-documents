@@ -11,7 +11,10 @@ import { SUPABASE_URL } from './js/config.js';
 const ROOT = fileURLToPath(new URL('.', import.meta.url));
 const PORT = Number(process.env.PORT) || 5173;
 const MAX_UPLOAD = 12 * 1024 * 1024;
-const UPLOAD_EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+// Только JPEG: браузер перекодирует картинку перед отправкой (js/to-jpeg.js).
+// Формат ограничен здесь же, чтобы в assets/ снова не завелись мегабайтные PNG,
+// если где-то забудут вызвать toJpeg().
+const UPLOAD_EXT = { 'image/jpeg': 'jpg' };
 
 /**
  * service_role ключ Supabase — им читаются ответы опроса, потому что anon-ключу
@@ -119,7 +122,7 @@ createServer(async (req, res) => {
   if (req.method === 'POST' && url.pathname === '/api/upload') {
     try {
       const ext = UPLOAD_EXT[(req.headers['content-type'] ?? '').split(';')[0].trim()];
-      if (!ext) throw new Error('поддерживаются только jpeg, png и webp');
+      if (!ext) throw new Error('принимается только image/jpeg — картинку перекодирует toJpeg() в браузере');
       // Каталог только из списка: имя приходит из браузера, гулять по диску им нельзя.
       const dir = { screenshots: 'assets/screenshots', survey: 'assets/survey' }[url.searchParams.get('dir') ?? 'screenshots'];
       if (!dir) throw new Error('неизвестный каталог загрузки');

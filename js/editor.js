@@ -1,5 +1,6 @@
 // Редактор (только локально): расстановка точек, правка описаний и скриншотов.
 import { loadData, el, MapView } from './common.js';
+import { toJpeg } from './to-jpeg.js';
 
 const data = await loadData();
 const { maps, docs, docById, spawns } = data;
@@ -288,10 +289,11 @@ $('shot-input').addEventListener('change', async () => {
   setStatus('загружаю…');
   try {
     for (const file of files) {
+      const jpeg = await toJpeg(file);
       const res = await fetch(`/api/upload?map=${s.map}&doc=${s.doc}&name=${encodeURIComponent(file.name)}`, {
         method: 'POST',
-        headers: { 'content-type': file.type || 'application/octet-stream' },
-        body: file,
+        headers: { 'content-type': 'image/jpeg' },
+        body: jpeg,
       });
       if (!res.ok) throw new Error(await res.text());
       const { path } = await res.json();

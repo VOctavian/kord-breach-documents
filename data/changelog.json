@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-14-1620",
+    "at": "2026-08-14T16:20",
+    "maps": [
+      {
+        "map": "lighthouse",
+        "added": [],
+        "fixed": [
+          {
+            "id": "lighthouse-cmss4jtfm",
+            "caption": "В нижнем яхтклубе, в комнате на втором этаже, под телевизором",
+            "captionEn": "In the lower yacht club, in a room on the second floor, under the TV"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-14-1522",
     "at": "2026-08-14T15:22",
     "maps": [

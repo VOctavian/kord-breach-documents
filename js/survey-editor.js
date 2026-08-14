@@ -2,6 +2,7 @@
 // просмотр ответов. Ответы читает сервер по service_role ключу — anon-ключу
 // доступ на чтение закрыт политикой, и это правильно.
 import { el } from './common.js';
+import { toJpeg } from './to-jpeg.js';
 
 const $ = (id) => document.getElementById(id);
 
@@ -190,8 +191,8 @@ function galleryBlock(owner) {
       try {
         const res = await fetch(`/api/upload?dir=survey&map=survey&doc=img`, {
           method: 'POST',
-          headers: { 'content-type': f.type },
-          body: f,
+          headers: { 'content-type': 'image/jpeg' },
+          body: await toJpeg(f),
         });
         if (!res.ok) throw new Error(await res.text());
         const { path } = await res.json();
