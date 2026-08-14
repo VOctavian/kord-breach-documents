@@ -141,6 +141,8 @@ createServer(async (req, res) => {
       res.writeHead(200, { 'content-type': 'application/json' })
         .end(JSON.stringify({ path: `${dir}/${name}` }));
       console.log(`загружен скриншот: ${name} (${(buf.length / 1024).toFixed(0)} КБ)`);
+      // Редактор жмёт картинки в JPEG сам; всё остальное приехало мимо него и весит лишнее.
+      if (ext !== 'jpg') console.warn(`  внимание: ${ext} вместо jpeg — файл тяжелее, чем нужно`);
     } catch (e) {
       res.writeHead(400, { 'content-type': 'text/plain; charset=utf-8' }).end(String(e.message ?? e));
     }

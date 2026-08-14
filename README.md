@@ -47,6 +47,9 @@ Run `node server.mjs` and open `editor.html`.
 - **Screenshots** — "+ Скриншот" uploads files (jpeg/png/webp, up to 12 MB) into
   `assets/screenshots/`; "Убрать фото" drops the current frame from the point
   (the file stays on disk). With more than one frame, thumbnails appear below.
+  Before uploading, the browser downscales the frame to 1920 px wide and re-encodes
+  it as JPEG at quality 85 — ~130 KB lands in the repository instead of the 1–3 MB
+  a PNG would take. A JPEG that is already narrow enough is passed through untouched.
 - **New spawn** — "+ Новый спавн" creates an empty point with no coordinates:
   fill in the description, add a screenshot, then place it from the right-click
   menu.
@@ -296,6 +299,7 @@ Extra events are sent by `js/analytics.js`:
 | `scripts/merge-spawns.mjs` | merges several screenshots into one point (list in `MERGES`) |
 | `scripts/add-en-captions.mjs`, `add-en-captions-2.mjs` | fill in English descriptions |
 | `scripts/stage-screenshots.mjs` | stages only the screenshots actually referenced by `data/spawns.json` |
+| `scripts/normalize-screenshots.mjs` | one-off: re-encodes any leftover PNG screenshots to JPEG ≤1920 px and rewrites the paths; needs `npm i --no-save sharp` |
 | `scripts/publish.mjs` | validate → commit → push → wait for the deploy |
 
 `download-screenshots.mjs` overwrites `data/spawns.json` with empty coordinates —
