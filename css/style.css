@@ -906,9 +906,16 @@ a:hover { color: #e0cfa4; }
 /* ---------- вход и аккаунт ---------- */
 
 .auth-btn { display: inline-flex; align-items: center; gap: 7px; max-width: 190px; }
+
+.admin-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
 /* .btn задаёт display: inline-flex и перебивает браузерное правило для [hidden],
-   поэтому ссылка на админку без этой строки видна всем. */
-.auth-admin-link[hidden] { display: none; }
+   поэтому кнопка админки без этой строки видна всем. */
+.admin-link[hidden] { display: none; }
 .auth-btn.is-admin { border-color: var(--accent); }
 .auth-btn-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 

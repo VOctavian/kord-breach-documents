@@ -16,7 +16,6 @@ const DICT = {
 
   backToMaps: { ru: '← Локации', en: '← Locations' },
   editorLink: { ru: 'Редактор точек', en: 'Point editor' },
-  surveyEditorLink: { ru: 'Редактор опросов', en: 'Survey editor' },
   editorShort: { ru: 'Редактор', en: 'Editor' },
   fitLabel: { ru: 'Вписать', en: 'Fit' },
   docTypeHeader: { ru: 'Тип документации', en: 'Document type' },
@@ -136,7 +135,7 @@ const DICT = {
   authSignOut: { ru: 'Выйти', en: 'Sign out' },
   authRoleAdmin: { ru: 'Админ', en: 'Admin' },
   authRoleSubscriber: { ru: 'Подписчик', en: 'Subscriber' },
-  authAdminPanel: { ru: 'Админка опросов', en: 'Survey admin' },
+  authAdminPanel: { ru: 'Админ панель', en: 'Admin Panel' },
   authError: { ru: 'Не удалось войти', en: 'Sign-in failed' },
   authUnavailable: {
     ru: 'Вход сейчас недоступен — сервис авторизации не отвечает. Остальное на сайте работает.',

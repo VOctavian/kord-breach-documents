@@ -8,6 +8,7 @@
 import { el } from './common.js';
 import { ready, session, profile, hasRole, authFetch, mountAuth, onAuthChange } from './auth.js';
 import { answerCard, resultsCsv, downloadCsv } from './survey-results.js';
+import { isLocal } from './widgets.js';
 
 const $ = (id) => document.getElementById(id);
 const root = $('root');
@@ -21,10 +22,6 @@ try {
   // Определения опросов лежат в git; без них работает только вкладка ролей.
 }
 const surveyById = new Map((file.surveys ?? []).map((s) => [s.id, s]));
-
-await ready();
-render();
-onAuthChange(render);
 
 function render() {
   if (!session()) return renderMessage('Нужно войти', 'Админка доступна после входа — кнопка справа вверху.');
@@ -47,23 +44,12 @@ function setStatus(text, cls = '') {
 
 /* ---------- каркас ---------- */
 
-// Разделы слева. Дальше сюда добавятся спавны и настройки сайта, поэтому меню —
-// список данных, а не разметка.
+// Разделы слева — список данных, а не разметка: дальше сюда добавятся спавны и
+// настройки сайта.
 const SECTIONS = [
-  {
-    group: 'Пользователи',
-    items: [{ id: 'roles', label: 'Роли', build: buildRoles }],
-  },
-  {
-    group: 'Опросы',
-    items: [
-      { id: 'active', label: 'Активные', build: buildActive },
-      { id: 'results', label: 'Ответы', build: buildResults },
-    ],
-  },
+  { id: 'users', label: 'Юзеры', build: buildUsers },
+  { id: 'surveys', label: 'Опросы', build: buildSurveys },
 ];
-
-const ALL = SECTIONS.flatMap((s) => s.items);
 
 function renderPanel() {
   const nav = $('nav');
@@ -78,20 +64,17 @@ function renderPanel() {
   };
 
   nav.replaceChildren(
-    ...SECTIONS.map((section) =>
+    el(
+      'div',
+      { class: 'group' },
       el(
         'div',
-        { class: 'group' },
-        el('h3', {}, section.group),
-        el(
-          'div',
-          { class: 'admin-nav' },
-          section.items.map((item) =>
-            el(
-              'button',
-              { class: 'admin-nav-item', type: 'button', 'data-id': item.id, onclick: () => open(item) },
-              item.label
-            )
+        { class: 'admin-nav' },
+        SECTIONS.map((item) =>
+          el(
+            'button',
+            { class: 'admin-nav-item', type: 'button', 'data-id': item.id, onclick: () => open(item) },
+            item.label
           )
         )
       )
@@ -100,10 +83,19 @@ function renderPanel() {
 
   root.replaceChildren(pane);
   // Раздел в адресе, чтобы перезагрузка возвращала туда же.
-  open(ALL.find((i) => i.id === location.hash.slice(1)) ?? ALL[0]);
+  open(SECTIONS.find((i) => i.id === location.hash.slice(1)) ?? SECTIONS[0]);
 }
 
-/* ---------- вкладка «Ответы» ---------- */
+/** Опросы: сверху что показывать на сайте, ниже — пришедшие ответы. */
+async function buildSurveys(pane) {
+  const active = el('div');
+  const results = el('div');
+  pane.append(active, results);
+  await buildActive(active);
+  await buildResults(results);
+}
+
+/* ---------- ответы на опросы ---------- */
 
 async function buildResults(pane) {
   const bar = el('div', { class: 'sv-results-bar' });
@@ -190,7 +182,7 @@ async function buildResults(pane) {
   load(select.value);
 }
 
-/* ---------- вкладка «Активные опросы» ---------- */
+/* ---------- какие опросы показывать ---------- */
 
 async function buildActive(pane) {
   const box = el('div', { class: 'sv-card' }, el('div', { class: 'sub' }, 'загружаю…'));
@@ -215,9 +207,11 @@ async function buildActive(pane) {
     el(
       'p',
       { class: 'pop-intro' },
-      'Тексты опросов правятся локально в survey-editor.html и живут в git. Здесь только переключается, ' +
+      'Тексты опросов правятся локально в редакторе и живут в git. Здесь только переключается, ' +
         'какие из них показывать — это применяется сразу, без деплоя.'
     ),
+    // Редактор опросов требует локального сервера, поэтому на сайте ссылки нет.
+    isLocal ? el('a', { class: 'btn', href: 'survey-editor.html' }, 'Открыть редактор опросов') : null,
     ...surveys.map((s) => {
       const cb = el('input', { type: 'checkbox', checked: active.includes(s.id) ? '' : null, onchange: save });
       return el(
@@ -242,9 +236,9 @@ async function buildActive(pane) {
   }
 }
 
-/* ---------- вкладка «Роли» ---------- */
+/* ---------- раздел «Юзеры» ---------- */
 
-async function buildRoles(pane) {
+async function buildUsers(pane) {
   const search = el('input', { type: 'search', class: 'btn', placeholder: 'поиск по почте или имени', oninput: paint });
   const box = el('div', {}, el('div', { class: 'sub' }, 'загружаю…'));
   pane.append(el('div', { class: 'sv-results-bar' }, search), box);
@@ -320,3 +314,11 @@ async function buildRoles(pane) {
 
   paint();
 }
+
+/* ---------- запуск ---------- */
+
+// Строго в конце файла: render() доходит до renderPanel(), а тот читает SECTIONS.
+// Вызов сверху попадал бы в мёртвую зону const и валил панель у настоящего админа.
+await ready();
+render();
+onAuthChange(render);

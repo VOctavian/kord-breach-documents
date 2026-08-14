@@ -16,8 +16,9 @@ document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
 mountAuth(document.getElementById('auth-slot'));
 mountAds();
-// Редакторы работают только с локальным сервером — на сайте ссылок на них нет.
-if (!isLocal) for (const id of ['editor-link', 'survey-editor-link']) document.getElementById(id).remove();
+// Редактор работает только с локальным сервером — на сайте ссылки на него нет.
+// Редактор опросов открывается из админ-панели, отдельной кнопки в шапке ему не надо.
+if (!isLocal) document.getElementById('editor-link').remove();
 applyI18n();
 mountWidgets();
 

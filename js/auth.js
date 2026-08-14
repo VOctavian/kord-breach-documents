@@ -258,11 +258,13 @@ export function mountAuth(slot) {
   document.body.append(pop);
   const box = pop.querySelector('.pop-box');
 
-  // Отдельная кнопка в шапке: админ ходит в панель часто, прятать её в попап
-  // аккаунта неудобно. Гостю и обычному пользователю она не показывается.
-  const adminLink = el('a', { class: 'btn auth-admin-link', href: 'admin.html', hidden: '' }, t('authAdminPanel'));
+  // Кнопка админки висит по центру шапки, а не в слоте: справа и так тесно, а
+  // ходит админ туда часто. Абсолютное позиционирование — топбар sticky, то есть
+  // сам служит точкой отсчёта.
+  const adminLink = el('a', { class: 'btn primary admin-link', href: 'admin.html', hidden: '' }, t('authAdminPanel'));
   const button = el('button', { class: 'btn auth-btn', type: 'button', onclick: open });
-  slot.append(adminLink, button);
+  slot.append(button);
+  slot.closest('.topbar')?.append(adminLink);
 
   function open() {
     render();
@@ -320,9 +322,6 @@ export function mountAuth(slot) {
         el('div', {}, el('div', { class: 'auth-name' }, me.name), el('div', { class: 'auth-email' }, me.email))
       ),
       badges,
-      // Ссылку на админку показываем только админу и только здесь: в шапке
-      // map.html и так тесно, а админ на сайте один.
-      hasRole('admin') ? el('a', { class: 'btn primary discord-btn', href: 'admin.html' }, t('authAdminPanel')) : null,
       el('button', { class: 'btn', type: 'button', onclick: () => signOut().then(close) }, t('authSignOut')),
       el('button', { class: 'btn', type: 'button', onclick: close }, t('closeLabel'))
     );
@@ -339,7 +338,8 @@ export function mountAuth(slot) {
 
   function paint() {
     const me = profile();
-    adminLink.hidden = !hasRole('admin');
+    // На самой админке кнопка вела бы на текущую страницу.
+    adminLink.hidden = !hasRole('admin') || location.pathname.endsWith('admin.html');
     button.replaceChildren();
     button.title = me ? me.email : t('authSignInTitle');
     if (me) {
