@@ -1,9 +1,25 @@
-// Редактор (только локально): расстановка точек, правка описаний и скриншотов.
+// Редактор: расстановка точек, правка описаний и скриншотов.
+//
+// Работает в двух режимах. Локально пишет прямо на диск через server.mjs.
+// На сайте копит правки в черновике и отправляет их в репозиторий кнопкой
+// «Опубликовать» — коммит на каждое движение маркера был бы издевательством
+// над историей и над деплоем. Куда именно писать, знает store.js.
 import { loadData, el, MapView } from './common.js';
 import { toJpeg } from './to-jpeg.js';
+import * as store from './store.js';
+import { ready, hasRole, session, mountAuth } from './auth.js';
 
 const data = await loadData();
 const { maps, docs, docById, spawns } = data;
+
+// Черновик прошлой сессии — правки, которые ещё не уехали в репозиторий.
+const draft = store.readDraft();
+if (draft?.length && confirm(`Есть неопубликованный черновик (${draft.length} точек). Продолжить с него?`)) {
+  spawns.length = 0;
+  spawns.push(...draft);
+} else if (draft) {
+  store.dropDraft();
+}
 
 const params = new URLSearchParams(location.search);
 let mapId = params.get('map') ?? maps[0].id;
@@ -175,7 +191,7 @@ addEventListener('blur', closeMenu);
 function renderShots() {
   const images = current()?.images ?? [];
   shotIdx = Math.min(shotIdx, Math.max(0, images.length - 1));
-  $('e-shot').src = images[shotIdx] ?? '';
+  $('e-shot').src = images[shotIdx] ? store.srcFor(images[shotIdx]) : '';
   $('e-shot').style.visibility = images.length ? '' : 'hidden';
   $('del-shot').disabled = images.length < 1;
 
@@ -185,7 +201,7 @@ function renderShots() {
   images.forEach((src, i) =>
     box.append(
       el('img', {
-        src,
+        src: store.srcFor(src),
         alt: `Фото ${i + 1}`,
         class: i === shotIdx ? 'active' : '',
         onclick: () => {
@@ -289,14 +305,7 @@ $('shot-input').addEventListener('change', async () => {
   setStatus('загружаю…');
   try {
     for (const file of files) {
-      const jpeg = await toJpeg(file);
-      const res = await fetch(`/api/upload?map=${s.map}&doc=${s.doc}&name=${encodeURIComponent(file.name)}`, {
-        method: 'POST',
-        headers: { 'content-type': 'image/jpeg' },
-        body: jpeg,
-      });
-      if (!res.ok) throw new Error(await res.text());
-      const { path } = await res.json();
+      const path = await store.addImage(await toJpeg(file), { map: s.map, doc: s.doc });
       s.images.push(path);
       shotIdx = s.images.length - 1;
     }
@@ -364,16 +373,19 @@ $('del-spawn').onclick = () => {
 
 /* ---------- сохранение ---------- */
 
-let timer;
 function save() {
-  clearTimeout(timer);
-  timer = setTimeout(flush, 500);
+  store.saveSpawns(spawns, setStatus);
 }
 
-/** Записать немедленно, не дожидаясь автосохранения. `false` — запись не удалась. */
+/**
+ * Дописать немедленно. Локально это запись на диск, на сайте — черновик,
+ * который уходит в репозиторий отдельной кнопкой «Опубликовать».
+ */
 async function flush() {
-  clearTimeout(timer);
-  setStatus('сохраняю…');
+  if (store.remote) {
+    store.saveSpawns(spawns, () => {});
+    return true;
+  }
   try {
     const res = await fetch('/api/spawns', {
       method: 'POST',
@@ -441,7 +453,7 @@ function zoomCenter(f) {
 $('e-shot').onclick = () => {
   const s = current();
   if (!s?.images.length) return;
-  $('m-shot').src = s.images[shotIdx];
+  $('m-shot').src = store.srcFor(s.images[shotIdx]);
   $('m-cap').textContent = s.caption;
   $('modal').classList.add('open');
 };
@@ -457,5 +469,48 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowLeft') step(-1);
   else if (e.key === 'ArrowRight') step(1);
 });
+
+/* ---------- публикация на сайте ---------- */
+
+if (store.remote) {
+  mountAuth($('auth-slot'));
+  const btn = $('publish');
+
+  const paint = () => {
+    const admin = hasRole('admin');
+    btn.hidden = !admin;
+    const n = store.pendingImages();
+    btn.textContent = store.isDirty() ? `Опубликовать${n ? ` (+${n} фото)` : ''}` : 'Опубликовано';
+    btn.disabled = !store.isDirty();
+    // Без роли редактор бесполезен: сохранить всё равно не выйдет.
+    $('progress-text').textContent = admin
+      ? $('progress-text').textContent
+      : session()
+        ? 'нет роли admin — правки опубликовать не получится'
+        : 'войдите, чтобы публиковать правки';
+  };
+
+  btn.onclick = async () => {
+    btn.disabled = true;
+    setStatus('публикую…');
+    try {
+      const { url } = await store.publish(spawns, `Правки точек из админки (${map.name})`);
+      setStatus('опубликовано ✓ деплой займёт 1–2 минуты', 'ok');
+      console.log('коммит:', url);
+    } catch (e) {
+      setStatus('не опубликовалось: ' + e.message, 'err');
+    }
+    paint();
+  };
+
+  store.onChange(paint);
+  ready().then(paint);
+  paint();
+
+  // Неопубликованные картинки живут только в памяти вкладки.
+  addEventListener('beforeunload', (e) => {
+    if (store.isDirty()) e.preventDefault();
+  });
+}
 
 await openMap();

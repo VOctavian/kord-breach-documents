@@ -49,6 +49,7 @@ function setStatus(text, cls = '') {
 const SECTIONS = [
   { id: 'users', label: 'Юзеры', build: buildUsers },
   { id: 'surveys', label: 'Опросы', build: buildSurveys },
+  { id: 'spawns', label: 'Спавны', build: buildSpawns },
 ];
 
 function renderPanel() {
@@ -93,6 +94,36 @@ async function buildSurveys(pane) {
   pane.append(active, results);
   await buildActive(active);
   await buildResults(results);
+}
+
+/* ---------- раздел «Спавны» ---------- */
+
+async function buildSpawns(pane) {
+  let maps = [];
+  try {
+    maps = await fetch('data/maps.json').then((r) => r.json());
+  } catch {}
+
+  pane.append(
+    el(
+      'div',
+      { class: 'sv-card' },
+      el('h2', {}, 'Точки на картах'),
+      el(
+        'p',
+        { class: 'pop-intro' },
+        isLocal
+          ? 'Редактор пишет прямо на диск — правки видны сразу после перезагрузки страницы.'
+          : 'Правки копятся в черновике и уезжают в репозиторий кнопкой «Опубликовать». ' +
+            'После публикации сайт обновляется за 1–2 минуты, пока идёт деплой.'
+      ),
+      el(
+        'div',
+        { class: 'admin-maps' },
+        maps.map((m) => el('a', { class: 'btn', href: `editor.html?map=${m.id}` }, m.name))
+      )
+    )
+  );
 }
 
 /* ---------- ответы на опросы ---------- */

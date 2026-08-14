@@ -25,17 +25,22 @@ jobs:
       - name: Собрать read-only версию
         run: |
           mkdir -p _site
-          cp index.html map.html admin.html _site/
+          # editor.html теперь публикуется: админ правит точки с любого устройства,
+          # а сохранение уходит в репозиторий через Edge Function. Без роли admin
+          # функция отвечает 403, так что сама страница ничего не открывает.
+          cp index.html map.html admin.html editor.html _site/
           cp -r css js data assets documentations _site/
-          rm -f _site/js/editor.js _site/js/survey-editor.js
+          # Редактор опросов остаётся локальным: он пишет файлы через server.mjs.
+          rm -f _site/js/survey-editor.js
           touch _site/.nojekyll
-          test ! -e _site/editor.html && test ! -e _site/js/editor.js && test ! -e _site/server.mjs
+          test ! -e _site/server.mjs
           test ! -e _site/survey-editor.html && test ! -e _site/js/survey-editor.js
           test ! -e _site/.env.local
           # Ключ в обход RLS не должен уехать в браузер ни при каких правках.
           ! grep -rIq "service_role\|SUPABASE_SERVICE_KEY" _site
           # Админка без своего HTML даёт молчаливую 404 — это обиднее падения сборки.
           test -e _site/admin.html && test -e _site/js/admin.js && test -e _site/js/auth.js
+          test -e _site/editor.html && test -e _site/js/editor.js && test -e _site/js/store.js
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -916,6 +916,8 @@ a:hover { color: #e0cfa4; }
 /* .btn задаёт display: inline-flex и перебивает браузерное правило для [hidden],
    поэтому кнопка админки без этой строки видна всем. */
 .admin-link[hidden] { display: none; }
+/* .btn задаёт display: inline-flex — без этого кнопка публикации видна и локально. */
+#publish[hidden] { display: none; }
 .auth-btn.is-admin { border-color: var(--accent); }
 .auth-btn-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
@@ -975,6 +977,8 @@ a:hover { color: #e0cfa4; }
 }
 .admin-nav-item:hover { background: var(--bg-3); color: var(--text); }
 .admin-nav-item.active { background: var(--accent); border-color: var(--accent-hot); color: #17130c; font-weight: 600; }
+
+.admin-maps { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 
 @media (max-width: 900px) {
   .auth-btn-name { display: none; }
