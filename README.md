@@ -303,11 +303,11 @@ role has to be granted twice.
 role it just says "no access" and returns no data: access is cut by RLS, and the
 client-side check exists only to avoid rendering a useless interface.
 
-| Tab | What it does |
+| Section | What it does |
 | --- | --- |
-| Answers | browse, delete, export CSV |
-| Active surveys | which surveys to show — applies **without a deploy** |
-| Roles | grant `admin` and `subscriber` |
+| Users | grant `admin` and `subscriber` |
+| Surveys | toggle which surveys are shown (**without a deploy**), browse and delete answers, export CSV |
+| Spawns | opens the editor for a chosen map |
 
 Survey texts stay in `data/survey.json` and are edited locally in
 `survey-editor.html`: that is content, it has history in git and works offline.
@@ -315,6 +315,54 @@ Only the list of enabled ones lives in Supabase
 (`site_settings.survey_active_ids`), because the urgent operation is switching a
 survey on or off, not rewriting a question. If Supabase is unreachable,
 `js/survey.js` falls back to `activeIds` from the file.
+
+## Editing spawns from the site
+
+The editor runs in two modes, and [js/store.js](js/store.js) is what decides
+which one.
+
+**Locally** it writes straight to disk through `server.mjs`, autosaving 500 ms
+after every change — same as it always did.
+
+**On the site** there is no disk, and saving means committing. Autosaving there
+would mean one commit and one deploy run per marker nudge, so edits pile up in a
+draft (`localStorage`) and go to the repository in a single commit when you press
+**Publish**. The site updates once the deploy finishes, 1–2 minutes later.
+
+Screenshots added before publishing live in the tab's memory and are shown from
+an `objectURL`, but their path is assigned immediately and hashed exactly the way
+`server.mjs` hashes it — so the same file added from a phone and from the desktop
+does not end up duplicated. That also means **an unpublished draft does not
+survive a tab reload with its images**; the editor warns on `beforeunload`.
+
+### The `commit` Edge Function
+
+[supabase/functions/commit/index.ts](supabase/functions/commit/index.ts) writes
+files into the repository via the GitHub Git Data API — data and images in one
+commit, so the site never references a file that is not there yet.
+
+It asks the database for the caller's roles (`rpc/my_roles`) using the caller's
+own token and refuses anything without `admin`. That means the rule about who may
+write stays in one place — RLS — and the function needs no service key at all.
+Paths are restricted to `data/` and `assets/`.
+
+**Deploying it (no CLI needed):** Dashboard → Edge Functions → Deploy a new
+function → *Via Editor*, name it `commit`, paste the file, Deploy.
+
+Secrets go to Project Settings → Edge Functions → Secrets:
+
+| Secret | Value |
+| --- | --- |
+| `GITHUB_TOKEN` | fine-grained token, this repo only, **Contents: read and write** |
+| `GITHUB_REPO` | `VOctavian/kord-breach-documents` |
+| `GITHUB_BRANCH` | optional, defaults to `main` |
+
+> Keep this repository the source of truth for the function. The dashboard editor
+> has **no version history** — an edit made there and not mirrored back here is
+> gone for good.
+
+If someone else pushed while you were editing, the function answers `409` instead
+of overwriting: reload the editor and redo the change.
 
 ## Ads
 
