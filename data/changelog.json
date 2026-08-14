@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-14-1522",
+    "at": "2026-08-14T15:22",
+    "maps": [
+      {
+        "map": "streets",
+        "added": [],
+        "fixed": [
+          {
+            "id": "streets-cmsr7i2n7",
+            "caption": "Около мешков на полу рямдом с книжной полкой среди разбросанных книг (нет скрина)",
+            "captionEn": "Near the bags on the floor next to a bookshelf among scattered books (no screenshot)"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2026-08-13-1455",
     "at": "2026-08-13T14:55",
     "maps": [
