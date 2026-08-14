@@ -7,12 +7,16 @@ import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
 import { mountSurvey } from './survey.js';
 import { mountPlanning } from './planning.js';
+import { mountAuth } from './auth.js';
+import { mountAds } from './ads.js';
 
 document.title = t('pageTitleMap');
 mountUmami();
 mountAuthor(document.getElementById('logo-slot'));
 document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
+mountAuth(document.getElementById('auth-slot'));
+mountAds();
 applyI18n();
 mountWidgets();
 

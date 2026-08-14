@@ -903,6 +903,56 @@ a:hover { color: #e0cfa4; }
 .lang-toggle .lang-opt:hover { color: var(--text); }
 .lang-toggle .lang-opt.active { background: var(--accent); color: #17130c; }
 
+/* ---------- вход и аккаунт ---------- */
+
+.auth-btn { display: inline-flex; align-items: center; gap: 7px; max-width: 190px; }
+.auth-btn.is-admin { border-color: var(--accent); }
+.auth-btn-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.auth-avatar {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-3);
+}
+.auth-avatar-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent-hot);
+}
+
+.auth-providers { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+.auth-provider {
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--brand, var(--text));
+}
+.auth-provider:hover { border-color: var(--brand, var(--accent)); background: var(--bg-3); }
+
+.auth-me { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.auth-name { font-size: 15px; }
+.auth-email { font-size: 12px; color: var(--text-dim); }
+
+.auth-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.auth-badges:empty { display: none; }
+.auth-badge {
+  padding: 2px 9px;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--accent-hot);
+}
+
+.auth-error { color: var(--danger); }
+
+@media (max-width: 900px) {
+  .auth-btn-name { display: none; }
+}
+
 /* ---------- плавающие кнопки: кофе и фидбэк ---------- */
 
 .float-buttons {

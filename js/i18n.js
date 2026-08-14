@@ -126,6 +126,23 @@ const DICT = {
   },
   discordJoin: { ru: 'Открыть Discord ↗', en: 'Open Discord ↗' },
 
+  authSignIn: { ru: 'Войти', en: 'Sign in' },
+  authSignInTitle: { ru: 'Войти на сайт', en: 'Sign in to the site' },
+  authSignInIntro: {
+    ru: 'Вход нужен только для подписки и админских функций. Смотреть карту и отвечать на опросы можно без него.',
+    en: 'Signing in is only needed for a subscription and admin features. The map and surveys work without it.',
+  },
+  authAccount: { ru: 'Аккаунт', en: 'Account' },
+  authSignOut: { ru: 'Выйти', en: 'Sign out' },
+  authRoleAdmin: { ru: 'Админ', en: 'Admin' },
+  authRoleSubscriber: { ru: 'Подписчик', en: 'Subscriber' },
+  authAdminPanel: { ru: 'Админка опросов', en: 'Survey admin' },
+  authError: { ru: 'Не удалось войти', en: 'Sign-in failed' },
+  authUnavailable: {
+    ru: 'Вход сейчас недоступен — сервис авторизации не отвечает. Остальное на сайте работает.',
+    en: 'Sign-in is unavailable right now — the auth service is not responding. Everything else still works.',
+  },
+
   sourceLabel: { ru: 'Источники', en: 'Sources' },
   sourceArticle: { ru: 'Скриншоты и описания — статья МетаДвиж', en: 'Screenshots and descriptions — MetaDvizh article' },
   sourceMaps: { ru: 'Карты — Escape from Tarkov Wiki', en: 'Maps — Escape from Tarkov Wiki' },

@@ -6,12 +6,16 @@ import { trackEvent, mountUmami } from './analytics.js';
 import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
 import { mountSurvey } from './survey.js';
+import { mountAuth } from './auth.js';
+import { mountAds } from './ads.js';
 
 document.title = t('pageTitleIndex');
 mountUmami();
 mountAuthor(document.getElementById('logo-slot'));
 document.getElementById('social-slot').append(socialLinks());
 document.getElementById('lang-slot').append(langToggle());
+mountAuth(document.getElementById('auth-slot'));
+mountAds();
 // Редакторы работают только с локальным сервером — на сайте ссылок на них нет.
 if (!isLocal) for (const id of ['editor-link', 'survey-editor-link']) document.getElementById(id).remove();
 applyI18n();

@@ -256,6 +256,77 @@ default, so check the expiry whenever you replace it:
 curl -s "https://discord.com/api/v10/invites/UErdQwg7ww?with_expiration=true"
 ```
 
+## Sign-in and roles
+
+Google and Discord through Supabase Auth. The schema lives in
+[supabase/schema.sql](supabase/schema.sql) — idempotent, run the whole thing in
+the SQL Editor.
+
+Roles sit in a `user_roles` table (`admin`, `subscriber`) rather than a column on
+the profile: a person can hold both, and a subscription has an expiry date. The
+client reads its own via the `my_roles()` RPC.
+
+**The first admin is granted by hand** — there is deliberately no "first person
+to sign in becomes admin", that is a race and a hole:
+
+1. Sign in on the site once; a trigger creates the row in `profiles`.
+2. `insert into public.user_roles (user_id, role) select id, 'admin' from public.profiles where email = '…';`
+
+After that, roles are handed out on the Roles tab in the admin panel. Removing the
+role from the last remaining admin is blocked by the `user_roles_keep_last_admin`
+trigger — recovering from that would mean going back to the SQL Editor.
+
+**Roles are deliberately not in the JWT.** A Custom Access Token Hook would save
+one query per request, but a broken hook takes sign-in down for everyone at once,
+and a revoked role would keep working for up to an hour until the token refreshes.
+With two admins the win is zero. Worth revisiting only if tables with tens of
+thousands of RLS-filtered rows ever appear.
+
+**What is configured in the dashboards.** The redirect URI in Google Cloud Console
+and the Discord Developer Portal is *not* the site — it is
+`<SUPABASE_URL>/auth/v1/callback`. In Supabase → URL Configuration: Site URL
+`https://voctavian.github.io/kord-breach-documents/`, Additional the same with
+`/**` plus `http://localhost:5173/**`. Scopes are set in code (`PROVIDERS` in
+[js/auth.js](js/auth.js)); there is no field for them in the dashboard.
+
+The site lives in a subfolder, so `location.origin` is somebody else's root —
+`js/auth.js` uses `new URL('.', location.href)` everywhere instead. Putting the
+origin into the Supabase settings would drop people on a GitHub 404 after login.
+
+One person signing in with both Google and Discord ends up as a single user only
+if the verified e-mail matches. Different addresses mean two accounts, and the
+role has to be granted twice.
+
+## Admin panel
+
+`admin.html` is published and reachable at the site URL, but without the `admin`
+role it just says "no access" and returns no data: access is cut by RLS, and the
+client-side check exists only to avoid rendering a useless interface.
+
+| Tab | What it does |
+| --- | --- |
+| Answers | browse, delete, export CSV |
+| Active surveys | which surveys to show — applies **without a deploy** |
+| Roles | grant `admin` and `subscriber` |
+
+Survey texts stay in `data/survey.json` and are edited locally in
+`survey-editor.html`: that is content, it has history in git and works offline.
+Only the list of enabled ones lives in Supabase
+(`site_settings.survey_active_ids`), because the urgent operation is switching a
+survey on or off, not rewriting a question. If Supabase is unreachable,
+`js/survey.js` falls back to `activeIds` from the file.
+
+## Ads
+
+There are no ad blocks yet — [js/ads.js](js/ads.js) is the extension point.
+`adsEnabled()` combines the `site_settings.ads_enabled` switch with roles:
+subscribers and admins never see ads. `mountAds()` puts a `no-ads` class on
+`<body>` so future placeholders can collapse with plain CSS.
+
+> The maps are CC BY-NC-SA (NonCommercial). The role mechanism has nothing to do
+> with the licence, but running ads on those maps would breach it — either swap
+> the maps out, or keep the subscription as an ad-free perk only.
+
 ## Analytics
 
 Two services, because they answer different questions.

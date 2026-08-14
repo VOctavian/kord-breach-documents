@@ -38,6 +38,27 @@ async function send(survey, answers) {
   if (!res.ok) throw new Error(`${res.status} ${(await res.text()).slice(0, 120)}`);
 }
 
+/**
+ * Какие опросы показывать. Список переключается из админки, поэтому спрашиваем
+ * Supabase — иначе включение требовало бы деплоя. На любую ошибку откатываемся
+ * на файл: опросы важнее свежести списка.
+ */
+async function activeIds(file) {
+  // activeId — прежний формат с одним опросом, читаем пока файл не пересохранён.
+  const fallback = Array.isArray(file?.activeIds) ? file.activeIds : [file?.activeId].filter(Boolean);
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/site_settings?key=eq.survey_active_ids&select=value`, {
+      headers: { apikey: SUPABASE_ANON_KEY, authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+      signal: AbortSignal.timeout(4000),
+    });
+    if (!res.ok) return fallback;
+    const value = (await res.json())[0]?.value;
+    return Array.isArray(value) ? value : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
 /** Картинки опроса или вопроса: клик открывает оригинал в новой вкладке. */
 function gallery(images) {
   if (!images?.length) return null;
@@ -184,9 +205,7 @@ export async function mountSurvey() {
   }
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
 
-  // Включённых опросов может быть сколько угодно. activeId — прежний формат
-  // с одним опросом: читаем его, пока файл не пересохранён редактором.
-  const active = Array.isArray(file?.activeIds) ? file.activeIds : [file?.activeId].filter(Boolean);
+  const active = await activeIds(file);
   const list = (file?.surveys ?? []).filter((s) => active.includes(s.id) && s.questions?.length);
   if (!list.length) return;
 
