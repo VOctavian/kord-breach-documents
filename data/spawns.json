@@ -3726,21 +3726,6 @@
     "floor": null
   },
   {
-    "id": "lighthouse-cmsobfuck",
-    "map": "lighthouse",
-    "mapName": "Маяк",
-    "doc": "personal",
-    "docName": "Личные данные ЧВК",
-    "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
-    "captionEn": "On the second floor of a brick house in the village next to the \"Passage to the Shore\" exit",
-    "images": [
-      "assets/screenshots/lighthouse-personal-e292e425.jpg"
-    ],
-    "x": 66.412,
-    "y": 52.273,
-    "floor": null
-  },
-  {
     "id": "lighthouse-cmsobgbdw",
     "map": "lighthouse",
     "mapName": "Маяк",
@@ -4816,6 +4801,23 @@
     ],
     "x": 34.043,
     "y": 54.315,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmstk92i8",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "тест  ",
+    "captionEn": "тест",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-ac57cb85.jpg"
+    ],
+    "x": 10.966,
+    "y": 8.986,
     "x2": null,
     "y2": null,
     "floor": null
