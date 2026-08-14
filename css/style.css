@@ -118,6 +118,10 @@ a:hover { color: #e0cfa4; }
   transition: background 0.12s, border-color 0.12s;
 }
 .btn:hover { background: #2c353b; border-color: var(--accent); }
+/* display: inline-flex выше перебивает браузерное правило для [hidden], и любая
+   спрятанная кнопка оставалась бы на виду. Ловил это трижды — пусть работает
+   для всех сразу, а не отдельной строкой на каждую новую кнопку. */
+.btn[hidden] { display: none; }
 .btn.primary { background: var(--accent); border-color: var(--accent-hot); color: #17130c; font-weight: 600; }
 .btn.primary:hover { background: var(--accent-hot); }
 .btn:disabled { opacity: 0.4; cursor: default; }
@@ -913,11 +917,6 @@ a:hover { color: #e0cfa4; }
   transform: translateX(-50%);
   z-index: 1;
 }
-/* .btn задаёт display: inline-flex и перебивает браузерное правило для [hidden],
-   поэтому кнопка админки без этой строки видна всем. */
-.admin-link[hidden] { display: none; }
-/* .btn задаёт display: inline-flex — без этого кнопка публикации видна и локально. */
-#publish[hidden] { display: none; }
 .auth-btn.is-admin { border-color: var(--accent); }
 .auth-btn-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 

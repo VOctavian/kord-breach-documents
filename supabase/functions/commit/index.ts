@@ -23,10 +23,14 @@ const GITHUB_API = 'https://api.github.com';
 const MAX_FILES = 60;
 const MAX_BYTES = 25 * 1024 * 1024;
 
+// apikey обязателен в списке: supabase-js и наш клиент шлют его вместе с
+// токеном, и браузер спрашивает разрешение на него в preflight. Без него
+// запрос с сайта не уходит вовсе — падает на CORS ещё до вызова функции.
 const CORS = {
   'access-control-allow-origin': '*',
-  'access-control-allow-headers': 'authorization, content-type',
+  'access-control-allow-headers': 'authorization, apikey, content-type, x-client-info',
   'access-control-allow-methods': 'POST, OPTIONS',
+  'access-control-max-age': '86400',
 };
 
 const json = (body: unknown, status = 200) =>

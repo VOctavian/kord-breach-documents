@@ -7,7 +7,7 @@ import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
 import { mountSurvey } from './survey.js';
 import { mountPlanning } from './planning.js';
-import { mountAuth } from './auth.js';
+import { mountAuth, hasRole, onAuthChange, ready } from './auth.js';
 import { mountAds } from './ads.js';
 
 document.title = t('pageTitleMap');
@@ -36,9 +36,15 @@ document.getElementById('map-name').textContent = localized(map);
 document.getElementById('map-sub').textContent =
   `${lang === 'en' ? map.name : map.en} · ${placed.length} / ${all.length} ${t('placedCounter')}`;
 
+// Редактор открыт локально и админу на сайте: правки с сайта уезжают в
+// репозиторий через Edge Function. Роль приходит асинхронно, поэтому кнопку
+// перекрашиваем по событию, а не один раз при загрузке.
 const editLink = document.getElementById('edit-link');
-if (isLocal) editLink.href = `editor.html?map=${mapId}`;
-else editLink.remove();
+editLink.href = `editor.html?map=${mapId}`;
+const paintEditLink = () => (editLink.hidden = !isLocal && !hasRole('admin'));
+paintEditLink();
+onAuthChange(paintEditLink);
+ready().then(paintEditLink);
 
 // Планирование поднимается после загрузки карты, а меню нужно уже конструктору —
 // отсюда ссылка через переменную.
