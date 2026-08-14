@@ -960,6 +960,46 @@ a:hover { color: #e0cfa4; }
 
 .auth-error { color: var(--danger); }
 
+/* ---------- предложенные метки ---------- */
+
+/* Пунктир и знак вопроса: предложение не должно ни на секунду выглядеть как
+   проверенная точка, даже боковым зрением. */
+.suggest-marker {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border-radius: 50%;
+  background: rgba(20, 24, 27, 0.9);
+  border: 2px dashed var(--accent-hot);
+  color: var(--accent-hot);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transform-origin: center;
+  z-index: 4;
+}
+.suggest-marker:hover { background: #2a2317; border-style: solid; }
+
+.suggest-caption {
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 9px 11px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.suggest-shot {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
 /* ---------- админка ---------- */
 
 .admin-nav { display: flex; flex-direction: column; gap: 3px; }

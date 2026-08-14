@@ -364,6 +364,40 @@ Secrets go to Project Settings → Edge Functions → Secrets:
 If someone else pushed while you were editing, the function answers `409` instead
 of overwriting: reload the editor and redo the change.
 
+## Suggested spawns
+
+Right-click the map → "Suggest a spawn here": a description, a document type and
+a screenshot. No sign-in required — but **no more than two suggestions per minute
+per address**.
+
+The limit lives in the database, in the `suggestions_rate_limit` trigger, not in
+the browser: a client-side counter is bypassed in a second. That is also why only
+the `suggest` Edge Function may write — neither the `spawn_suggestions` table nor
+the `suggestions` bucket is open to anon at all. Otherwise the limit would be
+skipped with a direct PostgREST call and the private bucket would turn into a
+free file host.
+
+Screenshots are downscaled to 1600 px on the longer side and re-encoded to JPEG
+in the browser; the function additionally checks the file signature and a 3 MB cap.
+
+The admin sees suggestions right on the map — a **dashed circle with a question
+mark**, so they are never mistaken for verified points, not even at a glance.
+Clicking one opens a card: the screenshot behind a signed URL (the bucket is
+private), the author, the date, and two buttons — open it in the editor, or delete.
+
+Opening it in the editor turns the suggestion into an ordinary draft point: the
+description and type can be corrected, the coordinates nudged, and the screenshot
+rides along in the same commit as the rest of the edits. The suggestion row is
+deleted right away, so **an abandoned draft loses it too** — the editor says so in
+the status line.
+
+Setup: run [supabase/suggestions.sql](supabase/suggestions.sql) in the SQL Editor
+and deploy [supabase/functions/suggest/index.ts](supabase/functions/suggest/index.ts)
+the same way as `commit`. No secrets to add — the platform injects `SUPABASE_URL`
+and `SUPABASE_SERVICE_ROLE_KEY` itself.
+
+To clear out stale ones: `select public.purge_old_suggestions(30);`
+
 ## Ads
 
 There are no ad blocks yet — [js/ads.js](js/ads.js) is the extension point.

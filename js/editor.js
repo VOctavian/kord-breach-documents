@@ -8,6 +8,7 @@ import { loadData, el, MapView } from './common.js';
 import { toJpeg } from './to-jpeg.js';
 import * as store from './store.js';
 import { ready, hasRole, session, mountAuth } from './auth.js';
+import { loadSuggestion, fetchImage, dropSuggestion } from './suggest.js';
 
 const data = await loadData();
 const { maps, docs, docById, spawns } = data;
@@ -514,3 +515,46 @@ if (store.remote) {
 }
 
 await openMap();
+
+/* ---------- принятое предложение ---------- */
+
+// Приходим сюда по ссылке из карточки на карте. Предложение превращается в
+// обычную точку черновика: описание и тип можно поправить, координаты подвинуть,
+// а скриншот переезжает в тот же коммит, что и остальные правки.
+// Строго после openMap(): ниже нужны загруженная карта и список точек локации.
+const suggestionId = params.get('suggestion');
+if (suggestionId) {
+  await ready();
+  if (!hasRole('admin')) {
+    setStatus('предложения открывает только админ', 'err');
+  } else {
+    try {
+      const s = await loadSuggestion(suggestionId);
+      if (!s) throw new Error('предложение не найдено — возможно, его уже разобрали');
+
+      const spawn = createSpawn();
+      spawn.caption = s.caption ?? '';
+      if (s.doc && docById[s.doc]) {
+        spawn.doc = s.doc;
+        spawn.docName = docById[s.doc].name;
+      }
+      if (s.image_path) {
+        const blob = await fetchImage(s.image_path);
+        if (blob) spawn.images.push(await store.addImage(blob, { map: spawn.map, doc: spawn.doc }));
+      }
+      place(spawn, s.x, s.y);
+      idx = list.indexOf(spawn);
+      render();
+      view.centerOn(s.x, s.y);
+      $('e-cap-ru').focus();
+
+      // Удаляем сразу: точка уже в черновике, и второй раз её принимать незачем.
+      // Если черновик не опубликуют — правка потеряется, но предложение видно
+      // в истории коммитов не будет, поэтому предупреждаем прямо в статусе.
+      await dropSuggestion(s);
+      setStatus('предложение забрано в черновик — не забудьте опубликовать', 'ok');
+    } catch (e) {
+      setStatus('не удалось: ' + e.message, 'err');
+    }
+  }
+}

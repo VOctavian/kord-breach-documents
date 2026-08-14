@@ -125,6 +125,38 @@ const DICT = {
   },
   discordJoin: { ru: 'Открыть Discord ↗', en: 'Open Discord ↗' },
 
+  suggestAdd: { ru: 'Предложить метку здесь', en: 'Suggest a spawn here' },
+  suggestTitle: { ru: 'Предложить метку', en: 'Suggest a spawn' },
+  suggestIntro: {
+    ru: 'Опишите, где лежит документ, и приложите скриншот. Предложение увидит автор карты и добавит его после проверки.',
+    en: 'Describe where the document is and attach a screenshot. The map author will review it and add it.',
+  },
+  suggestCaption: { ru: 'Где лежит', en: 'Where it is' },
+  suggestCaptionHint: { ru: 'Например: 2 этаж общежития, комната 214', en: 'For example: dorm 2nd floor, room 214' },
+  suggestDoc: { ru: 'Тип документации', en: 'Document type' },
+  suggestDocUnknown: { ru: 'не знаю', en: 'not sure' },
+  suggestShot: { ru: 'Скриншот', en: 'Screenshot' },
+  suggestSend: { ru: 'Отправить', en: 'Send' },
+  suggestSending: { ru: 'Отправляю…', en: 'Sending…' },
+  suggestNeedCaption: { ru: 'Опишите место — без этого метку не найти', en: 'Describe the spot — otherwise it cannot be found' },
+  suggestThanks: { ru: 'Спасибо!', en: 'Thank you!' },
+  suggestThanksNote: {
+    ru: 'Предложение отправлено. Если всё сходится, метка появится на карте после проверки.',
+    en: 'Your suggestion is in. If it checks out, the spawn will appear on the map after review.',
+  },
+  suggestCardTitle: { ru: 'Предложенная метка', en: 'Suggested spawn' },
+  suggestAnon: { ru: 'без имени', en: 'anonymous' },
+  suggestAccept: { ru: 'Открыть в редакторе', en: 'Open in the editor' },
+  suggestReject: { ru: 'Удалить', en: 'Delete' },
+  suggestRejectAsk: { ru: 'Удалить это предложение?', en: 'Delete this suggestion?' },
+  suggestLoadingShot: { ru: 'загружаю скриншот…', en: 'loading the screenshot…' },
+  suggestNoShot: { ru: 'Скриншот не приложен', en: 'No screenshot attached' },
+  suggestShotFailed: { ru: 'скриншот не открылся', en: 'could not open the screenshot' },
+  suggestOffline: {
+    ru: 'Приём предложений сейчас недоступен — попробуйте позже или напишите в Discord.',
+    en: 'Suggestions are unavailable right now — try later or drop a note in the Discord.',
+  },
+
   authSignIn: { ru: 'Войти', en: 'Sign in' },
   authSignInTitle: { ru: 'Войти на сайт', en: 'Sign in to the site' },
   authSignInIntro: {

@@ -224,7 +224,7 @@ export function mountPlanning(view, mapId, viewport) {
   for (const p of points) draw(p);
 
   return {
-    /** Меню по правому клику на пустом месте карты. */
-    mapMenu: (x, y, e) => contextMenu(e, [[t('planAdd'), false, () => add(x, y)]]),
+    /** Пункты для меню по правому клику — их собирает map.js вместе с чужими. */
+    menuItems: (x, y) => [[t('planAdd'), false, () => add(x, y)]],
   };
 }

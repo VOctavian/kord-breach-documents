@@ -1,5 +1,5 @@
 // Страница локации: карта с иконками документов + просмотрщик скриншотов.
-import { loadData, el, MapView, isPublished } from './common.js';
+import { loadData, el, MapView, isPublished, contextMenu } from './common.js';
 import { t, lang, localized, applyI18n } from './i18n.js';
 import { langToggle, socialLinks, mountWidgets, isLocal } from './widgets.js';
 import { trackEvent, mountUmami } from './analytics.js';
@@ -7,6 +7,7 @@ import { mountChangelog } from './changelog.js';
 import { mountAuthor } from './author.js';
 import { mountSurvey } from './survey.js';
 import { mountPlanning } from './planning.js';
+import { mountSuggest } from './suggest.js';
 import { mountAuth, hasRole, onAuthChange, ready } from './auth.js';
 import { mountAds } from './ads.js';
 
@@ -20,7 +21,7 @@ mountAds();
 applyI18n();
 mountWidgets();
 
-const { mapById, docById, spawns } = await loadData();
+const { mapById, docById, docs, spawns } = await loadData();
 mountChangelog(mapById);
 mountSurvey();
 const mapId = new URLSearchParams(location.search).get('map');
@@ -46,13 +47,19 @@ paintEditLink();
 onAuthChange(paintEditLink);
 ready().then(paintEditLink);
 
-// Планирование поднимается после загрузки карты, а меню нужно уже конструктору —
-// отсюда ссылка через переменную.
+// Планирование и предложения поднимаются после загрузки карты, а меню нужно уже
+// конструктору — отсюда ссылки через переменные. Пункты меню собираются из обоих:
+// планирование личное и живёт в браузере, предложение уходит на сервер.
 let planning = null;
+let suggest = null;
 const viewport = document.getElementById('viewport');
-const view = new MapView(viewport, { onMapContext: (x, y, e) => planning?.mapMenu(x, y, e) });
+const view = new MapView(viewport, {
+  onMapContext: (x, y, e) =>
+    contextMenu(e, [...(planning?.menuItems(x, y) ?? []), ...(suggest?.menuItems(x, y) ?? [])]),
+});
 await view.load(map);
 planning = mountPlanning(view, mapId, viewport);
+suggest = mountSuggest(view, mapId, docs);
 
 const hidden = new Set();
 let floor = null;
