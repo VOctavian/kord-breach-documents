@@ -4804,22 +4804,5 @@
     "x2": null,
     "y2": null,
     "floor": null
-  },
-  {
-    "id": "lighthouse-cmstk92i8",
-    "map": "lighthouse",
-    "mapName": "Маяк",
-    "doc": "expluatationnaea",
-    "docName": "Эксплуатационная документация",
-    "caption": "тест  ",
-    "captionEn": "тест",
-    "images": [
-      "assets/screenshots/lighthouse-expluatationnaea-ac57cb85.jpg"
-    ],
-    "x": 10.966,
-    "y": 8.986,
-    "x2": null,
-    "y2": null,
-    "floor": null
   }
 ]
