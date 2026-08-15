@@ -88,19 +88,33 @@ function highlight(docId) {
 for (const doc of docs) {
   const n = spawns.filter((s) => s.doc === doc.id).length;
   if (!n) continue;
-  legend.append(
-    el(
-      'div',
-      {
-        class: 'doc-legend-item',
-        onmouseenter: () => highlight(doc.id),
-        onmouseleave: () => highlight(null),
-        // На тач-устройствах наведения нет — подсвечиваем по тапу.
-        onclick: () => highlight(grid.classList.contains('highlighting') ? null : doc.id),
-      },
-      el('img', { src: doc.icon, alt: localized(doc) }),
-      el('div', { class: 'lbl' }, localized(doc)),
-      el('div', { class: 'n' }, String(n))
-    )
+  const item = el(
+    'div',
+    {
+      class: 'doc-legend-item',
+      'data-doc': doc.id,
+      onmouseenter: () => highlight(doc.id),
+      onmouseleave: () => highlight(null),
+      // На тач-устройствах наведения нет — подсвечиваем по тапу.
+      onclick: () => highlight(grid.classList.contains('highlighting') ? null : doc.id),
+    },
+    el('img', { src: doc.icon, alt: localized(doc) }),
+    el('div', { class: 'lbl' }, localized(doc)),
+    el('div', { class: 'n' }, String(n))
   );
+  legend.append(item);
+}
+
+/** Обратная связка: подсветить типы документации, которые есть на этой карте. */
+function highlightDocs(docIds) {
+  legend.classList.toggle('highlighting', docIds != null);
+  for (const item of legend.querySelectorAll('.doc-legend-item')) {
+    item.classList.toggle('match', !!docIds?.includes(item.dataset.doc));
+  }
+}
+
+for (const card of grid.querySelectorAll('.map-card')) {
+  const docIds = card.dataset.docs.split(' ');
+  card.addEventListener('mouseenter', () => highlightDocs(docIds));
+  card.addEventListener('mouseleave', () => highlightDocs(null));
 }

@@ -140,7 +140,14 @@ export function mountSuggest(view, mapId, docs) {
   }
 
   function draw(s) {
-    const node = el('button', { class: 'suggest-marker', type: 'button', title: s.caption }, '?');
+    // Пульсирует вложенный кружок, а не сам маркер: внешнему узлу MapView на
+    // каждом зуме проставляет инлайновый transform, гасящий масштаб карты, и
+    // анимация трансформа эту компенсацию бы перебила.
+    const node = el(
+      'button',
+      { class: 'suggest-marker', type: 'button', title: s.caption },
+      el('span', { class: 'suggest-dot' }, '?')
+    );
     node.onclick = (e) => {
       e.stopPropagation();
       openCard(s);
