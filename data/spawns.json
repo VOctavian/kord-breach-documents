@@ -305,7 +305,7 @@
     "mapName": "Резерв",
     "doc": "personal",
     "docName": "Личные данные ЧВК",
-    "caption": "Комната ключ РБ-ОБ",
+    "caption": "Комната ключ РБ-ОБ ",
     "x": 90.703,
     "y": 65.035,
     "floor": null,
@@ -1301,7 +1301,7 @@
     "images": [
       "assets/screenshots/lab-polzovatelskoe-c1d1db70.jpg"
     ],
-    "captionEn": "Cabinet in the \"Molecule\" "
+    "captionEn": "Cabinet in the \"Molecule\""
   },
   {
     "id": "lab-85",
