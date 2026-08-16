@@ -305,7 +305,7 @@
     "mapName": "Резерв",
     "doc": "personal",
     "docName": "Личные данные ЧВК",
-    "caption": "Комната ключ РБ-ОБ ",
+    "caption": "Комната ключ РБ-ОБ",
     "x": 90.703,
     "y": 65.035,
     "floor": null,
@@ -5158,6 +5158,40 @@
     "y": 28.339,
     "x2": null,
     "y2": null,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsvnaauj",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Район депо, убежище в одном из вагонов",
+    "captionEn": "Depot area, shelter in one of the cars",
+    "images": [
+      "assets/screenshots/reserve-personal-70c37afd.jpg"
+    ],
+    "x": 32.707,
+    "y": 37.189,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsvnb10b",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Второй этаж, тетрисная",
+    "captionEn": "Second floor, Tetris",
+    "images": [
+      "assets/screenshots/reserve-personal-e8ab1601.jpg"
+    ],
+    "x": 83.444,
+    "y": 88.205,
+    "x2": 50.212,
+    "y2": 43.451,
     "floor": null
   }
 ]
