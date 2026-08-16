@@ -4646,8 +4646,8 @@
     "images": [
       "assets/screenshots/streets-finansovaea-c6ceb671.jpg"
     ],
-    "x": 24.276,
-    "y": 33.415,
+    "x": 24.664,
+    "y": 33.375,
     "x2": 42.892,
     "y2": 33.672,
     "floor": null
@@ -4663,10 +4663,10 @@
     "images": [
       "assets/screenshots/streets-polzovatelskoe-89b2e785.jpg"
     ],
-    "x": 27.21,
-    "y": 31.039,
-    "x2": 45.915,
-    "y2": 31.695,
+    "x": 24.847,
+    "y": 32.813,
+    "x2": 44.026,
+    "y2": 33.385,
     "floor": null
   },
   {
@@ -5110,52 +5110,18 @@
     "floor": null
   },
   {
-    "id": "streets-cmsvmo4wb",
-    "map": "streets",
-    "mapName": "Улицы Таркова",
-    "doc": "polzovatelskoe",
-    "docName": "Пользовательская документация",
-    "caption": "В дверце красной машины",
-    "captionEn": "In the door of the red car",
+    "id": "groundzero-cmsvmr65n",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "У черного автомобиля с открытым багажником",
+    "captionEn": "A black car with an open trunk",
     "images": [
-      "assets/screenshots/streets-polzovatelskoe-0ebed903.jpg"
+      "assets/screenshots/groundzero-meditsinskaea-cef9c4a8.jpg"
     ],
-    "x": 47.843,
-    "y": 36.132,
-    "x2": null,
-    "y2": null,
-    "floor": null
-  },
-  {
-    "id": "streets-cmsvmow4r",
-    "map": "streets",
-    "mapName": "Улицы Таркова",
-    "doc": "polzovatelskoe",
-    "docName": "Пользовательская документация",
-    "caption": "Отель Pinewood в корридоре стоматологии на пуфике\n",
-    "captionEn": "Pinewood Hotel in the dental office hallway on an ottoman",
-    "images": [
-      "assets/screenshots/streets-polzovatelskoe-bc34ed83.jpg"
-    ],
-    "x": 59.401,
-    "y": 42.055,
-    "x2": null,
-    "y2": null,
-    "floor": null
-  },
-  {
-    "id": "streets-cmsvmpxyb",
-    "map": "streets",
-    "mapName": "Улицы Таркова",
-    "doc": "finansovaea",
-    "docName": "Финансовая документация",
-    "caption": "В здании Concordia на втором этаже в куче разбросанных книг",
-    "captionEn": "In the Concordia building on the second floor, in a pile of scattered books",
-    "images": [
-      "assets/screenshots/streets-finansovaea-982ff2bb.jpg"
-    ],
-    "x": 43.873,
-    "y": 74.874,
+    "x": 87.645,
+    "y": 18.94,
     "x2": null,
     "y2": null,
     "floor": null
