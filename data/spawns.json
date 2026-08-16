@@ -1536,14 +1536,14 @@
     "mapName": "Лаборатория",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "2 этаж в открытых палатах",
+    "caption": "3 этаж в открытых палатах",
     "x": 71.511,
     "y": 45.858,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-95debea1.jpg"
     ],
-    "captionEn": "2nd floor, in the open wards"
+    "captionEn": "3rd floor, in the open wards"
   },
   {
     "id": "lab-102",
@@ -1611,14 +1611,14 @@
     "mapName": "Лаборатория",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "2 этаж в открытой лаборатории",
+    "caption": "3 этаж в открытой лаборатории",
     "x": 69.366,
     "y": 42.114,
     "floor": null,
     "images": [
       "assets/screenshots/lab-meditsinskaea-bb4832d6.jpg"
     ],
-    "captionEn": "2nd floor, in the open laboratory"
+    "captionEn": "3rd floor, in the open laboratory"
   },
   {
     "id": "lab-107",
@@ -2352,8 +2352,8 @@
     "mapName": "Лаборатория",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "На 2 этаже в открытой секции с палатами",
-    "captionEn": "2nd floor, in the open ward section",
+    "caption": "На 3 этаже в открытой секции с палатами",
+    "captionEn": "3rd floor, in the open ward section",
     "images": [
       "assets/screenshots/lab-meditsinskaea-927d9828.jpg"
     ],
@@ -3364,6 +3364,21 @@
     "floor": null
   },
   {
+    "id": "lab-cmsnqskqv",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "2й этаж, комната офисов.",
+    "captionEn": "2nd floor, office room.",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-667cb343.jpg"
+    ],
+    "x": 69.467,
+    "y": 25.736,
+    "floor": null
+  },
+  {
     "id": "lab-cmsnqujh3",
     "map": "lab",
     "mapName": "Лаборатория",
@@ -3399,13 +3414,13 @@
     "mapName": "Лаборатория",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "1 этаж, комната рядом с \"Синей\"",
-    "captionEn": "1st floor, room next to \"Blue\"",
+    "caption": "2й этаж, комната рядом с \"Синей\"",
+    "captionEn": "2nd floor, room next to \"Blue\"",
     "images": [
       "assets/screenshots/lab-meditsinskaea-0d3ba99d.jpg"
     ],
-    "x": 39.291,
-    "y": 78.629,
+    "x": 72.265,
+    "y": 41.49,
     "floor": null
   },
   {
@@ -4016,8 +4031,8 @@
     "images": [
       "assets/screenshots/lab-polzovatelskoe-c9f8fb4f.jpg"
     ],
-    "x": 47.298,
-    "y": 43.51,
+    "x": 80.737,
+    "y": 5.716,
     "floor": null
   },
   {
@@ -5112,35 +5127,35 @@
     "floor": null
   },
   {
-    "id": "lab-cmsvmzdub",
-    "map": "lab",
-    "mapName": "Лаборатория",
-    "doc": "meditsinskaea",
-    "docName": "Медицинская документация",
-    "caption": "На столе в кафе около окон",
-    "captionEn": "On the table in the cafe near the windows",
+    "id": "labyrinth-cmsvn2asj",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "Рядом с трупом лаборанта",
+    "captionEn": "Next to the corpse of a laboratory assistant",
     "images": [
-      "assets/screenshots/lab-meditsinskaea-3ee861ec.jpg"
+      "assets/screenshots/labyrinth-tehnicheskaea-ef818986.jpg"
     ],
-    "x": 86.34,
-    "y": 15.702,
+    "x": 39.047,
+    "y": 53.604,
     "x2": null,
     "y2": null,
     "floor": null
   },
   {
-    "id": "lab-cmsvn10n7",
-    "map": "lab",
-    "mapName": "Лаборатория",
+    "id": "labyrinth-cmsvn2ysj",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "На столе рядом с компьютером в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»,",
-    "captionEn": "On the table next to the computer in the room locked with the \"TerraGroup Keycard (Green)\"",
+    "caption": "На коробке",
+    "captionEn": "On the box",
     "images": [
-      "assets/screenshots/lab-meditsinskaea-f98d0efa.jpg"
+      "assets/screenshots/labyrinth-meditsinskaea-a2c2dc6d.jpg"
     ],
-    "x": 74.698,
-    "y": 44.076,
+    "x": 45.374,
+    "y": 28.339,
     "x2": null,
     "y2": null,
     "floor": null
