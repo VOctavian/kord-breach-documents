@@ -5278,5 +5278,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "customs-cmswcsv7h",
+    "map": "customs",
+    "mapName": "Таможня",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "207 комната в маленькой общаге под стулом спавн проектной документации",
+    "captionEn": "Room 207 in a small dorm under a chair spawns design documentation",
+    "images": [
+      "assets/screenshots/customs-proectnaea-6f41a5f3.jpg"
+    ],
+    "x": 64.224,
+    "y": 83.183,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
