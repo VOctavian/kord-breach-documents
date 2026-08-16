@@ -5261,5 +5261,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "lab-cmsvr6dso",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе рядом с компьютером в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»,",
+    "captionEn": "On the table next to the computer in the room locked with the \"TerraGroup Keycard (Green)\"",
+    "images": [
+      "assets/screenshots/lab-polzovatelskoe-f98d0efa.jpg"
+    ],
+    "x": 74.764,
+    "y": 43.51,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
