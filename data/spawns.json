@@ -4972,5 +4972,22 @@
     "x2": 38.413,
     "y2": 48.727,
     "floor": null
+  },
+  {
+    "id": "woods-cmsvm48xw",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "У опрокинутого стола, возле входа на базу МЧС",
+    "captionEn": "Near the overturned table, near the entrance to the Ministry of Emergency Situations base",
+    "images": [
+      "assets/screenshots/woods-testovaea-acd8e6a7.jpg"
+    ],
+    "x": 60.204,
+    "y": 80.553,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
