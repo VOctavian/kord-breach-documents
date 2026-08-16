@@ -5210,5 +5210,56 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "icebreaker-cmsvnghmr",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Рубка на вертолётной площадкой (там же спавн РСП-30 и АМГ-10)",
+    "captionEn": "The helicopter landing pad (there's also a spawn area for RSP-30 and AMG-10)",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-3f143422.jpg"
+    ],
+    "x": 46.233,
+    "y": 20.954,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsvnhb5n",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На ящиках перед лестницей над машинным отделением (дальше вертолётная площадка)",
+    "captionEn": "On the boxes in front of the stairs above the engine room (further on is the helipad)",
+    "images": [
+      "assets/screenshots/icebreaker-personal-dfcb1184.jpg"
+    ],
+    "x": 60.622,
+    "y": 24.499,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsvnhloq",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На компьютере в правой комнате на проходе к вертолётной площадке",
+    "captionEn": "On the computer in the right room on the passage to the helipad",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-cc9ed21b.jpg"
+    ],
+    "x": 61.637,
+    "y": 24.007,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
