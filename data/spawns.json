@@ -3414,13 +3414,13 @@
     "mapName": "Лаборатория",
     "doc": "meditsinskaea",
     "docName": "Медицинская документация",
-    "caption": "2й этаж, комната рядом с \"Синей\"",
-    "captionEn": "2nd floor, room next to \"Blue\"",
+    "caption": "1 этаж, комната рядом с \"Синей\"",
+    "captionEn": "1 floor, room next to \"Blue\"",
     "images": [
       "assets/screenshots/lab-meditsinskaea-0d3ba99d.jpg"
     ],
-    "x": 72.265,
-    "y": 41.49,
+    "x": 39.259,
+    "y": 78.494,
     "floor": null
   },
   {
@@ -4031,8 +4031,8 @@
     "images": [
       "assets/screenshots/lab-polzovatelskoe-c9f8fb4f.jpg"
     ],
-    "x": 80.737,
-    "y": 5.716,
+    "x": 47.316,
+    "y": 43.794,
     "floor": null
   },
   {
@@ -5192,6 +5192,23 @@
     "y": 88.205,
     "x2": 50.212,
     "y2": 43.451,
+    "floor": null
+  },
+  {
+    "id": "lab-cmsvndz2z",
+    "map": "lab",
+    "mapName": "Лаборатория",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На столе в кафе около окон",
+    "captionEn": "On the table in the cafe near the windows",
+    "images": [
+      "assets/screenshots/lab-meditsinskaea-3ee861ec.jpg"
+    ],
+    "x": 86.267,
+    "y": 15.628,
+    "x2": null,
+    "y2": null,
     "floor": null
   }
 ]
