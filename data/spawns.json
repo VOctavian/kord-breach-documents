@@ -4989,5 +4989,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "woods-cmsvm6wmb",
+    "map": "woods",
+    "mapName": "Лес",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В депо на коробках внутри грузового контейнера на поезде",
+    "captionEn": "At the depot on boxes inside a freight container on a train",
+    "images": [
+      "assets/screenshots/woods-expluatationnaea-56bc4084.jpg"
+    ],
+    "x": 92.733,
+    "y": 75.7,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
