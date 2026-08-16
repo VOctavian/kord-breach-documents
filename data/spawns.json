@@ -3858,11 +3858,11 @@
     "images": [
       "assets/screenshots/reserve-proectnaea-c2d9f839.jpg"
     ],
-    "x": 23.509,
-    "y": 91.877,
+    "x": 23.386,
+    "y": 96.279,
     "floor": null,
-    "x2": 44.546,
-    "y2": 49.537
+    "x2": 44.595,
+    "y2": 53.745
   },
   {
     "id": "reserve-cmsobtxad",
@@ -5107,6 +5107,40 @@
     "y": 18.616,
     "x2": null,
     "y2": null,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsvmh0wb",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Район депо, убежище в одном из вагонов",
+    "captionEn": "Depot area, shelter in one of the cars",
+    "images": [
+      "assets/screenshots/reserve-personal-70c37afd.jpg"
+    ],
+    "x": 32.34,
+    "y": 37.281,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsvmijn7",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "Второй этаж, тетрисная",
+    "captionEn": "Second floor, Tetris",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-e8ab1601.jpg"
+    ],
+    "x": 83.34,
+    "y": 88.132,
+    "x2": 48.591,
+    "y2": 43.199,
     "floor": null
   }
 ]
