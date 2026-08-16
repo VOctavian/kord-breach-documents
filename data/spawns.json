@@ -1301,7 +1301,7 @@
     "images": [
       "assets/screenshots/lab-polzovatelskoe-c1d1db70.jpg"
     ],
-    "captionEn": "Cabinet in the \"Molecule\""
+    "captionEn": "Cabinet in the \"Molecule\" "
   },
   {
     "id": "lab-85",
@@ -5156,57 +5156,6 @@
     ],
     "x": 45.374,
     "y": 28.339,
-    "x2": null,
-    "y2": null,
-    "floor": null
-  },
-  {
-    "id": "icebreaker-cmsvn5spn",
-    "map": "icebreaker",
-    "mapName": "Ледокол",
-    "doc": "testovaea",
-    "docName": "Тестовая документация",
-    "caption": "На компьютере в правой комнате на проходе к вертолётной площадке",
-    "captionEn": "On the computer in the right room on the passage to the helipad",
-    "images": [
-      "assets/screenshots/icebreaker-testovaea-cc9ed21b.jpg"
-    ],
-    "x": 61.636,
-    "y": 23.922,
-    "x2": null,
-    "y2": null,
-    "floor": null
-  },
-  {
-    "id": "icebreaker-cmsvn68yj",
-    "map": "icebreaker",
-    "mapName": "Ледокол",
-    "doc": "testovaea",
-    "docName": "Тестовая документация",
-    "caption": "На ящиках перед лестницей над машинным отделением (дальше вертолётная площадка)",
-    "captionEn": "On the boxes in front of the stairs above the engine room (further on is the helipad)",
-    "images": [
-      "assets/screenshots/icebreaker-testovaea-dfcb1184.jpg"
-    ],
-    "x": 60.664,
-    "y": 24.598,
-    "x2": null,
-    "y2": null,
-    "floor": null
-  },
-  {
-    "id": "icebreaker-cmsvn7zz7",
-    "map": "icebreaker",
-    "mapName": "Ледокол",
-    "doc": "personal",
-    "docName": "Личные данные ЧВК",
-    "caption": "Рубка на вертолётной площадкой (там же спавн РСП-30 и АМГ-10)",
-    "captionEn": "The helicopter landing pad (there's also a spawn area for RSP-30 and AMG-10)",
-    "images": [
-      "assets/screenshots/icebreaker-personal-3f143422.jpg"
-    ],
-    "x": 46.079,
-    "y": 20.979,
     "x2": null,
     "y2": null,
     "floor": null
