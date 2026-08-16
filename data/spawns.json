@@ -5006,5 +5006,107 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "lighthouse-cmsvm9dfv",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Верхнее шале, микроволновка на кухне (2 этаж)",
+    "captionEn": "Upper chalet, microwave in the kitchen (2nd floor)",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-567ec635.jpg"
+    ],
+    "x": 82.987,
+    "y": 70.269,
+    "x2": 59.538,
+    "y2": 67.698,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsvmaj3f",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Яхт-клуб, на втором этаже в стойке под телевизором",
+    "captionEn": "Yacht Club, on the second floor in the stand under the TV",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-41a990ad.jpg"
+    ],
+    "x": 35.788,
+    "y": 56.152,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsvmbv9g",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В палатке недалеко от резервуара с вертолётом, на столе слева от входа",
+    "captionEn": "In a tent near the tank with a helicopter, on a table to the left of the entrance",
+    "images": [
+      "assets/screenshots/lighthouse-personal-69cb1108.jpg"
+    ],
+    "x": 57.336,
+    "y": 37.195,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsvmcc2b",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "На столе с ноутбуками в палатке недалеко от резервуара с вертолётом",
+    "captionEn": "On a table with laptops in a tent near the helicopter tank",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-21b49c96.jpg"
+    ],
+    "x": 57.811,
+    "y": 37.13,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsvmcy4j",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "В закрытой времянке недалеко от резервуара с вертолётом (необходим «Ключ от мастерской USEC Отступников»)",
+    "captionEn": "In a locked temporary building near the helicopter tank (requires the \"USEC Renegade Workshop Key\")",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-aec2db21.jpg"
+    ],
+    "x": 64.42,
+    "y": 36.803,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "lighthouse-cmsvmeukb",
+    "map": "lighthouse",
+    "mapName": "Маяк",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В ангаре железнодорожного депо на стеллаже",
+    "captionEn": "On a rack in the hangar of the railway depot",
+    "images": [
+      "assets/screenshots/lighthouse-expluatationnaea-99426159.jpg"
+    ],
+    "x": 45.408,
+    "y": 18.616,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
