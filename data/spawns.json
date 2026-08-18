@@ -3013,8 +3013,8 @@
     "images": [
       "assets/screenshots/streets-polzovatelskoe-ff9de2ba.jpg"
     ],
-    "x": 24.853,
-    "y": 33.409,
+    "x": 25.372,
+    "y": 33.502,
     "floor": null,
     "x2": 44.001,
     "y2": 33.67
@@ -4663,10 +4663,10 @@
     "images": [
       "assets/screenshots/streets-polzovatelskoe-89b2e785.jpg"
     ],
-    "x": 24.847,
-    "y": 32.813,
-    "x2": 44.026,
-    "y2": 33.385,
+    "x": 27.133,
+    "y": 30.852,
+    "x2": 45.842,
+    "y2": 31.26,
     "floor": null
   },
   {
@@ -4680,10 +4680,10 @@
     "images": [
       "assets/screenshots/streets-polzovatelskoe-cdf94682.jpg"
     ],
-    "x": 43.845,
-    "y": 75.217,
-    "x2": null,
-    "y2": null,
+    "x": 29.648,
+    "y": 88.204,
+    "x2": 43.744,
+    "y2": 75.514,
     "floor": null
   },
   {
@@ -5294,6 +5294,142 @@
     "y": 83.183,
     "x2": 44.148,
     "y2": 77.392,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyietpj",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На чёрной полке напротив входа.",
+    "captionEn": "On the black shelf across from the entrance when you walk in.",
+    "images": [
+      "assets/screenshots/streets-finansovaea-d7ecaa1e.jpg"
+    ],
+    "x": 25.864,
+    "y": 29.377,
+    "x2": 44.237,
+    "y2": 28.538,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyii6q8",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На нижней левой полке",
+    "captionEn": "On the lower left-hand shelf",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-018ba19b.jpg"
+    ],
+    "x": 50.708,
+    "y": 27.83,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyij35k",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "За стойкой регистрации, на полке.",
+    "captionEn": "Behind the reception desk on the shelf.\n\n",
+    "images": [
+      "assets/screenshots/streets-finansovaea-397c28f9.jpg"
+    ],
+    "x": 58.229,
+    "y": 40.425,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyik78w",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "За стойкую регистрацию, на полке.",
+    "captionEn": "On the stool next to the wet floor sign in the main lobby.",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-cc61e15f.jpg"
+    ],
+    "x": 59.482,
+    "y": 41.979,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyilikw",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На пассажирской двери красного автомобиля перед апартаментами «Кардинал».",
+    "captionEn": "In the passenger side door of the red car in front of the Cardinal apartments.",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-011a3a59.jpg"
+    ],
+    "x": 43.776,
+    "y": 36.113,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyimepk",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "С левой стороны полки над столом в центре комнаты.",
+    "captionEn": "On the left side of the shelf above the desk in the center of the room.",
+    "images": [
+      "assets/screenshots/streets-finansovaea-6b3baf50.jpg"
+    ],
+    "x": 43.861,
+    "y": 72.517,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyio7ps",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "В упавшем картотечном шкафу у углового окна.",
+    "captionEn": "In the fallen filing cabinet by the corner window.",
+    "images": [
+      "assets/screenshots/streets-polzovatelskoe-d0571e80.jpg"
+    ],
+    "x": 42.928,
+    "y": 71.461,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "streets-cmsyipl80",
+    "map": "streets",
+    "mapName": "Улицы Таркова",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На полу в куче книг.",
+    "captionEn": "On the floor in a pile of books.",
+    "images": [
+      "assets/screenshots/streets-finansovaea-85580714.jpg"
+    ],
+    "x": 30.007,
+    "y": 87.681,
+    "x2": 44.11,
+    "y2": 74.841,
     "floor": null
   }
 ]
