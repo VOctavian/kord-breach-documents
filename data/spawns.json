@@ -5635,5 +5635,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "shoreline-cmsyjfs4h",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На коробке в кузове синего пикапа.",
+    "captionEn": "On a box in the back bed of the blue pickup truck.",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-906b6929.jpg"
+    ],
+    "x": 13.123,
+    "y": 67.938,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
