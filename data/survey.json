@@ -1,5 +1,7 @@
 {
-  "activeIds": [],
+  "activeIds": [
+    "smsyq0k7s"
+  ],
   "surveys": [
     {
       "id": "2026-08-map-feedback",
@@ -45,6 +47,114 @@
           "text": "Discord",
           "textEn": "Discord",
           "multiline": false,
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "smsyq0k7s",
+      "title": "Что вы делаете со своими игровыми клипами?",
+      "titleEn": "What do you do with your game clips?",
+      "intro": "Программа живёт в трее и сама следит за папкой с записями. Новый клип появляется в списке с превью. В два клика: обрезал нужные секунды, дал название, залил на YouTube с доступом по ссылке — ссылка сразу в буфере. Программа помнит, что куда залито, и даёт удалить локальный файл, не теряя ссылку.",
+      "introEn": "The program lives in the system tray and automatically monitors the recordings folder. A new clip appears in the list with a preview. It takes just two clicks: trim the desired seconds, give it a title, upload it to YouTube with a link—the link is immediately saved in the clipboard. The program remembers where you've uploaded it and lets you delete the local file without losing the link.",
+      "images": [],
+      "questions": [
+        {
+          "id": "qmsyq0k7s0",
+          "text": "Никнэйм",
+          "textEn": "Nickname",
+          "multiline": false,
+          "images": []
+        },
+        {
+          "id": "qmsyq0k7s1",
+          "text": "Discord",
+          "textEn": "Discord",
+          "multiline": false,
+          "images": []
+        },
+        {
+          "id": "qmsyqa5ch",
+          "text": "Записываешь ли ты моменты из игр?",
+          "textEn": "Do you record moments from games?",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqano0",
+          "text": "Чем записываешь?",
+          "textEn": "What are you recording with?",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqbsxd",
+          "text": "Сколько клипов сейчас лежат необработанными?",
+          "textEn": "How many clips are currently sitting unprocessed?",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqcysh",
+          "text": "Что обычно происходит с записанным клипом? (можно несколько)  (Кидаю файл в Discord друзьям / Заливаю на YouTube / Публикую в TikTok / Shorts / Reels / Монтирую в большое видео / Просто лежит на диске / Удаляю)",
+          "textEn": "What usually happens to a recorded clip? (You can have several)  (I send the file to friends on Discord / I upload it to YouTube / I publish it to TikTok / Shorts / Reels / I edit it into a larger video / It just sits on my drive / I delete it)",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqfo2x",
+          "text": "Когда в последний раз хотел поделиться клипом — что сделал?",
+          "textEn": "The last time you wanted to share a video, what did you do?",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqfwea",
+          "text": "Что мешает выкладывать чаще? (можно несколько)  (Долго заливать / Лень возиться с обрезкой / Файл слишком большой, чтобы кинуть напрямую / Не хочу светить на публичном канале / Не помню, что уже выложил, а что нет / Ничего не мешает, выкладываю сколько нужно)",
+          "textEn": "What's stopping me from posting more often? (Several are fine) (It takes a long time to upload / I'm too lazy to crop it / The file is too big to upload directly / I don't want to show it off on a public channel / I don't remember what I've already posted and what I haven't / Nothing's stopping me, I post as much as I need)",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqjg7l",
+          "text": "Насколько это решает твою задачу?",
+          "textEn": "To what extent does this solve your problem?",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqjo5d",
+          "text": "Отметь то, что делал руками за последний месяц: (можно несколько)  (Обрезал клип перед тем, как выложить / Делал из горизонтального клипа вертикальный / Заливал видео скрытым / по ссылке / Искал, куда подевался уже выложенный клип / Удалял записи, чтобы освободить место / Ничего из этого)",
+          "textEn": "Please mark what you've done manually in the last month: (You can list several) (Cropped a clip before posting / Made a horizontal clip vertical / Uploaded a video hidden / via a link / Looked for where an already posted clip went / Deleted recordings to free up space / None of these)",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyql6g9",
+          "text": "Выбери максимум 3 функции, которыми пользовался бы чаще всего:  Автоматически подхватывает новые записи из папки Загрузка на YouTube в один клик / Быстрая обрезка без потери качества / Вертикальный кадр для Shorts и TikTok / Библиотека со статусами и ссылками / Удалить файл с диска, ссылку оставить / Скачать своё видео обратно с YouTube / Пресеты названий, описаний и тегов / Автопостинг ссылки в Discord / Публикация в TikTok",
+          "textEn": "Choose up to 3 features that you would use most often: Automatically picks up new recordings from the YouTube Upload folder in one click / Quick trimming without quality loss / Vertical frame for Shorts and TikTok / Library with statuses and links / Delete file from disk, leave link / Download your video back from YouTube / Presets for titles, descriptions, and tags / Auto-posting links to Discord / Publishing to TikTok",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqmw6x",
+          "text": "Чего в списке не хватает?",
+          "textEn": "What's missing from the list?",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqn0z5",
+          "text": "Если бы такая программа была готова сегодня:  Поставил бы прямо сейчас / Посмотрел бы, но не факт / Не поставил бы",
+          "textEn": "If such a program were ready today: I would put it on right now / I would watch it, but not necessarily / I wouldn’t put it on",
+          "multiline": true,
+          "images": []
+        },
+        {
+          "id": "qmsyqp1k9",
+          "text": "Оставь почту, если хочешь попробовать бету, и зайди на Discord Server",
+          "textEn": "Leave your email if you want to try the beta and join the Discord Server",
+          "multiline": true,
           "images": []
         }
       ]
