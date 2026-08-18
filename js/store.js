@@ -161,9 +161,42 @@ async function changelogFile(spawns) {
   }
 }
 
+/**
+ * Ссылки на картинки, которых не будет ни в этом коммите, ни на сайте.
+ *
+ * Черновик переживает перезагрузку вкладки, а байты картинок — нет: они лежат
+ * только в `pending`. Перезагрузили страницу между «добавить скриншот» и
+ * «опубликовать» — путь в данных остался, файл никуда не уехал, и точка на сайте
+ * показывала битую картинку. Так уже случилось с восемью точками.
+ */
+async function danglingImages(spawns) {
+  const paths = [...new Set(spawns.flatMap((s) => s.images ?? []))].filter((p) => !pending.has(p));
+  const missing = [];
+  await Promise.all(
+    paths.map(async (p) => {
+      try {
+        // HEAD достаточно: тело картинки нам не нужно, важен сам факт наличия.
+        const res = await fetch(p, { method: 'HEAD', cache: 'no-store' });
+        if (!res.ok) missing.push(p);
+      } catch {
+        missing.push(p);
+      }
+    })
+  );
+  return missing;
+}
+
 export async function publish(spawns, message) {
   const token = session()?.access_token;
   if (!token) throw new Error('нужно войти');
+
+  const lost = await danglingImages(spawns);
+  if (lost.length) {
+    throw new Error(
+      `не хватает ${lost.length} скриншотов — вкладку перезагружали, картинки из памяти пропали. ` +
+        `Добавьте их заново: ${lost.map((p) => p.split('/').pop()).join(', ')}`
+    );
+  }
 
   const changelog = await changelogFile(spawns);
   const files = [

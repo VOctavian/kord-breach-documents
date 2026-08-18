@@ -1,5 +1,350 @@
 [
   {
+    "id": "2026-08-18-1632",
+    "at": "2026-08-18T16:32",
+    "maps": [
+      {
+        "map": "interchange",
+        "added": [],
+        "fixed": [
+          {
+            "id": "interchange-cmsvlm4xw",
+            "caption": "IDEA, на полу рядом со столом",
+            "captionEn": "IDEA, on the floor next to the table"
+          },
+          {
+            "id": "interchange-cmsvlnl10",
+            "caption": "2 этаж, в магазине мебели",
+            "captionEn": "2nd floor, in the furniture store"
+          },
+          {
+            "id": "interchange-cmsvlogik",
+            "caption": "На диванчике в Бургер споте, 2 этаж",
+            "captionEn": "On a sofa at the Burger Spot, 2nd floor"
+          },
+          {
+            "id": "interchange-cmsvlp3o4",
+            "caption": "Тележка с мусором в магазине BIZARRO",
+            "captionEn": "A trash cart at the BIZARRO store"
+          },
+          {
+            "id": "interchange-cmsvlph0k",
+            "caption": "В магазине The National на картотеке",
+            "captionEn": "At The National store on the card index"
+          },
+          {
+            "id": "interchange-cmsvlqjic",
+            "caption": "Среди книг на столе в маленькой комнате в офисе между Goshan и OLI",
+            "captionEn": "Among the books on the table in the small room in the office between Goshan and OLI"
+          },
+          {
+            "id": "interchange-cmsvlrgdw",
+            "caption": "Офис администрации OLI",
+            "captionEn": "OLI Administration Office"
+          }
+        ],
+        "removed": []
+      },
+      {
+        "map": "shoreline",
+        "added": [],
+        "fixed": [
+          {
+            "id": "shoreline-cmsvlttlg",
+            "caption": "В доме в деревне (первый дом по счету если идти по дороге от выхода «Тоннель»)",
+            "captionEn": "In a house in the village (the first house in a row if you follow the road from the \"Tunnel\" exit)"
+          },
+          {
+            "id": "shoreline-cmsvlvng4",
+            "caption": "206 комната, за перевёрнутым столом ближе к балкону",
+            "captionEn": "Room 206, behind the upturned table closer to the balcony"
+          }
+        ],
+        "removed": []
+      }
+    ]
+  },
+  {
+    "id": "2026-08-17-0106",
+    "at": "2026-08-17T01:06",
+    "maps": [
+      {
+        "map": "customs",
+        "added": [
+          {
+            "id": "customs-cmswcsv7h",
+            "caption": "207 комната в маленькой общаге под стулом спавн проектной документации",
+            "captionEn": "Room 207 in a small dorm under a chair spawns design documentation"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      }
+    ]
+  },
+  {
+    "id": "2026-08-16-1501",
+    "at": "2026-08-16T15:01",
+    "maps": [
+      {
+        "map": "groundzero",
+        "added": [
+          {
+            "id": "groundzero-cmsvmr65n",
+            "caption": "У черного автомобиля с открытым багажником",
+            "captionEn": "A black car with an open trunk"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "interchange",
+        "added": [
+          {
+            "id": "interchange-cmsvlkhb0",
+            "caption": "На стеллаже внутри офиса ТЭЦ",
+            "captionEn": "On a rack inside the CHP office"
+          },
+          {
+            "id": "interchange-cmsvlm4xw",
+            "caption": "IDEA, на полу рядом со столом",
+            "captionEn": "IDEA, on the floor next to the table"
+          },
+          {
+            "id": "interchange-cmsvlnl10",
+            "caption": "2 этаж, в магазине мебели",
+            "captionEn": "2nd floor, in the furniture store"
+          },
+          {
+            "id": "interchange-cmsvlogik",
+            "caption": "На диванчике в Бургер споте, 2 этаж",
+            "captionEn": "On a sofa at the Burger Spot, 2nd floor"
+          },
+          {
+            "id": "interchange-cmsvlp3o4",
+            "caption": "Тележка с мусором в магазине BIZARRO",
+            "captionEn": "A trash cart at the BIZARRO store"
+          },
+          {
+            "id": "interchange-cmsvlph0k",
+            "caption": "В магазине The National на картотеке",
+            "captionEn": "At The National store on the card index"
+          },
+          {
+            "id": "interchange-cmsvlqjic",
+            "caption": "Среди книг на столе в маленькой комнате в офисе между Goshan и OLI",
+            "captionEn": "Among the books on the table in the small room in the office between Goshan and OLI"
+          },
+          {
+            "id": "interchange-cmsvlrgdw",
+            "caption": "Офис администрации OLI",
+            "captionEn": "OLI Administration Office"
+          }
+        ],
+        "fixed": [
+          {
+            "id": "interchange-49",
+            "caption": "Офисы между Goshan и OLI (комната с пультом выкл. сигнализации)",
+            "captionEn": "Offices between Goshan and OLI (the room with the alarm shut-off panel)"
+          }
+        ],
+        "removed": []
+      },
+      {
+        "map": "lab",
+        "added": [
+          {
+            "id": "lab-cmsvndz2z",
+            "caption": "На столе в кафе около окон",
+            "captionEn": "On the table in the cafe near the windows"
+          },
+          {
+            "id": "lab-cmsvr6dso",
+            "caption": "На столе рядом с компьютером в комнате закрытой на «Ключ-карта TerraGroup (Зелёная)»,",
+            "captionEn": "On the table next to the computer in the room locked with the \"TerraGroup Keycard (Green)\""
+          }
+        ],
+        "fixed": [
+          {
+            "id": "lab-cmsnr07zs",
+            "caption": "1 этаж, комната рядом с \"Синей\"",
+            "captionEn": "1 floor, room next to \"Blue\""
+          },
+          {
+            "id": "lab-cmsoceprx",
+            "caption": "Стойка рядом с лифтами между бойлерной и казармой",
+            "captionEn": "The stand next to the elevators between the boiler room and the barracks"
+          }
+        ],
+        "removed": []
+      },
+      {
+        "map": "lighthouse",
+        "added": [
+          {
+            "id": "lighthouse-cmsvm9dfv",
+            "caption": "Верхнее шале, микроволновка на кухне (2 этаж)",
+            "captionEn": "Upper chalet, microwave in the kitchen (2nd floor)"
+          },
+          {
+            "id": "lighthouse-cmsvmaj3f",
+            "caption": "Яхт-клуб, на втором этаже в стойке под телевизором",
+            "captionEn": "Yacht Club, on the second floor in the stand under the TV"
+          },
+          {
+            "id": "lighthouse-cmsvmbv9g",
+            "caption": "В палатке недалеко от резервуара с вертолётом, на столе слева от входа",
+            "captionEn": "In a tent near the tank with a helicopter, on a table to the left of the entrance"
+          },
+          {
+            "id": "lighthouse-cmsvmcc2b",
+            "caption": "На столе с ноутбуками в палатке недалеко от резервуара с вертолётом",
+            "captionEn": "On a table with laptops in a tent near the helicopter tank"
+          },
+          {
+            "id": "lighthouse-cmsvmcy4j",
+            "caption": "В закрытой времянке недалеко от резервуара с вертолётом (необходим «Ключ от мастерской USEC Отступников»)",
+            "captionEn": "In a locked temporary building near the helicopter tank (requires the \"USEC Renegade Workshop Key\")"
+          },
+          {
+            "id": "lighthouse-cmsvmeukb",
+            "caption": "В ангаре железнодорожного депо на стеллаже",
+            "captionEn": "On a rack in the hangar of the railway depot"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsvnaauj",
+            "caption": "Район депо, убежище в одном из вагонов",
+            "captionEn": "Depot area, shelter in one of the cars"
+          },
+          {
+            "id": "reserve-cmsvnb10b",
+            "caption": "Второй этаж, тетрисная",
+            "captionEn": "Second floor, Tetris"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "shoreline",
+        "added": [
+          {
+            "id": "shoreline-cmsvlttlg",
+            "caption": "В доме в деревне (первый дом по счету если идти по дороге от выхода «Тоннель»)",
+            "captionEn": "In a house in the village (the first house in a row if you follow the road from the \"Tunnel\" exit)"
+          },
+          {
+            "id": "shoreline-cmsvlvng4",
+            "caption": "206 комната, за перевёрнутым столом ближе к балкону",
+            "captionEn": "Room 206, behind the upturned table closer to the balcony"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "woods",
+        "added": [
+          {
+            "id": "woods-cmsvm48xw",
+            "caption": "У опрокинутого стола, возле входа на базу МЧС",
+            "captionEn": "Near the overturned table, near the entrance to the Ministry of Emergency Situations base"
+          },
+          {
+            "id": "woods-cmsvm6wmb",
+            "caption": "В депо на коробках внутри грузового контейнера на поезде",
+            "captionEn": "At the depot on boxes inside a freight container on a train"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "labyrinth",
+        "added": [
+          {
+            "id": "labyrinth-cmsvn2asj",
+            "caption": "Рядом с трупом лаборанта",
+            "captionEn": "Next to the corpse of a laboratory assistant"
+          },
+          {
+            "id": "labyrinth-cmsvn2ysj",
+            "caption": "На коробке",
+            "captionEn": "On the box"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "icebreaker",
+        "added": [
+          {
+            "id": "icebreaker-cmsvnghmr",
+            "caption": "Рубка на вертолётной площадкой (там же спавн РСП-30 и АМГ-10)",
+            "captionEn": "The helicopter landing pad (there's also a spawn area for RSP-30 and AMG-10)"
+          },
+          {
+            "id": "icebreaker-cmsvnhb5n",
+            "caption": "На ящиках перед лестницей над машинным отделением (дальше вертолётная площадка)",
+            "captionEn": "On the boxes in front of the stairs above the engine room (further on is the helipad)"
+          },
+          {
+            "id": "icebreaker-cmsvnhloq",
+            "caption": "На компьютере в правой комнате на проходе к вертолётной площадке",
+            "captionEn": "On the computer in the right room on the passage to the helipad"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      }
+    ]
+  },
+  {
+    "id": "2026-08-15-0221",
+    "at": "2026-08-15T02:21",
+    "maps": [
+      {
+        "map": "lighthouse",
+        "added": [],
+        "fixed": [],
+        "removed": [
+          {
+            "id": "lighthouse-cmsobfuck",
+            "caption": "На втором этаже кирпичного дома в деревне рядом с выходом «Переход на Берег»",
+            "captionEn": "On the second floor of a brick house in the village next to the \"Passage to the Shore\" exit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2026-08-14-2307",
+    "at": "2026-08-14T23:07",
+    "maps": [
+      {
+        "map": "streets",
+        "added": [],
+        "fixed": [
+          {
+            "id": "streets-cmsr7i2n7",
+            "caption": "Около мешков на полу рямдом с книжной полкой среди разбросанных книг (нет скрина)",
+            "captionEn": "Near the bags on the floor next to a bookshelf among scattered books (no screenshot)"
+          }
+        ],
+        "removed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-14-1620",
     "at": "2026-08-14T16:20",
     "maps": [
