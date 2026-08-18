@@ -7,6 +7,7 @@
 import { isLocal } from './widgets.js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './config.js';
 import { session } from './auth.js';
+import { buildRelease } from './changelog-build.js';
 
 export const remote = !isLocal;
 
@@ -132,12 +133,42 @@ const base64 = (bytes) => {
  * Отправляет черновик в репозиторий одним коммитом. Картинки едут вместе с
  * данными: иначе между двумя коммитами сайт ссылался бы на несуществующий файл.
  */
+/**
+ * Запись в «Что нового» для правок с сайта. Сравниваем с тем, что сейчас лежит
+ * на сайте: это ровно то состояние, которое видит посетитель.
+ *
+ * Ошибку глотаем: не попавшая запись обиднее, чем несорвавшаяся публикация, но
+ * ронять из-за неё сами правки точно не стоит.
+ */
+async function changelogFile(spawns) {
+  try {
+    const bust = `?cb=${Date.now()}`;
+    const [was, maps, history] = await Promise.all([
+      fetch(`data/spawns.json${bust}`).then((r) => r.json()),
+      fetch(`data/maps.json${bust}`).then((r) => r.json()),
+      fetch(`data/changelog.json${bust}`)
+        .then((r) => (r.ok ? r.json() : []))
+        .catch(() => []),
+    ]);
+    const release = buildRelease(spawns, was, maps.map((m) => m.id));
+    if (!release) return null;
+    return {
+      path: 'data/changelog.json',
+      content: JSON.stringify([release, ...(Array.isArray(history) ? history : [])], null, 2) + '\n',
+    };
+  } catch {
+    return null;
+  }
+}
+
 export async function publish(spawns, message) {
   const token = session()?.access_token;
   if (!token) throw new Error('нужно войти');
 
+  const changelog = await changelogFile(spawns);
   const files = [
     { path: 'data/spawns.json', content: JSON.stringify(spawns, null, 2) + '\n' },
+    ...(changelog ? [changelog] : []),
     ...[...pending].map(([path, { bytes }]) => ({ path, content: base64(bytes), encoding: 'base64' })),
   ];
 

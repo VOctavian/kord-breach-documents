@@ -71,6 +71,8 @@ const DICT = {
   changelogIntro: { ru: 'Карта обновилась — вот что изменилось.', en: 'The map has been updated — here is what changed.' },
   changelogFeatures: { ru: 'Новое на сайте', en: 'New on the site' },
   changelogAdded: { ru: 'Новые точки', en: 'New points' },
+  changelogRemoved: { ru: 'Убранные точки', en: 'Removed points' },
+  changelogNewMark: { ru: 'новое', en: 'new' },
   changelogFixed: { ru: 'Исправления', en: 'Fixes' },
   changelogMore: { ru: 'и ещё {n}', en: '{n} more' },
   changelogGot: { ru: 'Понятно', en: 'Got it' },

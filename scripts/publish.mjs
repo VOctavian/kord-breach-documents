@@ -13,6 +13,7 @@
 import { execSync, execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { buildRelease } from '../js/changelog-build.js';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SITE = 'https://voctavian.github.io/kord-breach-documents';
@@ -182,45 +183,9 @@ if (orphans.length) {
 
 const CHANGELOG_FILE = `${ROOT}data/changelog.json`;
 
-/**
- * Запись для попапа «Что нового»: точки, изменившиеся с прошлого коммита,
- * разложенные по локациям на «новые» и «исправления».
- *
- * Считаем только то, что видно посетителю: заготовки без описания и точки без
- * координат в changelog не попадают — они появятся в той публикации, в которой
- * их наконец разметят.
- */
-function buildRelease(was) {
-  const visible = (s) => Boolean(s && (s.caption?.trim() || s.images?.length) && s.x != null);
-  const item = (s) => ({ id: s.id, caption: s.caption ?? '', captionEn: s.captionEn ?? '' });
-  const sameImages = (a, b) => JSON.stringify(a.images ?? []) === JSON.stringify(b.images ?? []);
-
-  const groups = [];
-  for (const map of maps) {
-    const added = [];
-    const fixed = [];
-
-    for (const s of spawns.filter((s) => s.map === map.id && visible(s))) {
-      const before = was.get(s.id);
-      // Точка, которой раньше не было на карте: либо новая, либо наконец размеченная.
-      if (!visible(before)) added.push(item(s));
-      else if (before.x !== s.x || before.y !== s.y || before.caption !== s.caption || !sameImages(before, s)) {
-        fixed.push(item(s));
-      }
-    }
-
-    if (added.length || fixed.length) groups.push({ map: map.id, added, fixed });
-  }
-
-  if (!groups.length) return null;
-
-  const now = new Date();
-  const pad = (n) => String(n).padStart(2, '0');
-  const day = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
-  const time = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
-  // `at` — местное время публикации, его же показывает попап.
-  return { id: `${day}-${time.replace(':', '')}`, at: `${day}T${time}`, maps: groups };
-}
+// Сама раскладка изменений живёт в js/changelog-build.js — её же использует
+// правка с сайта. Держать две копии уже выходило боком: правки из админки
+// уезжали без записи в «Что нового».
 
 const paths = ALL ? ['.'] : PATHS;
 const changed = git(['status', '--porcelain', '--', ...paths]);
@@ -279,7 +244,7 @@ if (!was) {
   if (moved.length) summary.push(`сдвинуто: ${moved.length}`);
   if (retitled.length) summary.push(`описаний правлено: ${retitled.length}`);
 
-  if (CHANGELOG) release = buildRelease(was);
+  if (CHANGELOG) release = buildRelease(spawns, [...was.values()], maps.map((m) => m.id));
 }
 
 /** Что стало с опросами по сравнению с прошлым коммитом — для темы коммита. */
