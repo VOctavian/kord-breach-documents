@@ -5601,5 +5601,22 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "groundzero-cmsyja3mw",
+    "map": "groundzero",
+    "mapName": "Эпицентр",
+    "doc": "polzovatelskoe",
+    "docName": "Пользовательская документация",
+    "caption": "На диване у окна.",
+    "captionEn": "On the couch against the window.",
+    "images": [
+      "assets/screenshots/groundzero-polzovatelskoe-35ad7a72.jpg"
+    ],
+    "x": 62.74,
+    "y": 33.125,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
