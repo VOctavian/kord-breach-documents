@@ -4,8 +4,36 @@
     "at": "2026-08-18T16:32",
     "maps": [
       {
+        "map": "groundzero",
+        "added": [
+          {
+            "id": "groundzero-cmsyja3mw",
+            "caption": "На диване у окна.",
+            "captionEn": "On the couch against the window."
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
         "map": "interchange",
-        "added": [],
+        "added": [
+          {
+            "id": "interchange-cmsyivcyg",
+            "caption": "Сверху на синем шкафчике.",
+            "captionEn": "On top of the blue locker."
+          },
+          {
+            "id": "interchange-cmsyiw3yg",
+            "caption": "Внутри оружейного шкафа #21WS, запертого снаружи, на полке в середине слева.",
+            "captionEn": "Inside the #21WS external locked armory on the shelf middle left."
+          },
+          {
+            "id": "interchange-cmsyixwvc",
+            "caption": "На обеденном столе в палатке-кафетерии.",
+            "captionEn": "On a dining table in the cafeteria tent."
+          }
+        ],
         "fixed": [
           {
             "id": "interchange-cmsvlm4xw",
@@ -46,8 +74,37 @@
         "removed": []
       },
       {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmsyjd7pt",
+            "caption": "На полу рядом с зелёной папкой.",
+            "captionEn": "On the floor by the green binder."
+          }
+        ],
+        "fixed": [
+          {
+            "id": "reserve-cmsobry1h",
+            "caption": "Третий этаж короля",
+            "captionEn": "The King's Third Floor"
+          },
+          {
+            "id": "reserve-cmsobtxad",
+            "caption": "Второй этаж белой пешки, в комнате со стороны левого подъезда",
+            "captionEn": "The second floor of the white pawn, in the room on the left side of the entrance"
+          }
+        ],
+        "removed": []
+      },
+      {
         "map": "shoreline",
-        "added": [],
+        "added": [
+          {
+            "id": "shoreline-cmsyjfs4h",
+            "caption": "На коробке в кузове синего пикапа.",
+            "captionEn": "On a box in the back bed of the blue pickup truck."
+          }
+        ],
         "fixed": [
           {
             "id": "shoreline-cmsvlttlg",
@@ -60,6 +117,163 @@
             "captionEn": "Room 206, behind the upturned table closer to the balcony"
           }
         ],
+        "removed": []
+      },
+      {
+        "map": "streets",
+        "added": [
+          {
+            "id": "streets-cmsyietpj",
+            "caption": "На чёрной полке напротив входа.",
+            "captionEn": "On the black shelf across from the entrance when you walk in."
+          },
+          {
+            "id": "streets-cmsyii6q8",
+            "caption": "На нижней левой полке",
+            "captionEn": "On the lower left-hand shelf"
+          },
+          {
+            "id": "streets-cmsyij35k",
+            "caption": "За стойкой регистрации, на полке.",
+            "captionEn": "Behind the reception desk on the shelf.\n\n"
+          },
+          {
+            "id": "streets-cmsyik78w",
+            "caption": "За стойкую регистрацию, на полке.",
+            "captionEn": "On the stool next to the wet floor sign in the main lobby."
+          },
+          {
+            "id": "streets-cmsyilikw",
+            "caption": "На пассажирской двери красного автомобиля перед апартаментами «Кардинал».",
+            "captionEn": "In the passenger side door of the red car in front of the Cardinal apartments."
+          },
+          {
+            "id": "streets-cmsyimepk",
+            "caption": "С левой стороны полки над столом в центре комнаты.",
+            "captionEn": "On the left side of the shelf above the desk in the center of the room."
+          },
+          {
+            "id": "streets-cmsyio7ps",
+            "caption": "В упавшем картотечном шкафу у углового окна.",
+            "captionEn": "In the fallen filing cabinet by the corner window."
+          },
+          {
+            "id": "streets-cmsyipl80",
+            "caption": "На полу в куче книг.",
+            "captionEn": "On the floor in a pile of books."
+          }
+        ],
+        "fixed": [
+          {
+            "id": "streets-cmsllgzk1",
+            "caption": "Здание ЖК Cardinal, на кухне в корпоративной квартире TerraGroup (нужен ключ от корпоративной квартиры TerraGroup)",
+            "captionEn": "Cardinal residential complex, in the kitchen of the TerraGroup corporate apartment (requires a key to the TerraGroup corporate apartment)"
+          },
+          {
+            "id": "streets-cmsr7nmrn",
+            "caption": "Здание ЖК Cardinal, квартира Круглова, в гостиной на столе (нужен ключ от ключ от апартаментов в ЖК Cardinal)",
+            "captionEn": "Cardinal Residential Complex building, Kruglov's apartment, on the table in the living room (you need a key to the apartment in the Cardinal Residential Complex)"
+          },
+          {
+            "id": "streets-cmsr7pijf",
+            "caption": "Стол с компьютером на втором этаже Конкордии в корпусе, расположенном ближе к базе Кабана",
+            "captionEn": "A desk with a computer on the second floor of Concordia in the building located closer to the Kabana base"
+          }
+        ],
+        "removed": []
+      },
+      {
+        "map": "labyrinth",
+        "added": [
+          {
+            "id": "labyrinth-cmsyj1pmg",
+            "caption": "Поверх сгоревших ящиков возле котлов.",
+            "captionEn": "On top of the burnt boxes by the boilers."
+          },
+          {
+            "id": "labyrinth-cmsyj3grk",
+            "caption": "На серверной стойке в комнате наблюдения.",
+            "captionEn": "On the server rack in the Observation room."
+          },
+          {
+            "id": "labyrinth-cmsyj3tgg",
+            "caption": "В настоящее время добраться до этого района невозможно.",
+            "captionEn": "This area is currently impossible to reach."
+          },
+          {
+            "id": "labyrinth-cmsyj4q6w",
+            "caption": "На деревянном ящике рядом с местом появления шестого трупа с ключом.",
+            "captionEn": "On top of a wooden box next to the 6th corpse key spawn."
+          },
+          {
+            "id": "labyrinth-cmsyj59yo",
+            "caption": "В ящике, где появляется ключ от трупа, между лужей с токсичными веществами и комнатами с ловушками для дробовиков.",
+            "captionEn": "In the box where the corpse key spawns between toxic puddle and shotgun trap rooms."
+          },
+          {
+            "id": "labyrinth-cmsyj65h4",
+            "caption": "На ящике прямо у входа в зал собраний.",
+            "captionEn": "On the crate right next to the entrance of the assembly room."
+          },
+          {
+            "id": "labyrinth-cmsyj7flk",
+            "caption": "На ящике в комнате, примыкающей к изогнутому коридору.",
+            "captionEn": "On top of the crate in the room attached to the curved hallway."
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "icebreaker",
+        "added": [
+          {
+            "id": "icebreaker-cmsyjh955",
+            "caption": "На полу перед невысокой стеной.",
+            "captionEn": "On the floor in front of the half-wall."
+          },
+          {
+            "id": "icebreaker-cmsyjhynt",
+            "caption": "Справа от стола. (C-1)",
+            "captionEn": "On the right of the desk. (C-1)"
+          },
+          {
+            "id": "icebreaker-cmsyjj9jd",
+            "caption": "На дне шкафа в архиве.",
+            "captionEn": "In the bottom of the cabinet in the archives room."
+          },
+          {
+            "id": "icebreaker-cmsyjjmjl",
+            "caption": "Перед синим ящиком в углу комнаты.",
+            "captionEn": "In front of the blue crate in the corner of the room."
+          },
+          {
+            "id": "icebreaker-cmsyjk0sh",
+            "caption": "Среди папок с документами за столом на четыре персоны.",
+            "captionEn": "Among some binders behind the 4-seat table."
+          },
+          {
+            "id": "icebreaker-cmsyjklh5",
+            "caption": "В кресле в восточной комнате столовой.",
+            "captionEn": "On the armchair in the east room of the canteen."
+          },
+          {
+            "id": "icebreaker-cmsyjl2jt",
+            "caption": "На полке стола рядом с наушниками.(экипажа)",
+            "captionEn": "In the desk shelf by the headphones. (Crew Quarters)"
+          },
+          {
+            "id": "icebreaker-cmsyjmlkh",
+            "caption": "На стойке под пробковой доской.",
+            "captionEn": "On the counter under the cork board."
+          },
+          {
+            "id": "icebreaker-cmsyjngbd",
+            "caption": "На синем стуле у стены.",
+            "captionEn": "On the blue chair against the wall."
+          }
+        ],
+        "fixed": [],
         "removed": []
       }
     ]
