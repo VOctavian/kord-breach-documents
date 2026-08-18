@@ -234,7 +234,9 @@ async function buildActive(pane) {
     return;
   }
 
-  box.replaceChildren(
+  // `replaceChildren` — нативный метод: `null` он не пропускает мимо, как наш
+  // `el()`, а превращает в текстовый узел «null». Отсеиваем сами.
+  const kids = [
     el(
       'p',
       { class: 'pop-intro' },
@@ -252,8 +254,9 @@ async function buildActive(pane) {
         el('span', { class: 'sv-item-name' }, s.title || s.id),
         el('span', { class: 'sv-item-sub' }, `${s.questions?.length ?? 0} вопр.`)
       );
-    })
-  );
+    }),
+  ];
+  box.replaceChildren(...kids.filter(Boolean));
 
   async function save() {
     const ids = surveys.filter((s, i) => box.querySelectorAll('input[type=checkbox]')[i].checked).map((s) => s.id);
