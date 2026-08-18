@@ -5652,5 +5652,156 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjh955",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На полу перед невысокой стеной.",
+    "captionEn": "On the floor in front of the half-wall.",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-806d89b7.jpg"
+    ],
+    "x": 11.417,
+    "y": 45.641,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjhynt",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Справа от стола. (C-1)",
+    "captionEn": "On the right of the desk. (C-1)",
+    "images": [
+      "assets/screenshots/icebreaker-personal-22019ef4.jpg"
+    ],
+    "x": 25.734,
+    "y": 42.828,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjj9jd",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На дне шкафа в архиве.",
+    "captionEn": "In the bottom of the cabinet in the archives room.",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-6b6e50cb.jpg"
+    ],
+    "x": 45.86,
+    "y": 47.754,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjjmjl",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Перед синим ящиком в углу комнаты.",
+    "captionEn": "In front of the blue crate in the corner of the room.",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-6441a901.jpg"
+    ],
+    "x": 46.237,
+    "y": 49.614,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjk0sh",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "Среди папок с документами за столом на четыре персоны.",
+    "captionEn": "Among some binders behind the 4-seat table.",
+    "images": [
+      "assets/screenshots/icebreaker-personal-5abdf261.jpg"
+    ],
+    "x": 45.63,
+    "y": 49.614,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjklh5",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "В кресле в восточной комнате столовой.",
+    "captionEn": "On the armchair in the east room of the canteen.",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-fd5c1aa1.jpg"
+    ],
+    "x": 55.718,
+    "y": 48.721,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjl2jt",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На полке стола рядом с наушниками.(экипажа)",
+    "captionEn": "In the desk shelf by the headphones. (Crew Quarters)",
+    "images": [],
+    "x": 55.781,
+    "y": 43.365,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjmlkh",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На стойке под пробковой доской.",
+    "captionEn": "On the counter under the cork board.",
+    "images": [
+      "assets/screenshots/icebreaker-personal-9f5ea5d6.jpg"
+    ],
+    "x": 68.129,
+    "y": 10.261,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmsyjngbd",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На синем стуле у стены.",
+    "captionEn": "On the blue chair against the wall.",
+    "images": [
+      "assets/screenshots/icebreaker-personal-9516819c.jpg"
+    ],
+    "x": 95.318,
+    "y": 26.329,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
