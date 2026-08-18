@@ -5482,5 +5482,124 @@
     "x2": null,
     "y2": null,
     "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj1pmg",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "Поверх сгоревших ящиков возле котлов.",
+    "captionEn": "On top of the burnt boxes by the boilers.",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-a2571caf.jpg"
+    ],
+    "x": 31.214,
+    "y": 41.308,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj3grk",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На серверной стойке в комнате наблюдения.",
+    "captionEn": "On the server rack in the Observation room.",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-0f576171.jpg"
+    ],
+    "x": 41.643,
+    "y": 64.044,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj3tgg",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В настоящее время добраться до этого района невозможно.",
+    "captionEn": "This area is currently impossible to reach.",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-1d096897.jpg"
+    ],
+    "x": 41.614,
+    "y": 69.831,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj4q6w",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На деревянном ящике рядом с местом появления шестого трупа с ключом.",
+    "captionEn": "On top of a wooden box next to the 6th corpse key spawn.",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-9120c42b.jpg"
+    ],
+    "x": 82.618,
+    "y": 53.758,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj59yo",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В ящике, где появляется ключ от трупа, между лужей с токсичными веществами и комнатами с ловушками для дробовиков.",
+    "captionEn": "In the box where the corpse key spawns between toxic puddle and shotgun trap rooms.",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-5f33bb25.jpg"
+    ],
+    "x": 82.618,
+    "y": 54.985,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj65h4",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "meditsinskaea",
+    "docName": "Медицинская документация",
+    "caption": "На ящике прямо у входа в зал собраний.",
+    "captionEn": "On the crate right next to the entrance of the assembly room.",
+    "images": [
+      "assets/screenshots/labyrinth-meditsinskaea-d0787a7f.jpg"
+    ],
+    "x": 58.663,
+    "y": 48.789,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmsyj7flk",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На ящике в комнате, примыкающей к изогнутому коридору.",
+    "captionEn": "On top of the crate in the room attached to the curved hallway.",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-72f6e04f.jpg"
+    ],
+    "x": 45.061,
+    "y": 41.538,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
