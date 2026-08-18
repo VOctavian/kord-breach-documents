@@ -156,6 +156,13 @@
           "textEn": "Leave your email if you want to try the beta and join the Discord Server",
           "multiline": true,
           "images": []
+        },
+        {
+          "id": "qmsyrfjqq",
+          "text": "Сколько бы тебе было бы не жалко отдовать в месяц или навсегда за такую программу?",
+          "textEn": "How much would you be willing to pay per month or forever for such a program?",
+          "multiline": true,
+          "images": []
         }
       ]
     },
