@@ -3858,11 +3858,11 @@
     "images": [
       "assets/screenshots/reserve-proectnaea-c2d9f839.jpg"
     ],
-    "x": 23.509,
-    "y": 91.877,
+    "x": 22.286,
+    "y": 97.97,
     "floor": null,
-    "x2": 44.546,
-    "y2": 49.537
+    "x2": 43.492,
+    "y2": 55.066
   },
   {
     "id": "reserve-cmsobtxad",
@@ -3875,8 +3875,8 @@
     "images": [
       "assets/screenshots/reserve-proectnaea-a3f790bc.jpg"
     ],
-    "x": 96.398,
-    "y": 93.901,
+    "x": 96.494,
+    "y": 89.473,
     "floor": null,
     "x2": 52.28,
     "y2": 62.593
@@ -5615,6 +5615,23 @@
     ],
     "x": 62.74,
     "y": 33.125,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmsyjd7pt",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На полу рядом с зелёной папкой.",
+    "captionEn": "On the floor by the green binder.",
+    "images": [
+      "assets/screenshots/reserve-personal-64d80eec.jpg"
+    ],
+    "x": 96.657,
+    "y": 80.567,
     "x2": null,
     "y2": null,
     "floor": null
