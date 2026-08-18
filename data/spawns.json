@@ -5431,5 +5431,56 @@
     "x2": 44.11,
     "y2": 74.841,
     "floor": null
+  },
+  {
+    "id": "interchange-cmsyivcyg",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Сверху на синем шкафчике.",
+    "captionEn": "On top of the blue locker.",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-f5f45c4f.jpg"
+    ],
+    "x": 5.825,
+    "y": 64.201,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsyiw3yg",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "Внутри оружейного шкафа #21WS, запертого снаружи, на полке в середине слева.",
+    "captionEn": "Inside the #21WS external locked armory on the shelf middle left.",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-ac4e460a.jpg"
+    ],
+    "x": 24.056,
+    "y": 83.544,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "interchange-cmsyixwvc",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "finansovaea",
+    "docName": "Финансовая документация",
+    "caption": "На обеденном столе в палатке-кафетерии.",
+    "captionEn": "On a dining table in the cafeteria tent.",
+    "images": [
+      "assets/screenshots/interchange-finansovaea-bf67779e.jpg"
+    ],
+    "x": 81.818,
+    "y": 52.33,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
