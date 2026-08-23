@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-08-23-1348",
+    "at": "2026-08-23T13:48",
+    "maps": [
+      {
+        "map": "lab",
+        "added": [],
+        "fixed": [
+          {
+            "id": "lab-102",
+            "caption": "На столе в комнате закрытой на «Ключ-карта TerraGroup (Синяя)»",
+            "captionEn": "On the table in the room locked with the TerraGroup keycard (Blue)"
+          }
+        ],
+        "removed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-18-1632",
     "at": "2026-08-18T16:32",
     "maps": [
