@@ -122,7 +122,26 @@ ok(`${spawns.length} точек, ссылки на скриншоты целы`)
 if (drafts) warn(`${drafts} пустых заготовок — на сайт не попадут`);
 if (unplaced.length) warn(`${unplaced.length} без координат — на карте не покажутся: ${unplaced.map((s) => s.id).join(', ')}`);
 
-/* ---------- 1a. уборка несвязанных картинок ---------- */
+/* ---------- 1a. счётчик в карточке ссылки ---------- */
+
+// Discord и прочие скраперы превью не выполняют JavaScript: для них существует
+// только тот HTML, что пришёл с сервера. Поэтому число точек в og:description
+// приходится держать статическим — и обновлять здесь, иначе оно устареет на
+// первой же публикации. Делаем это до `git status`, чтобы правка попала в коммит.
+const placed = published.length - unplaced.length;
+const ogLine = `${placed} точек на ${maps.length} картах Escape from Tarkov со скриншотами и описаниями.`;
+if (!DRY) {
+  for (const page of ['index.html', 'map.html']) {
+    const src = readFileSync(ROOT + page, 'utf8');
+    const next = src.replace(/(<meta property="og:description" content=")[^"]*(">)/, `$1${ogLine}$2`);
+    if (next !== src) {
+      writeFileSync(ROOT + page, next, 'utf8');
+      ok(`${page}: счётчик в карточке ссылки обновлён на ${placed}`);
+    }
+  }
+}
+
+/* ---------- 1b. уборка несвязанных картинок ---------- */
 
 /**
  * Спрашиваем, что удалить из ненужных картинок. Не спрашиваем при `--dry-run`
@@ -208,7 +227,7 @@ const untracked = git(['ls-files', '--others', '--exclude-standard', '--', ...pa
   .filter(Boolean);
 // Оформление сайта живёт в assets/, но на него ссылается разметка, а не данные —
 // правило «в assets/ только то, на что ссылаются точки» его бы отбросило.
-const CHROME = ['assets/favicon/'];
+const CHROME = ['assets/favicon/', 'assets/og.jpg'];
 const toAdd = untracked.filter(
   (p) => !p.startsWith('assets/') || referenced.has(p) || CHROME.some((dir) => p.startsWith(dir))
 );
@@ -352,6 +371,8 @@ if (DRY) {
   process.exit(0);
 }
 
+let changelogWritten = false;
+
 if (release) {
   const history = existsSync(CHANGELOG_FILE) ? JSON.parse(readFileSync(CHANGELOG_FILE, 'utf8')) : [];
   let committed = new Set();
@@ -367,6 +388,7 @@ if (release) {
 
   // Новое сверху: попап показывает всё, что посетитель ещё не закрывал.
   writeFileSync(CHANGELOG_FILE, JSON.stringify([release, ...history.slice(draft ? 1 : 0)], null, 2) + '\n');
+  changelogWritten = true;
   if (draft) ok(`«Что нового»: черновая запись ${draft.id} заменена на ${release.id}`);
 }
 
@@ -391,6 +413,10 @@ const inIndex = new Set(git(['ls-files', '--', ...paths]).split('\n').filter(Boo
 const addable = modified.filter((p) => existsSync(ROOT + p) || inIndex.has(p));
 if (addable.length) git(['add', '-A', '--', ...addable]);
 if (toAdd.length) git(['add', '--', ...toAdd]);
+// Запись «Что нового» появляется уже после того, как список выше посчитан по
+// `git status`. Если до запуска файл был чистым, в список он не попадал — запись
+// оставалась на диске и в коммит не уезжала. Так она молча терялась в c16bd74.
+if (changelogWritten) git(['add', '--', 'data/changelog.json']);
 git(['commit', '-m', subject, '-m', body, '-m', 'Co-Authored-By: Claude <noreply@anthropic.com>']);
 const sha = git(['rev-parse', 'HEAD']).slice(0, 7);
 git(['push', 'origin', 'HEAD']);
