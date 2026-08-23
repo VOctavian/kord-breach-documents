@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /editor.html
+
+Sitemap: https://voctavian.github.io/kord-breach-documents/sitemap.xml

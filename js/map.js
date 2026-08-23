@@ -24,7 +24,10 @@ mountWidgets();
 const { mapById, docById, docs, spawns } = await loadData();
 mountChangelog(mapById);
 mountSurvey();
-const mapId = new URLSearchParams(location.search).get('map');
+// У каждой локации теперь своя страница (`shoreline.html`), она объявляет себя
+// через `__MAP__`. Старый адрес `map.html?map=<id>` продолжает работать: такие
+// ссылки уже разошлись по чатам, ломать их нельзя.
+const mapId = new URLSearchParams(location.search).get('map') ?? window.__MAP__;
 const map = mapById[mapId];
 if (!map) location.replace('index.html');
 

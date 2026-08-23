@@ -41,7 +41,7 @@ for (const map of maps) {
       'a',
       {
         class: 'map-card',
-        href: `map.html?map=${map.id}`,
+        href: `${map.id}.html`,
         'data-docs': [...byDoc.keys()].join(' '),
         onclick: () => trackEvent('map-open-' + map.id),
       },

@@ -17,7 +17,10 @@ import { buildRelease } from '../js/changelog-build.js';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SITE = 'https://voctavian.github.io/kord-breach-documents';
-const PATHS = ['data', 'assets/screenshots', 'assets/survey'];
+// Страницы локаций и sitemap пересобираются из данных, значит меняются вместе с
+// ними — и должны попадать в обычный прогон, без --all.
+const MAP_PAGES = JSON.parse(readFileSync(`${ROOT}data/maps.json`, 'utf8')).map((m) => `${m.id}.html`);
+const PATHS = ['data', 'assets/screenshots', 'assets/survey', 'sitemap.xml', 'robots.txt', ...MAP_PAGES];
 
 const argv = process.argv.slice(2);
 const has = (flag) => argv.includes(flag);
@@ -139,6 +142,13 @@ if (!DRY) {
       ok(`${page}: счётчик в карточке ссылки обновлён на ${placed}`);
     }
   }
+}
+
+// Страницы локаций зависят от числа точек, поэтому пересобираем их здесь же —
+// до `git status`, иначе правки не попали бы в список файлов коммита.
+if (!DRY) {
+  execFileSync(process.execPath, [`${ROOT}scripts/build-map-pages.mjs`, '--write'], { cwd: ROOT, stdio: 'ignore' });
+  ok('страницы локаций и sitemap пересобраны');
 }
 
 /* ---------- 1b. уборка несвязанных картинок ---------- */
@@ -375,16 +385,12 @@ let changelogWritten = false;
 
 if (release) {
   const history = existsSync(CHANGELOG_FILE) ? JSON.parse(readFileSync(CHANGELOG_FILE, 'utf8')) : [];
-  let committed = new Set();
-  try {
-    const head = git(['show', 'HEAD:data/changelog.json'], { stdio: ['ignore', 'pipe', 'ignore'] });
-    committed = new Set(JSON.parse(head).map((r) => r.id));
-  } catch {
-    // Файла ещё нет в истории — значит вся локальная версия черновая.
-  }
-  // Верхнюю запись мог оставить прогон с --changelog-only. Раз её нет в коммите,
-  // это черновик той же публикации: заменяем, иначе на одно обновление вышло бы две.
-  const draft = history[0] && !committed.has(history[0].id) ? history[0] : null;
+  // Черновик — только запись, которую оставил прогон с --changelog-only: он её
+  // помечает. Раньше признаком было «её нет в коммите», и под это попадала любая
+  // незакоммиченная правка: так молча пропали восстановленная запись за 18 августа
+  // и правка точки за 20-е. Ручное в changelog больше не трогаем.
+  const draft = history[0]?.draft ? history[0] : null;
+  if (has('--changelog-only')) release.draft = true;
 
   // Новое сверху: попап показывает всё, что посетитель ещё не закрывал.
   writeFileSync(CHANGELOG_FILE, JSON.stringify([release, ...history.slice(draft ? 1 : 0)], null, 2) + '\n');

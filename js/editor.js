@@ -416,7 +416,7 @@ $('done').onclick = async () => {
   btn.disabled = true;
   // Правка могла случиться меньше секунды назад — дописываем её, а не уходим молча.
   // Если запись не прошла, остаёмся на странице: иначе правки просто пропадут.
-  if (await flush()) location.href = `map.html?map=${mapId}`;
+  if (await flush()) location.href = `${mapId}.html`;
   else btn.disabled = false;
 };
 const step = (d) => {

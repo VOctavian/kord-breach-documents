@@ -28,7 +28,10 @@ jobs:
           # editor.html теперь публикуется: админ правит точки с любого устройства,
           # а сохранение уходит в репозиторий через Edge Function. Без роли admin
           # функция отвечает 403, так что сама страница ничего не открывает.
-          cp index.html map.html admin.html editor.html _site/
+          # Страницы локаций генерируются в корень (shoreline.html и остальные),
+          # поэтому берём все html разом — кроме редактора опросов, он локальный.
+          for f in *.html; do [ "$f" = "survey-editor.html" ] || cp "$f" _site/; done
+          cp sitemap.xml robots.txt _site/
           cp -r css js data assets documentations _site/
           # Редактор опросов остаётся локальным: он пишет файлы через server.mjs.
           rm -f _site/js/survey-editor.js
