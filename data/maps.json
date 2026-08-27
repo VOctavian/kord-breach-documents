@@ -9,13 +9,22 @@
     "height": 1359
   },
   {
-    "id": "factory",
-    "name": "Завод",
-    "en": "Factory",
-    "file": "assets/maps/factory.webp",
+    "id": "reserve",
+    "name": "Резерв",
+    "en": "Reserve",
+    "file": "assets/maps/reserve.webp",
     "type": "raster",
     "width": 2600,
-    "height": 811
+    "height": 1540
+  },
+  {
+    "id": "woods",
+    "name": "Лес",
+    "en": "Woods",
+    "file": "assets/maps/woods.webp",
+    "type": "raster",
+    "width": 2600,
+    "height": 2544
   },
   {
     "id": "groundzero",
@@ -25,6 +34,42 @@
     "type": "raster",
     "width": 2600,
     "height": 2600
+  },
+  {
+    "id": "shoreline",
+    "name": "Берег",
+    "en": "Shoreline",
+    "file": "assets/maps/shoreline.webp",
+    "type": "raster",
+    "width": 2600,
+    "height": 1781
+  },
+  {
+    "id": "factory",
+    "name": "Завод",
+    "en": "Factory",
+    "file": "assets/maps/factory.webp",
+    "type": "raster",
+    "width": 2600,
+    "height": 811
+  },
+  {
+    "id": "lighthouse",
+    "name": "Маяк",
+    "en": "Lighthouse",
+    "file": "assets/maps/lighthouse.webp",
+    "type": "raster",
+    "width": 2242,
+    "height": 3892
+  },
+  {
+    "id": "streets",
+    "name": "Улицы Таркова",
+    "en": "Streets of Tarkov",
+    "file": "assets/maps/streets.webp",
+    "type": "raster",
+    "width": 2600,
+    "height": 2005
   },
   {
     "id": "interchange",
@@ -45,49 +90,13 @@
     "height": 1490
   },
   {
-    "id": "lighthouse",
-    "name": "Маяк",
-    "en": "Lighthouse",
-    "file": "assets/maps/lighthouse.webp",
-    "type": "raster",
-    "width": 2242,
-    "height": 3892
-  },
-  {
-    "id": "reserve",
-    "name": "Резерв",
-    "en": "Reserve",
-    "file": "assets/maps/reserve.webp",
+    "id": "icebreaker",
+    "name": "Ледокол",
+    "en": "Icebreaker",
+    "file": "assets/maps/icebreaker.webp",
     "type": "raster",
     "width": 2600,
-    "height": 1540
-  },
-  {
-    "id": "shoreline",
-    "name": "Берег",
-    "en": "Shoreline",
-    "file": "assets/maps/shoreline.webp",
-    "type": "raster",
-    "width": 2600,
-    "height": 1781
-  },
-  {
-    "id": "streets",
-    "name": "Улицы Таркова",
-    "en": "Streets of Tarkov",
-    "file": "assets/maps/streets.webp",
-    "type": "raster",
-    "width": 2600,
-    "height": 2005
-  },
-  {
-    "id": "woods",
-    "name": "Лес",
-    "en": "Woods",
-    "file": "assets/maps/woods.webp",
-    "type": "raster",
-    "width": 2600,
-    "height": 2544
+    "height": 1463
   },
   {
     "id": "labyrinth",
@@ -97,14 +106,5 @@
     "type": "raster",
     "width": 2600,
     "height": 2409
-  },
-  {
-    "id": "icebreaker",
-    "name": "Ледокол",
-    "en": "Icebreaker",
-    "file": "assets/maps/icebreaker.webp",
-    "type": "raster",
-    "width": 2600,
-    "height": 1463
   }
 ]

@@ -11,12 +11,37 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/factory.html</loc>
+    <loc>https://voctavian.github.io/kord-breach-documents/reserve.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voctavian.github.io/kord-breach-documents/woods.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://voctavian.github.io/kord-breach-documents/groundzero.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voctavian.github.io/kord-breach-documents/shoreline.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voctavian.github.io/kord-breach-documents/factory.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voctavian.github.io/kord-breach-documents/lighthouse.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voctavian.github.io/kord-breach-documents/streets.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
   </url>
@@ -31,37 +56,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/lighthouse.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/reserve.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/shoreline.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/streets.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/woods.html</loc>
+    <loc>https://voctavian.github.io/kord-breach-documents/icebreaker.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://voctavian.github.io/kord-breach-documents/labyrinth.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://voctavian.github.io/kord-breach-documents/icebreaker.html</loc>
     <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
   </url>
