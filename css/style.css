@@ -1340,6 +1340,31 @@ a:hover { color: #e0cfa4; }
 .survey-intro { margin: 0 0 14px; font-size: 13px; color: var(--text-dim); }
 .survey-q { margin-bottom: 12px; }
 
+/* Вопрос с вариантами ответа. Формулировка у него не `<label>`, а отдельная
+   строка: подписи здесь у самих вариантов, и клик по тексту вопроса не должен
+   ничего выбирать. */
+.survey-q-label { display: block; margin-bottom: 6px; font-size: 13px; color: var(--text-dim); }
+.survey-opts { display: flex; flex-direction: column; gap: 2px; }
+.survey-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.survey-opt:hover { background: var(--bg-3); }
+.survey-opt input { margin: 2px 0 0; flex: none; accent-color: var(--accent-hot); }
+.survey-opt:has(input:checked) { background: var(--bg-3); color: var(--text); }
+.survey-extra { display: block; width: 100%; margin-top: 6px; }
+
+/* Строка варианта ответа в редакторе: номер, два поля и кнопки в одну линию. */
+.sv-option { display: flex; align-items: flex-end; gap: 6px; margin-bottom: 4px; }
+.sv-option .fld { flex: 1; margin: 0; }
+.sv-option .sv-q-num { padding-bottom: 8px; }
+
 /* Картинки опроса и вопросов: клик открывает оригинал в новой вкладке. */
 .survey-gallery { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
 .survey-gallery img {

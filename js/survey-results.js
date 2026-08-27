@@ -3,6 +3,13 @@
 // и напрямую из PostgREST под админом), а показывают одинаково.
 import { el } from './common.js';
 
+/**
+ * Ответ строкой. У вопроса с вариантами он приходит объектом: `ids` для подсчёта
+ * голосов, `label` — уже собранная читаемая строка. Вставить объект как текст
+ * нельзя: получилось бы «[object Object]».
+ */
+const asText = (v) => (v && typeof v === 'object' ? (v.label ?? [v.ids?.join('; '), v.text].filter(Boolean).join(' — ')) : v);
+
 /** Карточка одного ответа. `titleById` — id вопроса → его текст. */
 export function answerCard(row, titleById, onDelete) {
   return el(
@@ -23,7 +30,7 @@ export function answerCard(row, titleById, onDelete) {
         'div',
         { class: 'sv-a-item' },
         el('div', { class: 'sv-a-q' }, titleById.get(qid) ?? qid),
-        el('div', { class: 'sv-a-v' }, value)
+        el('div', { class: 'sv-a-v' }, asText(value))
       )
     )
   );
@@ -42,7 +49,7 @@ export function resultsCsv(survey, rows) {
       [
         new Date(r.created_at).toISOString(),
         r.lang ?? '',
-        ...questions.map((q) => r.answers?.[q.id] ?? ''),
+        ...questions.map((q) => asText(r.answers?.[q.id]) ?? ''),
       ]
         .map(esc)
         .join(',')

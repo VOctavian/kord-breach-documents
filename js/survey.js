@@ -72,6 +72,58 @@ function gallery(images) {
 }
 
 /**
+ * Один вопрос: поле ввода либо варианты ответа. Возвращает узел и функцию,
+ * которая собирает ответ — `null`, если человек ничего не выбрал и не написал.
+ *
+ * Ответ на вопрос с вариантами уходит объектом: `ids` нужны, чтобы потом считать
+ * голоса, а `label` — чтобы карточка ответа и CSV оставались читаемыми, даже
+ * если формулировку варианта позже поправят.
+ */
+function buildQuestion(q) {
+  const type = q.type ?? 'text';
+  const label = el('span', {}, localized(q, 'text'));
+
+  if (type !== 'one' && type !== 'many') {
+    const input = q.multiline ? el('textarea', { rows: 3 }) : el('input', { type: 'text' });
+    const node = el('div', { class: 'survey-q' }, el('label', { class: 'fld' }, label, input), gallery(q.images));
+    return { node, read: () => input.value.trim() || null };
+  }
+
+  const many = type === 'many';
+  // Имя группы общее на весь вопрос — иначе переключатели не исключали бы друг друга.
+  const group = `sv-${q.id}`;
+  const boxes = (q.options ?? []).map((o) => {
+    const input = el('input', { type: many ? 'checkbox' : 'radio', name: group, value: o.id });
+    return { o, input, node: el('label', { class: 'survey-opt' }, input, el('span', {}, localized(o, 'text'))) };
+  });
+
+  const extra = q.extra ? el('input', { type: 'text', class: 'survey-extra', placeholder: t('surveyExtra') }) : null;
+
+  const node = el(
+    'div',
+    { class: 'survey-q' },
+    el('div', { class: 'survey-q-label' }, label),
+    el('div', { class: 'survey-opts' }, boxes.map((b) => b.node)),
+    extra,
+    gallery(q.images)
+  );
+
+  const read = () => {
+    const picked = boxes.filter((b) => b.input.checked);
+    const text = extra?.value.trim() ?? '';
+    if (!picked.length && !text) return null;
+    const labels = picked.map((b) => localized(b.o, 'text'));
+    return {
+      ids: picked.map((b) => b.o.id),
+      text,
+      label: [labels.join('; '), text].filter(Boolean).join(' — '),
+    };
+  };
+
+  return { node, read };
+}
+
+/**
  * Кнопка и панель одного опроса. `onOpen` даёт хозяину закрыть остальные панели:
  * они лежат друг на друге у правого края, две открытые перекрыли бы одна другую.
  */
@@ -95,6 +147,8 @@ function buildSurvey(survey, state, rail, onOpen) {
     button.title = `${name} — ${done ? t('surveyBtnDone') : t('surveyBtnTitle')}`;
   };
 
+  // Вопрос → функция чтения ответа. Раньше здесь лежало само поле ввода, но у
+  // вариантов ответа значение собирается из нескольких элементов.
   const fields = new Map();
   const body = el('div', { class: 'survey-body' });
   const status = el('div', { class: 'survey-status' });
@@ -106,11 +160,9 @@ function buildSurvey(survey, state, rail, onOpen) {
       el('p', { class: 'survey-intro' }, localized(survey, 'intro') || ''),
       gallery(survey.images),
       ...survey.questions.map((q) => {
-        const input = q.multiline
-          ? el('textarea', { rows: 3, id: `sv-${q.id}` })
-          : el('input', { type: 'text', id: `sv-${q.id}` });
-        fields.set(q.id, input);
-        return el('div', { class: 'survey-q' }, el('label', { class: 'fld' }, el('span', {}, localized(q, 'text')), input), gallery(q.images));
+        const { node, read } = buildQuestion(q);
+        fields.set(q.id, read);
+        return node;
       })
     );
     status.textContent = '';
@@ -122,9 +174,9 @@ function buildSurvey(survey, state, rail, onOpen) {
 
   async function onSubmit() {
     const answers = {};
-    for (const [id, input] of fields) {
-      const v = input.value.trim();
-      if (v) answers[id] = v;
+    for (const [id, read] of fields) {
+      const v = read();
+      if (v != null) answers[id] = v;
     }
     if (!Object.keys(answers).length) {
       status.textContent = t('surveyEmpty');

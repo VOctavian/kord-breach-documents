@@ -63,106 +63,441 @@
           "id": "qmsyq0k7s0",
           "text": "Никнэйм",
           "textEn": "Nickname",
+          "images": [],
           "multiline": false,
-          "images": []
+          "options": [],
+          "extra": false,
+          "type": "text"
         },
         {
           "id": "qmsyq0k7s1",
           "text": "Discord",
           "textEn": "Discord",
+          "images": [],
           "multiline": false,
-          "images": []
+          "options": [],
+          "extra": false,
+          "type": "text"
         },
         {
           "id": "qmsyqa5ch",
           "text": "Записываешь ли ты моменты из игр?",
           "textEn": "Do you record moments from games?",
-          "multiline": true,
-          "images": []
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "o1",
+              "text": "Да, регулярно",
+              "textEn": "Yes, regularly"
+            },
+            {
+              "id": "o2",
+              "text": "Иногда, если момент того стоит",
+              "textEn": "Sometimes, if the moment is worth it"
+            },
+            {
+              "id": "o3",
+              "text": "Нет, не записываю",
+              "textEn": "No, I do not record"
+            }
+          ],
+          "extra": false,
+          "type": "one"
         },
         {
           "id": "qmsyqano0",
           "text": "Чем записываешь?",
           "textEn": "What are you recording with?",
-          "multiline": true,
-          "images": []
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "o4",
+              "text": "OBS Studio",
+              "textEn": "OBS Studio"
+            },
+            {
+              "id": "o5",
+              "text": "NVIDIA ShadowPlay",
+              "textEn": "NVIDIA ShadowPlay"
+            },
+            {
+              "id": "o6",
+              "text": "AMD ReLive / Adrenalin",
+              "textEn": "AMD ReLive / Adrenalin"
+            },
+            {
+              "id": "o7",
+              "text": "Игровая панель Xbox",
+              "textEn": "Xbox Game Bar"
+            },
+            {
+              "id": "o8",
+              "text": "Medal.tv",
+              "textEn": "Medal.tv"
+            },
+            {
+              "id": "o9",
+              "text": "Оверлей Steam",
+              "textEn": "Steam overlay"
+            }
+          ],
+          "extra": true,
+          "type": "many"
         },
         {
           "id": "qmsyqbsxd",
           "text": "Сколько клипов сейчас лежат необработанными?",
           "textEn": "How many clips are currently sitting unprocessed?",
-          "multiline": true,
-          "images": []
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "oa",
+              "text": "Ни одного",
+              "textEn": "None"
+            },
+            {
+              "id": "ob",
+              "text": "1–10",
+              "textEn": "1–10"
+            },
+            {
+              "id": "oc",
+              "text": "11–50",
+              "textEn": "11–50"
+            },
+            {
+              "id": "od",
+              "text": "51–200",
+              "textEn": "51–200"
+            },
+            {
+              "id": "oe",
+              "text": "Больше 200",
+              "textEn": "More than 200"
+            },
+            {
+              "id": "of",
+              "text": "Никогда не считал",
+              "textEn": "Never counted"
+            }
+          ],
+          "extra": false,
+          "type": "one"
         },
         {
           "id": "qmsyqcysh",
-          "text": "Что обычно происходит с записанным клипом? (можно несколько)  (Кидаю файл в Discord друзьям / Заливаю на YouTube / Публикую в TikTok / Shorts / Reels / Монтирую в большое видео / Просто лежит на диске / Удаляю)",
-          "textEn": "What usually happens to a recorded clip? (You can have several)  (I send the file to friends on Discord / I upload it to YouTube / I publish it to TikTok / Shorts / Reels / I edit it into a larger video / It just sits on my drive / I delete it)",
-          "multiline": true,
-          "images": []
+          "text": "Что обычно происходит с записанным клипом?",
+          "textEn": "What usually happens to a recorded clip?",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "og",
+              "text": "Кидаю файл друзьям в Discord",
+              "textEn": "I send the file to friends on Discord"
+            },
+            {
+              "id": "oh",
+              "text": "Заливаю на YouTube",
+              "textEn": "I upload it to YouTube"
+            },
+            {
+              "id": "oi",
+              "text": "Публикую в TikTok, Shorts или Reels",
+              "textEn": "I post it to TikTok, Shorts or Reels"
+            },
+            {
+              "id": "oj",
+              "text": "Монтирую в большое видео",
+              "textEn": "I edit it into a longer video"
+            },
+            {
+              "id": "ok",
+              "text": "Просто лежит на диске",
+              "textEn": "It just sits on the drive"
+            },
+            {
+              "id": "ol",
+              "text": "Удаляю",
+              "textEn": "I delete it"
+            }
+          ],
+          "extra": true,
+          "type": "many"
         },
         {
           "id": "qmsyqfo2x",
           "text": "Когда в последний раз хотел поделиться клипом — что сделал?",
           "textEn": "The last time you wanted to share a video, what did you do?",
+          "images": [],
           "multiline": true,
-          "images": []
+          "options": [],
+          "extra": false,
+          "type": "text"
         },
         {
           "id": "qmsyqfwea",
-          "text": "Что мешает выкладывать чаще? (можно несколько)  (Долго заливать / Лень возиться с обрезкой / Файл слишком большой, чтобы кинуть напрямую / Не хочу светить на публичном канале / Не помню, что уже выложил, а что нет / Ничего не мешает, выкладываю сколько нужно)",
-          "textEn": "What's stopping me from posting more often? (Several are fine) (It takes a long time to upload / I'm too lazy to crop it / The file is too big to upload directly / I don't want to show it off on a public channel / I don't remember what I've already posted and what I haven't / Nothing's stopping me, I post as much as I need)",
-          "multiline": true,
-          "images": []
+          "text": "Что мешает выкладывать чаще?",
+          "textEn": "What stops you from posting more often?",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "om",
+              "text": "Долго заливать",
+              "textEn": "Uploading takes too long"
+            },
+            {
+              "id": "on",
+              "text": "Лень возиться с обрезкой",
+              "textEn": "Too lazy to bother with trimming"
+            },
+            {
+              "id": "oo",
+              "text": "Файл слишком большой, чтобы кинуть напрямую",
+              "textEn": "The file is too big to send directly"
+            },
+            {
+              "id": "op",
+              "text": "Не хочу светить на публичном канале",
+              "textEn": "I do not want it on a public channel"
+            },
+            {
+              "id": "oq",
+              "text": "Не помню, что уже выложил, а что нет",
+              "textEn": "I lose track of what is already posted"
+            },
+            {
+              "id": "or",
+              "text": "Ничего не мешает, выкладываю сколько нужно",
+              "textEn": "Nothing stops me, I post as much as I want"
+            }
+          ],
+          "extra": true,
+          "type": "many"
         },
         {
           "id": "qmsyqjg7l",
-          "text": "Насколько это решает твою задачу?",
-          "textEn": "To what extent does this solve your problem?",
-          "multiline": true,
-          "images": []
+          "text": "Насколько описанная программа решает твою задачу?",
+          "textEn": "How well does the program described above solve your problem?",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "os",
+              "text": "Полностью — это про меня",
+              "textEn": "Completely — that is exactly my case"
+            },
+            {
+              "id": "ot",
+              "text": "Частично, часть шагов всё равно руками",
+              "textEn": "Partly, some steps stay manual"
+            },
+            {
+              "id": "ou",
+              "text": "Почти нет",
+              "textEn": "Barely"
+            },
+            {
+              "id": "ov",
+              "text": "Совсем не моя задача",
+              "textEn": "Not my problem at all"
+            }
+          ],
+          "extra": true,
+          "type": "one"
         },
         {
           "id": "qmsyqjo5d",
-          "text": "Отметь то, что делал руками за последний месяц: (можно несколько)  (Обрезал клип перед тем, как выложить / Делал из горизонтального клипа вертикальный / Заливал видео скрытым / по ссылке / Искал, куда подевался уже выложенный клип / Удалял записи, чтобы освободить место / Ничего из этого)",
-          "textEn": "Please mark what you've done manually in the last month: (You can list several) (Cropped a clip before posting / Made a horizontal clip vertical / Uploaded a video hidden / via a link / Looked for where an already posted clip went / Deleted recordings to free up space / None of these)",
-          "multiline": true,
-          "images": []
+          "text": "Отметь, что делал руками за последний месяц",
+          "textEn": "Mark what you did by hand over the last month",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "ow",
+              "text": "Обрезал клип перед тем, как выложить",
+              "textEn": "Trimmed a clip before posting"
+            },
+            {
+              "id": "ox",
+              "text": "Делал из горизонтального клипа вертикальный",
+              "textEn": "Turned a horizontal clip into a vertical one"
+            },
+            {
+              "id": "oy",
+              "text": "Заливал видео скрытым или по ссылке",
+              "textEn": "Uploaded a video unlisted or link-only"
+            },
+            {
+              "id": "oz",
+              "text": "Искал, куда подевался уже выложенный клип",
+              "textEn": "Hunted for a clip I had already posted"
+            },
+            {
+              "id": "o10",
+              "text": "Удалял записи, чтобы освободить место",
+              "textEn": "Deleted recordings to free up space"
+            },
+            {
+              "id": "o11",
+              "text": "Ничего из этого",
+              "textEn": "None of these"
+            }
+          ],
+          "extra": true,
+          "type": "many"
         },
         {
           "id": "qmsyql6g9",
-          "text": "Выбери максимум 3 функции, которыми пользовался бы чаще всего:  Автоматически подхватывает новые записи из папки Загрузка на YouTube в один клик / Быстрая обрезка без потери качества / Вертикальный кадр для Shorts и TikTok / Библиотека со статусами и ссылками / Удалить файл с диска, ссылку оставить / Скачать своё видео обратно с YouTube / Пресеты названий, описаний и тегов / Автопостинг ссылки в Discord / Публикация в TikTok",
-          "textEn": "Choose up to 3 features that you would use most often: Automatically picks up new recordings from the YouTube Upload folder in one click / Quick trimming without quality loss / Vertical frame for Shorts and TikTok / Library with statuses and links / Delete file from disk, leave link / Download your video back from YouTube / Presets for titles, descriptions, and tags / Auto-posting links to Discord / Publishing to TikTok",
-          "multiline": true,
-          "images": []
+          "text": "Какими функциями пользовался бы чаще всего? Отметь до трёх",
+          "textEn": "Which features would you use most often? Pick up to three",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "o12",
+              "text": "Сам подхватывает новые записи из папки",
+              "textEn": "Picks up new recordings from the folder by itself"
+            },
+            {
+              "id": "o13",
+              "text": "Загрузка на YouTube в один клик",
+              "textEn": "One-click upload to YouTube"
+            },
+            {
+              "id": "o14",
+              "text": "Быстрая обрезка без потери качества",
+              "textEn": "Fast trimming without re-encoding"
+            },
+            {
+              "id": "o15",
+              "text": "Вертикальный кадр для Shorts и TikTok",
+              "textEn": "Vertical crop for Shorts and TikTok"
+            },
+            {
+              "id": "o16",
+              "text": "Библиотека со статусами и ссылками",
+              "textEn": "A library with statuses and links"
+            },
+            {
+              "id": "o17",
+              "text": "Удалить файл с диска, ссылку оставить",
+              "textEn": "Delete the local file, keep the link"
+            },
+            {
+              "id": "o18",
+              "text": "Скачать своё видео обратно с YouTube",
+              "textEn": "Download your own video back from YouTube"
+            },
+            {
+              "id": "o19",
+              "text": "Пресеты названий, описаний и тегов",
+              "textEn": "Presets for titles, descriptions and tags"
+            },
+            {
+              "id": "o1a",
+              "text": "Автопостинг ссылки в Discord",
+              "textEn": "Auto-posting the link to Discord"
+            },
+            {
+              "id": "o1b",
+              "text": "Публикация в TikTok",
+              "textEn": "Publishing to TikTok"
+            }
+          ],
+          "extra": false,
+          "type": "many"
         },
         {
           "id": "qmsyqmw6x",
           "text": "Чего в списке не хватает?",
           "textEn": "What's missing from the list?",
+          "images": [],
           "multiline": true,
-          "images": []
+          "options": [],
+          "extra": false,
+          "type": "text"
         },
         {
           "id": "qmsyqn0z5",
-          "text": "Если бы такая программа была готова сегодня:  Поставил бы прямо сейчас / Посмотрел бы, но не факт / Не поставил бы",
-          "textEn": "If such a program were ready today: I would put it on right now / I would watch it, but not necessarily / I wouldn’t put it on",
-          "multiline": true,
-          "images": []
+          "text": "Если бы такая программа была готова сегодня",
+          "textEn": "If such a program were ready today",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "o1c",
+              "text": "Поставил бы прямо сейчас",
+              "textEn": "I would install it right away"
+            },
+            {
+              "id": "o1d",
+              "text": "Посмотрел бы, но не факт",
+              "textEn": "I would take a look, but no promises"
+            },
+            {
+              "id": "o1e",
+              "text": "Не поставил бы",
+              "textEn": "I would not install it"
+            }
+          ],
+          "extra": true,
+          "type": "one"
         },
         {
           "id": "qmsyqp1k9",
           "text": "Оставь почту, если хочешь попробовать бету, и зайди на Discord Server",
           "textEn": "Leave your email if you want to try the beta and join the Discord Server",
-          "multiline": true,
-          "images": []
+          "images": [],
+          "multiline": false,
+          "options": [],
+          "extra": false,
+          "type": "text"
         },
         {
           "id": "qmsyrfjqq",
-          "text": "Сколько бы тебе было бы не жалко отдовать в месяц или навсегда за такую программу?",
-          "textEn": "How much would you be willing to pay per month or forever for such a program?",
-          "multiline": true,
-          "images": []
+          "text": "Сколько было бы не жалко отдать за такую программу?",
+          "textEn": "How much would you be willing to pay for such a program?",
+          "images": [],
+          "multiline": false,
+          "options": [
+            {
+              "id": "o1f",
+              "text": "Только бесплатно",
+              "textEn": "Free only"
+            },
+            {
+              "id": "o1g",
+              "text": "До 200 ₽ в месяц",
+              "textEn": "Up to €2 a month"
+            },
+            {
+              "id": "o1h",
+              "text": "200–500 ₽ в месяц",
+              "textEn": "€2–5 a month"
+            },
+            {
+              "id": "o1i",
+              "text": "Больше 500 ₽ в месяц",
+              "textEn": "More than €5 a month"
+            },
+            {
+              "id": "o1j",
+              "text": "Разово до 1500 ₽ навсегда",
+              "textEn": "A one-off payment up to €15"
+            },
+            {
+              "id": "o1k",
+              "text": "Разово больше 1500 ₽ навсегда",
+              "textEn": "A one-off payment above €15"
+            }
+          ],
+          "extra": true,
+          "type": "one"
         }
       ]
     },

@@ -157,6 +157,124 @@ function textField(label, obj, key, multiline = false) {
   return el('label', { class: 'fld' }, el('span', {}, label), input);
 }
 
+const TYPES = [
+  ['text', 'Текстовый ответ'],
+  ['one', 'Один вариант'],
+  ['many', 'Несколько вариантов'],
+];
+
+/** Тип вопроса. У старых вопросов поля нет — это текстовый ответ. */
+function typeField(q) {
+  const select = el(
+    'select',
+    {
+      class: 'btn',
+      onchange: (e) => {
+        q.type = e.target.value;
+        // Переключились на варианты, а их нет — заводим пару пустых, иначе
+        // вопрос выглядел бы сломанным: подпись есть, выбирать нечего.
+        if (q.type !== 'text' && !q.options?.length) q.options = [newOption(), newOption()];
+        renderEditor();
+        save();
+      },
+    },
+    TYPES.map(([v, label]) => el('option', { value: v, selected: (q.type ?? 'text') === v ? '' : null }, label))
+  );
+  return el('label', { class: 'fld' }, el('span', {}, 'Тип ответа'), select);
+}
+
+const newOption = () => ({ id: newId('o'), text: '', textEn: '' });
+
+/** Часть карточки вопроса, зависящая от типа: галочка многострочности или список вариантов. */
+function questionBody(q) {
+  const type = q.type ?? 'text';
+  if (type === 'text') {
+    return [
+      el(
+        'label',
+        { class: 'sv-toggle' },
+        el('input', {
+          type: 'checkbox',
+          checked: q.multiline ? '' : null,
+          onchange: (e) => {
+            q.multiline = e.target.checked;
+            save();
+          },
+        }),
+        el('span', {}, 'Многострочный ответ')
+      ),
+    ];
+  }
+
+  const options = (q.options ??= []);
+  return [
+    el('div', { class: 'sv-sub-label' }, 'Варианты ответа'),
+    ...options.map((o, i) =>
+      el(
+        'div',
+        { class: 'sv-option' },
+        el('span', { class: 'sv-q-num' }, `${i + 1}`),
+        textField('RU', o, 'text'),
+        textField('EN', o, 'textEn'),
+        el(
+          'button',
+          {
+            class: 'btn small',
+            type: 'button',
+            title: 'Выше',
+            disabled: i === 0 ? '' : null,
+            onclick: () => {
+              options.splice(i - 1, 0, ...options.splice(i, 1));
+              renderEditor();
+              save();
+            },
+          },
+          '↑'
+        ),
+        el(
+          'button',
+          {
+            class: 'btn small danger',
+            type: 'button',
+            onclick: () => {
+              options.splice(i, 1);
+              renderEditor();
+              save();
+            },
+          },
+          '✕'
+        )
+      )
+    ),
+    el(
+      'button',
+      {
+        class: 'btn small',
+        type: 'button',
+        onclick: () => {
+          options.push(newOption());
+          renderEditor();
+          save();
+        },
+      },
+      '+ Вариант'
+    ),
+    el(
+      'label',
+      { class: 'sv-toggle' },
+      el('input', {
+        type: 'checkbox',
+        checked: q.extra ? '' : null,
+        onchange: (e) => {
+          q.extra = e.target.checked;
+          save();
+        },
+      }),
+      el('span', {}, 'Поле «своими словами»')
+    ),
+  ];
+}
+
 /** Галерея: загрузка файлов в assets/survey и удаление из списка. */
 function galleryBlock(owner) {
   const strip = el(
@@ -270,19 +388,8 @@ function renderEditor() {
         ),
         textField('Вопрос (RU)', q, 'text'),
         textField('Вопрос (EN)', q, 'textEn'),
-        el(
-          'label',
-          { class: 'sv-toggle' },
-          el('input', {
-            type: 'checkbox',
-            checked: q.multiline ? '' : null,
-            onchange: (e) => {
-              q.multiline = e.target.checked;
-              save();
-            },
-          }),
-          el('span', {}, 'Многострочный ответ')
-        ),
+        typeField(q),
+        ...questionBody(q),
         el('div', { class: 'sv-sub-label' }, 'Галерея вопроса'),
         galleryBlock(q)
       )
@@ -292,7 +399,7 @@ function renderEditor() {
 }
 
 function addQ() {
-  current.questions.push({ id: newId('q'), text: '', textEn: '', multiline: true, images: [] });
+  current.questions.push({ id: newId('q'), text: '', textEn: '', type: 'text', multiline: true, options: [], extra: false, images: [] });
   renderEditor();
   save();
 }
