@@ -21,7 +21,7 @@ mountAds();
 applyI18n();
 mountWidgets();
 
-const { mapById, docById, docs, spawns } = await loadData();
+const { maps, mapById, docById, docs, spawns } = await loadData();
 mountChangelog(mapById);
 mountSurvey();
 // У каждой локации теперь своя страница (`shoreline.html`), она объявляет себя
@@ -137,9 +137,97 @@ if (map.floors?.length > 1) {
   for (const f of map.floors) box.append(mk(f.id, localized(f)));
 }
 
-/* ---------- отрисовка маркеров и списка ---------- */
+/* ---------- переход между локациями ---------- */
 
-const listBox = document.getElementById('spawn-list');
+// Вместо списка точек: сами точки и так видны маркерами, а вот перескочить на
+// соседнюю карту раньше можно было только через главную. Заодно двенадцать
+// страниц локаций перелинковываются между собой.
+// Страницы локаций сгенерированы из map.html: пока они не пересобраны после
+// правки шаблона, этого блока в них нет. Падать из-за него всей карте незачем —
+// без панели она работает, а строка в консоли подскажет причину.
+const navBox = document.getElementById('map-nav');
+if (!navBox) console.warn('нет #map-nav — страница собрана из старого map.html, пересоберите: node scripts/build-map-pages.mjs --write');
+
+/** Строки панели и типы документации каждой локации — для подсказки и подсветки. */
+const navRows = [];
+
+for (const m of navBox ? maps : []) {
+  const pts = spawns.filter((s) => s.map === m.id && isPublished(s) && s.x != null);
+  // Пустую локацию не показываем: страницы у неё тоже нет.
+  if (!pts.length) continue;
+  const docIds = [...new Set(pts.map((s) => s.doc))];
+  const here = m.id === mapId;
+  const row = el(
+    'a',
+    {
+      class: 'map-nav-item' + (here ? ' active' : ''),
+      href: `${m.id}.html`,
+      // Ссылка на саму себя перезагрузила бы страницу без всякой пользы.
+      onclick: here ? (e) => e.preventDefault() : null,
+    },
+    el('span', { class: 'lbl' }, localized(m)),
+    el('span', { class: 'docs' }, docIds.map((id) => el('img', { src: docById[id].icon, alt: '' }))),
+    el('span', { class: 'n' }, String(pts.length))
+  );
+  navRows.push({ row, docs: new Set(docIds) });
+  navBox.append(row);
+}
+
+/* ---------- подсказка: какая документация лежит на локации ---------- */
+
+// Держим подсказку в body, а не внутри строки: у боковой панели `overflow-y: auto`,
+// вложенный блок обрезался бы по её краю.
+const tip = el('div', { class: 'doc-tip', hidden: '' });
+document.body.append(tip);
+
+let tipTimer;
+const unmark = () => navRows.forEach(({ row }) => row.classList.remove('match'));
+const hideTip = () => {
+  tip.hidden = true;
+  unmark();
+};
+// Уходим не сразу: между строкой и подсказкой есть зазор, и мгновенное закрытие
+// не давало бы навести курсор на саму документацию.
+const leave = () => (tipTimer = setTimeout(hideTip, 140));
+const enter = () => clearTimeout(tipTimer);
+
+tip.addEventListener('mouseenter', enter);
+tip.addEventListener('mouseleave', leave);
+
+for (const { row, docs } of navRows) {
+  row.addEventListener('mouseenter', () => {
+    enter();
+    showTip(row, [...docs]);
+  });
+  row.addEventListener('mouseleave', leave);
+}
+
+function showTip(row, docIds) {
+  tip.replaceChildren(
+    ...docIds.map((id) => {
+      const doc = docById[id];
+      return el(
+        'div',
+        {
+          class: 'doc-tip-item',
+          // Наведение на тип документации показывает, где ещё она встречается.
+          onmouseenter: () => navRows.forEach(({ row: r, docs }) => r.classList.toggle('match', docs.has(id))),
+          onmouseleave: unmark,
+        },
+        el('img', { src: doc.icon, alt: '' }),
+        el('span', {}, localized(doc))
+      );
+    })
+  );
+  tip.hidden = false;
+  // Размеры известны только после показа, поэтому позиционируем следом.
+  const r = row.getBoundingClientRect();
+  const t = tip.getBoundingClientRect();
+  tip.style.left = Math.min(r.right + 10, innerWidth - t.width - 8) + 'px';
+  tip.style.top = Math.max(8, Math.min(r.top - 8, innerHeight - t.height - 8)) + 'px';
+}
+
+/* ---------- отрисовка маркеров ---------- */
 
 function render() {
   visible = placed.filter((s) => !hidden.has(s.doc) && (floor == null || !s.floor || s.floor === floor));
@@ -159,34 +247,11 @@ function render() {
     });
   }
 
-  listBox.replaceChildren();
-  all.forEach((s) => {
-    const doc = docById[s.doc];
-    const item = el(
-      'div',
-      {
-        class: 'spawn-item' + (s.x == null ? ' unplaced' : ''),
-        title: s.x == null ? t('unplacedTitle') : localized(s, 'caption'),
-        onclick: () => {
-          const slide = slides.findIndex((sl) => sl.spawn === s);
-          if (slide < 0) return;
-          view.centerOn(s.x, s.y);
-          open(slide);
-        },
-      },
-      el('img', { src: doc.icon, alt: '' }),
-      el('span', {}, localized(s, 'caption') || t('noCaption'))
-    );
-    item.dataset.id = s.id;
-    listBox.append(item);
-  });
   highlight();
 }
 
 function highlight() {
-  const id = slides[current]?.spawn.id;
-  view.setActive(id);
-  listBox.querySelectorAll('.spawn-item').forEach((n) => n.classList.toggle('active', n.dataset.id === id));
+  view.setActive(slides[current]?.spawn.id);
 }
 
 /* ---------- модалка ---------- */

@@ -20,6 +20,7 @@ const DICT = {
   fitLabel: { ru: 'Вписать', en: 'Fit' },
   docTypeHeader: { ru: 'Тип документации', en: 'Document type' },
   spawnListHeader: { ru: 'Точки спавна', en: 'Spawn points' },
+  mapsNavHeader: { ru: 'Локации', en: 'Locations' },
   floorHeader: { ru: 'Этаж', en: 'Floor' },
   allLayers: { ru: 'Все слои', en: 'All layers' },
   altHeader: { ru: 'Функции', en: 'Features' },
