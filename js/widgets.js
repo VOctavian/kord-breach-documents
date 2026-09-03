@@ -76,8 +76,8 @@ const DONATE = [
   { label: t('boostyLabel'), value: 'https://boosty.to/mastermd/donate', link: 'https://boosty.to/mastermd/donate' },
   {
     label: 'DonationAlerts',
-    value: 'https://www.donationalerts.com/r/mastermd_ttv',
-    link: 'https://www.donationalerts.com/r/mastermd_ttv',
+    value: 'https://www.donationalerts.com/r/mastermd',
+    link: 'https://www.donationalerts.com/r/mastermd',
     qr: 'assets/misc/donationalerts_qr.png',
   },
 ];
