@@ -1,5 +1,79 @@
 [
   {
+    "id": "2026-09-07-1521",
+    "at": "2026-09-07T15:21",
+    "maps": [
+      {
+        "map": "shoreline",
+        "added": [
+          {
+            "id": "shoreline-cmtr7hrxx",
+            "caption": "Комната 216 на коробке",
+            "captionEn": "Room 216 on the box"
+          },
+          {
+            "id": "shoreline-cmtr7ihbz",
+            "caption": "клуб норвинский 1 этаж",
+            "captionEn": "Norvinsky Club, 1st floor (lighter photo with an arrow)"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "interchange",
+        "added": [
+          {
+            "id": "interchange-cmtr7gd71",
+            "caption": "В магазине SPIEL в корзине за прилавком",
+            "captionEn": "At the SPIEL store, in a basket behind the counter"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "icebreaker",
+        "added": [
+          {
+            "id": "icebreaker-cmtr7jxod",
+            "caption": "На полке стола рядом с наушниками",
+            "captionEn": "On the shelf of the table next to the headphones"
+          },
+          {
+            "id": "icebreaker-cmtr7k8bp",
+            "caption": "В синем ящике справа после входа в комнату",
+            "captionEn": "In the blue box on the right after entering the room"
+          },
+          {
+            "id": "icebreaker-cmtr7ki1r",
+            "caption": "На столе в западной комнате столовой",
+            "captionEn": "On the table in the western dining room"
+          },
+          {
+            "id": "icebreaker-cmtr7kr3g",
+            "caption": "На маленьком столе слева от дверного проёма в лабораторном офисе",
+            "captionEn": "On a small table to the left of the doorway in the lab office"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "labyrinth",
+        "added": [
+          {
+            "id": "labyrinth-cmtr7l9pd",
+            "caption": "На картонных коробках рядом с точкой появления ключа у тела возле зелёной канистры",
+            "captionEn": "On cardboard boxes near the key spawn point near the body next to the green canister"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      }
+    ]
+  },
+  {
     "id": "2026-09-07-1355",
     "at": "2026-09-07T13:55",
     "maps": [

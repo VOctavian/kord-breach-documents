@@ -5822,5 +5822,141 @@
     "x2": 43.052,
     "y2": 80.698,
     "floor": null
+  },
+  {
+    "id": "interchange-cmtr7gd71",
+    "map": "interchange",
+    "mapName": "Развязка",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "В магазине SPIEL в корзине за прилавком",
+    "captionEn": "At the SPIEL store, in a basket behind the counter",
+    "images": [
+      "assets/screenshots/interchange-tehnicheskaea-cd91b046.jpg"
+    ],
+    "x": 73.388,
+    "y": 47.911,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmtr7hrxx",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "Комната 216 на коробке",
+    "captionEn": "Room 216 on the box",
+    "images": [
+      "assets/screenshots/shoreline-testovaea-05b4020d.jpg"
+    ],
+    "x": 85.04,
+    "y": 44.643,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "shoreline-cmtr7ihbz",
+    "map": "shoreline",
+    "mapName": "Берег",
+    "doc": "expluatationnaea",
+    "docName": "Эксплуатационная документация",
+    "caption": "клуб норвинский 1 этаж",
+    "captionEn": "Norvinsky Club, 1st floor (lighter photo with an arrow)",
+    "images": [
+      "assets/screenshots/shoreline-expluatationnaea-deeb09a9.jpg"
+    ],
+    "x": 43.215,
+    "y": 90.01,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmtr7jxod",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На полке стола рядом с наушниками",
+    "captionEn": "On the shelf of the table next to the headphones",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-b7df86c1.jpg"
+    ],
+    "x": 48.703,
+    "y": 46.428,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmtr7k8bp",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "В синем ящике справа после входа в комнату",
+    "captionEn": "In the blue box on the right after entering the room",
+    "images": [
+      "assets/screenshots/icebreaker-personal-3c603bcf.jpg"
+    ],
+    "x": 48.406,
+    "y": 47.862,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmtr7ki1r",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "personal",
+    "docName": "Личные данные ЧВК",
+    "caption": "На столе в западной комнате столовой",
+    "captionEn": "On the table in the western dining room",
+    "images": [
+      "assets/screenshots/icebreaker-personal-4efd4d55.jpg"
+    ],
+    "x": 51.423,
+    "y": 49.088,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "icebreaker-cmtr7kr3g",
+    "map": "icebreaker",
+    "mapName": "Ледокол",
+    "doc": "testovaea",
+    "docName": "Тестовая документация",
+    "caption": "На маленьком столе слева от дверного проёма в лабораторном офисе",
+    "captionEn": "On a small table to the left of the doorway in the lab office",
+    "images": [
+      "assets/screenshots/icebreaker-testovaea-d1dd1e1d.jpg"
+    ],
+    "x": 65.705,
+    "y": 48.836,
+    "x2": null,
+    "y2": null,
+    "floor": null
+  },
+  {
+    "id": "labyrinth-cmtr7l9pd",
+    "map": "labyrinth",
+    "mapName": "Лабиринт",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
+    "caption": "На картонных коробках рядом с точкой появления ключа у тела возле зелёной канистры",
+    "captionEn": "On cardboard boxes near the key spawn point near the body next to the green canister",
+    "images": [
+      "assets/screenshots/labyrinth-tehnicheskaea-e4498605.jpg"
+    ],
+    "x": 59.687,
+    "y": 56.27,
+    "x2": null,
+    "y2": null,
+    "floor": null
   }
 ]
