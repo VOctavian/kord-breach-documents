@@ -775,8 +775,8 @@
     "doc": "tehnicheskaea",
     "docName": "Чертежи и тех. документация",
     "caption": "Офисы OLI",
-    "x": 82.996,
-    "y": 66.901,
+    "x": 83.425,
+    "y": 66.939,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-tehnicheskaea-bcce7bab.jpg"
@@ -790,8 +790,8 @@
     "doc": "tehnicheskaea",
     "docName": "Чертежи и тех. документация",
     "caption": "Офисы OLI",
-    "x": 83.38,
-    "y": 66.951,
+    "x": 82.912,
+    "y": 66.916,
     "floor": null,
     "images": [
       "assets/screenshots/interchange-tehnicheskaea-ea57bbca.jpg"
@@ -4816,8 +4816,8 @@
     "images": [
       "assets/screenshots/interchange-finansovaea-701ad818.jpg"
     ],
-    "x": 43.461,
-    "y": 22.007,
+    "x": 42.881,
+    "y": 20.735,
     "x2": null,
     "y2": null,
     "floor": null
@@ -5438,8 +5438,8 @@
     "id": "interchange-cmsyivcyg",
     "map": "interchange",
     "mapName": "Развязка",
-    "doc": "finansovaea",
-    "docName": "Финансовая документация",
+    "doc": "tehnicheskaea",
+    "docName": "Чертежи и тех. документация",
     "caption": "Сверху на синем шкафчике.",
     "captionEn": "On top of the blue locker.",
     "images": [
@@ -5634,8 +5634,8 @@
     ],
     "x": 96.657,
     "y": 80.567,
-    "x2": null,
-    "y2": null,
+    "x2": 52.475,
+    "y2": 62.244,
     "floor": null
   },
   {
@@ -5804,6 +5804,23 @@
     "y": 26.329,
     "x2": null,
     "y2": null,
+    "floor": null
+  },
+  {
+    "id": "reserve-cmtr4fjv7",
+    "map": "reserve",
+    "mapName": "Резерв",
+    "doc": "proectnaea",
+    "docName": "Проектная документация",
+    "caption": "На полу между двумя шкафами",
+    "captionEn": "On the floor between two cabinets",
+    "images": [
+      "assets/screenshots/reserve-proectnaea-34ab612d.jpg"
+    ],
+    "x": 69.448,
+    "y": 77.746,
+    "x2": 43.052,
+    "y2": 80.698,
     "floor": null
   }
 ]

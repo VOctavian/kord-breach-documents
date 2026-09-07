@@ -1,5 +1,45 @@
 [
   {
+    "id": "2026-09-07-1355",
+    "at": "2026-09-07T13:55",
+    "maps": [
+      {
+        "map": "reserve",
+        "added": [
+          {
+            "id": "reserve-cmtr4fjv7",
+            "caption": "На полу между двумя шкафами",
+            "captionEn": "On the floor between two cabinets"
+          }
+        ],
+        "fixed": [],
+        "removed": []
+      },
+      {
+        "map": "interchange",
+        "added": [],
+        "fixed": [
+          {
+            "id": "interchange-50",
+            "caption": "Офисы OLI",
+            "captionEn": "OLI offices"
+          },
+          {
+            "id": "interchange-51",
+            "caption": "Офисы OLI",
+            "captionEn": "OLI offices"
+          },
+          {
+            "id": "interchange-cmsvlkhb0",
+            "caption": "На стеллаже внутри офиса ТЭЦ",
+            "captionEn": "On a rack inside the CHP office"
+          }
+        ],
+        "removed": []
+      }
+    ]
+  },
+  {
     "id": "2026-08-23-1348",
     "at": "2026-08-23T13:48",
     "maps": [
